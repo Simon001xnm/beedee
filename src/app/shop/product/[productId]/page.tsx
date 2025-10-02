@@ -80,8 +80,8 @@ export default function ProductPage({ params }: ProductPageProps) {
           </Carousel>
         </div>
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl md:text-4xl font-headline font-bold">{product.name}</h1>
-          <p className="text-3xl font-bold text-primary">{formatPrice(product.price)}</p>
+          <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary">{product.name}</h1>
+          <p className="text-3xl font-bold text-accent">{formatPrice(product.price)}</p>
           <Separator />
           <p className="text-muted-foreground leading-relaxed">{product.description}</p>
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
@@ -94,7 +94,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       <Separator className="my-12" />
 
       <div>
-        <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6">You Might Also Like</h2>
+        <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6 text-primary">You Might Also Like</h2>
         <ProductRecommendations 
           currentProductId={product.id}
           currentCategory={product.category} 
@@ -105,7 +105,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         <>
           <Separator className="my-12" />
           <div>
-            <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6">Related Products</h2>
+            <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6 text-primary">Related Products</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {relatedProducts.map(relatedProduct => (
                 <ProductCard key={relatedProduct.id} product={relatedProduct} />

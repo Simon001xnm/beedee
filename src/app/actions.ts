@@ -1,7 +1,7 @@
 "use server";
 
 import { getPersonalizedRecommendations, PersonalizedRecommendationsInput } from '@/ai/flows/personalized-product-recommendations';
-import { getRecommendedProductsByIds } from './lib/data';
+import { getRecommendedProductsByIds } from '@/lib/data';
 
 export async function getRecommendations(input: PersonalizedRecommendationsInput) {
   try {

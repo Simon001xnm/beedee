@@ -13,7 +13,7 @@ export const Icons = {
       {...props}
     >
       <text x="0" y="18" fontFamily="'Playfair Display', serif" fontSize="20px" fontWeight="bold" fill="hsl(var(--primary))">
-        MS
+        BD
       </text>
     </svg>
   ),
@@ -26,10 +26,7 @@ export const Icons = {
       {...props}
     >
       <text x="0" y="90" fontFamily="'Playfair Display', serif" fontSize="100" fontWeight="700" fill="currentColor">
-        Magical
-      </text>
-      <text x="250" y="110" fontFamily="'PT Sans', sans-serif" fontSize="60" fontWeight="400" fill="currentColor">
-        Shoekenya
+        Bee&Dee
       </text>
     </svg>
   ),

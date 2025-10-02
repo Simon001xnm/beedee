@@ -2,14 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Return Policy",
-  description: "Read the return and exchange policy for Magical Shoekenya.",
+  description: "Read the return and exchange policy for Bee&Dee.",
 };
 
 export default function ReturnPolicyPage() {
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">
       <div className="text-center">
-        <h1 className="text-4xl font-headline font-bold">Return Policy</h1>
+        <h1 className="text-4xl font-headline font-bold text-primary">Return Policy</h1>
         <p className="mt-2 text-lg text-muted-foreground">
           Your satisfaction is our priority.
         </p>
@@ -17,11 +17,11 @@ export default function ReturnPolicyPage() {
       
       <Card className="max-w-3xl mx-auto mt-10">
         <CardHeader>
-          <CardTitle className="font-headline">Our Promise</CardTitle>
+          <CardTitle className="font-headline text-primary">Our Promise</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            At Magical Shoekenya, we want you to be completely happy with your purchase. If you are not satisfied for any reason, we are here to help with our return and exchange policy.
+            At Bee&Dee, we want you to be completely happy with your purchase. If you are not satisfied for any reason, we are here to help with our return and exchange policy.
           </p>
           
           <h3 className="font-semibold text-foreground pt-4">Conditions for Return</h3>
@@ -34,7 +34,7 @@ export default function ReturnPolicyPage() {
 
           <h3 className="font-semibold text-foreground pt-4">How to Initiate a Return</h3>
           <p>
-            To initiate a return, please contact our customer service team at <a href="mailto:info@magicalshoekenya.com" className="text-primary hover:underline">info@magicalshoekenya.com</a> with your order number and the reason for your return. Our team will guide you through the process.
+            To initiate a return, please contact our customer service team at <a href="mailto:info@beedee.com" className="text-primary hover:underline">info@beedee.com</a> with your order number and the reason for your return. Our team will guide you through the process.
           </p>
 
           <h3 className="font-semibold text-foreground pt-4">Refunds</h3>
@@ -43,7 +43,7 @@ export default function ReturnPolicyPage() {
           </p>
 
            <p className="pt-6 text-sm">
-            This is a placeholder policy. Please consult with Magical Shoekenya directly for their official return policy.
+            This is a placeholder policy. Please consult with Bee&Dee directly for their official return policy.
           </p>
 
         </CardContent>
