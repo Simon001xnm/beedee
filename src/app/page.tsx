@@ -33,7 +33,7 @@ const infoItems = [
 ];
 
 export default function Home() {
-  const topCategories = categories.filter(c => ['sneakers', 'football-boots', 'ladies-shoes', 'handbags'].includes(c.id));
+  const allCategories = categories.filter(c => c.parentId === null);
 
   return (
     <div className="flex flex-col">
@@ -58,11 +58,11 @@ export default function Home() {
       <section className="container mx-auto px-4 md:px-6 py-12">
         <div className="text-center mb-8">
           <p className="text-primary font-semibold">FASHION COLLECTIONS</p>
-          <h2 className="text-3xl font-headline font-bold">TOP CATEGORIES</h2>
-          <p className="text-muted-foreground">Here are some of our top categories.</p>
+          <h2 className="text-3xl font-headline font-bold">OUR CATEGORIES</h2>
+          <p className="text-muted-foreground">Browse through our wide range of shoe and handbag categories.</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {topCategories.map(category => (
+          {allCategories.map(category => (
             <Link href={`/shop/${category.id}`} key={category.id} className="group text-center">
               <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl border-none">
                 <CardContent className="p-0 relative">
