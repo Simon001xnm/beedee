@@ -1,3 +1,5 @@
+
+'use client';
 import { getProductById, getCategoryById, getRelatedProducts } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -14,7 +16,8 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/product-card";
 import { ProductRecommendations } from "@/components/product-recommendations";
-import type { Metadata } from 'next';
+import { useCart } from "@/context/cart-context";
+import { Product } from "@/lib/types";
 
 type ProductPageProps = {
   params: {
@@ -22,26 +25,14 @@ type ProductPageProps = {
   };
 };
 
-export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = getProductById(params.productId);
-  if (!product) {
-    return {
-      title: 'Product Not Found',
-    };
-  }
-  return {
-    title: product.name,
-    description: product.description,
-  };
-}
-
 export default function ProductPage({ params }: ProductPageProps) {
+  const { addToCart } = useCart();
   const product = getProductById(params.productId);
 
   if (!product) {
     notFound();
   }
-
+  
   const category = getCategoryById(product.category);
   const relatedProducts = getRelatedProducts(product);
 
@@ -53,6 +44,10 @@ export default function ProductPage({ params }: ProductPageProps) {
     breadcrumbItems.push({ label: category.name, href: `/shop/${category.id}` });
   }
   breadcrumbItems.push({ label: product.name });
+
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8">
@@ -85,7 +80,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           <Separator />
           <p className="text-muted-foreground leading-relaxed">{product.description}</p>
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
-            <Button size="lg" className="flex-1">Add to Cart</Button>
+            <Button size="lg" className="flex-1" onClick={handleAddToCart}>Add to Cart</Button>
             <Button size="lg" variant="outline" className="flex-1">Buy Now</Button>
           </div>
         </div>

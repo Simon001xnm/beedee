@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from "next/link";
@@ -19,14 +20,17 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Icons } from "./icons";
 import { cn } from "@/lib/utils";
 import { categories } from "@/lib/data";
+import { useCart } from "@/context/cart-context";
+import { Badge } from "./ui/badge";
 
 const mainNavLinks = categories.filter(c => !c.parentId).map(c => ({ href: `/shop/${c.id}`, label: c.name }));
 
 export function Header() {
   const pathname = usePathname();
+  const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -101,6 +105,13 @@ export function Header() {
                 </Link>
               ))}
             </div>
+             <div className="mt-6 flex flex-col gap-2">
+                <Link href="/account" className="text-lg text-foreground/60 hover:text-foreground/80">Account</Link>
+                 <Link href="/cart" className="text-lg text-foreground/60 hover:text-foreground/80 flex items-center gap-2">
+                  Cart
+                  {totalItems > 0 && <Badge variant="secondary">{totalItems}</Badge>}
+                </Link>
+              </div>
           </SheetContent>
         </Sheet>
       </div>
@@ -132,13 +143,20 @@ export function Header() {
               </Link>
             ))}
              <div className="flex items-center ml-auto">
-                <Button variant="ghost" size="icon">
-                  <User className="h-5 w-5" />
-                  <span className="sr-only">Account</span>
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="/account">
+                    <User className="h-5 w-5" />
+                    <span className="sr-only">Account</span>
+                  </Link>
                 </Button>
-                <Button variant="ghost" size="icon">
-                  <ShoppingCart className="h-5 w-5" />
-                  <span className="sr-only">Cart</span>
+                <Button variant="ghost" size="icon" className="relative" asChild>
+                  <Link href="/cart">
+                    <ShoppingCart className="h-5 w-5" />
+                    <span className="sr-only">Cart</span>
+                     {totalItems > 0 && (
+                      <Badge className="absolute -top-1 -right-1 h-5 w-5 justify-center p-0">{totalItems}</Badge>
+                    )}
+                  </Link>
                 </Button>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 export interface Category {
   id: string;
   name: string;
@@ -15,4 +16,8 @@ export interface Product {
   category: string;
   subcategory: string | null;
   relatedProducts: string[];
+}
+
+export interface CartItem extends Product {
+  quantity: number;
 }
