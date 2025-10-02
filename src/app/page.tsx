@@ -5,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { categories, products, getProducts } from '@/lib/data';
 import { CreditCard, RefreshCw, Truck, MessageCircle, Star, Heart } from 'lucide-react';
 import { FlashSaleBanner } from '@/components/flash-sale-banner';
-import { Icons } from '@/components/icons';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 import { HeroCarousel } from '@/components/hero-carousel';
@@ -164,7 +163,7 @@ export default function Home() {
           </div>
           <Separator className="my-8" />
            <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Bee&Dee. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Bee & Dee. All rights reserved.</p>
           </div>
         </div>
       </footer>

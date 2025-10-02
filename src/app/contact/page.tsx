@@ -4,15 +4,15 @@ import { Separator } from "@/components/ui/separator";
 
 export const metadata = {
   title: "Contact Us",
-  description: "Get in touch with Bee&Dee.",
+  description: "Get in touch with Bee & Dee.",
 };
 
 const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+254 792 822146",
-    href: "tel:+254792822146",
+    value: "+254 106587150",
+    href: "tel:+254106587150",
   },
   {
     icon: Mail,
@@ -23,7 +23,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Sawa Mall, 3rd Floor, Shop C8, Moi Avenue, Nairobi",
+    value: "Juction Trade Centre, Nairobi along Latema Road off Riverroad",
   },
 ];
 

@@ -26,7 +26,7 @@ export const Icons = {
       {...props}
     >
       <text x="0" y="90" fontFamily="'Playfair Display', serif" fontSize="100" fontWeight="700" fill="currentColor">
-        Bee&Dee
+        Bee & Dee
       </text>
     </svg>
   ),

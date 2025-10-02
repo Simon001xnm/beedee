@@ -10,19 +10,19 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-               <Image src="/logo.png" alt="Bee&Dee" width={120} height={50} className="brightness-0 invert" />
+               <Image src="/logo.png" alt="Bee & Dee" width={120} height={50} className="brightness-0 invert" />
             </Link>
             <p className="max-w-md text-primary-foreground/80">
-              Discover your perfect pair at Bee&Dee. We offer a wide range of stylish and comfortable shoes for every occasion.
+              Discover your perfect pair at Bee & Dee. We offer a wide range of stylish and comfortable shoes for every occasion.
             </p>
             <div className="mt-4 flex flex-col gap-2 text-primary-foreground/90">
                 <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-accent" />
-                    <span>+254 792 822146</span>
+                    <span>+254 106587150</span>
                 </div>
                  <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-accent" />
-                    <span>info@magicalshoekenya.com</span>
+                    <span>info@beedee.com</span>
                 </div>
             </div>
              <div className="mt-4 flex space-x-4">

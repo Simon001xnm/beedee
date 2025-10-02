@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Return Policy",
-  description: "Read the return and exchange policy for Bee&Dee.",
+  description: "Read the return and exchange policy for Bee & Dee.",
 };
 
 export default function ReturnPolicyPage() {
@@ -21,7 +21,7 @@ export default function ReturnPolicyPage() {
         </CardHeader>
         <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            At Bee&Dee, we want you to be completely happy with your purchase. If you are not satisfied for any reason, we are here to help with our return and exchange policy.
+            At Bee & Dee, we want you to be completely happy with your purchase. If you are not satisfied for any reason, we are here to help with our return and exchange policy.
           </p>
           
           <h3 className="font-semibold text-foreground pt-4">Conditions for Return</h3>
@@ -43,7 +43,7 @@ export default function ReturnPolicyPage() {
           </p>
 
            <p className="pt-6 text-sm">
-            This is a placeholder policy. Please consult with Bee&Dee directly for their official return policy.
+            This is a placeholder policy. Please consult with Bee & Dee directly for their official return policy.
           </p>
 
         </CardContent>

@@ -32,7 +32,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/logo.png" alt="Bee&Dee" width={100} height={40} />
+          <Image src="/logo.png" alt="Bee & Dee" width={100} height={40} />
         </Link>
         <div className="relative ml-auto flex-1 md:grow-0">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -47,14 +47,14 @@ export function Header() {
                 <Phone className="h-5 w-5 text-primary" />
                 <div className="flex flex-col text-sm">
                     <span className="font-semibold">CALL US</span>
-                    <a href="tel:+254792822146" className="text-muted-foreground hover:text-primary">+254 792 822146</a>
+                    <a href="tel:+254106587150" className="text-muted-foreground hover:text-primary">+254 106587150</a>
                 </div>
             </div>
              <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
                 <div className="flex flex-col text-sm">
                     <span className="font-semibold">EMAIL US</span>
-                    <a href="mailto:info@magicalshoekenya.com" className="text-muted-foreground hover:text-primary">info@magicalshoekenya.com</a>
+                    <a href="mailto:info@beedee.com" className="text-muted-foreground hover:text-primary">info@beedee.com</a>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <Image src="/logo.png" alt="Bee&Dee" width={120} height={50} />
+              <Image src="/logo.png" alt="Bee & Dee" width={120} height={50} />
             </Link>
             <div className="flex flex-col space-y-3">
               <Link

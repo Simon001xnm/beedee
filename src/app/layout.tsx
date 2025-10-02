@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Kenya Shoe Shop',
+  title: 'Bee & Dee',
   description: 'The best shoes in Kenya, delivered to your doorstep.',
 };
 

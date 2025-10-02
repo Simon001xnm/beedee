@@ -11,7 +11,7 @@ const WhatsAppIcon = () => (
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/254792822146"
+      href="https://wa.me/254106587150"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 left-4 z-50 transition-transform hover:scale-110"
