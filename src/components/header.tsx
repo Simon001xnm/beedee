@@ -7,9 +7,12 @@ import {
   Search,
   ShoppingCart,
   User,
+  Phone,
+  Mail,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Sheet,
   SheetContent,
@@ -27,39 +30,34 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Icons.LogoFull className="h-6" />
-          </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link
-                href="/shop"
-                className={cn(
-                  "transition-colors hover:text-foreground/80",
-                  pathname === '/shop'
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                )}
-              >
-                Shop
-              </Link>
-            {mainNavLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "transition-colors hover:text-foreground/80",
-                  pathname?.startsWith(link.href)
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+        <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Icons.LogoFull className="h-8" />
+        </Link>
+        <div className="relative ml-auto flex-1 md:grow-0">
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Input
+            type="search"
+            placeholder="Search..."
+            className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[320px]"
+          />
         </div>
-        
+        <div className="hidden md:flex items-center gap-4 ml-auto">
+            <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5 text-primary" />
+                <div className="flex flex-col text-sm">
+                    <span className="font-semibold">CALL US</span>
+                    <a href="tel:+254792822146" className="text-muted-foreground hover:text-primary">+254 792 822146</a>
+                </div>
+            </div>
+             <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-primary" />
+                <div className="flex flex-col text-sm">
+                    <span className="font-semibold">EMAIL US</span>
+                    <a href="mailto:info@magicalshoekenya.com" className="text-muted-foreground hover:text-primary">info@magicalshoekenya.com</a>
+                </div>
+            </div>
+        </div>
+
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -104,29 +102,46 @@ export function Header() {
             </div>
           </SheetContent>
         </Sheet>
-        
-        <div className="flex flex-1 items-center justify-end md:justify-end">
-           <div className="md:hidden">
-              <Link href="/" className="flex items-center space-x-2">
-                <Icons.LogoFull className="h-6" />
-              </Link>
-            </div>
-          <nav className="flex items-center">
-            <Button variant="ghost" size="icon">
-              <Search className="h-5 w-5" />
-              <span className="sr-only">Search</span>
-            </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
-              <span className="sr-only">Account</span>
-            </Button>
-            <Button variant="ghost" size="icon">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="sr-only">Cart</span>
-            </Button>
-          </nav>
-        </div>
       </div>
+      <nav className="hidden md:block bg-muted">
+        <div className="container flex items-center justify-center space-x-6 text-sm font-medium h-12">
+            <Link
+                href="/shop"
+                className={cn(
+                  "transition-colors hover:text-primary",
+                  pathname === '/shop'
+                    ? "text-primary font-bold"
+                    : "text-foreground/80"
+                )}
+              >
+                All Products
+              </Link>
+            {mainNavLinks.map(link => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "transition-colors hover:text-primary",
+                  pathname?.startsWith(link.href)
+                    ? "text-primary font-bold"
+                    : "text-foreground/80"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+             <div className="flex items-center ml-auto">
+                <Button variant="ghost" size="icon">
+                  <User className="h-5 w-5" />
+                  <span className="sr-only">Account</span>
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <ShoppingCart className="h-5 w-5" />
+                  <span className="sr-only">Cart</span>
+                </Button>
+            </div>
+          </div>
+      </nav>
     </header>
   );
 }
