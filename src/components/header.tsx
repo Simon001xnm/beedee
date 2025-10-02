@@ -32,6 +32,17 @@ export function Header() {
             <Icons.LogoFull className="h-6" />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
+            <Link
+                href="/shop"
+                className={cn(
+                  "transition-colors hover:text-foreground/80",
+                  pathname === '/shop'
+                    ? "text-foreground"
+                    : "text-foreground/60"
+                )}
+              >
+                Shop
+              </Link>
             {mainNavLinks.map(link => (
               <Link
                 key={link.href}
@@ -65,6 +76,17 @@ export function Header() {
               <Icons.LogoFull className="h-6" />
             </Link>
             <div className="flex flex-col space-y-3">
+              <Link
+                href="/shop"
+                className={cn(
+                  "transition-colors hover:text-foreground/80 text-lg",
+                  pathname === '/shop'
+                    ? "text-foreground font-semibold"
+                    : "text-foreground/60"
+                )}
+              >
+                Shop
+              </Link>
               {mainNavLinks.map(link => (
                 <Link
                   key={link.href}
@@ -83,10 +105,12 @@ export function Header() {
           </SheetContent>
         </Sheet>
         
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            {/* Can be a search input here */}
-          </div>
+        <div className="flex flex-1 items-center justify-end md:justify-end">
+           <div className="md:hidden">
+              <Link href="/" className="flex items-center space-x-2">
+                <Icons.LogoFull className="h-6" />
+              </Link>
+            </div>
           <nav className="flex items-center">
             <Button variant="ghost" size="icon">
               <Search className="h-5 w-5" />
