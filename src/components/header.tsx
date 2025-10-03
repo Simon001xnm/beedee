@@ -2,7 +2,6 @@
 'use client';
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Menu,
@@ -36,7 +35,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/Logo.png" alt="Bee & Dee" width={100} height={40} />
+          <img src="/Logo.png" alt="Bee & Dee" style={{ height: '40px', width: 'auto' }} />
         </Link>
         <div className="relative ml-auto flex-1 md:grow-0">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -76,7 +75,7 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <Image src="/Logo.png" alt="Bee & Dee" width={120} height={50} />
+              <img src="/Logo.png" alt="Bee & Dee" style={{ height: '50px', width: 'auto' }} />
             </Link>
             <div className="flex flex-col space-y-3">
               <Link
