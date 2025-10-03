@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Icons } from "./icons";
 import { Facebook, Instagram, Phone, Mail } from "lucide-react";
 
 export function Footer() {
