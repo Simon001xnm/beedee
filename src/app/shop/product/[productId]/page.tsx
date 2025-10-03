@@ -29,17 +29,27 @@ type ProductPageProps = {
 export default function ProductPage({ params }: ProductPageProps) {
   const { addToCart } = useCart();
   const [product, setProduct] = useState<Product | undefined>(undefined);
+  const [productId, setProductId] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchProduct = () => {
-      const p = getProductById(params.productId);
+    // Since params can be a promise, we handle it here.
+    const resolveParams = async () => {
+        const resolvedParams = await params;
+        setProductId(resolvedParams.productId);
+    };
+    resolveParams();
+  }, [params]);
+
+
+  useEffect(() => {
+    if (productId) {
+      const p = getProductById(productId);
       if (!p) {
         notFound();
       }
       setProduct(p);
-    };
-    fetchProduct();
-  }, [params.productId]);
+    }
+  }, [productId]);
 
 
   if (!product) {
