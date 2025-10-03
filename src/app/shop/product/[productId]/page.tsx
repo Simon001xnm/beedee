@@ -1,3 +1,4 @@
+
 'use client';
 import { getProductById, getCategoryById, getRelatedProducts } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -17,6 +18,7 @@ import { ProductCard } from "@/components/product-card";
 import { ProductRecommendations } from "@/components/product-recommendations";
 import { useCart } from "@/context/cart-context";
 import { Product } from "@/lib/types";
+import { useEffect, useState } from "react";
 
 type ProductPageProps = {
   params: {
@@ -26,10 +28,23 @@ type ProductPageProps = {
 
 export default function ProductPage({ params }: ProductPageProps) {
   const { addToCart } = useCart();
-  const product = getProductById(params.productId);
+  const [product, setProduct] = useState<Product | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchProduct = () => {
+      const p = getProductById(params.productId);
+      if (!p) {
+        notFound();
+      }
+      setProduct(p);
+    };
+    fetchProduct();
+  }, [params.productId]);
+
 
   if (!product) {
-    notFound();
+    // You can return a loading state here
+    return <div>Loading...</div>;
   }
   
   const category = getCategoryById(product.category);
