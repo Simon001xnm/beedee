@@ -1,4 +1,3 @@
-
 'use client';
 import { getProductById, getCategoryById, getRelatedProducts } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -76,7 +75,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl md:text-4xl font-headline font-bold">{product.name}</h1>
-          <p className="text-3xl font-bold text-primary">{formatPrice(product.price)}</p>
+          <p className="text-3xl font-bold text-accent">{formatPrice(product.price)}</p>
           <Separator />
           <p className="text-muted-foreground leading-relaxed">{product.description}</p>
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
