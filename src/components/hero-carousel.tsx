@@ -65,14 +65,14 @@ export function HeroCarousel() {
                     className="object-cover"
                     data-ai-hint={item.imageHint}
                 />
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/60" />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="container mx-auto px-4 text-center text-white">
                         <p className="text-xl md:text-2xl font-light">{item.super_title}</p>
                         <h1 className="text-5xl md:text-7xl font-headline font-bold my-4">{item.title}</h1>
                         <p className="text-lg md:text-xl max-w-lg mx-auto mb-8">{item.description}</p>
                         <div className="flex gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-primary hover:bg-primary/80">
+                            <Button asChild size="lg">
                                 <Link href={item.href}>Shop Now</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black">

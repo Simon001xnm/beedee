@@ -30,7 +30,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           <CardTitle className="text-base font-medium leading-tight line-clamp-2">{product.name}</CardTitle>
         </CardHeader>
         <CardFooter className="p-4 pt-0">
-          <p className="text-lg font-semibold text-accent">{formatPrice(product.price)}</p>
+          <p className="text-lg font-semibold text-primary">{formatPrice(product.price)}</p>
         </CardFooter>
       </Card>
     </Link>

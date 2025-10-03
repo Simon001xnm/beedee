@@ -114,7 +114,7 @@ export function Header() {
           </SheetContent>
         </Sheet>
       </div>
-      <nav className="hidden md:block bg-primary/10">
+      <nav className="hidden md:block border-t">
         <div className="container flex items-center justify-center space-x-6 text-sm font-medium h-12">
             <Link
                 href="/shop"

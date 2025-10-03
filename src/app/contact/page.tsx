@@ -52,13 +52,13 @@ export default function ContactPage() {
 
       <Card className="max-w-4xl mx-auto mt-10 shadow-lg">
         <CardHeader>
-          <CardTitle className="text-2xl font-headline text-primary">Our Information</CardTitle>
+          <CardTitle className="text-2xl font-headline">Our Information</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
             {contactDetails.map((detail) => (
               <div key={detail.label} className="flex items-start gap-4">
-                <detail.icon className="h-6 w-6 text-accent mt-1" />
+                <detail.icon className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg">{detail.label}</h3>
                   {detail.href ? (
@@ -76,7 +76,7 @@ export default function ContactPage() {
           <Separator className="my-8" />
 
           <div>
-            <h3 className="font-semibold text-lg text-center mb-4 text-primary">Follow us on Social Media</h3>
+            <h3 className="font-semibold text-lg text-center mb-4">Follow us on Social Media</h3>
             <div className="flex justify-center gap-6">
               {socialLinks.map((social) => (
                 <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
