@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-               <img src="/Logo.png" alt="Bee & Dee" style={{ height: '50px', width: 'auto' }} />
+               <img src="/brands/Logo.png" alt="Bee & Dee" style={{ height: '50px', width: 'auto' }} />
             </Link>
             <p className="max-w-md text-primary-foreground/80">
               Discover your perfect pair at Bee & Dee. We offer a wide range of stylish and comfortable shoes for every occasion.
