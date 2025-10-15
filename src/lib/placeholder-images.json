@@ -1,114 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "mens-sneakers",
-      "description": "A collection of men's sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1744622504873-c54b18731180?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZW4lMjBzbmVha2Vyc3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "men sneakers"
-    },
-    {
-      "id": "mens-formal",
-      "description": "A pair of men's formal shoes",
-      "imageUrl": "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtYWwlMjBzaG9lc3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "formal shoes"
-    },
-    {
-      "id": "mens-boots",
-      "description": "A pair of men's Timberland-style boots",
-      "imageUrl": "https://images.unsplash.com/photo-1549385567-cd2800e3a65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBib290c3xlbnwwfHx8fDE3NTk0MDEyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "men boots"
-    },
-    {
-      "id": "mens-loafers",
-      "description": "A pair of men's loafers",
-      "imageUrl": "https://images.unsplash.com/photo-1693287728946-058e154f3a14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBsb2FmZXJzfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "men loafers"
-    },
-    {
-      "id": "ladies-sneakers",
-      "description": "A pair of stylish ladies' sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1695508874945-4cde5319f110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21lbiUyMHNuZWFrZXJzfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "women sneakers"
-    },
-    {
-      "id": "ladies-heels",
-      "description": "A pair of elegant high heels",
-      "imageUrl": "https://images.unsplash.com/photo-1627631457335-d1041fd0cb8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGlnaCUyMGhlZWxzfGVufDB8fHx8MTc1OTM0NDYwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "high heels"
-    },
-    {
-      "id": "ladies-sandals",
-      "description": "A pair of comfortable ladies' sandals",
-      "imageUrl": "https://images.unsplash.com/photo-1597423913783-c53b15744c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMHNhbmRhbHN8ZW58MHx8fHwxNzU5NDAxMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "women sandals"
-    },
-    {
-      "id": "ladies-boots",
-      "description": "A pair of fashionable ladies' boots",
-      "imageUrl": "https://images.unsplash.com/photo-1545571597-3a20563b55cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21lbiUyMGJvb3RzfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "women boots"
-    },
-    {
-      "id": "nike-air-max",
-      "description": "Nike Air Max sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1658492572022-ecf972b354a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuaWtlJTIwc25lYWtlcnN8ZW58MHx8fHwxNzU5NDAxMjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nike sneakers"
-    },
-    {
-      "id": "adidas-yeezy",
-      "description": "Adidas Yeezy sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1676821537459-f4de7b5ac18e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhZGlkYXMlMjBzbmVha2Vyc3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "adidas sneakers"
-    },
-    {
-      "id": "alexander-mcqueen",
-      "description": "Alexander McQueen oversized sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1625697501168-8db2e03c1046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZXNpZ25lciUyMHNuZWFrZXJzfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "designer sneakers"
-    },
-    {
-      "id": "new-balance",
-      "description": "New Balance classic sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1659738495795-f0aef20e809c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXclMjBiYWxhbmNlfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "new balance"
-    },
-    {
-      "id": "clarks",
-      "description": "Clarks comfortable sneakers",
-      "imageUrl": "https://images.unsplash.com/photo-1709186404666-ee89a090575c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbGFya3MlMjBzaG9lc3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "clarks shoes"
-    },
-    {
-      "id": "nike-mercurial",
-      "description": "Nike Mercurial football boots",
-      "imageUrl": "https://images.unsplash.com/photo-1569949193459-0ebef6dd01d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmb290YmFsbCUyMGNsZWF0c3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "football cleats"
-    },
-    {
-      "id": "adidas-predator",
-      "description": "Adidas Predator football boots",
-      "imageUrl": "https://images.unsplash.com/photo-1612387048655-5b94cf7543b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzb2NjZXIlMjBjbGVhdHN8ZW58MHx8fHwxNzU5NDAxMjY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "soccer cleats"
-    },
-    {
-      "id": "puma-football",
-      "description": "Puma football boots",
-      "imageUrl": "https://images.unsplash.com/photo-1708728458780-b71a224c8c4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHVtYSUyMHNvY2NlcnxlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "puma soccer"
-    },
-    {
-      "id": "leather-handbags",
-      "description": "A collection of leather handbags",
-      "imageUrl": "https://images.unsplash.com/photo-1633555741039-e87012f6a9d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsZWF0aGVyJTIwaGFuZGJhZ3xlbnwwfHx8fDE3NTkzOTE3NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "leather handbag"
-    },
-    {
-      "id": "branded-handbags",
-      "description": "A designer branded handbag",
-      "imageUrl": "https://images.unsplash.com/photo-1603567364858-8e3362d9f040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXNpZ25lciUyMGhhbmRiYWd8ZW58MHx8fHwxNzU5MzIxODMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "designer handbag"
-    },
-    {
       "id": "nike-shox-1",
       "description": "Nike Shox TL",
       "imageUrl": "/brands/1759343541032.jpg",
@@ -125,6 +17,102 @@
       "description": "Nike Shox TL back view",
       "imageUrl": "/brands/1759343541420.jpg",
       "imageHint": "nike shox"
+    },
+    {
+      "id": "jordan-1",
+      "description": "Air Jordan 1 Mid",
+      "imageUrl": "/brands/1759343546186.jpg",
+      "imageHint": "air jordan"
+    },
+    {
+      "id": "jordan-2",
+      "description": "Air Jordan 1 Mid side",
+      "imageUrl": "/brands/1759343546446.jpg",
+      "imageHint": "air jordan"
+    },
+    {
+      "id": "jordan-3",
+      "description": "Air Jordan 1 Mid back",
+      "imageUrl": "/brands/1759343546762.jpg",
+      "imageHint": "air jordan"
+    },
+    {
+      "id": "jordan-4",
+      "description": "Air Jordan 1 Mid top",
+      "imageUrl": "/brands/1759343546977.jpg",
+      "imageHint": "air jordan"
+    },
+    {
+      "id": "converse-1",
+      "description": "Converse Chuck 70 Leather",
+      "imageUrl": "/brands/1759343543521.jpg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-2",
+      "description": "Converse Chuck 70 Leather side",
+      "imageUrl": "/brands/1759343545470.jpg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-3",
+      "description": "Converse Chuck 70 Leather back",
+      "imageUrl": "/brands/1759343547405.jpg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "lacoste-1",
+      "description": "Lacoste Men's Official Shoe",
+      "imageUrl": "/brands/1759343545660.jpg",
+      "imageHint": "lacoste official"
+    },
+    {
+      "id": "lacoste-2",
+      "description": "Lacoste Men's Official Shoe side",
+      "imageUrl": "/brands/1759343545857.jpg",
+      "imageHint": "lacoste official"
+    },
+    {
+      "id": "lacoste-3",
+      "description": "Lacoste Men's Official Shoe top",
+      "imageUrl": "/brands/1759343546334.jpg",
+      "imageHint": "lacoste official"
+    },
+    {
+      "id": "nike-airforce-1",
+      "description": "Nike Air Force 1",
+      "imageUrl": "/brands/1759343545964.jpg",
+      "imageHint": "nike airforce"
+    },
+    {
+      "id": "nike-airforce-2",
+      "description": "Nike Air Force 1 side",
+      "imageUrl": "/brands/1759343546870.jpg",
+      "imageHint": "nike airforce"
+    },
+    {
+      "id": "tommy-boots-1",
+      "description": "Tommy Hilfiger High Boots",
+      "imageUrl": "/brands/1759343546083.jpg",
+      "imageHint": "tommy hilfiger"
+    },
+    {
+      "id": "tommy-boots-2",
+      "description": "Tommy Hilfiger High Boots side",
+      "imageUrl": "/brands/1759343547242.jpg",
+      "imageHint": "tommy hilfiger"
+    },
+    {
+      "id": "nike-shox-black",
+      "description": "Nike Shox Black",
+      "imageUrl": "/brands/1759343546667.jpg",
+      "imageHint": "nike shox"
+    },
+    {
+      "id": "polo-sneaker",
+      "description": "Polo Ralph Lauren Sneaker",
+      "imageUrl": "/brands/1759343547127.jpg",
+      "imageHint": "polo ralphlauren"
     }
   ]
 }
