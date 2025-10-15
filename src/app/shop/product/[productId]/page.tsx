@@ -87,7 +87,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       src={image.url}
                       alt={`${product.name} - view ${index + 1}`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-contain rounded-lg"
                       data-ai-hint={image.hint}
                     />
                   </div>

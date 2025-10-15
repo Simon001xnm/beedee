@@ -144,7 +144,7 @@ export default function Home() {
                   {products.map(product => (
                     <div key={product.id} className="flex items-center gap-4">
                       <Link href={`/shop/product/${product.id}`} className="block w-16 h-16 bg-secondary rounded-md overflow-hidden">
-                         <Image src={product.images[0].url} alt={product.name} width={64} height={64} className="object-cover w-full h-full" />
+                         <Image src={product.images[0].url} alt={product.name} width={64} height={64} className="object-contain w-full h-full" />
                       </Link>
                       <div>
                         <Link href={`/shop/product/${product.id}`} className="font-semibold text-sm text-foreground hover:text-primary leading-tight line-clamp-2">{product.name}</Link>
