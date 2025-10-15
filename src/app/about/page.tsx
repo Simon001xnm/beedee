@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                  <Image
-                    src="/brands/Staff2.jpg"
+                    src="/brands/Staff3.jpg"
                     alt="Bee & Dee Staff Member 2"
                     width={300}
                     height={400}
