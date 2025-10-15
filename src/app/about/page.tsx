@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                    src="/Staff1.jpg"
+                    src="/brands/Staff1.jpg"
                     alt="Bee & Dee Staff Member 1"
                     width={300}
                     height={400}
@@ -29,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                  <Image
-                    src="/Staff2.jpg"
+                    src="/brands/Staff2.jpg"
                     alt="Bee & Dee Staff Member 2"
                     width={300}
                     height={400}
