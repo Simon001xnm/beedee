@@ -23,7 +23,7 @@ export default function AboutPage() {
                     alt="Bee & Dee Staff Member 1"
                     width={300}
                     height={400}
-                    className="object-cover w-full h-full"
+                    className="object-cover"
                     data-ai-hint="team member"
                 />
             </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
                     alt="Bee & Dee Staff Member 2"
                     width={300}
                     height={400}
-                    className="object-cover w-full h-full"
+                    className="object-cover"
                     data-ai-hint="team member"
                 />
             </div>
