@@ -82,7 +82,7 @@ export default function Home() {
           <h2 className="text-3xl font-headline font-bold text-primary">TOP CATEGORIES</h2>
           <p className="text-muted-foreground">Here are some of our top categories.</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {topCategories.map(category => (
             <Link href={`/shop/${category.id}`} key={category.id} className="group text-center">
               <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl border-none bg-primary/5">

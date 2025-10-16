@@ -12,8 +12,6 @@ export const categories: Category[] = [
   { id: 'ladies-shoes', name: 'Ladies\' Shoes', parentId: null, imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
   { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
   { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
-  { id: 'football-boots', name: 'Football Boots', parentId: null, imageUrl: 'https://picsum.photos/seed/fb-cat/600/400', imageHint: 'football boots' },
-  { id: 'handbags', name: 'Handbags', parentId: null, imageUrl: 'https://picsum.photos/seed/handbag/600/400', imageHint: 'handbags leather' }
 ];
 
 export const products: Product[] = [
