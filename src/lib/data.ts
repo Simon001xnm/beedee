@@ -153,6 +153,476 @@ export const products: Product[] = [
         category: 'sneakers',
         subcategory: null,
         relatedProducts: ['prod-adidas-campus']
+    },
+    {
+        id: 'new-prod-1',
+        name: 'Product 1',
+        price: 5000,
+        images: [ getImage('new-image-1') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-2',
+        name: 'Product 2',
+        price: 5000,
+        images: [ getImage('new-image-2') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-3',
+        name: 'Product 3',
+        price: 5000,
+        images: [ getImage('new-image-3') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-4',
+        name: 'Product 4',
+        price: 5000,
+        images: [ getImage('new-image-4') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-5',
+        name: 'Product 5',
+        price: 5000,
+        images: [ getImage('new-image-5') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-6',
+        name: 'Product 6',
+        price: 5000,
+        images: [ getImage('new-image-6') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-7',
+        name: 'Product 7',
+        price: 5000,
+        images: [ getImage('new-image-7') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-8',
+        name: 'Product 8',
+        price: 5000,
+        images: [ getImage('new-image-8') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-9',
+        name: 'Product 9',
+        price: 5000,
+        images: [ getImage('new-image-9') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-10',
+        name: 'Product 10',
+        price: 5000,
+        images: [ getImage('new-image-10') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-11',
+        name: 'Product 11',
+        price: 5000,
+        images: [ getImage('new-image-11') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-12',
+        name: 'Product 12',
+        price: 5000,
+        images: [ getImage('new-image-12') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-13',
+        name: 'Product 13',
+        price: 5000,
+        images: [ getImage('new-image-13') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-14',
+        name: 'Product 14',
+        price: 5000,
+        images: [ getImage('new-image-14') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-15',
+        name: 'Product 15',
+        price: 5000,
+        images: [ getImage('new-image-15') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-16',
+        name: 'Product 16',
+        price: 5000,
+        images: [ getImage('new-image-16') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-17',
+        name: 'Product 17',
+        price: 5000,
+        images: [ getImage('new-image-17') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-18',
+        name: 'Product 18',
+        price: 5000,
+        images: [ getImage('new-image-18') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-19',
+        name: 'Product 19',
+        price: 5000,
+        images: [ getImage('new-image-19') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-20',
+        name: 'Product 20',
+        price: 5000,
+        images: [ getImage('new-image-20') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-21',
+        name: 'Product 21',
+        price: 5000,
+        images: [ getImage('new-image-21') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-22',
+        name: 'Product 22',
+        price: 5000,
+        images: [ getImage('new-image-22') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-23',
+        name: 'Product 23',
+        price: 5000,
+        images: [ getImage('new-image-23') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-24',
+        name: 'Product 24',
+        price: 5000,
+        images: [ getImage('new-image-24') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-25',
+        name: 'Product 25',
+        price: 5000,
+        images: [ getImage('new-image-25') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-26',
+        name: 'Product 26',
+        price: 5000,
+        images: [ getImage('new-image-26') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-27',
+        name: 'Product 27',
+        price: 5000,
+        images: [ getImage('new-image-27') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-28',
+        name: 'Product 28',
+        price: 5000,
+        images: [ getImage('new-image-28') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-29',
+        name: 'Product 29',
+        price: 5000,
+        images: [ getImage('new-image-29') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-30',
+        name: 'Product 30',
+        price: 5000,
+        images: [ getImage('new-image-30') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-31',
+        name: 'Product 31',
+        price: 5000,
+        images: [ getImage('new-image-31') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-32',
+        name: 'Product 32',
+        price: 5000,
+        images: [ getImage('new-image-32') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-33',
+        name: 'Product 33',
+        price: 5000,
+        images: [ getImage('new-image-33') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-34',
+        name: 'Product 34',
+        price: 5000,
+        images: [ getImage('new-image-34') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-35',
+        name: 'Product 35',
+        price: 5000,
+        images: [ getImage('new-image-35') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-36',
+        name: 'Product 36',
+        price: 5000,
+        images: [ getImage('new-image-36') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-37',
+        name: 'Product 37',
+        price: 5000,
+        images: [ getImage('new-image-37') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-38',
+        name: 'Product 38',
+        price: 5000,
+        images: [ getImage('new-image-38') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-39',
+        name: 'Product 39',
+        price: 5000,
+        images: [ getImage('new-image-39') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-40',
+        name: 'Product 40',
+        price: 5000,
+        images: [ getImage('new-image-40') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-41',
+        name: 'Product 41',
+        price: 5000,
+        images: [ getImage('new-image-41') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-42',
+        name: 'Product 42',
+        price: 5000,
+        images: [ getImage('new-image-42') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-43',
+        name: 'Product 43',
+        price: 5000,
+        images: [ getImage('new-image-43') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-44',
+        name: 'Product 44',
+        price: 5000,
+        images: [ getImage('new-image-44') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-45',
+        name: 'Product 45',
+        price: 5000,
+        images: [ getImage('new-image-45') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-46',
+        name: 'Product 46',
+        price: 5000,
+        images: [ getImage('new-image-46') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
+        id: 'new-prod-47',
+        name: 'Product 47',
+        price: 5000,
+        images: [ getImage('new-image-47') ],
+        description: 'A great new product.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
     }
 ];
 
@@ -169,3 +639,5 @@ export const getRelatedProducts = (product: Product) => {
 export const getRecommendedProductsByIds = (ids: string[]) => {
   return products.filter(p => ids.includes(p.id));
 }
+
+    
