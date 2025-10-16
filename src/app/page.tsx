@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -36,11 +37,10 @@ const infoItems = [
 ];
 
 const brands = [
-  { name: 'Adidas', logo: '/brands/adidas.svg' },
-  { name: 'New Balance', logo: '/brands/new-balance.svg' },
-  { name: 'Nike', logo: '/brands/nike.svg' },
-  { name: 'Puma', logo: '/brands/puma.svg' },
-  { name: 'Reebok', logo: '/brands/reebok.svg' },
+  { name: 'Adidas', logo: '/brands/Adidas logo.jpeg' },
+  { name: 'New Balance', logo: '/brands/newbalance logo.png' },
+  { name: 'Nike', logo: '/brands/nike logo.jpeg' },
+  { name: 'Tommy Hilfiger', logo: '/brands/hilfiger logo.png' },
 ];
 
 const footerProductLists = {
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center gap-8 md:gap-16 flex-wrap">
           {brands.map(brand => (
-            <Image key={brand.name} src={brand.logo} alt={brand.name} width={100} height={50} className="grayscale hover:grayscale-0 transition-all" />
+            <Image key={brand.name} src={brand.logo} alt={brand.name} width={100} height={50} className="grayscale hover:grayscale-0 transition-all object-contain" />
           ))}
         </div>
       </section>
