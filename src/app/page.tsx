@@ -40,7 +40,7 @@ const brands = [
   { name: 'Adidas', logo: '/brands/Adidas logo.jpeg' },
   { name: 'New Balance', logo: '/brands/newbalance logo.png' },
   { name: 'Nike', logo: '/brands/nike logo.jpeg' },
-  { name: 'Tommy Hilfiger', logo: '/brands/hilfiger logo.png' },
+  { name: 'Tommy Hilfiger', logo: '/brands/hilfiger-logo.png' },
 ];
 
 const footerProductLists = {
