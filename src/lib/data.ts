@@ -11,7 +11,9 @@ export const categories: Category[] = [
   { id: 'mens-shoes', name: 'Men\'s Shoes', parentId: null, imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
   { id: 'ladies-shoes', name: 'Ladies\' Shoes', parentId: null, imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
   { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
-  { id: 'boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
+  { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
+  { id: 'football-boots', name: 'Football Boots', parentId: null, imageUrl: 'https://picsum.photos/seed/fb-cat/600/400', imageHint: 'football boots' },
+  { id: 'handbags', name: 'Handbags', parentId: null, imageUrl: 'https://picsum.photos/seed/handbag/600/400', imageHint: 'handbags leather' }
 ];
 
 export const products: Product[] = [
@@ -95,7 +97,7 @@ export const products: Product[] = [
         ],
         description: 'Make a statement with these stunning high boots from Tommy Hilfiger. Combining classic design with modern flair, these boots are perfect for the fashion-forward woman. Ideal for both casual and dressy outfits.',
         category: 'ladies-shoes',
-        subcategory: 'boots',
+        subcategory: 'ladies-boots',
         relatedProducts: []
     },
     {
@@ -121,6 +123,36 @@ export const products: Product[] = [
         category: 'sneakers',
         subcategory: null,
         relatedProducts: ['prod-converse-chuck-70']
+    },
+    {
+        id: 'prod-nb-550',
+        name: 'New Balance 550',
+        price: 11500,
+        images: [ getImage('nb-550-1') ],
+        description: 'The return of a basketball legend. Originally worn by pros, the new 550 pays tribute to the 1989 original with classic details reminiscent of the era - simple, clean and true to its legacy.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: ['prod-air-jordan-1']
+    },
+    {
+        id: 'prod-adidas-campus',
+        name: 'Adidas Campus 00s',
+        price: 9800,
+        images: [ getImage('adidas-campus-1') ],
+        description: 'These adidas shoes update the iconic Campus 80s, adding modern materials, colours and proportions. They\'re done up in premium suede, lined with soft textile and ride on an off-white midsole — a clear nod to the Campus legacy.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: ['prod-puma-suede']
+    },
+    {
+        id: 'prod-puma-suede',
+        name: 'Puma Suede Classic XXI',
+        price: 7500,
+        images: [ getImage('puma-suede-1') ],
+        description: 'The Suede hit the scene in 1968 and has been changing the game ever since. It’s been worn by icons of every generation, and it’s stayed classic through it all. This version features a full suede upper and an authentic PUMA vibe.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: ['prod-adidas-campus']
     }
 ];
 

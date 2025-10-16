@@ -113,6 +113,24 @@
       "description": "Polo Ralph Lauren Sneaker",
       "imageUrl": "/brands/1759343547127.jpg",
       "imageHint": "polo ralphlauren"
+    },
+    {
+      "id": "nb-550-1",
+      "description": "New Balance 550",
+      "imageUrl": "https://picsum.photos/seed/nb550-1/600/600",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "adidas-campus-1",
+      "description": "Adidas Campus 00s",
+      "imageUrl": "https://picsum.photos/seed/campus1/600/600",
+      "imageHint": "adidas campus"
+    },
+    {
+      "id": "puma-suede-1",
+      "description": "Puma Suede Classic",
+      "imageUrl": "https://picsum.photos/seed/puma1/600/600",
+      "imageHint": "puma suede"
     }
   ]
 }
