@@ -124,36 +124,6 @@ export const products: Product[] = [
         subcategory: null,
         relatedProducts: ['prod-converse-chuck-70']
     },
-    {
-        id: 'prod-nb-550',
-        name: 'New Balance 550',
-        price: 3700,
-        images: [ getImage('nb-550-1') ],
-        description: 'The return of a basketball legend. Originally worn by pros, the new 550 pays tribute to the 1989 original with classic details reminiscent of the era - simple, clean and true to its legacy.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: ['prod-air-jordan-1']
-    },
-    {
-        id: 'prod-adidas-campus',
-        name: 'Adidas Campus 00s',
-        price: 3400,
-        images: [ getImage('adidas-campus-1') ],
-        description: 'These adidas shoes update the iconic Campus 80s, adding modern materials, colours and proportions. They\'re done up in premium suede, lined with soft textile and ride on an off-white midsole — a clear nod to the Campus legacy.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: ['prod-puma-suede']
-    },
-    {
-        id: 'prod-puma-suede',
-        name: 'Puma Suede Classic XXI',
-        price: 2800,
-        images: [ getImage('puma-suede-1') ],
-        description: 'The Suede hit the scene in 1968 and has been changing the game ever since. It’s been worn by icons of every generation, and it’s stayed classic through it all. This version features a full suede upper and an authentic PUMA vibe.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: ['prod-adidas-campus']
-    },
     { id: 'new-prod-1', name: 'Product 1', price: 1500, images: [getImage('new-image-1')], description: 'A great new product.', category: 'sneakers', subcategory: null, relatedProducts: [] },
     { id: 'new-prod-2', name: 'Product 2', price: 1500, images: [getImage('new-image-2')], description: 'A great new product.', category: 'sneakers', subcategory: null, relatedProducts: [] },
     { id: 'new-prod-3', name: 'Product 3', price: 1500, images: [getImage('new-image-3')], description: 'A great new product.', category: 'sneakers', subcategory: null, relatedProducts: [] },
