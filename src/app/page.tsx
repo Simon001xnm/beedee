@@ -129,7 +129,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center gap-8 md:gap-16 flex-wrap">
           {brands.map(brand => (
-            <Image key={brand.name} src={brand.logo} alt={brand.name} width={100} height={50} className="grayscale hover:grayscale-0 transition-all object-contain" />
+            <Image key={brand.name} src={brand.logo} alt={brand.name} width={100} height={50} className="transition-all object-contain" />
           ))}
         </div>
       </section>
