@@ -10,6 +10,9 @@ import { CartProvider } from '@/context/cart-context';
 export const metadata: Metadata = {
   title: 'Bee & Dee',
   description: 'The best shoes in Kenya, delivered to your doorstep.',
+  icons: {
+    icon: '/brands/Logo.png',
+  },
 };
 
 export default function RootLayout({
