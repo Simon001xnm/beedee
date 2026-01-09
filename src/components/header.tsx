@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from "next/link";
@@ -16,6 +17,9 @@ import { Input } from "@/components/ui/input";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -74,6 +78,12 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
+            <SheetHeader className="sr-only">
+              <SheetTitle>Menu</SheetTitle>
+              <SheetDescription>
+                Main navigation menu for the Bee & Dee online store.
+              </SheetDescription>
+            </SheetHeader>
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <Image src="/brands/Logo.png" alt="Bee & Dee" width={120} height={50} />
             </Link>
