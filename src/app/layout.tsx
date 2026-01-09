@@ -33,6 +33,7 @@ export default function RootLayout({
           'min-h-screen bg-background font-body antialiased',
           'font-body'
         )}
+        suppressHydrationWarning={true}
       >
         <CartProvider>
           <div className="relative flex min-h-dvh flex-col">
