@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "kids-airforce-1-1",
+      "description": "Kids Airforce 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.25.23.jpeg",
+      "imageHint": "kids airforce"
+    },
+    {
+      "id": "kids-airforce-1-2",
+      "description": "Kids Airforce 1 side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.25.22.jpeg",
+      "imageHint": "kids airforce"
+    },
+    {
       "id": "kids-sneaker-v3-1",
       "description": "Kids sneaker v3",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31 (1).jpeg",
