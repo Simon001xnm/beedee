@@ -857,6 +857,36 @@
       "description": "Jordan 3",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.17.24.jpeg",
       "imageHint": "jordan 3"
+    },
+    {
+      "id": "nike-airmax-plus-1",
+      "description": "Nike Air Max Plus",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.44.jpeg",
+      "imageHint": "nike airmax"
+    },
+    {
+      "id": "nike-airmax-plus-2",
+      "description": "Nike Air Max Plus",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.45 (1).jpeg",
+      "imageHint": "nike airmax"
+    },
+    {
+      "id": "nike-airmax-plus-3",
+      "description": "Nike Air Max Plus",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.45 (2).jpeg",
+      "imageHint": "nike airmax"
+    },
+    {
+      "id": "nike-airmax-plus-4",
+      "description": "Nike Air Max Plus",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.45 (3).jpeg",
+      "imageHint": "nike airmax"
+    },
+    {
+      "id": "nike-airmax-plus-5",
+      "description": "Nike Air Max Plus",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.45.jpeg",
+      "imageHint": "nike airmax"
     }
   ]
 }

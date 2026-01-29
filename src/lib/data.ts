@@ -16,6 +16,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-nike-airmax-plus',
+        name: 'Nike Air Max Plus',
+        price: 3799,
+        images: [
+            getImage('nike-airmax-plus-1'),
+            getImage('nike-airmax-plus-2'),
+            getImage('nike-airmax-plus-3'),
+            getImage('nike-airmax-plus-4'),
+            getImage('nike-airmax-plus-5'),
+        ],
+        description: 'A stylish and comfortable Nike Air Max Plus sneaker. Available in sizes 40-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-jordan-3',
         name: 'Jordan 3',
         price: 3499,
