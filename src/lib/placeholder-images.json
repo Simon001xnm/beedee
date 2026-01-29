@@ -611,6 +611,36 @@
       "description": "Adidas Samoa pair",
       "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58.jpeg",
       "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samba-1",
+      "description": "Adidas Samba front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.34.jpeg",
+      "imageHint": "adidas samba"
+    },
+    {
+      "id": "samba-2",
+      "description": "Adidas Samba side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.35 (1).jpeg",
+      "imageHint": "adidas samba"
+    },
+    {
+      "id": "samba-3",
+      "description": "Adidas Samba back",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.35.jpeg",
+      "imageHint": "adidas samba"
+    },
+    {
+      "id": "samba-4",
+      "description": "Adidas Samba other side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.36.jpeg",
+      "imageHint": "adidas samba"
+    },
+    {
+      "id": "samba-5",
+      "description": "Adidas Samba angle",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.37.jpeg",
+      "imageHint": "adidas samba"
     }
   ]
 }

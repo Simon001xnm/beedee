@@ -36,6 +36,22 @@ export const products: Product[] = [
         relatedProducts: ['prod-nike-shox-tl-white', 'prod-air-jordan-1']
     },
     {
+        id: 'prod-adidas-samba',
+        name: 'Adidas Samba',
+        price: 2499,
+        images: [
+            getImage('samba-1'),
+            getImage('samba-2'),
+            getImage('samba-3'),
+            getImage('samba-4'),
+            getImage('samba-5'),
+        ],
+        description: 'A true icon, the Adidas Samba is a legendary indoor football shoe that has become a streetwear staple. Its timeless design features a leather upper and suede overlays. Available in sizes 36-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: ['prod-adidas-samoa', 'prod-converse-chuck-70']
+    },
+    {
         id: 'prod-nike-shox-tl-white',
         name: 'Nike Shox TL - White',
         price: 3500,
