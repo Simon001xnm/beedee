@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-kids-sneakers-2',
+        name: 'Kids Sneakers',
+        price: 1799,
+        images: [
+            getImage('kids-sneaker-v2-1'),
+            getImage('kids-sneaker-v2-2'),
+            getImage('kids-sneaker-v2-3'),
+            getImage('kids-sneaker-v2-4'),
+        ],
+        description: 'Stylish and comfortable sneakers for kids. Available in sizes 26-37.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-kids-sneakers',
         name: 'Kids Sneakers',
         price: 1799,
