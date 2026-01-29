@@ -16,6 +16,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-tn-airmax-plus',
+        name: 'Tn Air Max Plus',
+        price: 3499,
+        images: [
+            getImage('tn-airmax-plus-1'),
+            getImage('tn-airmax-plus-2'),
+            getImage('tn-airmax-plus-3'),
+            getImage('tn-airmax-plus-4'),
+            getImage('tn-airmax-plus-5'),
+        ],
+        description: 'A striking and comfortable Tn Air Max Plus sneaker, featuring tuned Air for premium stability and cushioning. Available in sizes 40-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-nike-metcon',
         name: 'Nike Metcon',
         price: 3499,
