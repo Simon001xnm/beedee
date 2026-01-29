@@ -121,7 +121,7 @@
       "imageHint": "air jordan"
     },
     {
-      "id": "jordan-3",
+      "id": "jordan-3-image",
       "description": "Air Jordan 1 Mid back",
       "imageUrl": "/brands/1759343546762.jpg",
       "imageHint": "air jordan"
@@ -887,6 +887,36 @@
       "description": "Nike Air Max Plus",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.22.45.jpeg",
       "imageHint": "nike airmax"
+    },
+    {
+      "id": "airmax-97-1",
+      "description": "Airmax 97",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.52 (2).jpeg",
+      "imageHint": "airmax 97"
+    },
+    {
+      "id": "airmax-97-2",
+      "description": "Airmax 97",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.52 (3).jpeg",
+      "imageHint": "airmax 97"
+    },
+    {
+      "id": "airmax-97-3",
+      "description": "Airmax 97",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.52.jpeg",
+      "imageHint": "airmax 97"
+    },
+    {
+      "id": "airmax-97-4",
+      "description": "Airmax 97",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.53 (1).jpeg",
+      "imageHint": "airmax 97"
+    },
+    {
+      "id": "airmax-97-5",
+      "description": "Airmax 97",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.53.jpeg",
+      "imageHint": "airmax 97"
     }
   ]
 }

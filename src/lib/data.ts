@@ -52,6 +52,22 @@ export const products: Product[] = [
         relatedProducts: []
     },
     {
+        id: 'prod-airmax-97',
+        name: 'Airmax 97',
+        price: 3499,
+        images: [
+            getImage('airmax-97-1'),
+            getImage('airmax-97-2'),
+            getImage('airmax-97-3'),
+            getImage('airmax-97-4'),
+            getImage('airmax-97-5'),
+        ],
+        description: 'A stylish and comfortable Airmax 97. Available in sizes 36-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-airmax-90',
         name: 'Airmax 90',
         price: 3499,
@@ -168,7 +184,7 @@ export const products: Product[] = [
         images: [
             getImage('jordan-1'),
             getImage('jordan-2'),
-            getImage('jordan-3'),
+            getImage('jordan-3-image'),
             getImage('jordan-4'),
         ],
         description: 'The Air Jordan 1 Mid shoe is inspired by the first AJ1, offering fans of Jordan retros a chance to follow in the footsteps of greatness. Fresh colour trims the clean, classic materials, injecting some newness into the familiar design.',
