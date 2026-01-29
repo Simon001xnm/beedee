@@ -16,6 +16,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-timberland-casual',
+        name: 'TimberLand Casual',
+        price: 2800,
+        images: [
+            getImage('timberland-1'),
+            getImage('timberland-2'),
+            getImage('timberland-3'),
+            getImage('timberland-4'),
+            getImage('timberland-5'),
+        ],
+        description: 'A stylish and durable casual shoe from Timberland, perfect for everyday wear. Available in sizes 40-45.',
+        category: 'mens-shoes',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-adidas-samoa',
         name: 'ADIDAS Samoa',
         price: 2800,

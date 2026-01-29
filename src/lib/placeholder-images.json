@@ -1,6 +1,36 @@
 {
   "placeholderImages": [
     {
+      "id": "timberland-1",
+      "description": "Timberland Casual front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.22 (1).jpeg",
+      "imageHint": "timberland shoe"
+    },
+    {
+      "id": "timberland-2",
+      "description": "Timberland Casual side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.22.jpeg",
+      "imageHint": "timberland shoe"
+    },
+    {
+      "id": "timberland-3",
+      "description": "Timberland Casual back",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.23 (1).jpeg",
+      "imageHint": "timberland shoe"
+    },
+    {
+      "id": "timberland-4",
+      "description": "Timberland Casual other side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.23.jpeg",
+      "imageHint": "timberland shoe"
+    },
+    {
+      "id": "timberland-5",
+      "description": "Timberland Casual angle",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.24.jpeg",
+      "imageHint": "timberland shoe"
+    },
+    {
       "id": "nike-shox-1",
       "description": "Nike Shox TL",
       "imageUrl": "/brands/1759343541032.jpg",
