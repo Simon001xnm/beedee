@@ -1,6 +1,6 @@
 
 'use client';
-import { getProductById, getCategoryById, getRelatedProducts } from "@/lib/data";
+import { getProductById, getCategoryById, getProductsByCategory } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import {
@@ -58,7 +58,9 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
   
   const category = getCategoryById(product.category);
-  const relatedProducts = getRelatedProducts(product);
+  const productsInCategory = getProductsByCategory(product.category)
+    .filter((p) => p.id !== product.id)
+    .slice(0, 4);
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -120,13 +122,13 @@ export default function ProductPage({ params }: ProductPageProps) {
         />
       </div>
 
-      {relatedProducts.length > 0 && (
+      {productsInCategory.length > 0 && (
         <>
           <Separator className="my-12" />
           <div>
-            <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6">Related Products</h2>
+            <h2 className="text-2xl md:text-3xl font-headline font-bold mb-6">More in {category?.name}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {relatedProducts.map(relatedProduct => (
+              {productsInCategory.map(relatedProduct => (
                 <ProductCard key={relatedProduct.id} product={relatedProduct} />
               ))}
             </div>
