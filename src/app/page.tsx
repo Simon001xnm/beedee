@@ -52,7 +52,7 @@ const footerProductLists = {
 
 export default function Home() {
   const topCategories = categories.filter(c => c.parentId === null);
-  const latestProducts = getProducts().slice(0, 4);
+  const latestProducts = getProducts().slice(0, 8);
 
   return (
     <div className="flex flex-col">
