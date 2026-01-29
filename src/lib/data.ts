@@ -16,6 +16,26 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-jordan-3',
+        name: 'Jordan 3',
+        price: 3499,
+        images: [
+            getImage('jordan-3-1'),
+            getImage('jordan-3-2'),
+            getImage('jordan-3-3'),
+            getImage('jordan-3-4'),
+            getImage('jordan-3-5'),
+            getImage('jordan-3-6'),
+            getImage('jordan-3-7'),
+            getImage('jordan-3-8'),
+            getImage('jordan-3-9'),
+        ],
+        description: 'A classic Jordan 3 sneaker. Available in sizes 36-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-airmax-90',
         name: 'Airmax 90',
         price: 3499,
