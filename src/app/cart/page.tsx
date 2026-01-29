@@ -46,7 +46,7 @@ export default function CartPage() {
                 <div className="flow-root">
                   <ul role="list" className="-my-6 divide-y divide-border">
                     {cartItems.map((product) => (
-                      <li key={product.id} className="flex py-6">
+                      <li key={product.cartItemId} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-border">
                           <Image
                             src={product.images[0].url}
@@ -65,19 +65,22 @@ export default function CartPage() {
                               </h3>
                               <p className="ml-4">{formatPrice(product.price * product.quantity)}</p>
                             </div>
+                             <p className="mt-1 text-sm text-muted-foreground">
+                                {product.selectedSize} / {product.selectedColor}
+                            </p>
                           </div>
                           <div className="flex flex-1 items-end justify-between text-sm">
                              <div className="flex items-center border border-input rounded-md">
-                                <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(product.id, product.quantity - 1)}>
+                                <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(product.cartItemId, product.quantity - 1)}>
                                   <Minus className="h-4 w-4" />
                                 </Button>
                                 <Input
                                   type="number"
                                   value={product.quantity}
-                                  onChange={(e) => updateQuantity(product.id, parseInt(e.target.value) || 1)}
+                                  onChange={(e) => updateQuantity(product.cartItemId, parseInt(e.target.value) || 1)}
                                   className="h-8 w-12 text-center border-0 bg-transparent"
                                 />
-                                <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(product.id, product.quantity + 1)}>
+                                <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(product.cartItemId, product.quantity + 1)}>
                                   <Plus className="h-4 w-4" />
                                 </Button>
                               </div>
@@ -87,7 +90,7 @@ export default function CartPage() {
                                 variant="ghost"
                                 type="button"
                                 className="font-medium text-primary hover:text-primary/80"
-                                onClick={() => removeFromCart(product.id)}
+                                onClick={() => removeFromCart(product.cartItemId)}
                               >
                                 <Trash2 className="h-4 w-4 mr-1"/>
                                 Remove

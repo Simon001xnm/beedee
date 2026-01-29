@@ -19,6 +19,10 @@ import { ProductRecommendations } from "@/components/product-recommendations";
 import { useCart } from "@/context/cart-context";
 import { Product } from "@/lib/types";
 import { useEffect, useState } from "react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 
 type ProductPageProps = {
   params: {
@@ -28,8 +32,11 @@ type ProductPageProps = {
 
 export default function ProductPage({ params }: ProductPageProps) {
   const { addToCart } = useCart();
+  const { toast } = useToast();
   const [product, setProduct] = useState<Product | undefined>(undefined);
   const [productId, setProductId] = useState<string | null>(null);
+  const [selectedSize, setSelectedSize] = useState<string | undefined>();
+  const [selectedColor, setSelectedColor] = useState<string | undefined>();
 
   useEffect(() => {
     // Since params can be a promise, we handle it here.
@@ -48,6 +55,12 @@ export default function ProductPage({ params }: ProductPageProps) {
         notFound();
       }
       setProduct(p);
+      if (p?.sizes?.length === 1) {
+        setSelectedSize(p.sizes[0]);
+      }
+      if (p?.colors?.length === 1) {
+        setSelectedColor(p.colors[0]);
+      }
     }
   }, [productId]);
 
@@ -72,7 +85,25 @@ export default function ProductPage({ params }: ProductPageProps) {
   breadcrumbItems.push({ label: product.name });
 
   const handleAddToCart = () => {
-    addToCart(product);
+    if (!product) return;
+
+    if (product.sizes.length > 0 && !selectedSize) {
+        toast({
+            variant: "destructive",
+            title: "Please select a size.",
+        });
+        return;
+    }
+
+    if (product.colors.length > 0 && !selectedColor) {
+        toast({
+            variant: "destructive",
+            title: "Please select a color.",
+        });
+        return;
+    }
+
+    addToCart(product, selectedSize || "", selectedColor || "");
   };
 
   return (
@@ -100,10 +131,53 @@ export default function ProductPage({ params }: ProductPageProps) {
             <CarouselNext className="right-2" />
           </Carousel>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           <h1 className="text-3xl md:text-4xl font-headline font-bold">{product.name}</h1>
           <p className="text-3xl font-bold text-accent">{formatPrice(product.price)}</p>
           <Separator />
+          
+          {product.sizes && product.sizes.length > 0 && (
+            <div className="grid gap-2">
+              <Label className="font-semibold text-lg">Size</Label>
+              <RadioGroup value={selectedSize} onValueChange={setSelectedSize} className="flex flex-wrap gap-2">
+                {product.sizes.map((size) => (
+                  <div key={size}>
+                    <RadioGroupItem value={size} id={`size-${size}`} className="peer sr-only" />
+                    <Label
+                      htmlFor={`size-${size}`}
+                      className={cn("flex h-10 w-10 items-center justify-center rounded-md border text-sm font-medium uppercase transition-colors hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground cursor-pointer",
+                      selectedSize === size ? 'border-primary bg-primary text-primary-foreground' : 'border-input'
+                      )}
+                    >
+                      {size}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {product.colors && product.colors.length > 0 && (
+             <div className="grid gap-2">
+                <Label className="font-semibold text-lg">Color</Label>
+                <RadioGroup value={selectedColor} onValueChange={setSelectedColor} className="flex flex-wrap gap-3">
+                    {product.colors.map((color) => (
+                    <div key={color}>
+                        <RadioGroupItem value={color} id={`color-${color}`} className="peer sr-only" />
+                        <Label
+                        htmlFor={`color-${color}`}
+                        className={cn("flex items-center justify-center rounded-md border-2 px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary cursor-pointer",
+                          selectedColor === color ? 'border-primary bg-primary text-primary-foreground' : 'border-input'
+                        )}
+                        >
+                        {color}
+                        </Label>
+                    </div>
+                    ))}
+                </RadioGroup>
+            </div>
+          )}
+
           <p className="text-muted-foreground leading-relaxed">{product.description}</p>
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
             <Button size="lg" className="flex-1" onClick={handleAddToCart}>Add to Cart</Button>

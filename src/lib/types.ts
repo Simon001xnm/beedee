@@ -16,8 +16,13 @@ export interface Product {
   category: string;
   subcategory: string | null;
   relatedProducts: string[];
+  sizes: string[];
+  colors: string[];
 }
 
 export interface CartItem extends Product {
+  cartItemId: string; // Unique identifier for this specific variant in the cart
   quantity: number;
+  selectedSize: string;
+  selectedColor: string;
 }
