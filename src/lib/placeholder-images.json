@@ -917,6 +917,24 @@
       "description": "Airmax 97",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.12.53.jpeg",
       "imageHint": "airmax 97"
+    },
+    {
+      "id": "nike-metcon-1",
+      "description": "Nike Metcon",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.25.16 (1).jpeg",
+      "imageHint": "nike metcon"
+    },
+    {
+      "id": "nike-metcon-2",
+      "description": "Nike Metcon",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.25.16 (2).jpeg",
+      "imageHint": "nike metcon"
+    },
+    {
+      "id": "nike-metcon-3",
+      "description": "Nike Metcon",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.25.16.jpeg",
+      "imageHint": "nike metcon"
     }
   ]
 }

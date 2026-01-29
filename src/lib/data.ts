@@ -16,6 +16,20 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-nike-metcon',
+        name: 'Nike Metcon',
+        price: 3499,
+        images: [
+            getImage('nike-metcon-1'),
+            getImage('nike-metcon-2'),
+            getImage('nike-metcon-3'),
+        ],
+        description: 'A durable and stable training shoe, the Nike Metcon is built for your toughest workouts. Available in sizes 37-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-nike-airmax-plus',
         name: 'Nike Air Max Plus',
         price: 3799,
