@@ -16,6 +16,27 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-mens-official',
+        name: 'Mens Official Shoes',
+        price: 2999,
+        images: [
+            getImage('mens-official-1'),
+            getImage('mens-official-2'),
+            getImage('mens-official-3'),
+            getImage('mens-official-4'),
+            getImage('mens-official-5'),
+            getImage('mens-official-6'),
+            getImage('mens-official-7'),
+            getImage('mens-official-8'),
+            getImage('mens-official-9'),
+            getImage('mens-official-10'),
+        ],
+        description: 'A sleek and sophisticated official shoe for the modern man. Crafted from premium leather, this shoe offers both comfort and timeless style, perfect for formal occasions or elevating your everyday look. Available in sizes 39-45.',
+        category: 'mens-shoes',
+        subcategory: 'formal-shoes',
+        relatedProducts: []
+    },
+    {
         id: 'prod-timberland-casual',
         name: 'TimberLand Casual',
         price: 2800,
