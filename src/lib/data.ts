@@ -16,6 +16,29 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-airmax-90',
+        name: 'Airmax 90',
+        price: 3499,
+        images: [
+            getImage('airmax-90-1'),
+            getImage('airmax-90-2'),
+            getImage('airmax-90-3'),
+            getImage('airmax-90-4'),
+            getImage('airmax-90-5'),
+            getImage('airmax-90-6'),
+            getImage('airmax-90-7'),
+            getImage('airmax-90-8'),
+            getImage('airmax-90-9'),
+            getImage('airmax-90-10'),
+            getImage('airmax-90-11'),
+            getImage('airmax-90-12'),
+        ],
+        description: 'A stylish and comfortable Airmax 90. Available in sizes 36-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-mens-official',
         name: 'Mens Official Shoes',
         price: 2999,
