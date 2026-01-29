@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "kids-sneaker-v3-1",
+      "description": "Kids sneaker v3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31 (1).jpeg",
+      "imageHint": "kids sneakers"
+    },
+    {
+      "id": "kids-sneaker-v3-2",
+      "description": "Kids sneaker v3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31 (2).jpeg",
+      "imageHint": "kids sneakers"
+    },
+    {
+      "id": "kids-sneaker-v3-3",
+      "description": "Kids sneaker v3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31.jpeg",
+      "imageHint": "kids sneakers"
+    },
+    {
       "id": "kids-sneaker-v2-1",
       "description": "Kids sneaker v2",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.14.08 (1).jpeg",

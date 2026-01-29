@@ -17,6 +17,20 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-kids-sneakers-3',
+        name: 'Kids Sneakers',
+        price: 1499,
+        images: [
+            getImage('kids-sneaker-v3-1'),
+            getImage('kids-sneaker-v3-2'),
+            getImage('kids-sneaker-v3-3'),
+        ],
+        description: 'Stylish and comfortable sneakers for kids. Available in sizes 23-27.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: []
+    },
+    {
         id: 'prod-kids-sneakers-2',
         name: 'Kids Sneakers',
         price: 1799,
@@ -420,5 +434,7 @@ export const getRelatedProducts = (product: Product) => {
 export const getRecommendedProductsByIds = (ids: string[]) => {
   return products.filter(p => ids.includes(p.id));
 }
+
+    
 
     
