@@ -16,6 +16,26 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'prod-adidas-samoa',
+        name: 'ADIDAS Samoa',
+        price: 2800,
+        images: [
+            getImage('samoa-1'),
+            getImage('samoa-2'),
+            getImage('samoa-3'),
+            getImage('samoa-4'),
+            getImage('samoa-5'),
+            getImage('samoa-6'),
+            getImage('samoa-7'),
+            getImage('samoa-8'),
+            getImage('samoa-9'),
+        ],
+        description: 'A classic from the archives, the Adidas Samoa is a timeless trainer loved for its sleek silhouette and iconic toe bumper. Available in sizes 40-45.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: ['prod-nike-shox-tl-white', 'prod-air-jordan-1']
+    },
+    {
         id: 'prod-nike-shox-tl-white',
         name: 'Nike Shox TL - White',
         price: 3500,

@@ -557,6 +557,60 @@
       "description": "New product image",
       "imageUrl": "/brands/1759343636218.jpg",
       "imageHint": "official shoes"
+    },
+    {
+      "id": "samoa-1",
+      "description": "Adidas Samoa front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.56.jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-2",
+      "description": "Adidas Samoa side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-3",
+      "description": "Adidas Samoa back",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (2).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-4",
+      "description": "Adidas Samoa other side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (3).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-5",
+      "description": "Adidas Samoa angle",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (4).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-6",
+      "description": "Adidas Samoa sole",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57.jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-7",
+      "description": "Adidas Samoa top",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58 (1).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-8",
+      "description": "Adidas Samoa detail",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58 (2).jpeg",
+      "imageHint": "adidas samoa"
+    },
+    {
+      "id": "samoa-9",
+      "description": "Adidas Samoa pair",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58.jpeg",
+      "imageHint": "adidas samoa"
     }
   ]
 }
