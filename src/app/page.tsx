@@ -2,9 +2,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { categories, products, getProducts } from '@/lib/data';
-import { CreditCard, RefreshCw, Truck, MessageCircle, Star, Heart } from 'lucide-react';
+import { getProducts } from '@/lib/data';
+import { CreditCard, RefreshCw, Truck, MessageCircle, Star } from 'lucide-react';
 import { FlashSaleBanner } from '@/components/flash-sale-banner';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { WhatsAppButton } from '@/components/whatsapp-button';
@@ -51,7 +50,6 @@ const footerProductLists = {
 }
 
 export default function Home() {
-  const topCategories = categories.filter(c => c.parentId === null);
   const latestProducts = getProducts().slice(0, 8);
 
   return (
@@ -73,37 +71,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-6 py-12">
-        <div className="text-center mb-8">
-          <p className="text-accent font-semibold">FASHION COLLECTIONS</p>
-          <h2 className="text-3xl font-headline font-bold text-primary">TOP CATEGORIES</h2>
-          <p className="text-muted-foreground">Here are some of our top categories.</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {topCategories.map(category => (
-            <Link href={`/shop/${category.id}`} key={category.id} className="group text-center">
-              <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl border-none bg-primary/5">
-                <CardContent className="p-0 relative">
-                  <div className="absolute top-2 right-2 z-10">
-                    <Heart className="h-10 w-10 text-primary/20 group-hover:text-accent group-hover:fill-accent transition-colors" />
-                  </div>
-                  <div className="relative aspect-square">
-                    <Image
-                      src={category.imageUrl}
-                      alt={category.name}
-                      fill
-                      className="object-contain transition-transform duration-300 group-hover:scale-105 p-4"
-                      data-ai-hint={category.imageHint}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-              <h3 className="font-semibold mt-4 text-lg text-primary">{category.name}</h3>
-            </Link>
-          ))}
         </div>
       </section>
 
