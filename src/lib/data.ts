@@ -10,11 +10,27 @@ export const categories: Category[] = [
   { id: 'sneakers', name: 'Sneakers', parentId: null, imageUrl: getImage('jordan-1').url, imageHint: getImage('jordan-1').hint },
   { id: 'mens-shoes', name: 'Men\'s Shoes', parentId: null, imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
   { id: 'ladies-shoes', name: 'Ladies\' Shoes', parentId: null, imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
+  { id: 'kids-shoes', name: 'Kids\' Shoes', parentId: null, imageUrl: getImage('kids-sneaker-1').url, imageHint: getImage('kids-sneaker-1').hint },
   { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
   { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
 ];
 
 export const products: Product[] = [
+    {
+        id: 'prod-kids-sneakers',
+        name: 'Kids Sneakers',
+        price: 1799,
+        images: [
+            getImage('kids-sneaker-1'),
+            getImage('kids-sneaker-2'),
+            getImage('kids-sneaker-3'),
+            getImage('kids-sneaker-4'),
+        ],
+        description: 'Stylish and comfortable sneakers for kids. Available in sizes 27-36.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: []
+    },
     {
         id: 'prod-tn-airmax-plus',
         name: 'Tn Air Max Plus',

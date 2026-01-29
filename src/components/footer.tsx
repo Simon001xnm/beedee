@@ -43,6 +43,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               <li><Link href="/shop/mens-shoes" className="text-primary-foreground/90 hover:text-accent">Men's Shoes</Link></li>
               <li><Link href="/shop/ladies-shoes" className="text-primary-foreground/90 hover:text-accent">Ladies' Shoes</Link></li>
+               <li><Link href="/shop/kids-shoes" className="text-primary-foreground/90 hover:text-accent">Kids' Shoes</Link></li>
               <li><Link href="/shop/sneakers" className="text-primary-foreground/90 hover:text-accent">Sneakers</Link></li>
               <li><Link href="/shop/formal-shoes" className="text-primary-foreground/90 hover:text-accent">Formal Shoes</Link></li>
                <li><Link href="/shop/ladies-boots" className="text-primary-foreground/90 hover:text-accent">Boots</Link></li>
