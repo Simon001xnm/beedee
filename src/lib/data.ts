@@ -18,6 +18,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'kbs-kids-sneakers',
+        name: 'KBS Kids Sneakers',
+        price: 1499,
+        images: [
+            getImage('kbs-1'),
+            getImage('kbs-2'),
+            getImage('kbs-3'),
+        ],
+        description: 'Stylish and comfortable, these KBS sneakers are perfect for active kids. With a durable build and a fun design, they are ready for any adventure.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+        colors: ['Navy Blue', 'Black', 'Pink'],
+    },
+    {
         id: 'fashion-bunny',
         name: 'Fashion bunny',
         price: 1499,
@@ -487,6 +503,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 

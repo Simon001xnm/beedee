@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "kbs-1",
+      "description": "KBS kids shoes",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.32.jpeg",
+      "imageHint": "kids shoes"
+    },
+    {
+      "id": "kbs-2",
+      "description": "KBS kids shoes side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.33 (1).jpeg",
+      "imageHint": "kids shoes"
+    },
+    {
+      "id": "kbs-3",
+      "description": "KBS kids shoes back",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.33.jpeg",
+      "imageHint": "kids shoes"
+    },
+    {
       "id": "fashion-bunny-1",
       "description": "Fashion bunny shoes",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.27.43 (1).jpeg",
@@ -623,156 +641,6 @@
       "description": "New product image",
       "imageUrl": "/brands/1759343567586.jpg",
       "imageHint": "new product"
-    },
-    {
-      "id": "new-image-50",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343567807.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-51",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343567926.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-52",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568059.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-53",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568144.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-54",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568275.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-55",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568411.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-56",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568516.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-57",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568637.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-58",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343568723.jpg",
-      "imageHint": "new product"
-    },
-    {
-      "id": "new-image-59",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343633233.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-60",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343633438.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-61",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343633600.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-62",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343633786.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-63",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343634002.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-64",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343634220.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-65",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343634390.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-66",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343634620.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-67",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343634844.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-68",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343635038.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-69",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343635217.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-70",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343635430.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-71",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343635613.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-72",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343635823.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-73",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343636025.jpg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "new-image-74",
-      "description": "New product image",
-      "imageUrl": "/brands/1759343636218.jpg",
-      "imageHint": "official shoes"
     },
     {
       "id": "samoa-1",
