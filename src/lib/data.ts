@@ -18,6 +18,20 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'bow-girls',
+        name: 'Bow Girls',
+        price: 1499,
+        images: [
+            getImage('bow-girls-1'),
+        ],
+        description: 'Adorable and stylish, these "Bow Girls" shoes are perfect for your little fashionista. Featuring a prominent bow for a touch of elegance, these shoes are both comfortable and chic for any occasion.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
+        colors: ['Pink', 'White'],
+    },
+    {
         id: 'shinny-sqmr',
         name: 'Shinny S-QMR',
         price: 1799,
@@ -518,6 +532,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 
