@@ -570,56 +570,7 @@ export const products: Product[] = [
         relatedProducts: ['converse-chuck-70-leather'],
         sizes: ['38', '39', '40', '41', '42', '43'],
         colors: ['Navy', 'White', 'Black'],
-    },
-    { id: 'product-1', name: 'Product 1', price: 1500, images: [getImage('new-image-1')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-2', name: 'Product 2', price: 1800, images: [getImage('new-image-2')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-3', name: 'Product 3', price: 2200, images: [getImage('new-image-3')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-4', name: 'Product 4', price: 1300, images: [getImage('new-image-4')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-5', name: 'Product 5', price: 2500, images: [getImage('new-image-5')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-6', name: 'Product 6', price: 2800, images: [getImage('new-image-6')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-7', name: 'Product 7', price: 1900, images: [getImage('new-image-7')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-8', name: 'Product 8', price: 3100, images: [getImage('new-image-8')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-9', name: 'Product 9', price: 1600, images: [getImage('new-image-9')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-10', name: 'Product 10', price: 3300, images: [getImage('new-image-10')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-11', name: 'Product 11', price: 1200, images: [getImage('new-image-11')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-12', name: 'Product 12', price: 2100, images: [getImage('new-image-12')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-13', name: 'Product 13', price: 2400, images: [getImage('new-image-13')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-14', name: 'Product 14', price: 2700, images: [getImage('new-image-14')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-15', name: 'Product 15', price: 3000, images: [getImage('new-image-15')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-16', name: 'Product 16', price: 1400, images: [getImage('new-image-16')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-17', name: 'Product 17', price: 3400, images: [getImage('new-image-17')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-18', name: 'Product 18', price: 1700, images: [getImage('new-image-18')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-19', name: 'Product 19', price: 2900, images: [getImage('new-image-19')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-20', name: 'Product 20', price: 2300, images: [getImage('new-image-20')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-21', name: 'Product 21', price: 1100, images: [getImage('new-image-21')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-22', name: 'Product 22', price: 3200, images: [getImage('new-image-22')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-23', name: 'Product 23', price: 2000, images: [getImage('new-image-23')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-24', name: 'Product 24', price: 2600, images: [getImage('new-image-24')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-25', name: 'Product 25', price: 1000, images: [getImage('new-image-25')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-26', name: 'Product 26', price: 3500, images: [getImage('new-image-26')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-27', name: 'Product 27', price: 1500, images: [getImage('new-image-27')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-28', name: 'Product 28', price: 1800, images: [getImage('new-image-28')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-29', name: 'Product 29', price: 2200, images: [getImage('new-image-29')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-30', name: 'Product 30', price: 1300, images: [getImage('new-image-30')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-31', name: 'Product 31', price: 2500, images: [getImage('new-image-31')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-32', name: 'Product 32', price: 2800, images: [getImage('new-image-32')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-33', name: 'Product 33', price: 1900, images: [getImage('new-image-33')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-34', name: 'Product 34', price: 3100, images: [getImage('new-image-34')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-35', name: 'Product 35', price: 1600, images: [getImage('new-image-35')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-36', name: 'Product 36', price: 3300, images: [getImage('new-image-36')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-37', name: 'Product 37', price: 1200, images: [getImage('new-image-37')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-38', name: 'Product 38', price: 2100, images: [getImage('new-image-38')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-39', name: 'Product 39', price: 2400, images: [getImage('new-image-39')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-40', name: 'Product 40', price: 2700, images: [getImage('new-image-40')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-41', name: 'Product 41', price: 3000, images: [getImage('new-image-41')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-42', name: 'Product 42', price: 1400, images: [getImage('new-image-42')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-43', name: 'Product 43', price: 3400, images: [getImage('new-image-43')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-44', name: 'Product 44', price: 1700, images: [getImage('new-image-44')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-45', name: 'Product 45', price: 2900, images: [getImage('new-image-45')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-46', name: 'Product 46', price: 2300, images: [getImage('new-image-46')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-47', name: 'Product 47', price: 1100, images: [getImage('new-image-47')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-48', name: 'Product 48', price: 1800, images: [getImage('new-image-48')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] },
-    { id: 'product-49', name: 'Product 49', price: 1800, images: [getImage('new-image-49')], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', category: 'sneakers', subcategory: null, relatedProducts: [], sizes: [], colors: [] }
+    }
 ];
 
 export const getProducts = () => products;
@@ -639,6 +590,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 
