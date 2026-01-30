@@ -133,7 +133,17 @@ export default function Home() {
           <Separator className="my-8" />
            <div className="text-center text-sm text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Bee & Dee. All rights reserved.</p>
-            <p>Project developed and maintained by Simon Styles Technologies Limited.</p>
+            <p>
+              Site designed and maintained by{' '}
+              <a
+                href="https://simonstyles.co.ke/services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Simon Styles Technologies Limited
+              </a>.
+            </p>
           </div>
         </div>
       </footer>
