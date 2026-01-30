@@ -1019,6 +1019,108 @@
       "description": "Nike Metcon",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.25.16.jpeg",
       "imageHint": "nike metcon"
+    },
+    {
+      "id": "new-balance-1",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.09 (1).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-2",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.09 (2).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-3",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.09 (3).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-4",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.09.jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-5",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.10 (1).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-6",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.10 (2).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-7",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.10 (3).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-8",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.10.jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-9",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.11 (1).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "new-balance-10",
+      "description": "New Balance Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.11.jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "converse-leather-1",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.11 (1).jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-2",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.18.11.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-3",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.37.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-4",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38 (1).jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-5",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38 (2).jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-6",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-7",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.39.jpeg",
+      "imageHint": "converse leather"
     }
   ]
 }
