@@ -18,6 +18,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'elsa-shoes',
+        name: 'Elsa',
+        price: 1499,
+        images: [
+            getImage('elsa-1'),
+            getImage('elsa-2'),
+        ],
+        description: 'Let your little one step into a fairytale with these enchanting Elsa shoes. Perfect for fans of the frozen magic, these shoes are as comfortable as they are beautiful, featuring delightful shades of purple and pink.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33'],
+        colors: ['Purple', 'Pink'],
+    },
+    {
         id: 'bow-girls',
         name: 'Bow Girls',
         price: 1499,
@@ -533,6 +548,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 

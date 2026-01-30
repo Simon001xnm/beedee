@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "elsa-1",
+      "description": "Elsa themed shoes for kids",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.38.15.jpeg",
+      "imageHint": "elsa shoes"
+    },
+    {
+      "id": "elsa-2",
+      "description": "Elsa themed shoes for kids side view",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.38.16.jpeg",
+      "imageHint": "elsa shoes"
+    },
+    {
       "id": "bow-girls-1",
       "description": "Bow girls shoes",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.35.39.jpeg",
