@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "shinny-sqmr-1",
+      "description": "Shinny S-QMR kids shoes",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.30.15 (1).jpeg",
+      "imageHint": "shiny kids shoes"
+    },
+    {
+      "id": "shinny-sqmr-2",
+      "description": "Shinny S-QMR kids shoes side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.30.15 (2).jpeg",
+      "imageHint": "shiny kids shoes"
+    },
+    {
       "id": "kbs-1",
       "description": "KBS kids shoes",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.32.jpeg",

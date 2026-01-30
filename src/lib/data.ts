@@ -18,6 +18,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'shinny-sqmr',
+        name: 'Shinny S-QMR',
+        price: 1799,
+        images: [
+            getImage('shinny-sqmr-1'),
+            getImage('shinny-sqmr-2'),
+        ],
+        description: 'Let your little one shine with these dazzling Shinny S-QMR sneakers. Featuring a sparkly finish and a comfortable design, they are perfect for adding a bit of glamour to any outfit.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+        colors: ['Pink', 'Baby Pink'],
+    },
+    {
         id: 'kbs-kids-sneakers',
         name: 'KBS Kids Sneakers',
         price: 1499,
@@ -503,6 +518,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 
