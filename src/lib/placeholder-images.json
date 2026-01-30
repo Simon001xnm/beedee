@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "tick-duck-1",
+      "description": "Tick Duck shoes for kids",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.02 (1).jpeg",
+      "imageHint": "duck shoes"
+    },
+    {
+      "id": "tick-duck-2",
+      "description": "Tick Duck shoes for kids side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.02.jpeg",
+      "imageHint": "duck shoes"
+    },
+    {
+      "id": "tick-duck-3",
+      "description": "Tick Duck shoes for kids top",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.03.jpeg",
+      "imageHint": "duck shoes"
+    },
+    {
       "id": "elsa-1",
       "description": "Elsa themed shoes for kids",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.38.15.jpeg",

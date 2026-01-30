@@ -18,6 +18,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'tick-duck',
+        name: 'Tick Duck',
+        price: 1499,
+        images: [
+            getImage('tick-duck-1'),
+            getImage('tick-duck-2'),
+            getImage('tick-duck-3'),
+        ],
+        description: 'Quack up your little one\'s style with these fun and playful "Tick Duck" shoes. Designed for comfort and durability, they are perfect for everyday adventures.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+        colors: ['Black', 'Blue', 'Pink'],
+    },
+    {
         id: 'elsa-shoes',
         name: 'Elsa',
         price: 1499,
@@ -548,6 +564,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 
