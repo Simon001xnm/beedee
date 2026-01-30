@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -19,6 +18,24 @@ export default function CartPage() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+
+  const handleCheckout = () => {
+    const phoneNumber = "254106587150";
+    let message = "Hello Bee & Dee, I would like to order the following items:\n\n";
+    
+    cartItems.forEach((item, index) => {
+        message += `${index + 1}. ${item.name}\n`;
+        if (item.selectedSize) message += `   - Size: ${item.selectedSize}\n`;
+        if (item.selectedColor) message += `   - Color: ${item.selectedColor}\n`;
+        message += `   - Quantity: ${item.quantity}\n`;
+        message += `   - Price: ${formatPrice(item.price * item.quantity)}\n\n`;
+    });
+
+    message += `*Total: ${formatPrice(subtotal)}*`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8">
@@ -126,8 +143,8 @@ export default function CartPage() {
                     </div>
                 </CardContent>
                 <CardFooter>
-                    <Button className="w-full" size="lg">
-                        Proceed to Checkout
+                    <Button className="w-full" size="lg" onClick={handleCheckout}>
+                        Checkout on WhatsApp
                     </Button>
                 </CardFooter>
             </Card>
@@ -137,4 +154,3 @@ export default function CartPage() {
     </div>
   );
 }
-

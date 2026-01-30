@@ -106,6 +106,36 @@ export default function ProductPage({ params }: ProductPageProps) {
     addToCart(product, selectedSize || "", selectedColor || "");
   };
 
+  const handleBuyNow = () => {
+    if (!product) return;
+
+    if (product.sizes.length > 0 && !selectedSize) {
+        toast({
+            variant: "destructive",
+            title: "Please select a size.",
+        });
+        return;
+    }
+
+    if (product.colors.length > 0 && !selectedColor) {
+        toast({
+            variant: "destructive",
+            title: "Please select a color.",
+        });
+        return;
+    }
+    
+    const phoneNumber = "254106587150";
+    let message = "Hello Bee & Dee, I would like to purchase the following item:\n\n";
+    message += `*Product:* ${product.name}\n`;
+    if (selectedSize) message += `*Size:* ${selectedSize}\n`;
+    if (selectedColor) message += `*Color:* ${selectedColor}\n`;
+    message += `*Price:* ${formatPrice(product.price)}\n`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-8">
       <Breadcrumb items={breadcrumbItems} className="mb-6" />
@@ -181,7 +211,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           <p className="text-muted-foreground leading-relaxed">{product.description}</p>
           <div className="flex flex-col sm:flex-row gap-2 mt-4">
             <Button size="lg" className="flex-1" onClick={handleAddToCart}>Add to Cart</Button>
-            <Button size="lg" variant="outline" className="flex-1">Buy Now</Button>
+            <Button size="lg" variant="outline" className="flex-1" onClick={handleBuyNow}>Buy Now on WhatsApp</Button>
           </div>
         </div>
       </div>
