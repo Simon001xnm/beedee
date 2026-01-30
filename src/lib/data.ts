@@ -18,6 +18,38 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'atongmu',
+        name: 'Atongmu',
+        price: 1499,
+        images: [
+            getImage('atongmu-1'),
+            getImage('atongmu-2'),
+            getImage('atongmu-3'),
+        ],
+        description: 'Stylish and comfortable, the Atongmu sneakers are perfect for active kids. With a durable build and a fun design, they are ready for any adventure.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
+        colors: ['Black', 'Pink', 'Blue'],
+    },
+    {
+        id: 'sport-kids',
+        name: 'Sport',
+        price: 1499,
+        images: [
+            getImage('sport-kids-1'),
+            getImage('sport-kids-2'),
+            getImage('sport-kids-3'),
+        ],
+        description: 'Get your little athlete ready for action with these sporty and comfortable shoes. Designed for performance and style, they are perfect for running, playing, and all kinds of fun activities.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        colors: ['Black', 'Green', 'Brown'],
+    },
+    {
         id: 'tick-duck',
         name: 'Tick Duck',
         price: 1499,
@@ -564,6 +596,7 @@ export const getRecommendedProductsByIds = (ids: string[]) => {
     
 
     
+
 
 
 
