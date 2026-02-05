@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'nba-lakers',
+        name: 'NBA Lakers',
+        price: 4499,
+        images: [
+            getImage('nba-lakers-1'),
+            getImage('nba-lakers-2'),
+        ],
+        description: 'Show your team spirit with the NBA Lakers sneakers. These high-performance shoes feature iconic Lakers colors and branding, providing both style and comfort on and off the court.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Purple/Gold', 'White/Purple'],
+    },
+    {
         id: 'jordan-1-retro',
         name: 'Jordan 1',
         price: 3499,

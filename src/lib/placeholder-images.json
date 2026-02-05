@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "nba-lakers-1",
+      "description": "NBA Lakers sneakers front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.31.jpeg",
+      "imageHint": "lakers sneakers"
+    },
+    {
+      "id": "nba-lakers-2",
+      "description": "NBA Lakers sneakers side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.31 (1).jpeg",
+      "imageHint": "lakers sneakers"
+    },
+    {
       "id": "jordan-1-retro-1",
       "description": "Jordan 1 retro front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.28.jpeg",
