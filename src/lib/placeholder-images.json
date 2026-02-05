@@ -1,6 +1,30 @@
 {
   "placeholderImages": [
     {
+      "id": "terrex-1",
+      "description": "Terrex sneakers front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.25.18.jpeg",
+      "imageHint": "terrex sneakers"
+    },
+    {
+      "id": "terrex-2",
+      "description": "Terrex sneakers side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.25.19 (1).jpeg",
+      "imageHint": "terrex sneakers"
+    },
+    {
+      "id": "terrex-3",
+      "description": "Terrex sneakers back",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.25.19 (2).jpeg",
+      "imageHint": "terrex sneakers"
+    },
+    {
+      "id": "terrex-4",
+      "description": "Terrex sneakers top",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.25.19.jpeg",
+      "imageHint": "terrex sneakers"
+    },
+    {
       "id": "atongmu-1",
       "description": "Atongmu kids shoes",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.59.57 (1).jpeg",

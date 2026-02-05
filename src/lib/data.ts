@@ -1,4 +1,3 @@
-
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -17,6 +16,23 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
+    {
+        id: 'terrex-shoes',
+        name: 'Terrex',
+        price: 3499,
+        images: [
+            getImage('terrex-1'),
+            getImage('terrex-2'),
+            getImage('terrex-3'),
+            getImage('terrex-4'),
+        ],
+        description: 'Built for the trail and the streets, these Terrex shoes offer exceptional grip and durability. Perfect for your next adventure.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'Grey', 'Green'],
+    },
     {
         id: 'converse-leather-new',
         name: 'Converse Leather',
