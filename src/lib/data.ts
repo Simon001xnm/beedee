@@ -17,6 +17,32 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'mens-boots-new',
+        name: 'Men\'s Boots',
+        price: 4800,
+        images: [
+            getImage('mens-boots-1'),
+            getImage('mens-boots-2'),
+            getImage('mens-boots-3'),
+            getImage('mens-boots-4'),
+            getImage('mens-boots-5'),
+            getImage('mens-boots-6'),
+            getImage('mens-boots-7'),
+            getImage('mens-boots-8'),
+            getImage('mens-boots-9'),
+            getImage('mens-boots-10'),
+            getImage('mens-boots-11'),
+            getImage('mens-boots-12'),
+            getImage('mens-boots-13'),
+        ],
+        description: 'Rugged and stylish Men\'s boots, built for durability and comfort. Perfect for everyday wear or your next outdoor adventure.',
+        category: 'mens-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'Brown'],
+    },
+    {
         id: 'nba-lakers',
         name: 'NBA Lakers',
         price: 4499,

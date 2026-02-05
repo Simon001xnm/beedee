@@ -1,6 +1,84 @@
 {
   "placeholderImages": [
     {
+      "id": "mens-boots-1",
+      "description": "Men's boots view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.51 (1).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-2",
+      "description": "Men's boots view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.51 (2).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-3",
+      "description": "Men's boots view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.51 (3).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-4",
+      "description": "Men's boots view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.51.jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-5",
+      "description": "Men's boots view 5",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.52 (1).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-6",
+      "description": "Men's boots view 6",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.52 (2).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-7",
+      "description": "Men's boots view 7",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.52 (3).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-8",
+      "description": "Men's boots view 8",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.52.jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-9",
+      "description": "Men's boots view 9",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.53 (1).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-10",
+      "description": "Men's boots view 10",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.54 (3).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-11",
+      "description": "Men's boots view 11",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.54 (4).jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-12",
+      "description": "Men's boots view 12",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.54.jpeg",
+      "imageHint": "mens boots"
+    },
+    {
+      "id": "mens-boots-13",
+      "description": "Men's boots view 13",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.55.jpeg",
+      "imageHint": "mens boots"
+    },
+    {
       "id": "nba-lakers-1",
       "description": "NBA Lakers sneakers front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.31.jpeg",
