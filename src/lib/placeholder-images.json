@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "af-custom-1",
+      "description": "AF custom sneakers front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.26.jpeg",
+      "imageHint": "custom sneakers"
+    },
+    {
+      "id": "af-custom-2",
+      "description": "AF custom sneakers side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.27.jpeg",
+      "imageHint": "custom sneakers"
+    },
+    {
       "id": "runstar-motion-1",
       "description": "Runstar motion sneakers front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.24.jpeg",

@@ -1,4 +1,3 @@
-
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -17,6 +16,21 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
+    {
+        id: 'af-custom',
+        name: 'AF custom',
+        price: 3499,
+        images: [
+            getImage('af-custom-1'),
+            getImage('af-custom-2'),
+        ],
+        description: 'Elevate your rotation with the "AF Custom". A fresh take on an absolute classic, featuring high-quality finishes and a timeless silhouette that offers both style and durability for everyday wear.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['White', 'Black'],
+    },
     {
         id: 'runstar-motion',
         name: 'Runstar Motion',
