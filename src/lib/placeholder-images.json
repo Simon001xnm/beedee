@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "amiri-1",
+      "description": "New Amiri sneaker view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.07.35.jpeg",
+      "imageHint": "amiri sneaker"
+    },
+    {
+      "id": "amiri-2",
+      "description": "New Amiri sneaker view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.07.35 (1).jpeg",
+      "imageHint": "amiri sneaker"
+    },
+    {
       "id": "nb-550-1",
       "description": "New balance 550 front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.05.43.jpeg",

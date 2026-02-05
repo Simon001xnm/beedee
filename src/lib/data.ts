@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'new-amiri',
+        name: 'New Amiri',
+        price: 3499,
+        images: [
+            getImage('amiri-1'),
+            getImage('amiri-2'),
+        ],
+        description: 'Experience luxury and style with the New Amiri sneakers. Crafted with premium materials and a signature design, these sneakers offer a modern aesthetic and exceptional comfort for those who appreciate high-end fashion.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White'],
+    },
+    {
         id: 'nb-550',
         name: 'New balance 550',
         price: 3499,
