@@ -857,6 +857,18 @@
       "description": "Converse Leather Sneaker",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.52.56.jpeg",
       "imageHint": "converse leather"
+    },
+    {
+      "id": "puma-suede-xl-1",
+      "description": "Puma Suede XL front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.21 (1).jpeg",
+      "imageHint": "puma sneakers"
+    },
+    {
+      "id": "puma-suede-xl-2",
+      "description": "Puma Suede XL side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.21.jpeg",
+      "imageHint": "puma sneakers"
     }
   ]
 }

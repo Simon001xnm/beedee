@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'puma-suede-xl',
+        name: 'Puma Suede XL',
+        price: 3499,
+        images: [
+            getImage('puma-suede-xl-1'),
+            getImage('puma-suede-xl-2'),
+        ],
+        description: 'The Puma Suede XL takes the classic silhouette and adds a bold, oversized look. Featuring premium suede and a chunky design, these sneakers are perfect for making a statement with classic style and modern comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White', 'Blue'],
+    },
+    {
         id: 'airforce1-valentines',
         name: 'Airforce1 Valentines',
         price: 2499,
