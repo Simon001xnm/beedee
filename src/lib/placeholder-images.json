@@ -787,33 +787,27 @@
       "imageHint": "new balance"
     },
     {
-      "id": "converse-leather-3",
-      "description": "Converse Leather Sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.37.jpeg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "converse-leather-4",
-      "description": "Converse Leather Sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38 (1).jpeg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "converse-leather-5",
-      "description": "Converse Leather Sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38 (2).jpeg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "converse-leather-6",
-      "description": "Converse Leather Sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.38.jpeg",
-      "imageHint": "converse leather"
-    },
-    {
       "id": "converse-leather-7",
       "description": "Converse Leather Sneaker",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.20.39.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-8",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.52.54.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-9",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.52.55.jpeg",
+      "imageHint": "converse leather"
+    },
+    {
+      "id": "converse-leather-10",
+      "description": "Converse Leather Sneaker",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.52.56.jpeg",
       "imageHint": "converse leather"
     }
   ]

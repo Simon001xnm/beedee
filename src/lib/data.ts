@@ -18,6 +18,46 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'converse-leather-new',
+        name: 'Converse Leather',
+        price: 1499,
+        images: [
+            getImage('converse-leather-7'),
+            getImage('converse-leather-8'),
+            getImage('converse-leather-9'),
+            getImage('converse-leather-10'),
+        ],
+        description: 'Classic style meets modern comfort. These Converse leather sneakers are a versatile addition to any wardrobe, perfect for a polished yet casual look.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'Brown', 'Black/White', 'Pink', 'Gray', 'Cream'],
+    },
+    {
+        id: 'new-balance-sneakers',
+        name: 'New Balance',
+        price: 3499,
+        images: [
+            getImage('new-balance-1'),
+            getImage('new-balance-2'),
+            getImage('new-balance-3'),
+            getImage('new-balance-4'),
+            getImage('new-balance-5'),
+            getImage('new-balance-6'),
+            getImage('new-balance-7'),
+            getImage('new-balance-8'),
+            getImage('new-balance-9'),
+            getImage('new-balance-10'),
+        ],
+        description: 'Discover the perfect blend of style and comfort with these New Balance sneakers. Engineered for performance and designed for the streets, they offer a premium look and feel.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White', 'Gray', 'Pink', 'Yellow'],
+    },
+    {
         id: 'atongmu',
         name: 'Atongmu',
         price: 1499,
@@ -527,47 +567,6 @@ export const products: Product[] = [
         relatedProducts: ['converse-chuck-70-leather'],
         sizes: ['38', '39', '40', '41', '42', '43'],
         colors: ['Navy', 'White', 'Black'],
-    },
-    {
-        id: 'new-balance-sneakers',
-        name: 'New Balance',
-        price: 3499,
-        images: [
-            getImage('new-balance-1'),
-            getImage('new-balance-2'),
-            getImage('new-balance-3'),
-            getImage('new-balance-4'),
-            getImage('new-balance-5'),
-            getImage('new-balance-6'),
-            getImage('new-balance-7'),
-            getImage('new-balance-8'),
-            getImage('new-balance-9'),
-            getImage('new-balance-10'),
-        ],
-        description: 'Discover the perfect blend of style and comfort with these New Balance sneakers. Engineered for performance and designed for the streets, they offer a premium look and feel.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: [],
-        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-        colors: ['Black', 'White', 'Gray', 'Pink', 'Yellow'],
-    },
-    {
-        id: 'converse-leather-new',
-        name: 'Converse Leather',
-        price: 1499,
-        images: [
-            getImage('converse-leather-3'),
-            getImage('converse-leather-4'),
-            getImage('converse-leather-5'),
-            getImage('converse-leather-6'),
-            getImage('converse-leather-7'),
-        ],
-        description: 'Classic style meets modern comfort. These Converse leather sneakers are a versatile addition to any wardrobe, perfect for a polished yet casual look.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: [],
-        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-        colors: ['Black', 'Brown', 'Black/White', 'Pink', 'Gray', 'Cream'],
     }
 ];
 
@@ -584,20 +583,3 @@ export const getRelatedProducts = (product: Product) => {
 export const getRecommendedProductsByIds = (ids: string[]) => {
   return products.filter(p => ids.includes(p.id));
 }
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
