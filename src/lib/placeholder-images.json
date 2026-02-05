@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "jordan-1-retro-1",
+      "description": "Jordan 1 retro front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.28.jpeg",
+      "imageHint": "jordan sneakers"
+    },
+    {
+      "id": "jordan-1-retro-2",
+      "description": "Jordan 1 retro side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.29.jpeg",
+      "imageHint": "jordan sneakers"
+    },
+    {
       "id": "af-custom-1",
       "description": "AF custom sneakers front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.26.jpeg",

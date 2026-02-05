@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'jordan-1-retro',
+        name: 'Jordan 1',
+        price: 3499,
+        images: [
+            getImage('jordan-1-retro-1'),
+            getImage('jordan-1-retro-2'),
+        ],
+        description: 'The Jordan 1 brings classic court style and iconic heritage to your collection. Featuring premium materials and a timeless silhouette, these sneakers offer both comfort and exceptional style for any occasion.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Red/Black', 'White/Black', 'Blue'],
+    },
+    {
         id: 'af-custom',
         name: 'AF custom',
         price: 3499,
