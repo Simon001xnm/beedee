@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'nb-550',
+        name: 'New balance 550',
+        price: 3499,
+        images: [
+            getImage('nb-550-1'),
+            getImage('nb-550-2'),
+        ],
+        description: 'The New Balance 550 brings retro court style to the modern day. Its clean silhouette and premium materials offer a timeless look and exceptional comfort for everyday wear.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['White/Grey', 'White/Blue'],
+    },
+    {
         id: 'mens-boots-new',
         name: 'Men\'s Boots',
         price: 4800,

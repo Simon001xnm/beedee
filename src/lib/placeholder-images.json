@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "nb-550-1",
+      "description": "New balance 550 front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.05.43.jpeg",
+      "imageHint": "new balance 550"
+    },
+    {
+      "id": "nb-550-2",
+      "description": "New balance 550 side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.05.43 (1).jpeg",
+      "imageHint": "new balance 550"
+    },
+    {
       "id": "mens-boots-1",
       "description": "Men's boots view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 10.46.51 (1).jpeg",
