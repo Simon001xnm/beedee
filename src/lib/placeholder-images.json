@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "jordan-4-fear-1",
+      "description": "Jordan 4 Fear Pack front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.16.jpeg",
+      "imageHint": "jordan sneakers"
+    },
+    {
+      "id": "jordan-4-fear-2",
+      "description": "Jordan 4 Fear Pack side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.17.jpeg",
+      "imageHint": "jordan sneakers"
+    },
+    {
       "id": "terrex-1",
       "description": "Terrex sneakers front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 15.25.18.jpeg",

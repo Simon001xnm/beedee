@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'jordan-4-fear-pack',
+        name: 'Jordan 4 Fear Pack',
+        price: 3800,
+        images: [
+            getImage('jordan-4-fear-1'),
+            getImage('jordan-4-fear-2'),
+        ],
+        description: 'The Jordan 4 Fear Pack features a sophisticated palette of black, white, and cool grey. Built with premium materials, this icon offers a timeless look and superior comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Cool Grey', 'Black', 'White'],
+    },
+    {
         id: 'terrex-shoes',
         name: 'Terrex',
         price: 3499,
