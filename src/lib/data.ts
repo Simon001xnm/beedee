@@ -1,3 +1,4 @@
+
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -16,6 +17,21 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
+    {
+        id: 'runstar-motion',
+        name: 'Runstar Motion',
+        price: 3499,
+        images: [
+            getImage('runstar-motion-1'),
+            getImage('runstar-motion-2'),
+        ],
+        description: 'Express yourself with the Runstar Motion. Its expressive, lugged outsole and premium materials offer a bold look and all-day comfort, making it a standout choice for those who want to make a statement.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White'],
+    },
     {
         id: 'puma-suede-xl',
         name: 'Puma Suede XL',

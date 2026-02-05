@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "runstar-motion-1",
+      "description": "Runstar motion sneakers front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.24.jpeg",
+      "imageHint": "runstar sneakers"
+    },
+    {
+      "id": "runstar-motion-2",
+      "description": "Runstar motion sneakers side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.23.jpeg",
+      "imageHint": "runstar sneakers"
+    },
+    {
       "id": "af1-valentines-1",
       "description": "Airforce1 Valentines front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.19.jpeg",
