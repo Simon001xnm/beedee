@@ -1,6 +1,54 @@
 {
   "placeholderImages": [
     {
+      "id": "vans-1",
+      "description": "Vans sneaker view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.25 (1).jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-2",
+      "description": "Vans sneaker view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.25.jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-3",
+      "description": "Vans sneaker view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.26 (1).jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-4",
+      "description": "Vans sneaker view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.26.jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-5",
+      "description": "Vans sneaker view 5",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.27 (1).jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-6",
+      "description": "Vans sneaker view 6",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.27 (2).jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-7",
+      "description": "Vans sneaker view 7",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.27.jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
+      "id": "vans-8",
+      "description": "Vans sneaker view 8",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.28.jpeg",
+      "imageHint": "vans sneaker"
+    },
+    {
       "id": "amiri-1",
       "description": "New Amiri sneaker view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 11.07.35.jpeg",

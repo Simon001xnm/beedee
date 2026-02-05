@@ -17,6 +17,27 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'vans-classic',
+        name: 'Vans',
+        price: 1499,
+        images: [
+            getImage('vans-1'),
+            getImage('vans-2'),
+            getImage('vans-3'),
+            getImage('vans-4'),
+            getImage('vans-5'),
+            getImage('vans-6'),
+            getImage('vans-7'),
+            getImage('vans-8'),
+        ],
+        description: 'Classic Vans sneakers, perfect for everyday casual wear. Features a timeless design and durable construction.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White', 'Blue'],
+    },
+    {
         id: 'new-amiri',
         name: 'New Amiri',
         price: 3499,
