@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'airforce1-valentines',
+        name: 'Airforce1 Valentines',
+        price: 2499,
+        images: [
+            getImage('af1-valentines-1'),
+            getImage('af1-valentines-2'),
+        ],
+        description: 'Celebrate love with the special edition Airforce 1 Valentines. Featuring heart details and a classic silhouette, these sneakers are perfect for adding a touch of romance to your step.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40'],
+        colors: ['White/Red', 'Pink'],
+    },
+    {
         id: 'jordan-4-fear-pack',
         name: 'Jordan 4 Fear Pack',
         price: 3800,

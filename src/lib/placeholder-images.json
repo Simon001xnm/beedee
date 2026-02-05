@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "af1-valentines-1",
+      "description": "Airforce1 Valentines front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.19.jpeg",
+      "imageHint": "valentines sneakers"
+    },
+    {
+      "id": "af1-valentines-2",
+      "description": "Airforce1 Valentines side",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.18.jpeg",
+      "imageHint": "valentines sneakers"
+    },
+    {
       "id": "jordan-4-fear-1",
       "description": "Jordan 4 Fear Pack front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 09.14.16.jpeg",
