@@ -17,6 +17,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'timberland-casual',
+        name: 'Casual Timberland',
+        price: 2800,
+        images: [
+            getImage('timberland-casual-new-1'),
+            getImage('timberland-casual-new-2'),
+            getImage('timberland-casual-new-3'),
+        ],
+        description: 'A stylish and durable casual shoe from Timberland, perfect for everyday wear, combining ruggedness with a refined aesthetic. Crafted with high-quality materials for long-lasting comfort.',
+        category: 'mens-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Wheat', 'Black', 'Brown'],
+    },
+    {
         id: 'naked-wolf',
         name: 'Naked wolf',
         price: 3499,
@@ -601,24 +617,6 @@ export const products: Product[] = [
         relatedProducts: [],
         sizes: ['39', '40', '41', '42', '43', '44', '45'],
         colors: ['Black', 'Brown'],
-    },
-    {
-        id: 'timberland-casual',
-        name: 'TimberLand Casual',
-        price: 2800,
-        images: [
-            getImage('timberland-1'),
-            getImage('timberland-2'),
-            getImage('timberland-3'),
-            getImage('timberland-4'),
-            getImage('timberland-5'),
-        ],
-        description: 'A stylish and durable casual shoe from Timberland, perfect for everyday wear, combining ruggedness with a refined aesthetic.',
-        category: 'mens-shoes',
-        subcategory: null,
-        relatedProducts: [],
-        sizes: ['40', '41', '42', '43', '44', '45'],
-        colors: ['Wheat', 'Black'],
     },
     {
         id: 'adidas-samoa',
