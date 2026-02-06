@@ -17,6 +17,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'samba-double-sole',
+        name: 'Samba double sole',
+        price: 2999,
+        images: [
+            getImage('samba-double-sole-1'),
+            getImage('samba-double-sole-2'),
+        ],
+        description: 'Elevate your style with the Samba Double Sole. This fresh take on the classic silhouette features a bold platform sole, offering a modern aesthetic while maintaining the iconic Samba heritage and comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black/White'],
+    },
+    {
         id: 'alexander-mcqueen',
         name: 'Alexander McQueen',
         price: 3499,

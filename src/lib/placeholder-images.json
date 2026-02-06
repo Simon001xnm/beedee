@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "samba-double-sole-1",
+      "description": "Samba double sole view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.18.47 (1).jpeg",
+      "imageHint": "samba sneakers"
+    },
+    {
+      "id": "samba-double-sole-2",
+      "description": "Samba double sole view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.18.47.jpeg",
+      "imageHint": "samba sneakers"
+    },
+    {
       "id": "mcqueen-1",
       "description": "Alexander McQueen view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.11.33 (1).jpeg",
