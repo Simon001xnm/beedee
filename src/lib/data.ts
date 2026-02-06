@@ -17,6 +17,37 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'nike-shox-new',
+        name: 'Nike shocks',
+        price: 3999,
+        images: [
+            getImage('nike-shox-new-1'),
+            getImage('nike-shox-new-2'),
+            getImage('nike-shox-new-3'),
+            getImage('nike-shox-new-4'),
+        ],
+        description: 'Experience responsive cushioning and iconic style with the Nike Shox. Designed for impact protection and a bold look, these sneakers feature the legendary Shox columns for a springy feel with every step.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Black/Grey'],
+    },
+    {
+        id: 'polo-loafer-new',
+        name: 'Polo loafer',
+        price: 2499,
+        images: [
+            getImage('polo-loafer-1'),
+        ],
+        description: 'Sophisticated and comfortable, the Polo Loafer is a timeless choice for a refined look. Crafted with attention to detail, these loafers offer effortless style and all-day comfort for any formal or smart-casual occasion.',
+        category: 'mens-shoes',
+        subcategory: 'formal-shoes',
+        relatedProducts: [],
+        sizes: ['39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'Brown'],
+    },
+    {
         id: 'samba-double-sole',
         name: 'Samba double sole',
         price: 2999,

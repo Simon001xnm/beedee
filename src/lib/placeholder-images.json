@@ -1,6 +1,36 @@
 {
   "placeholderImages": [
     {
+      "id": "polo-loafer-1",
+      "description": "Polo loafer front",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 12.37.40.jpeg",
+      "imageHint": "polo loafer"
+    },
+    {
+      "id": "nike-shox-new-1",
+      "description": "Nike shocks view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 14.42.40.jpeg",
+      "imageHint": "nike shox"
+    },
+    {
+      "id": "nike-shox-new-2",
+      "description": "Nike shocks view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 14.42.41 (1).jpeg",
+      "imageHint": "nike shox"
+    },
+    {
+      "id": "nike-shox-new-3",
+      "description": "Nike shocks view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 14.42.41.jpeg",
+      "imageHint": "nike shox"
+    },
+    {
+      "id": "nike-shox-new-4",
+      "description": "Nike shocks view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 14.42.42.jpeg",
+      "imageHint": "nike shox"
+    },
+    {
       "id": "samba-double-sole-1",
       "description": "Samba double sole view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.18.47 (1).jpeg",
