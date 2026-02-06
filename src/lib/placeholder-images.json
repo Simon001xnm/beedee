@@ -1,6 +1,30 @@
 {
   "placeholderImages": [
     {
+      "id": "mcqueen-1",
+      "description": "Alexander McQueen view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.11.33 (1).jpeg",
+      "imageHint": "mcqueen sneakers"
+    },
+    {
+      "id": "mcqueen-2",
+      "description": "Alexander McQueen view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.11.33.jpeg",
+      "imageHint": "mcqueen sneakers"
+    },
+    {
+      "id": "mcqueen-3",
+      "description": "Alexander McQueen view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.11.34 (1).jpeg",
+      "imageHint": "mcqueen sneakers"
+    },
+    {
+      "id": "mcqueen-4",
+      "description": "Alexander McQueen view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.11.34.jpeg",
+      "imageHint": "mcqueen sneakers"
+    },
+    {
       "id": "timberland-casual-new-1",
       "description": "Casual Timberland view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.09.24 (1).jpeg",

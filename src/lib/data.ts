@@ -17,6 +17,23 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'alexander-mcqueen',
+        name: 'Alexander McQueen',
+        price: 3499,
+        images: [
+            getImage('mcqueen-1'),
+            getImage('mcqueen-2'),
+            getImage('mcqueen-3'),
+            getImage('mcqueen-4'),
+        ],
+        description: 'Iconic oversized sneakers from Alexander McQueen. Combining luxury materials with a bold, contemporary silhouette, these sneakers are perfect for a fashion-forward street style.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['White', 'Black'],
+    },
+    {
         id: 'timberland-casual',
         name: 'Casual Timberland',
         price: 2800,
