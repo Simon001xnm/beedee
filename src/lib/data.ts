@@ -17,6 +17,23 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'naked-wolf',
+        name: 'Naked wolf',
+        price: 3499,
+        images: [
+            getImage('naked-wolf-1'),
+            getImage('naked-wolf-2'),
+            getImage('naked-wolf-3'),
+            getImage('naked-wolf-4'),
+        ],
+        description: 'The Naked Wolf sneakers redefine modern luxury footwear with their iconic chunky silhouette and bold aesthetic. Crafted for those who dare to be different, these sneakers combine high-fashion design with exceptional comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'White', 'Beige'],
+    },
+    {
         id: 'vans-classic',
         name: 'Vans',
         price: 1499,

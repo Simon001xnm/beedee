@@ -1,6 +1,30 @@
 {
   "placeholderImages": [
     {
+      "id": "naked-wolf-1",
+      "description": "Naked wolf sneaker view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.00.26 (1).jpeg",
+      "imageHint": "naked wolf"
+    },
+    {
+      "id": "naked-wolf-2",
+      "description": "Naked wolf sneaker view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.00.26.jpeg",
+      "imageHint": "naked wolf"
+    },
+    {
+      "id": "naked-wolf-3",
+      "description": "Naked wolf sneaker view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.00.27 (1).jpeg",
+      "imageHint": "naked wolf"
+    },
+    {
+      "id": "naked-wolf-4",
+      "description": "Naked wolf sneaker view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 14.00.27.jpeg",
+      "imageHint": "naked wolf"
+    },
+    {
       "id": "vans-1",
       "description": "Vans sneaker view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-01-30 at 13.54.25 (1).jpeg",
