@@ -1,6 +1,30 @@
 {
   "placeholderImages": [
     {
+      "id": "clarks-1",
+      "description": "Clarks shoe view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 09.57.30.jpeg",
+      "imageHint": "clarks shoes"
+    },
+    {
+      "id": "clarks-2",
+      "description": "Clarks shoe view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 09.57.31 (1).jpeg",
+      "imageHint": "clarks shoes"
+    },
+    {
+      "id": "clarks-3",
+      "description": "Clarks shoe view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 09.57.31 (2).jpeg",
+      "imageHint": "clarks shoes"
+    },
+    {
+      "id": "clarks-4",
+      "description": "Clarks shoe view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 09.57.31.jpeg",
+      "imageHint": "clarks shoes"
+    },
+    {
       "id": "polo-loafer-1",
       "description": "Polo loafer front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 12.37.40.jpeg",

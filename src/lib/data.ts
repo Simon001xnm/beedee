@@ -17,6 +17,23 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'clarks-official',
+        name: 'Clarks',
+        price: 2999,
+        images: [
+            getImage('clarks-1'),
+            getImage('clarks-2'),
+            getImage('clarks-3'),
+            getImage('clarks-4'),
+        ],
+        description: 'Timeless comfort and classic style with Clarks. Crafted with premium materials for a refined look and exceptional durability, these shoes are perfect for both formal and smart-casual settings.',
+        category: 'mens-shoes',
+        subcategory: 'formal-shoes',
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44'],
+        colors: ['Brown', 'Black'],
+    },
+    {
         id: 'nike-shox-new',
         name: 'Nike shocks',
         price: 3999,
