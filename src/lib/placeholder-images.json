@@ -1,6 +1,42 @@
 {
   "placeholderImages": [
     {
+      "id": "soccer-boot-1",
+      "description": "Soccer boot view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24 (1).jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
+      "id": "soccer-boot-2",
+      "description": "Soccer boot view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24 (2).jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
+      "id": "soccer-boot-3",
+      "description": "Soccer boot view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24 (3).jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
+      "id": "soccer-boot-4",
+      "description": "Soccer boot view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24.jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
+      "id": "soccer-boot-5",
+      "description": "Soccer boot view 5",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.25 (1).jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
+      "id": "soccer-boot-6",
+      "description": "Soccer boot view 6",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.25.jpeg",
+      "imageHint": "soccer boots"
+    },
+    {
       "id": "clarks-1",
       "description": "Clarks shoe view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 09.57.30.jpeg",

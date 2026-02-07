@@ -13,9 +13,29 @@ export const categories: Category[] = [
   { id: 'kids-shoes', name: 'Kids\' Shoes', parentId: null, imageUrl: getImage('kids-sneaker-1').url, imageHint: getImage('kids-sneaker-1').hint },
   { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
   { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
+  { id: 'soccer-boots', name: 'Soccer Boots', parentId: 'mens-shoes', imageUrl: getImage('soccer-boot-1').url, imageHint: getImage('soccer-boot-1').hint },
 ];
 
 export const products: Product[] = [
+    {
+        id: 'soccer-boots-pro',
+        name: 'Soccer boots',
+        price: 3999,
+        images: [
+            getImage('soccer-boot-1'),
+            getImage('soccer-boot-2'),
+            getImage('soccer-boot-3'),
+            getImage('soccer-boot-4'),
+            getImage('soccer-boot-5'),
+            getImage('soccer-boot-6'),
+        ],
+        description: 'Take your game to the next level with these high-performance soccer boots. Engineered for maximum traction and precision control, they offer a comfortable fit and durable construction for any surface.',
+        category: 'mens-shoes',
+        subcategory: 'soccer-boots',
+        relatedProducts: [],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Multi-color'],
+    },
     {
         id: 'clarks-official',
         name: 'Clarks',
