@@ -562,7 +562,7 @@ export const products: Product[] = [
         colors: ['Blue', 'Pink', 'Green', 'Black'],
     },
     {
-        id: 'kids-sneakers',
+        id: 'kids-sneaker-1',
         name: 'Kids Sneakers',
         price: 1799,
         images: [
@@ -810,7 +810,7 @@ export const products: Product[] = [
     {
         id: 'lacoste-mens-official',
         name: 'Lacoste Men\'s Official',
-        price: 3999,
+        price: 2499,
         images: [
             getImage('lacoste-1'),
             getImage('lacoste-2'),
