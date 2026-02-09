@@ -826,7 +826,7 @@ export const products: Product[] = [
     {
         id: 'nike-air-force-1-07',
         name: 'Nike Air Force 1 \'07',
-        price: 3600,
+        price: 3499,
         images: [
             getImage('nike-airforce-1'),
             getImage('nike-airforce-2'),
@@ -841,7 +841,7 @@ export const products: Product[] = [
     {
         id: 'tommy-hilfiger-high-boots',
         name: 'Tommy Hilfiger High Boots',
-        price: 3900,
+        price: 3499,
         images: [
             getImage('tommy-boots-1'),
             getImage('tommy-boots-2'),
@@ -870,7 +870,7 @@ export const products: Product[] = [
     {
         id: 'polo-ralph-lauren-sneaker',
         name: 'Polo Ralph Lauren Sneaker',
-        price: 3200,
+        price: 2499,
         images: [
             getImage('polo-sneaker')
         ],
