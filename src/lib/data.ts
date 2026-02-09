@@ -319,7 +319,7 @@ export const products: Product[] = [
     {
         id: 'jordan-4-fear-pack',
         name: 'Jordan 4 Fear Pack',
-        price: 3800,
+        price: 3499,
         images: [
             getImage('jordan-4-fear-1'),
             getImage('jordan-4-fear-2'),
