@@ -22,14 +22,14 @@ export const products: Product[] = [
         name: 'New Balance 9060',
         price: 3499,
         images: [
-            getImage('nb-9060-1'),
-            getImage('nb-9060-2'),
+            getImage('nb-9060-3'),
+            getImage('nb-9060-4'),
         ],
         description: 'The New Balance 9060 is a new expression of refined style and innovation-led design. It reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the proudly futuristic, visible tech aesthetic of the Y2K era.',
         category: 'sneakers',
         subcategory: null,
         relatedProducts: [],
-        sizes: ['36', '37', '38', '39', '40', '41', '42'],
+        sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
         colors: ['Multi-color'],
     },
     {

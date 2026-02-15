@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "nb-9060-3",
+      "description": "New Balance 9060 view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.22.50 PM (1).jpeg",
+      "imageHint": "new balance 9060"
+    },
+    {
+      "id": "nb-9060-4",
+      "description": "New Balance 9060 view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.22.50 PM (2).jpeg",
+      "imageHint": "new balance 9060"
+    },
+    {
       "id": "nb-9060-1",
       "description": "New Balance 9060 front",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.20.55 PM.jpeg",
