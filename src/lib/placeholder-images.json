@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "samoa-new-1",
+      "description": "Samoa view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg",
+      "imageHint": "samoa sneakers"
+    },
+    {
+      "id": "samoa-new-2",
+      "description": "Samoa view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 10.59.37 AM.jpeg",
+      "imageHint": "samoa sneakers"
+    },
+    {
       "id": "kids-open-1",
       "description": "Kids open shoe view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 10.02.21 AM (3).jpeg",

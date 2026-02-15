@@ -18,6 +18,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'samoa-new',
+        name: 'Samoa',
+        price: 2799,
+        images: [
+            getImage('samoa-new-1'),
+            getImage('samoa-new-2'),
+        ],
+        description: 'The Samoa is a classic trainer loved for its sleek silhouette and iconic toe bumper. A versatile choice for any casual look, offering timeless style and exceptional comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'kids-open',
         name: 'Kids open',
         price: 1499,
