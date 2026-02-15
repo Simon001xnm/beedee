@@ -18,6 +18,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'nb-special-offer',
+        name: 'New Balance Special Offer',
+        price: 2999,
+        images: [
+            getImage('nb-offer-1'),
+            getImage('nb-offer-2'),
+            getImage('nb-offer-3'),
+        ],
+        description: 'OFFER OFFER! Grab these stylish New Balance sneakers at an incredible price. Perfect for everyday comfort and a modern look.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'samoa-new',
         name: 'Samoa',
         price: 2799,

@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "nb-offer-1",
+      "description": "New Balance Special Offer view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 3.47.23 PM.jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "nb-offer-2",
+      "description": "New Balance Special Offer view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 3.47.24 PM (1).jpeg",
+      "imageHint": "new balance"
+    },
+    {
+      "id": "nb-offer-3",
+      "description": "New Balance Special Offer view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 3.47.24 PM (3).jpeg",
+      "imageHint": "new balance"
+    },
+    {
       "id": "samoa-new-1",
       "description": "Samoa view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg",
