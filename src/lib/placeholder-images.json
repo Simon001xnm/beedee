@@ -205,30 +205,6 @@
       "imageHint": "men sandals"
     },
     {
-      "id": "elsa-1",
-      "description": "Elsa kids shoes",
-      "imageUrl": "https://images.unsplash.com/photo-1707013537977-90e0a6cfa484?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxraWRzJTIwc2hvZXN8ZW58MHx8fHwxNzcxMTkzMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "elsa-2",
-      "description": "Elsa kids shoes side",
-      "imageUrl": "https://images.unsplash.com/photo-1707013537977-90e0a6cfa484?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxraWRzJTIwc2hvZXN8ZW58MHx8fHwxNzcxMTkzMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "bow-girls-1",
-      "description": "Bow Girls shoe view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1744814917810-269fbf29ca00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnaXJscyUyMHNob2VzfGVufDB8fHx8MTc3MTE5MzIwNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "girls shoes"
-    },
-    {
-      "id": "bow-girls-2",
-      "description": "Bow Girls shoe view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1744814917810-269fbf29ca00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnaXJscyUyMHNob2VzfGVufDB8fHx8MTc3MTE5MzIwNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "girls shoes"
-    },
-    {
       "id": "soccer-boot-1",
       "description": "Soccer boot view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24 (1).jpeg",
@@ -293,54 +269,6 @@
       "description": "Polo loafer front",
       "imageUrl": "/brands/WhatsApp Image 2026-01-31 at 12.37.40.jpeg",
       "imageHint": "polo loafer"
-    },
-    {
-      "id": "nike-airforce-1",
-      "description": "Nike Air Force 1 view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1722489291778-cb2a414d6ee0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aGl0ZSUyMHNuZWFrZXJzfGVufDB8fHx8MTc3MTE4Mzg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "white sneakers"
-    },
-    {
-      "id": "nike-airforce-2",
-      "description": "Nike Air Force 1 view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1722489291778-cb2a414d6ee0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aGl0ZSUyMHNuZWFrZXJzfGVufDB8fHx8MTc3MTE4Mzg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "white sneakers"
-    },
-    {
-      "id": "tommy-boots-1",
-      "description": "Tommy Boots view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1567873000290-bdad3f03a7b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGFkaWVzJTIwYm9vdHN8ZW58MHx8fHwxNzcxMTkzMjA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ladies boots"
-    },
-    {
-      "id": "tommy-boots-2",
-      "description": "Tommy Boots view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1621996659490-3275b4d0d951?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYWRpZXMlMjBib290c3xlbnwwfHx8fDE3NzExOTMyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ladies boots"
-    },
-    {
-      "id": "polo-sneaker",
-      "description": "Polo Sneaker view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1601929131351-21b36fcd49be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xvJTIwc25lYWtlcnxlbnwwfHx8fDE3NzExOTMyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "polo sneaker"
-    },
-    {
-      "id": "jordan-1",
-      "description": "Jordan 1 preview",
-      "imageUrl": "https://images.unsplash.com/photo-1744832982645-a875f05fced6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8am9yZGFuJTIwc25lYWtlcnN8ZW58MHx8fHwxNzcxMTkzMjA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jordan sneakers"
-    },
-    {
-      "id": "lacoste-1",
-      "description": "Lacoste preview",
-      "imageUrl": "https://images.unsplash.com/photo-1531310197839-ccf54634509e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3JtYWwlMjBzaG9lc3xlbnwwfHx8fDE3NzExOTMyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "formal shoes"
-    },
-    {
-      "id": "kids-sneaker-1",
-      "description": "Kids sneaker preview",
-      "imageUrl": "https://images.unsplash.com/photo-1584564515943-b54cbb61836b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxraWRzJTIwc2hvZXN8ZW58MHx8fHwxNzcxMTkzMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kids shoes"
     }
   ]
 }

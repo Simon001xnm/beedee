@@ -1,3 +1,4 @@
+
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -6,7 +7,8 @@ const getImage = (id: string) => {
   if (image) {
     return { url: image.imageUrl, hint: image.imageHint };
   }
-  // Robust fallback for missing registry entries
+  // Pick a "random" high-quality shoe placeholder if specific mapping is missing
+  // This uses a fixed seed based on the ID to keep it stable
   return { 
     url: `https://picsum.photos/seed/${id || 'shoe'}/600/600`, 
     hint: 'shoe' 
@@ -14,12 +16,12 @@ const getImage = (id: string) => {
 }
 
 export const categories: Category[] = [
-  { id: 'sneakers', name: 'Sneakers', parentId: null, imageUrl: getImage('jordan-1').url, imageHint: getImage('jordan-1').hint },
-  { id: 'mens-shoes', name: 'Men\'s Shoes', parentId: null, imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
-  { id: 'ladies-shoes', name: 'Ladies\' Shoes', parentId: null, imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
-  { id: 'kids-shoes', name: 'Kids\' Shoes', parentId: null, imageUrl: getImage('kids-sneaker-1').url, imageHint: getImage('kids-sneaker-1').hint },
-  { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('lacoste-1').url, imageHint: getImage('lacoste-1').hint },
-  { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('tommy-boots-1').url, imageHint: getImage('tommy-boots-1').hint },
+  { id: 'sneakers', name: 'Sneakers', parentId: null, imageUrl: getImage('samoa-new-1').url, imageHint: getImage('samoa-new-1').hint },
+  { id: 'mens-shoes', name: 'Men\'s Shoes', parentId: null, imageUrl: getImage('clarks-1').url, imageHint: getImage('clarks-1').hint },
+  { id: 'ladies-shoes', name: 'Ladies\' Shoes', parentId: null, imageUrl: getImage('asics-gel-1').url, imageHint: getImage('asics-gel-1').hint },
+  { id: 'kids-shoes', name: 'Kids\' Shoes', parentId: null, imageUrl: getImage('kids-sneaker-v4-1').url, imageHint: getImage('kids-sneaker-v4-1').hint },
+  { id: 'formal-shoes', name: 'Formal Shoes', parentId: 'mens-shoes', imageUrl: getImage('polo-loafer-1').url, imageHint: getImage('polo-loafer-1').hint },
+  { id: 'ladies-boots', name: 'Boots', parentId: 'ladies-shoes', imageUrl: getImage('asics-gel-1').url, imageHint: getImage('asics-gel-1').hint },
   { id: 'soccer-boots', name: 'Soccer Boots', parentId: 'mens-shoes', imageUrl: getImage('soccer-boot-1').url, imageHint: getImage('soccer-boot-1').hint },
 ];
 
@@ -74,13 +76,9 @@ export const products: Product[] = [
     },
     {
         id: 'kids-sneakers-v5',
-        name: 'Kids Sneakers',
+        name: 'Kids Sneakers (Toddler)',
         price: 1799,
         images: [
-            getImage('kids-sneaker-v4-1'),
-            getImage('kids-sneaker-v4-2'),
-            getImage('kids-sneaker-v4-3'),
-            getImage('kids-sneaker-v4-4'),
             getImage('kids-sneaker-v5-5'),
         ],
         description: 'Perfect for the little ones, these stylish kids sneakers are designed for comfort and durability. Ideal for toddlers and early walkers.',
@@ -177,7 +175,7 @@ export const products: Product[] = [
             getImage('nb-9060-1'),
             getImage('nb-9060-2'),
         ],
-        description: 'The New Balance 9060 is a new expression of refined style and innovation-led design. It reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the futuristic, visible tech aesthetic of the Y2K era.',
+        description: 'The New Balance 9060 reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the futuristic, visible tech aesthetic of the Y2K era.',
         category: 'sneakers',
         subcategory: null,
         relatedProducts: [],
@@ -273,8 +271,7 @@ export const products: Product[] = [
         name: 'Elsa',
         price: 1499,
         images: [
-            getImage('elsa-1'),
-            getImage('elsa-2'),
+            getImage('kids-sneaker-v5-5'), // Picked a high quality kids shoe from your uploads
         ],
         description: 'Let your little one step into a fairytale with these enchanting Elsa shoes. Perfect for fans of the frozen magic.',
         category: 'kids-shoes',
@@ -288,8 +285,7 @@ export const products: Product[] = [
         name: 'Bow Girls',
         price: 1499,
         images: [
-            getImage('bow-girls-1'),
-            getImage('bow-girls-2'),
+            getImage('kids-open-1'), // Picked a high quality kids shoe from your uploads
         ],
         description: 'Adorable and stylish, these "Bow Girls" shoes are perfect for your little fashionista.',
         category: 'kids-shoes',
@@ -303,8 +299,7 @@ export const products: Product[] = [
         name: 'Nike Air Force 1 \'07',
         price: 3499,
         images: [
-            getImage('nike-airforce-1'),
-            getImage('nike-airforce-2'),
+            getImage('asics-new-1'), // Picked a high quality sneaker from your uploads as a better placeholder
         ],
         description: 'The radiance lives on in the Nike Air Force 1 \'07, the b-ball OG that puts a fresh spin on what you know best.',
         category: 'sneakers',
@@ -318,8 +313,7 @@ export const products: Product[] = [
         name: 'Tommy Hilfiger High Boots',
         price: 3499,
         images: [
-            getImage('tommy-boots-1'),
-            getImage('tommy-boots-2'),
+            getImage('asics-gel-1'), // Better placeholder from your uploads
         ],
         description: 'Make a statement with these stunning high boots from Tommy Hilfiger.',
         category: 'ladies-shoes',
@@ -333,7 +327,7 @@ export const products: Product[] = [
         name: 'Polo Ralph Lauren Sneaker',
         price: 2499,
         images: [
-            getImage('polo-sneaker')
+            getImage('samoa-new-1')
         ],
         description: 'A classic sneaker from Polo Ralph Lauren that combines preppy style with athletic comfort.',
         category: 'sneakers',
