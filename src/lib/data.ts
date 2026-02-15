@@ -18,6 +18,20 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'nike-ld-waffle',
+        name: 'Nike LD waffle',
+        price: 3499,
+        images: [
+            getImage('nike-ld-waffle-1'),
+        ],
+        description: 'The Nike LD Waffle is a fusion of two iconic Nike silhouettes: the LDV and the Waffle Daybreak. Featuring a unique doubled-up aesthetic with overlapping tongues, Swooshes, and laces, it offers a distinct, high-fashion look combined with classic waffle traction and comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'nb-9060',
         name: 'New Balance 9060',
         price: 3499,
