@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "bape-star-1",
+      "description": "Bape star view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg",
+      "imageHint": "bape star"
+    },
+    {
+      "id": "bape-star-2",
+      "description": "Bape star view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.04.37 PM.jpeg",
+      "imageHint": "bape star"
+    },
+    {
+      "id": "bape-star-3",
+      "description": "Bape star view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.04.38 PM.jpeg",
+      "imageHint": "bape star"
+    },
+    {
       "id": "nike-ld-waffle-1",
       "description": "Nike LD waffle front view",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg",

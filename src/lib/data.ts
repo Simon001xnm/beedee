@@ -18,6 +18,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'bape-star',
+        name: 'Bape star',
+        price: 2999,
+        images: [
+            getImage('bape-star-1'),
+            getImage('bape-star-2'),
+            getImage('bape-star-3'),
+        ],
+        description: 'Iconic Bape Star sneakers featuring a bold design and signature star logo. Crafted with premium materials for a distinct street-style look and lasting comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'nike-ld-waffle',
         name: 'Nike LD waffle',
         price: 3499,
