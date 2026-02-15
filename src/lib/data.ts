@@ -18,6 +18,24 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'kids-sneakers-v5',
+        name: 'Kids Sneakers',
+        price: 1799,
+        images: [
+            getImage('kids-sneaker-v4-1'),
+            getImage('kids-sneaker-v4-2'),
+            getImage('kids-sneaker-v4-3'),
+            getImage('kids-sneaker-v4-4'),
+            getImage('kids-sneaker-v5-5'),
+        ],
+        description: 'Perfect for the little ones, these stylish kids sneakers are designed for comfort and durability. Ideal for toddlers and early walkers.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'kids-sneakers-v4',
         name: 'Kids Sneakers',
         price: 1799,
