@@ -1,4 +1,3 @@
-
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -175,6 +174,8 @@ export const products: Product[] = [
         images: [
             getImage('nb-9060-v2-1'),
             getImage('nb-9060-v2-2'),
+            getImage('nb-9060-1'),
+            getImage('nb-9060-2'),
         ],
         description: 'The New Balance 9060 is a new expression of refined style and innovation-led design. It reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the futuristic, visible tech aesthetic of the Y2K era.',
         category: 'sneakers',
