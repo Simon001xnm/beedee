@@ -1,6 +1,24 @@
 {
   "placeholderImages": [
     {
+      "id": "men-sandals-1",
+      "description": "Men sandals view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18 (1).jpeg",
+      "imageHint": "men sandals"
+    },
+    {
+      "id": "men-sandals-2",
+      "description": "Men sandals view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18 (2).jpeg",
+      "imageHint": "men sandals"
+    },
+    {
+      "id": "men-sandals-3",
+      "description": "Men sandals view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18.jpeg",
+      "imageHint": "men sandals"
+    },
+    {
       "id": "soccer-boot-1",
       "description": "Soccer boot view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 10.00.24 (1).jpeg",

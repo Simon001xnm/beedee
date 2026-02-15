@@ -18,6 +18,22 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'men-sandals',
+        name: 'Men sandals',
+        price: 1800,
+        images: [
+            getImage('men-sandals-1'),
+            getImage('men-sandals-2'),
+            getImage('men-sandals-3'),
+        ],
+        description: 'Stylish and comfortable men\'s sandals, perfect for warm weather or casual wear. Crafted for durability and a relaxed fit.',
+        category: 'mens-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['40', '41', '42', '43', '44', '45'],
+        colors: ['Black', 'Brown'],
+    },
+    {
         id: 'soccer-boots-pro',
         name: 'Soccer boots',
         price: 3999,
@@ -304,7 +320,7 @@ export const products: Product[] = [
     {
         id: 'airforce1-valentines',
         name: 'Airforce1 Valentines',
-        price: 2499,
+        price: 3499,
         images: [
             getImage('af1-valentines-1'),
             getImage('af1-valentines-2'),
