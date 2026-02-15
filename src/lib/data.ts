@@ -18,6 +18,23 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'kids-open',
+        name: 'Kids open',
+        price: 1499,
+        images: [
+            getImage('kids-open-1'),
+            getImage('kids-open-2'),
+            getImage('kids-open-3'),
+            getImage('kids-open-4'),
+        ],
+        description: 'Comfortable and stylish open shoes for kids, perfect for warm weather and casual outings. Designed for durability and ease of wear.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'kids-sneakers-v5',
         name: 'Kids Sneakers',
         price: 1799,
