@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "jordan-voodoo-1",
+      "description": "Jordan Voodoo view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg",
+      "imageHint": "jordan voodoo"
+    },
+    {
+      "id": "jordan-voodoo-2",
+      "description": "Jordan Voodoo view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg",
+      "imageHint": "jordan voodoo"
+    },
+    {
       "id": "bape-star-1",
       "description": "Bape star view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg",

@@ -18,6 +18,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'jordan-voodoo',
+        name: 'Jordan Voodoo',
+        price: 3499,
+        images: [
+            getImage('jordan-voodoo-1'),
+            getImage('jordan-voodoo-2'),
+        ],
+        description: 'The Jordan Voodoo features a unique, patchwork-inspired design with premium materials and distinctive details. A standout addition to any sneaker collection, offering both iconic style and exceptional comfort.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'bape-star',
         name: 'Bape star',
         price: 2999,
