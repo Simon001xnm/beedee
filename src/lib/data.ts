@@ -18,6 +18,23 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'kids-sneakers-v4',
+        name: 'Kids Sneakers',
+        price: 1799,
+        images: [
+            getImage('kids-sneaker-v4-1'),
+            getImage('kids-sneaker-v4-2'),
+            getImage('kids-sneaker-v4-3'),
+            getImage('kids-sneaker-v4-4'),
+        ],
+        description: 'Durable and stylish sneakers for active kids. Perfect for school and play, offering great support and comfort.',
+        category: 'kids-shoes',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'asics-gel-sneakers',
         name: 'ASICS GEL sneakers',
         price: 2999,
