@@ -1,9 +1,17 @@
+
 import type { Product, Category } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
 const getImage = (id: string) => {
   const image = PlaceHolderImages.find(img => img.id === id);
-  return image ? { url: image.imageUrl, hint: image.imageHint } : { url: 'https://picsum.photos/seed/shoe-placeholder/600/600', hint: 'shoe' };
+  if (image) {
+    return { url: image.imageUrl, hint: image.imageHint };
+  }
+  // Robust fallback for missing registry entries
+  return { 
+    url: `https://picsum.photos/seed/${id || 'shoe'}/600/600`, 
+    hint: 'shoe' 
+  };
 }
 
 export const categories: Category[] = [
@@ -153,7 +161,7 @@ export const products: Product[] = [
         images: [
             getImage('nike-ld-waffle-1'),
         ],
-        description: 'The Nike LD Waffle is a fusion of two iconic Nike silhouettes: the LDV and the Waffle Daybreak. Featuring a unique doubled-up aesthetic with overlapping tongues, Swooshes, and laces, it offers a distinct, high-fashion look combined with classic waffle traction and comfort.',
+        description: 'The Nike LD Waffle is a fusion of two iconic Nike silhouettes: the LDV and the Waffle Daybreak. Featuring a unique doubled-up aesthetic with overlapping tongues, Swooshes, and lashes, it offers a distinct look combined with classic waffle traction.',
         category: 'sneakers',
         subcategory: null,
         relatedProducts: [],
@@ -168,7 +176,7 @@ export const products: Product[] = [
             getImage('nb-9060-v2-1'),
             getImage('nb-9060-v2-2'),
         ],
-        description: 'The New Balance 9060 is a new expression of refined style and innovation-led design. It reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the proudly futuristic, visible tech aesthetic of the Y2K era.',
+        description: 'The New Balance 9060 is a new expression of refined style and innovation-led design. It reinterprets familiar elements from classic 99X models with a warped sensibility inspired by the futuristic, visible tech aesthetic of the Y2K era.',
         category: 'sneakers',
         subcategory: null,
         relatedProducts: [],
@@ -221,7 +229,7 @@ export const products: Product[] = [
             getImage('soccer-boot-5'),
             getImage('soccer-boot-6'),
         ],
-        description: 'Take your game to the next level with these high-performance soccer boots. Engineered for maximum traction and precision control, they offer a comfortable fit and durable construction for any surface.',
+        description: 'Take your game to the next level with these high-performance soccer boots. Engineered for maximum traction and precision control.',
         category: 'mens-shoes',
         subcategory: 'soccer-boots',
         relatedProducts: [],
@@ -238,29 +246,12 @@ export const products: Product[] = [
             getImage('clarks-3'),
             getImage('clarks-4'),
         ],
-        description: 'Timeless comfort and classic style with Clarks. Crafted with premium materials for a refined look and exceptional durability, these shoes are perfect for both formal and smart-casual settings.',
+        description: 'Timeless comfort and classic style with Clarks. Crafted with premium materials for a refined look and exceptional durability.',
         category: 'mens-shoes',
         subcategory: 'formal-shoes',
         relatedProducts: [],
         sizes: ['40', '41', '42', '43', '44'],
         colors: ['Brown', 'Black'],
-    },
-    {
-        id: 'nike-shox-new',
-        name: 'Nike shocks',
-        price: 3999,
-        images: [
-            getImage('nike-shox-new-1'),
-            getImage('nike-shox-new-2'),
-            getImage('nike-shox-new-3'),
-            getImage('nike-shox-new-4'),
-        ],
-        description: 'Experience responsive cushioning and iconic style with the Nike Shox. Designed for impact protection and a bold look, these sneakers feature the legendary Shox columns for a springy feel with every step.',
-        category: 'sneakers',
-        subcategory: null,
-        relatedProducts: [],
-        sizes: ['40', '41', '42', '43', '44', '45'],
-        colors: ['Black/Grey'],
     },
     {
         id: 'polo-loafer-new',
@@ -269,7 +260,7 @@ export const products: Product[] = [
         images: [
             getImage('polo-loafer-1'),
         ],
-        description: 'Sophisticated and comfortable, the Polo Loafer is a timeless choice for a refined look. Crafted with attention to detail, these loafers offer effortless style and all-day comfort for any formal or smart-casual occasion.',
+        description: 'Sophisticated and comfortable, the Polo Loafer is a timeless choice for a refined look.',
         category: 'mens-shoes',
         subcategory: 'formal-shoes',
         relatedProducts: [],
@@ -284,7 +275,7 @@ export const products: Product[] = [
             getImage('elsa-1'),
             getImage('elsa-2'),
         ],
-        description: 'Let your little one step into a fairytale with these enchanting Elsa shoes. Perfect for fans of the frozen magic, these shoes are as comfortable as they are beautiful, featuring delightful shades of purple and pink.',
+        description: 'Let your little one step into a fairytale with these enchanting Elsa shoes. Perfect for fans of the frozen magic.',
         category: 'kids-shoes',
         subcategory: null,
         relatedProducts: [],
@@ -299,7 +290,7 @@ export const products: Product[] = [
             getImage('bow-girls-1'),
             getImage('bow-girls-2'),
         ],
-        description: 'Adorable and stylish, these "Bow Girls" shoes are perfect for your little fashionista. Featuring a prominent bow for a touch of elegance, these shoes are both comfortable and chic for any occasion.',
+        description: 'Adorable and stylish, these "Bow Girls" shoes are perfect for your little fashionista.',
         category: 'kids-shoes',
         subcategory: null,
         relatedProducts: [],
@@ -314,10 +305,10 @@ export const products: Product[] = [
             getImage('nike-airforce-1'),
             getImage('nike-airforce-2'),
         ],
-        description: 'The radiance lives on in the Nike Air Force 1 \'07, the b-ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.',
+        description: 'The radiance lives on in the Nike Air Force 1 \'07, the b-ball OG that puts a fresh spin on what you know best.',
         category: 'sneakers',
         subcategory: null,
-        relatedProducts: ['air-jordan-1-mid', 'nike-shox-tl-white'],
+        relatedProducts: [],
         sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
         colors: ['Triple White', 'Triple Black'],
     },
@@ -329,7 +320,7 @@ export const products: Product[] = [
             getImage('tommy-boots-1'),
             getImage('tommy-boots-2'),
         ],
-        description: 'Make a statement with these stunning high boots from Tommy Hilfiger. Combining classic design with modern flair, these boots are perfect for the fashion-forward woman. Ideal for both casual and dressy outfits.',
+        description: 'Make a statement with these stunning high boots from Tommy Hilfiger.',
         category: 'ladies-shoes',
         subcategory: 'ladies-boots',
         relatedProducts: [],
@@ -343,10 +334,10 @@ export const products: Product[] = [
         images: [
             getImage('polo-sneaker')
         ],
-        description: 'A classic sneaker from Polo Ralph Lauren that combines preppy style with athletic comfort. A versatile shoe for any casual occasion.',
+        description: 'A classic sneaker from Polo Ralph Lauren that combines preppy style with athletic comfort.',
         category: 'sneakers',
         subcategory: null,
-        relatedProducts: ['converse-chuck-70-leather'],
+        relatedProducts: [],
         sizes: ['38', '39', '40', '41', '42', '43'],
         colors: ['Navy', 'White', 'Black'],
     }
