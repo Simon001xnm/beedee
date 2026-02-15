@@ -18,6 +18,24 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'asics-sneakers',
+        name: 'Asics',
+        price: 3499,
+        images: [
+            getImage('asics-1'),
+            getImage('asics-2'),
+            getImage('asics-3'),
+            getImage('asics-4'),
+            getImage('asics-5'),
+        ],
+        description: 'High-performance Asics sneakers designed for comfort and durability. Perfect for running or casual wear with a sleek, modern aesthetic.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'men-sandals',
         name: 'Men sandals',
         price: 1800,

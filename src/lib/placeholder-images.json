@@ -1,6 +1,36 @@
 {
   "placeholderImages": [
     {
+      "id": "asics-1",
+      "description": "Asics sneaker view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg",
+      "imageHint": "asics sneakers"
+    },
+    {
+      "id": "asics-2",
+      "description": "Asics sneaker view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.00 AM.jpeg",
+      "imageHint": "asics sneakers"
+    },
+    {
+      "id": "asics-3",
+      "description": "Asics sneaker view 3",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM (1).jpeg",
+      "imageHint": "asics sneakers"
+    },
+    {
+      "id": "asics-4",
+      "description": "Asics sneaker view 4",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM (2).jpeg",
+      "imageHint": "asics sneakers"
+    },
+    {
+      "id": "asics-5",
+      "description": "Asics sneaker view 5",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM.jpeg",
+      "imageHint": "asics sneakers"
+    },
+    {
       "id": "men-sandals-1",
       "description": "Men sandals view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18 (1).jpeg",
