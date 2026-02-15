@@ -133,14 +133,14 @@
       "imageHint": "nike ld waffle"
     },
     {
-      "id": "nb-9060-3",
-      "description": "New Balance 9060 view 3",
+      "id": "nb-9060-v2-1",
+      "description": "New Balance 9060 v2 view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.22.50 PM (1).jpeg",
       "imageHint": "new balance 9060"
     },
     {
-      "id": "nb-9060-4",
-      "description": "New Balance 9060 view 4",
+      "id": "nb-9060-v2-2",
+      "description": "New Balance 9060 v2 view 2",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 12.22.50 PM (2).jpeg",
       "imageHint": "new balance 9060"
     },
@@ -157,49 +157,49 @@
       "imageHint": "new balance 9060"
     },
     {
-      "id": "asics-1",
+      "id": "asics-new-1",
       "description": "Asics sneaker view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg",
       "imageHint": "asics sneakers"
     },
     {
-      "id": "asics-2",
+      "id": "asics-new-2",
       "description": "Asics sneaker view 2",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.00 AM.jpeg",
       "imageHint": "asics sneakers"
     },
     {
-      "id": "asics-3",
+      "id": "asics-new-3",
       "description": "Asics sneaker view 3",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM (1).jpeg",
       "imageHint": "asics sneakers"
     },
     {
-      "id": "asics-4",
+      "id": "asics-new-4",
       "description": "Asics sneaker view 4",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM (2).jpeg",
       "imageHint": "asics sneakers"
     },
     {
-      "id": "asics-5",
+      "id": "asics-new-5",
       "description": "Asics sneaker view 5",
       "imageUrl": "/brands/WhatsApp Image 2026-02-04 at 11.55.01 AM.jpeg",
       "imageHint": "asics sneakers"
     },
     {
-      "id": "men-sandals-1",
+      "id": "men-sandals-new-1",
       "description": "Men sandals view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18 (1).jpeg",
       "imageHint": "men sandals"
     },
     {
-      "id": "men-sandals-2",
+      "id": "men-sandals-new-2",
       "description": "Men sandals view 2",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18 (2).jpeg",
       "imageHint": "men sandals"
     },
     {
-      "id": "men-sandals-3",
+      "id": "men-sandals-new-3",
       "description": "Men sandals view 3",
       "imageUrl": "/brands/WhatsApp Image 2026-02-03 at 12.03.18.jpeg",
       "imageHint": "men sandals"
@@ -635,510 +635,6 @@
       "description": "Atongmu kids shoes top",
       "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.59.57.jpeg",
       "imageHint": "kids shoes"
-    },
-    {
-      "id": "sport-kids-1",
-      "description": "Sport kids shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.49.25 (1).jpeg",
-      "imageHint": "sport shoes"
-    },
-    {
-      "id": "sport-kids-2",
-      "description": "Sport kids shoes side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.49.25 (2).jpeg",
-      "imageHint": "sport shoes"
-    },
-    {
-      "id": "sport-kids-3",
-      "description": "Sport kids shoes top",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.49.25.jpeg",
-      "imageHint": "sport shoes"
-    },
-    {
-      "id": "tick-duck-1",
-      "description": "Tick Duck shoes for kids",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.02 (1).jpeg",
-      "imageHint": "duck shoes"
-    },
-    {
-      "id": "tick-duck-2",
-      "description": "Tick Duck shoes for kids side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.02.jpeg",
-      "imageHint": "duck shoes"
-    },
-    {
-      "id": "tick-duck-3",
-      "description": "Tick Duck shoes for kids top",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.44.03.jpeg",
-      "imageHint": "duck shoes"
-    },
-    {
-      "id": "elsa-1",
-      "description": "Elsa themed shoes for kids",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.38.15.jpeg",
-      "imageHint": "elsa shoes"
-    },
-    {
-      "id": "elsa-2",
-      "description": "Elsa themed shoes for kids side view",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.38.16.jpeg",
-      "imageHint": "elsa shoes"
-    },
-    {
-      "id": "bow-girls-1",
-      "description": "Bow girls shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.35.39.jpeg",
-      "imageHint": "girls shoes"
-    },
-    {
-      "id": "bow-girls-2",
-      "description": "Bow girls shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.35.40.jpeg",
-      "imageHint": "girls shoes"
-    },
-    {
-      "id": "shinny-sqmr-1",
-      "description": "Shinny S-QMR kids shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.30.15 (1).jpeg",
-      "imageHint": "shiny kids shoes"
-    },
-    {
-      "id": "shinny-sqmr-2",
-      "description": "Shinny S-QMR kids shoes side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.30.15 (2).jpeg",
-      "imageHint": "shiny kids shoes"
-    },
-    {
-      "id": "kbs-1",
-      "description": "KBS kids shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.32.jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "kbs-2",
-      "description": "KBS kids shoes side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.33 (1).jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "kbs-3",
-      "description": "KBS kids shoes back",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.28.33.jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "fashion-bunny-1",
-      "description": "Fashion bunny shoes",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.27.43 (1).jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "fashion-bunny-2",
-      "description": "Fashion bunny shoes side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.27.43 (2).jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "fashion-bunny-3",
-      "description": "Fashion bunny shoes top",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.27.43.jpeg",
-      "imageHint": "kids shoes"
-    },
-    {
-      "id": "kids-airforce-1-1",
-      "description": "Kids Airforce 1",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.25.23.jpeg",
-      "imageHint": "kids airforce"
-    },
-    {
-      "id": "kids-airforce-1-2",
-      "description": "Kids Airforce 1 side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.25.22.jpeg",
-      "imageHint": "kids airforce"
-    },
-    {
-      "id": "kids-sneaker-v3-1",
-      "description": "Kids sneaker v3",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31 (1).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v3-2",
-      "description": "Kids sneaker v3",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31 (2).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v3-3",
-      "description": "Kids sneaker v3",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.18.31.jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v2-1",
-      "description": "Kids sneaker v2",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.14.08 (1).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v2-2",
-      "description": "Kids sneaker v2",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.14.08 (2).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v2-3",
-      "description": "Kids sneaker v2",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.14.08.jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-v2-4",
-      "description": "Kids sneaker v2",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.14.09.jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-1",
-      "description": "Kids sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.12.16 (1).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-2",
-      "description": "Kids sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.12.16 (2).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-3",
-      "description": "Kids sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.12.16 (3).jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "kids-sneaker-4",
-      "description": "Kids sneaker",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 14.12.16.jpeg",
-      "imageHint": "kids sneakers"
-    },
-    {
-      "id": "tn-airmax-plus-1",
-      "description": "Tn Air Max Plus",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.28.13.jpeg",
-      "imageHint": "tn airmax"
-    },
-    {
-      "id": "tn-airmax-plus-2",
-      "description": "Tn Air Max Plus",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.28.14 (1).jpeg",
-      "imageHint": "tn airmax"
-    },
-    {
-      "id": "tn-airmax-plus-3",
-      "description": "Tn Air Max Plus",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.28.14 (2).jpeg",
-      "imageHint": "tn airmax"
-    },
-    {
-      "id": "tn-airmax-plus-4",
-      "description": "Tn Air Max Plus",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.28.14 (3).jpeg",
-      "imageHint": "tn airmax"
-    },
-    {
-      "id": "tn-airmax-plus-5",
-      "description": "Tn Air Max Plus",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-29 at 11.28.14.jpeg",
-      "imageHint": "tn airmax"
-    },
-    {
-      "id": "mens-official-1",
-      "description": "Mens Official Shoes front",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.09 (2).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-2",
-      "description": "Mens Official Shoes side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.09.jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-3",
-      "description": "Mens Official Shoes back",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.10 (2).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-4",
-      "description": "Mens Official Shoes other side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.11 (2).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-5",
-      "description": "Mens Official Shoes angle",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.11 (3).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-6",
-      "description": "Mens Official Shoes sole",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.11 (4).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-7",
-      "description": "Mens Official Shoes top",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.11.jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-8",
-      "description": "Mens Official Shoes detail",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.12 (2).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-9",
-      "description": "Mens Official Shoes pair",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.12 (3).jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "mens-official-10",
-      "description": "Mens Official Shoes other",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 11.00.12.jpeg",
-      "imageHint": "official shoes"
-    },
-    {
-      "id": "timberland-1",
-      "description": "Timberland Casual front",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.22 (1).jpeg",
-      "imageHint": "timberland shoe"
-    },
-    {
-      "id": "timberland-2",
-      "description": "Timberland Casual side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.22.jpeg",
-      "imageHint": "timberland shoe"
-    },
-    {
-      "id": "timberland-3",
-      "description": "Timberland Casual back",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.23 (1).jpeg",
-      "imageHint": "timberland shoe"
-    },
-    {
-      "id": "timberland-4",
-      "description": "Timberland Casual other side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.23.jpeg",
-      "imageHint": "timberland shoe"
-    },
-    {
-      "id": "timberland-5",
-      "description": "Timberland Casual angle",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.59.24.jpeg",
-      "imageHint": "timberland shoe"
-    },
-    {
-      "id": "nike-shox-1",
-      "description": "Nike Shox TL",
-      "imageUrl": "/brands/1759343541032.jpg",
-      "imageHint": "nike shox"
-    },
-    {
-      "id": "nike-shox-2",
-      "description": "Nike Shox TL side view",
-      "imageUrl": "/brands/1759343541238.jpg",
-      "imageHint": "nike shox"
-    },
-    {
-      "id": "nike-shox-3",
-      "description": "Nike Shox TL back view",
-      "imageUrl": "/brands/1759343541420.jpg",
-      "imageHint": "nike shox"
-    },
-    {
-      "id": "jordan-1",
-      "description": "Air Jordan 1 Mid",
-      "imageUrl": "/brands/1759343546186.jpg",
-      "imageHint": "air jordan"
-    },
-    {
-      "id": "jordan-2",
-      "description": "Air Jordan 1 Mid side",
-      "imageUrl": "/brands/1759343546446.jpg",
-      "imageHint": "air jordan"
-    },
-    {
-      "id": "jordan-3-image",
-      "description": "Air Jordan 1 Mid back",
-      "imageUrl": "/brands/1759343546762.jpg",
-      "imageHint": "air jordan"
-    },
-    {
-      "id": "jordan-4",
-      "description": "Air Jordan 1 Mid top",
-      "imageUrl": "/brands/1759343546977.jpg",
-      "imageHint": "air jordan"
-    },
-    {
-      "id": "converse-1",
-      "description": "Converse Chuck 70 Leather",
-      "imageUrl": "/brands/1759343543521.jpg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "converse-2",
-      "description": "Converse Chuck 70 Leather side",
-      "imageUrl": "/brands/1759343545470.jpg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "converse-3",
-      "description": "Converse Chuck 70 Leather back",
-      "imageUrl": "/brands/1759343547405.jpg",
-      "imageHint": "converse leather"
-    },
-    {
-      "id": "lacoste-1",
-      "description": "Lacoste Men's Official Shoe",
-      "imageUrl": "/brands/1759343545660.jpg",
-      "imageHint": "lacoste official"
-    },
-    {
-      "id": "lacoste-2",
-      "description": "Lacoste Men's Official Shoe side",
-      "imageUrl": "/brands/1759343545857.jpg",
-      "imageHint": "lacoste official"
-    },
-    {
-      "id": "lacoste-3",
-      "description": "Lacoste Men's Official Shoe top",
-      "imageUrl": "/brands/1759343546334.jpg",
-      "imageHint": "lacoste official"
-    },
-    {
-      "id": "nike-airforce-1",
-      "description": "Nike Air Force 1",
-      "imageUrl": "/brands/1759343545964.jpg",
-      "imageHint": "nike airforce"
-    },
-    {
-      "id": "nike-airforce-2",
-      "description": "Nike Air Force 1 side",
-      "imageUrl": "/brands/1759343546870.jpg",
-      "imageHint": "nike airforce"
-    },
-    {
-      "id": "tommy-boots-1",
-      "description": "Tommy Hilfiger High Boots",
-      "imageUrl": "/brands/1759343546083.jpg",
-      "imageHint": "tommy hilfiger"
-    },
-    {
-      "id": "tommy-boots-2",
-      "description": "Tommy Hilfiger High Boots side",
-      "imageUrl": "/brands/1759343547242.jpg",
-      "imageHint": "tommy hilfiger"
-    },
-    {
-      "id": "nike-shox-black",
-      "description": "Nike Shox Black",
-      "imageUrl": "/brands/1759343546667.jpg",
-      "imageHint": "nike shox"
-    },
-    {
-      "id": "polo-sneaker",
-      "description": "Polo Ralph Lauren Sneaker",
-      "imageUrl": "/brands/1759343547127.jpg",
-      "imageHint": "polo ralphlauren"
-    },
-    {
-      "id": "samoa-1",
-      "description": "Adidas Samoa front",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.56.jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-2",
-      "description": "Adidas Samoa side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-3",
-      "description": "Adidas Samoa back",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (2).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-4",
-      "description": "Adidas Samoa other side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (3).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-5",
-      "description": "Adidas Samoa angle",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57 (4).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-6",
-      "description": "Adidas Samoa sole",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.57.jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-7",
-      "description": "Adidas Samoa top",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58 (1).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-8",
-      "description": "Adidas Samoa detail",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58 (2).jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samoa-9",
-      "description": "Adidas Samoa pair",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.57.58.jpeg",
-      "imageHint": "adidas samoa"
-    },
-    {
-      "id": "samba-1",
-      "description": "Adidas Samba front",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.34.jpeg",
-      "imageHint": "adidas samba"
-    },
-    {
-      "id": "samba-2",
-      "description": "Adidas Samba side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.35 (1).jpeg",
-      "imageHint": "adidas samba"
-    },
-    {
-      "id": "samba-3",
-      "description": "Adidas Samba back",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.35.jpeg",
-      "imageHint": "adidas samba"
-    },
-    {
-      "id": "samba-4",
-      "description": "Adidas Samba other side",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.36.jpeg",
-      "imageHint": "adidas samba"
-    },
-    {
-      "id": "samba-5",
-      "description": "Adidas Samba angle",
-      "imageUrl": "/brands/WhatsApp Image 2026-01-28 at 10.58.37.jpeg",
-      "imageHint": "adidas samba"
     }
   ]
 }
