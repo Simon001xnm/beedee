@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "asics-gel-1",
+      "description": "ASICS GEL sneakers view 1",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg",
+      "imageHint": "asics gel"
+    },
+    {
+      "id": "asics-gel-2",
+      "description": "ASICS GEL sneakers view 2",
+      "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.21.20 PM.jpeg",
+      "imageHint": "asics gel"
+    },
+    {
       "id": "jordan-voodoo-1",
       "description": "Jordan Voodoo view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg",

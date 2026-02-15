@@ -18,6 +18,21 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
     {
+        id: 'asics-gel-sneakers',
+        name: 'ASICS GEL sneakers',
+        price: 2999,
+        images: [
+            getImage('asics-gel-1'),
+            getImage('asics-gel-2'),
+        ],
+        description: 'The ASICS GEL sneakers offer superior cushioning and stability for all-day comfort. Featuring GEL technology for impact absorption and a sleek design that works for both active and casual wear.',
+        category: 'sneakers',
+        subcategory: null,
+        relatedProducts: [],
+        sizes: ['36', '37', '38', '39', '40', '41'],
+        colors: ['Multi-color'],
+    },
+    {
         id: 'jordan-voodoo',
         name: 'Jordan Voodoo',
         price: 3499,
