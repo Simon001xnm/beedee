@@ -14,31 +14,31 @@ import Autoplay from "embla-carousel-autoplay"
 
 const carouselItems = [
     {
-        id: 'new-balance',
-        super_title: "Limited Edition",
-        title: "NEW BALANCE",
-        description: "The perfect fusion of urban style and exceptional engineering. Crafted for those who demand more.",
-        imageUrl: "https://images.unsplash.com/photo-1659738495795-f0aef20e809c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXclMjBiYWxhbmNlfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        id: 'new-balance-offer',
+        super_title: "Limited Time Offer",
+        title: "NEW BALANCE SPECIAL",
+        description: "Premium comfort meets iconic design. Grab your pair from our exclusive New Balance collection today.",
+        imageUrl: "/brands/WhatsApp Image 2026-02-06 at 3.47.23 PM.jpeg",
         imageHint: "new balance sneakers",
-        href: "/shop/sneakers",
+        href: "/shop/product/p0",
     },
      {
-        id: 'ladies-boots',
-        super_title: "Winter Elite",
-        title: "FASHION BOOTS",
-        description: "Elevate your stride with our latest leather collection. Defined by quality, designed for you.",
-        imageUrl: "https://images.unsplash.com/photo-1545571597-3a20563b55cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21lbiUyMGJvb3RzfGVufDB8fHx8MTc1OTQwMTI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-        imageHint: "women boots",
-        href: "/shop/ladies-boots",
+        id: 'jordan-voodoo',
+        super_title: "Exclusive Release",
+        title: "JORDAN VOODOO",
+        description: "Make a statement with the most sought-after design of the season. Authentic, bold, and unapologetically you.",
+        imageUrl: "/brands/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg",
+        imageHint: "jordan sneakers",
+        href: "/shop/product/p6",
     },
      {
-        id: 'mens-formal',
-        super_title: "The Official Look",
-        title: "SIGNATURE FORMALS",
-        description: "Exquisite craftsmanship meets modern sophistication. For the moments that matter.",
-        imageUrl: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3JtYWwlMjBzaG9lc3xlbnwwfHx8fDE3NTk0MDEyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-        imageHint: "men formal",
-        href: "/shop/formal-shoes",
+        id: 'adidas-samoa',
+        super_title: "Street Classic",
+        title: "ADIDAS SAMOA",
+        description: "The timeless silhouette for everyday style. Experience the perfect blend of heritage and modern luxury.",
+        imageUrl: "/brands/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg",
+        imageHint: "adidas sneakers",
+        href: "/shop/product/p1",
     },
 ]
 
@@ -57,27 +57,27 @@ export function HeroCarousel() {
         <CarouselContent>
           {carouselItems.map((item) => (
             <CarouselItem key={item.id}>
-              <div className="w-full h-[80vh] min-h-[600px] relative bg-primary">
+              <div className="w-full h-[85vh] min-h-[600px] relative bg-primary">
                 <Image
                     src={item.imageUrl}
                     alt={item.title}
                     fill
                     priority
-                    className="object-cover opacity-70"
+                    className="object-cover opacity-80"
                     data-ai-hint={item.imageHint}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="container mx-auto px-4 text-center">
-                        <p className="text-accent font-bold tracking-[0.4em] uppercase text-sm md:text-base mb-4 drop-shadow-lg">{item.super_title}</p>
-                        <h1 className="text-6xl md:text-9xl font-headline font-bold text-white mb-6 tracking-tight drop-shadow-2xl">{item.title}</h1>
-                        <p className="text-white/80 text-lg md:text-2xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">{item.description}</p>
-                        <div className="flex gap-6 justify-center">
-                            <Button asChild size="lg" className="btn-gold h-14 px-10 rounded-full">
-                                <Link href={item.href}>SHOP THE COLLECTION</Link>
+                        <p className="text-accent font-bold tracking-[0.4em] uppercase text-xs md:text-sm mb-4 drop-shadow-md">{item.super_title}</p>
+                        <h1 className="text-5xl md:text-8xl font-headline font-bold text-white mb-6 tracking-tight drop-shadow-2xl">{item.title}</h1>
+                        <p className="text-white/90 text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-lg">{item.description}</p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button asChild size="lg" className="btn-gold h-14 px-10 rounded-full text-sm tracking-widest font-bold">
+                                <Link href={item.href}>SHOP NOW</Link>
                             </Button>
-                            <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white hover:text-primary h-14 px-10 rounded-full transition-all duration-300">
-                                <Link href="/about">DISCOVER BEE & DEE</Link>
+                            <Button asChild size="lg" variant="outline" className="bg-white/5 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-primary h-14 px-10 rounded-full transition-all duration-300">
+                                <Link href="/shop">VIEW COLLECTION</Link>
                             </Button>
                         </div>
                     </div>
