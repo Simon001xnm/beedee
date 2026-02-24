@@ -44,7 +44,7 @@ export function Header() {
         <div className="container flex justify-between items-center text-[10px] tracking-widest font-bold uppercase">
           <div className="flex gap-6">
             <span className="flex items-center gap-2"><Phone className="h-3 w-3 text-accent" /> +254 106587150</span>
-            <span className="flex items-center gap-2"><Mail className="h-3 w-3 text-accent" /> support@beedee.luxury</span>
+            <span className="flex items-center gap-2"><Mail className="h-3 w-3 text-accent" /> wambuilenny@gmail.com</span>
           </div>
           <div className="flex gap-4 items-center">
             <span>Follow Our Journey</span>

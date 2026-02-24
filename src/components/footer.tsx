@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, Star } from "lucide-react";
+import { MessageCircle, Star, Mail } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -15,8 +15,8 @@ export function Footer() {
               The ultimate destination for premium footwear in Kenya. We redefine luxury through comfort and authentic style.
             </p>
             <div className="flex gap-6">
-               <Link href="#" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><MessageCircle className="h-4 w-4"/></Link>
-               <Link href="#" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><Star className="h-4 w-4"/></Link>
+               <Link href="https://wa.me/254106587150" target="_blank" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><MessageCircle className="h-4 w-4"/></Link>
+               <Link href="mailto:wambuilenny@gmail.com" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><Mail className="h-4 w-4"/></Link>
             </div>
           </div>
           <div className="space-y-8">
@@ -39,7 +39,7 @@ export function Footer() {
           </div>
            <div className="space-y-8">
             <h4 className="text-accent font-black tracking-[0.3em] text-[10px] uppercase">Stay Bold</h4>
-            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Subscribe for early access to elite releases and seasonal private sales.</p>
+            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Subscribe for early access to elite releases. For direct inquiries, email us at <span className="text-accent">wambuilenny@gmail.com</span></p>
             <div className="flex gap-2">
               <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 px-4 py-3 text-xs rounded-lg flex-1 outline-none focus:border-accent transition-colors text-white" />
               <Button size="sm" className="bg-accent text-primary font-black text-[9px] tracking-widest px-6 uppercase rounded-lg hover:bg-accent/80 transition-all">JOIN</Button>
