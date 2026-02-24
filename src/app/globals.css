@@ -13,17 +13,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 221 44% 10%;
     
-    /* Deep Navy Blue */
-    --primary: 221 44% 18%;
+    /* Deeper Navy Blue for Premium feel */
+    --primary: 221 44% 12%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 210 40% 96%;
-    --secondary-foreground: 221 44% 18%;
+    --secondary-foreground: 221 44% 12%;
     
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
     
-    /* Premium Gold */
+    /* Authentic Gold */
     --accent: 43 89% 55%;
     --accent-foreground: 221 44% 10%;
     
@@ -79,14 +79,22 @@
 
 @layer components {
   .btn-gold {
-    @apply bg-accent text-accent-foreground font-bold transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-accent text-accent-foreground font-bold tracking-widest uppercase transition-all duration-500 shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:scale-[1.02] active:scale-[0.98] border border-accent/20;
   }
   
   .card-premium {
-    @apply border-none shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1;
+    @apply bg-white border border-primary/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 rounded-2xl;
+  }
+
+  .image-container-clear {
+    @apply relative aspect-square overflow-hidden bg-[#F9FAFB] rounded-t-2xl p-4 flex items-center justify-center;
   }
   
   .gradient-navy {
-    @apply bg-gradient-to-br from-primary via-[#1a2c4e] to-[#0f1a30];
+    @apply bg-gradient-to-br from-[#0a1120] via-[#111c33] to-[#0a1120];
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
 }
