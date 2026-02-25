@@ -1,10 +1,10 @@
+
 'use client';
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Menu,
-  Search,
   ShoppingCart,
   User,
   Phone,
@@ -18,7 +18,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 import { categories } from "@/lib/data";
 import { useCart } from "@/context/cart-context";
 import { Badge } from "./ui/badge";
@@ -29,9 +28,7 @@ export function Header() {
   const { cartItems } = useCart();
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  const navLinks = categories
-    .filter(c => !c.parentId)
-    .map(c => ({ href: `/shop/${c.id}`, label: c.name }));
+  const navLinks = categories.map(c => ({ href: `/shop/${c.id}`, label: c.name }));
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl border-b border-primary/5">
@@ -76,8 +73,8 @@ export function Header() {
 
         {/* Desktop Nav - Left */}
         <nav className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">
-          <Link href="/shop" className="hover:text-primary transition-colors">Collections</Link>
-          <Link href="/shop/sneakers" className="hover:text-primary transition-colors">Sneakers</Link>
+          <Link href="/shop/sneaker-lab" className="hover:text-primary transition-colors">The Sneaker Lab</Link>
+          <Link href="/shop/gentlemens-quarters" className="hover:text-primary transition-colors">Gentlemen's Quarters</Link>
         </nav>
 
         {/* Central Logo */}
@@ -96,8 +93,8 @@ export function Header() {
         {/* Desktop Nav - Right & Actions */}
         <div className="flex items-center gap-2 md:gap-6">
           <nav className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70 mr-4">
-            <Link href="/about" className="hover:text-primary transition-colors">About</Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
+            <Link href="/shop/ladies-vault" className="hover:text-primary transition-colors">Ladies' Vault</Link>
+            <Link href="/shop/mini-icons" className="hover:text-primary transition-colors">Mini Icons</Link>
           </nav>
           
           <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-transparent">
