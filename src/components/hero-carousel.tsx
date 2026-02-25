@@ -12,26 +12,9 @@ import {
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { getProductById } from "@/lib/data";
 
-const carouselItems = [
-    {
-        id: 'promo-1',
-        title: "The Sneaker Lab 2026",
-        subtitle: "Global Express Delivery",
-        description: "Experience ultimate comfort and street-ready style with our curated New Balance and Jordan collections.",
-        imageId: 'hero-sneakers-banner',
-        href: "/shop/sneaker-lab",
-    },
-     {
-        id: 'promo-2',
-        title: "Gentlemen's Quarters",
-        subtitle: "Premium Heritage Craftsmanship",
-        description: "Discover the perfect balance of class and durability with our exclusive Clarks and Loafer edits.",
-        imageId: 'hero-formal-banner',
-        href: "/shop/gentlemens-quarters",
-    },
-]
+const featuredProductIds = ['p0', 'p6', 'p9']; // NB Special Offer, Jordan Voodoo, NB 9060
 
 export function HeroCarousel() {
   return (
@@ -44,28 +27,38 @@ export function HeroCarousel() {
           ]}
     >
     <CarouselContent className="h-full">
-      {carouselItems.map((item) => {
-        const image = PlaceHolderImages.find(img => img.id === item.imageId);
+      {featuredProductIds.map((id) => {
+        const product = getProductById(id);
+        if (!product) return null;
+
         return (
-          <CarouselItem key={item.id} className="h-full">
-            <div className="w-full h-full relative group">
+          <CarouselItem key={product.id} className="h-full">
+            <div className="w-full h-[400px] lg:h-full relative group">
               <Image
-                  src={image?.imageUrl || "https://picsum.photos/seed/default/1200/600"}
-                  alt={item.title}
+                  src={product.images[0].url}
+                  alt={product.name}
                   fill
                   priority
-                  className="object-cover"
-                  data-ai-hint={image?.imageHint || "luxury shoes"}
+                  className="object-cover object-center"
+                  data-ai-hint={product.images[0].hint || "luxury shoes"}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent" />
-              <div className="absolute inset-0 flex items-center p-8 md:p-16">
-                  <div className="max-w-md text-white">
-                      <p className="text-accent font-bold uppercase tracking-widest text-xs mb-2">{item.subtitle}</p>
-                      <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{item.title}</h2>
-                      <p className="text-white/80 text-sm md:text-lg mb-8 line-clamp-2">{item.description}</p>
-                      <Button asChild size="lg" className="btn-accent-market">
-                          <Link href={item.href}>Explore Collection</Link>
-                      </Button>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent" />
+              <div className="absolute inset-0 flex items-center p-8 md:p-12">
+                  <div className="max-w-sm md:max-w-md text-white">
+                      <p className="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-3">Featured Selection</p>
+                      <h2 className="text-3xl md:text-5xl font-black mb-4 leading-[1.1] tracking-tighter uppercase">{product.name}</h2>
+                      <p className="text-white/70 text-sm md:text-base mb-8 line-clamp-2 font-medium">
+                        {product.description}
+                      </p>
+                      <div className="flex items-center gap-6">
+                        <Button asChild size="lg" className="btn-accent-market h-12 px-8 text-xs">
+                            <Link href={`/shop/product/${product.id}`}>Shop This Pair</Link>
+                        </Button>
+                        <div className="flex flex-col">
+                            <span className="text-[10px] uppercase font-bold text-white/50 tracking-widest">Starting At</span>
+                            <span className="text-xl font-black text-accent tracking-tighter">KSh {product.price.toLocaleString()}</span>
+                        </div>
+                      </div>
                   </div>
               </div>
             </div>
@@ -73,8 +66,10 @@ export function HeroCarousel() {
         );
       })}
     </CarouselContent>
-    <CarouselPrevious className="left-4 bg-white/10 hover:bg-white text-white hover:text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
-    <CarouselNext className="right-4 bg-white/10 hover:bg-white text-white hover:text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="absolute bottom-4 right-12 flex gap-2">
+        <CarouselPrevious className="static translate-y-0 h-10 w-10 bg-white/10 hover:bg-accent hover:text-primary border-none text-white transition-all" />
+        <CarouselNext className="static translate-y-0 h-10 w-10 bg-white/10 hover:bg-accent hover:text-primary border-none text-white transition-all" />
+    </div>
     </Carousel>
   )
 }
