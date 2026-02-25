@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Center Column: Global Marketplace Slider */}
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[400px]">
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] lg:min-h-[400px]">
               <HeroCarousel />
             </div>
 
@@ -98,32 +98,32 @@ export default function Home() {
 
       {/* Global Service Badges */}
       <section className="container-market">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="flex items-start gap-5">
-            <div className="p-4 bg-primary/5 rounded-2xl">
-              <Truck className="h-6 w-6 text-primary" />
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+          <div className="flex items-start gap-4 md:gap-5">
+            <div className="p-3 md:p-4 bg-primary/5 rounded-2xl">
+              <Truck className="h-5 w-5 md:h-6 md:w-6 text-primary" />
             </div>
             <div>
-              <p className="text-sm font-black uppercase tracking-wider mb-1">Express Delivery</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Swift dispatch across Nairobi and efficient countrywide shipping.</p>
+              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Express Delivery</p>
+              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Swift dispatch across Nairobi and efficient countrywide shipping.</p>
             </div>
           </div>
-          <div className="flex items-start gap-5 md:border-x md:px-10">
-            <div className="p-4 bg-accent/5 rounded-2xl">
-              <ShieldCheck className="h-6 w-6 text-accent" />
+          <div className="flex items-start gap-4 md:gap-5 md:border-x md:px-10">
+            <div className="p-3 md:p-4 bg-accent/5 rounded-2xl">
+              <ShieldCheck className="h-5 w-5 md:h-6 md:w-6 text-accent" />
             </div>
             <div>
-              <p className="text-sm font-black uppercase tracking-wider mb-1">Quality Assurance</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Each pair is rigorously inspected for authenticity and craftsmanship.</p>
+              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Quality Assurance</p>
+              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Each pair is rigorously inspected for authenticity and craftsmanship.</p>
             </div>
           </div>
-          <div className="flex items-start gap-5">
-            <div className="p-4 bg-primary/5 rounded-2xl">
-              <RefreshCcw className="h-6 w-6 text-primary" />
+          <div className="flex items-start gap-4 md:gap-5">
+            <div className="p-3 md:p-4 bg-primary/5 rounded-2xl">
+              <RefreshCcw className="h-5 w-5 md:h-6 md:w-6 text-primary" />
             </div>
             <div>
-              <p className="text-sm font-black uppercase tracking-wider mb-1">Premium Exchange</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Seamless 7-day exchange policy for guaranteed customer satisfaction.</p>
+              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Premium Exchange</p>
+              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Seamless 7-day exchange policy for guaranteed customer satisfaction.</p>
             </div>
           </div>
         </div>
@@ -134,8 +134,8 @@ export default function Home() {
         <div className="flex justify-between items-end mb-8">
           <div>
             <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Curated Trends</span>
-            <h2 className="text-3xl font-black text-primary flex items-center gap-3 tracking-tighter">
-              <TrendingUp className="h-8 w-8 text-accent" />
+            <h2 className="text-2xl md:text-3xl font-black text-primary flex items-center gap-3 tracking-tighter">
+              <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-accent" />
               WEEKLY BESTSELLERS
             </h2>
           </div>
@@ -143,37 +143,37 @@ export default function Home() {
             Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
           {trendingItems.map(product => (
             <ProductCard key={product.id} product={product} variant="minimal" />
           ))}
         </div>
       </section>
 
-      {/* Structured Category Showcase */}
-      <section className="bg-primary py-20 text-white overflow-hidden">
+      {/* Structured Category Showcase - Responsive Fixed */}
+      <section className="bg-primary py-12 md:py-20 text-white overflow-hidden">
         <div className="container-market">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
+            <div className="space-y-6 md:space-y-8 text-center lg:text-left">
+              <div className="space-y-3 md:space-y-4">
                 <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em]">The Elite Edit</span>
-                <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9]">MASTERING THE STRIDE.</h2>
-                <p className="text-white/60 text-lg max-w-md leading-relaxed">
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9]">MASTERING THE STRIDE.</h2>
+                <p className="text-white/60 text-base md:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">
                   Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
                 </p>
               </div>
-              <div className="flex gap-4">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-xs px-10 h-14 rounded-none">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-8 h-12 rounded-none">
                   <Link href="/shop/gentlemens-quarters">View Collection</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-xs px-10 h-14 rounded-none transition-all">
+                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-8 h-12 rounded-none transition-all">
                   <Link href="/shop">All Departments</Link>
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
                {luxuryEdit.map((product, idx) => (
-                 <div key={product.id} className={idx % 2 !== 0 ? 'mt-8' : ''}>
+                 <div key={product.id} className={idx % 2 !== 0 ? 'mt-4 md:mt-8' : ''}>
                     <ProductCard product={product} className="bg-white/5 border-white/10" />
                  </div>
                ))}
@@ -184,13 +184,13 @@ export default function Home() {
 
       {/* Global Navigation Hub */}
       <section className="container-market py-10">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
             <Image src="https://picsum.photos/seed/cat-1/800/800" alt="Ladies" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="luxury heels" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Ladies' Vault</h3>
-              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors">
+            <div className="absolute bottom-0 left-0 p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4">Ladies' Vault</h3>
+              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors text-xs">
                 <Link href="/shop/ladies-vault">Discover Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
               </Button>
             </div>
@@ -198,22 +198,22 @@ export default function Home() {
           <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
             <Image src="https://picsum.photos/seed/cat-2/800/800" alt="Kids" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="kids sneakers" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Mini Icons</h3>
-              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors">
+            <div className="absolute bottom-0 left-0 p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4">Mini Icons</h3>
+              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors text-xs">
                 <Link href="/shop/mini-icons">Shop Kids <ArrowRight className="h-4 w-4 ml-2" /></Link>
               </Button>
             </div>
           </div>
-          <div className="bg-accent rounded-2xl p-10 flex flex-col justify-center text-primary relative overflow-hidden">
+          <div className="bg-accent rounded-2xl p-8 md:p-10 flex flex-col justify-center text-primary relative overflow-hidden">
             <div className="absolute -top-10 -right-10 opacity-10">
-               <Star className="h-40 w-40 rotate-12" />
+               <Star className="h-32 w-32 md:h-40 md:w-40 rotate-12" />
             </div>
-            <h3 className="text-4xl font-black tracking-tighter leading-none mb-6">JOIN THE CONCIERGE.</h3>
-            <p className="font-bold text-sm mb-8 opacity-80 uppercase tracking-wider">Get exclusive access to private drops and premium footwear releases.</p>
-            <div className="flex gap-2">
-               <input type="email" placeholder="Your Email" className="flex-1 bg-white/20 border-white/20 rounded-lg px-4 text-sm placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/40" />
-               <Button className="bg-primary text-white font-black uppercase tracking-widest text-[10px] h-12 px-6">Join</Button>
+            <h3 className="text-2xl md:text-4xl font-black tracking-tighter leading-none mb-4 md:mb-6 uppercase">JOIN THE CONCIERGE.</h3>
+            <p className="font-bold text-[10px] md:text-xs mb-6 md:mb-8 opacity-80 uppercase tracking-wider">Get exclusive access to private drops and premium footwear releases.</p>
+            <div className="flex flex-col sm:flex-row gap-2">
+               <input type="email" placeholder="Your Email" className="flex-1 bg-white/20 border-white/20 rounded-lg px-4 h-10 md:h-12 text-xs md:text-sm placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/40" />
+               <Button className="bg-primary text-white font-black uppercase tracking-widest text-[9px] h-10 md:h-12 px-6">Join</Button>
             </div>
           </div>
         </div>
