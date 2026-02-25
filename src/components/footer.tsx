@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { MessageCircle, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
@@ -12,13 +13,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div className="space-y-6">
-            <div className="relative h-10 w-32">
-              <Image 
-                src="/brands/Logo.png" 
-                alt="Bee & Dee" 
-                fill
-                className="object-contain" 
-              />
+            <div className="flex items-center gap-2">
+               <span className="font-black text-primary text-2xl tracking-tighter italic">BEE & DEE</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed">
               Bee & Dee is Kenya's premier footwear marketplace, providing authentic, high-quality shoes and handbags to modern individuals.
@@ -85,8 +81,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p suppressHydrationWarning>&copy; {currentYear} Bee & Dee Premium Marketplace. All rights reserved.</p>
           <div className="flex gap-6">
-            <Image src="https://picsum.photos/seed/visa/100/30" alt="Visa" width={40} height={15} className="grayscale opacity-50" />
-            <Image src="https://picsum.photos/seed/mpesa/100/30" alt="M-Pesa" width={40} height={15} className="grayscale opacity-50" />
+            <div className="h-4 w-10 bg-gray-100 rounded animate-pulse" />
+            <div className="h-4 w-10 bg-gray-100 rounded animate-pulse" />
           </div>
         </div>
       </div>

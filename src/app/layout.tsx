@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -18,9 +19,6 @@ export const metadata: Metadata = {
   keywords: ['shoes kenya', 'sneakers nairobi', 'footwear marketplace', 'bee and dee', 'kenya shoe shop'],
   authors: [{ name: 'Bee & Dee' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  icons: {
-    icon: '/brands/Logo.png',
-  },
 };
 
 export default function RootLayout({

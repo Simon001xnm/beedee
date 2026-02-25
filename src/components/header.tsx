@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from "next/link";
@@ -54,16 +55,10 @@ export function Header() {
       {/* Main Branding & Search Row */}
       <div className="bg-white border-b border-gray-100">
         <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
-          {/* Brand Logo */}
+          {/* Brand Logo - Updated to use remote placeholder */}
           <Link href="/" className="flex-shrink-0">
-            <div className="relative h-8 md:h-10 w-24 md:w-32">
-              <Image 
-                src="/brands/Logo.png" 
-                alt="Bee & Dee" 
-                fill 
-                className="object-contain"
-                priority 
-              />
+            <div className="relative h-8 md:h-10 w-24 md:w-32 flex items-center justify-center bg-primary/5 rounded-lg overflow-hidden border border-primary/10">
+              <span className="font-black text-primary text-lg tracking-tighter italic">BEE & DEE</span>
             </div>
           </Link>
 

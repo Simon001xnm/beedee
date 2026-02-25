@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                    src="/brands/Staff2.jpg"
+                    src="https://picsum.photos/seed/staff1/600/800"
                     alt="Bee & Dee Staff Member 1"
                     width={300}
                     height={400}
@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                  <Image
-                    src="/brands/Staff3.jpg"
+                    src="https://picsum.photos/seed/staff2/600/800"
                     alt="Bee & Dee Staff Member 2"
                     width={300}
                     height={400}
