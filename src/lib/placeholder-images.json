@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "hero-sneakers-banner",
+      "description": "Premium sneakers banner for home hero",
+      "imageUrl": "https://images.unsplash.com/photo-1543652711-77eeb35ae548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBzbmVha2Vyc3xlbnwwfHx8fDE3NzIwMzgwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury sneakers"
+    },
+    {
+      "id": "hero-formal-banner",
+      "description": "Men's formal shoes banner for home hero",
+      "imageUrl": "https://images.unsplash.com/photo-1770198408387-7f45e5d6c056?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVucyUyMGRyZXNzJTIwc2hvZXN8ZW58MHx8fHwxNzcyMDM4MDk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mens dress shoes"
+    },
+    {
       "id": "nb-offer-1",
       "description": "New Balance Special Offer view 1",
       "imageUrl": "/brands/WhatsApp Image 2026-02-06 at 3.47.23 PM.jpeg",
