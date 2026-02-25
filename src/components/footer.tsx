@@ -6,17 +6,28 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-white pt-32 pb-12 overflow-hidden border-t border-white/5">
+    <footer className="bg-primary text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="space-y-8 col-span-1 lg:col-span-1">
-            <Image src="/brands/Logo.png" alt="Bee & Dee" width={140} height={60} className="brightness-0 invert opacity-90" />
-            <p className="text-white/50 text-xs font-bold tracking-[0.15em] leading-loose uppercase">
+            <div className="relative h-16 w-40">
+              <Image 
+                src="/brands/Logo.png" 
+                alt="Bee & Dee" 
+                fill
+                className="object-contain" 
+              />
+            </div>
+            <p className="text-white/50 text-xs font-bold tracking-[0.15em] leading-loose uppercase max-w-xs">
               The ultimate destination for premium footwear in Kenya. We redefine luxury through comfort and authentic style.
             </p>
-            <div className="flex gap-6">
-               <Link href="https://wa.me/254106587150" target="_blank" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><MessageCircle className="h-4 w-4"/></Link>
-               <Link href="mailto:wambuilenny@gmail.com" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm"><Mail className="h-4 w-4"/></Link>
+            <div className="flex gap-4">
+               <Link href="https://wa.me/254106587150" target="_blank" className="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm group">
+                  <MessageCircle className="h-5 w-5 transition-transform group-hover:scale-110"/>
+               </Link>
+               <Link href="mailto:wambuilenny@gmail.com" className="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm group">
+                  <Mail className="h-5 w-5 transition-transform group-hover:scale-110"/>
+               </Link>
             </div>
           </div>
           <div className="space-y-8">
@@ -40,10 +51,10 @@ export function Footer() {
            <div className="space-y-8">
             <h4 className="text-accent font-black tracking-[0.3em] text-[10px] uppercase">Stay Bold</h4>
             <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Subscribe for early access to elite releases. For direct inquiries, email us at <span className="text-accent">wambuilenny@gmail.com</span></p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 px-4 py-3 text-xs rounded-lg flex-1 outline-none focus:border-accent transition-colors text-white" />
-              <Button size="sm" className="bg-accent text-primary font-black text-[9px] tracking-widest px-6 uppercase rounded-lg hover:bg-accent/80 transition-all">JOIN</Button>
-            </div>
+            <form action={`mailto:wambuilenny@gmail.com`} method="post" encType="text/plain" className="flex gap-2">
+              <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 px-4 py-3 text-xs rounded-lg flex-1 outline-none focus:border-accent transition-colors text-white" required />
+              <Button type="submit" size="sm" className="bg-accent text-primary font-black text-[9px] tracking-widest px-6 uppercase rounded-lg hover:bg-accent/80 transition-all">JOIN</Button>
+            </form>
           </div>
         </div>
         <Separator className="bg-white/5 mb-12" />
