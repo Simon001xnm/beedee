@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Product } from '@/lib/types';
 import { getRecommendations } from '@/app/actions';
 import { ProductCard } from './product-card';
@@ -18,47 +18,51 @@ export function ProductRecommendations({ currentProductId, currentCategory }: Pr
   const [recommendations, setRecommendations] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Stabilize inputs for recommendations
+  const recommendationParams = useMemo(() => ({
+    currentProductId,
+    currentCategory
+  }), [currentProductId, currentCategory]);
+
   useEffect(() => {
     let history: string[] = [];
     try {
       history = JSON.parse(sessionStorage.getItem(BROWSING_HISTORY_KEY) || '[]');
     } catch (e) {
-      console.error('Could not parse browsing history', e);
       history = [];
     }
     
-    // Add current product to history if not already present
-    if (!history.includes(currentProductId)) {
-      history.unshift(currentProductId);
+    if (!history.includes(recommendationParams.currentProductId)) {
+      history.unshift(recommendationParams.currentProductId);
     }
     
-    // Trim history
     const updatedHistory = history.slice(0, MAX_HISTORY_LENGTH);
     
     try {
       sessionStorage.setItem(BROWSING_HISTORY_KEY, JSON.stringify(updatedHistory));
-    } catch (e) {
-      console.error('Could not save browsing history', e);
-    }
+    } catch (e) {}
 
     const fetchRecommendations = async () => {
       setIsLoading(true);
-      const recommendedProducts = await getRecommendations({
-        browsingHistory: updatedHistory,
-        cartItems: [], // This could be populated from a cart context
-        categoryPreferences: [currentCategory],
-        numberOfRecommendations: 4,
-      });
+      try {
+        const recommendedProducts = await getRecommendations({
+          browsingHistory: updatedHistory,
+          cartItems: [],
+          categoryPreferences: [recommendationParams.currentCategory],
+          numberOfRecommendations: 4,
+        });
 
-      // Filter out the current product from recommendations
-      const filteredRecommendations = recommendedProducts.filter(p => p.id !== currentProductId);
-      
-      setRecommendations(filteredRecommendations);
-      setIsLoading(false);
+        const filteredRecommendations = recommendedProducts.filter(p => p.id !== recommendationParams.currentProductId);
+        setRecommendations(filteredRecommendations);
+      } catch (error) {
+        setRecommendations([]);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     fetchRecommendations();
-  }, [currentProductId, currentCategory]);
+  }, [recommendationParams]);
 
   if (isLoading) {
     return (
@@ -77,7 +81,7 @@ export function ProductRecommendations({ currentProductId, currentCategory }: Pr
   }
 
   if (recommendations.length === 0) {
-    return null; // Don't show the section if there are no recommendations
+    return null;
   }
 
   return (

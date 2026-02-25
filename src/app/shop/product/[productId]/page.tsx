@@ -1,4 +1,7 @@
 'use client';
+
+import * as React from "react";
+import { use, useState, useMemo } from "react";
 import { getProductById, getCategoryById, getProductsByCategory } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -16,8 +19,6 @@ import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/product-card";
 import { ProductRecommendations } from "@/components/product-recommendations";
 import { useCart } from "@/context/cart-context";
-import { Product } from "@/lib/types";
-import { useEffect, useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
@@ -26,56 +27,36 @@ import { Star, ShieldCheck, Truck, RefreshCw, MessageCircle, Ruler, Info } from 
 import Link from 'next/link';
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     productId: string;
-  };
+  }>;
 };
 
 export default function ProductPage({ params }: ProductPageProps) {
+  const { productId } = use(params);
   const { addToCart } = useCart();
   const { toast } = useToast();
-  const [product, setProduct] = useState<Product | undefined>(undefined);
-  const [productId, setProductId] = useState<string | null>(null);
-  const [selectedSize, setSelectedSize] = useState<string | undefined>();
-  const [selectedColor, setSelectedColor] = useState<string | undefined>();
 
-  useEffect(() => {
-    const resolveParams = async () => {
-        const resolvedParams = await params;
-        setProductId(resolvedParams.productId);
-    };
-    resolveParams();
-  }, [params]);
-
-  useEffect(() => {
-    if (productId) {
-      const p = getProductById(productId);
-      if (!p) {
-        notFound();
-      }
-      setProduct(p);
-      if (p?.sizes?.length === 1) {
-        setSelectedSize(p.sizes[0]);
-      }
-      if (p?.colors?.length === 1) {
-        setSelectedColor(p.colors[0]);
-      }
-    }
-  }, [productId]);
+  const product = useMemo(() => getProductById(productId), [productId]);
 
   if (!product) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mb-6"></div>
-        <p className="font-headline font-bold text-primary tracking-[0.3em] text-xs uppercase animate-pulse">Experiencing Luxury...</p>
-      </div>
-    );
+    notFound();
   }
-  
-  const category = getCategoryById(product.category);
-  const productsInCategory = getProductsByCategory(product.category)
-    .filter((p) => p.id !== product.id)
-    .slice(0, 4);
+
+  const [selectedSize, setSelectedSize] = useState<string | undefined>(
+    product.sizes.length === 1 ? product.sizes[0] : undefined
+  );
+  const [selectedColor, setSelectedColor] = useState<string | undefined>(
+    product.colors.length === 1 ? product.colors[0] : undefined
+  );
+
+  const category = useMemo(() => getCategoryById(product.category), [product.category]);
+  const productsInCategory = useMemo(() => 
+    getProductsByCategory(product.category)
+      .filter((p) => p.id !== product.id)
+      .slice(0, 4),
+    [product.id, product.category]
+  );
 
   const handleAddToCart = () => {
     if (!product) return;

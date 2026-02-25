@@ -5,13 +5,14 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 type CategoryPageProps = {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const category = getCategoryById(params.category);
+  const { category: categoryId } = await params;
+  const category = getCategoryById(categoryId);
   if (!category) {
     return {
       title: 'Category Not Found',
@@ -23,9 +24,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = getCategoryById(params.category);
-  const products = getProductsByCategory(params.category);
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { category: categoryId } = await params;
+  const category = getCategoryById(categoryId);
+  const products = getProductsByCategory(categoryId);
 
   if (!category) {
     notFound();
