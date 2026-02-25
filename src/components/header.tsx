@@ -23,7 +23,6 @@ import {
 import { categories } from "@/lib/data";
 import { useCart } from "@/context/cart-context";
 import { Badge } from "./ui/badge";
-import Image from "next/image";
 
 export function Header() {
   const { cartItems } = useCart();
@@ -55,10 +54,10 @@ export function Header() {
       {/* Main Branding & Search Row */}
       <div className="bg-white border-b border-gray-100">
         <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
-          {/* Brand Logo - Updated to use remote placeholder */}
+          {/* Brand Logo - Text based to replace local image */}
           <Link href="/" className="flex-shrink-0">
-            <div className="relative h-8 md:h-10 w-24 md:w-32 flex items-center justify-center bg-primary/5 rounded-lg overflow-hidden border border-primary/10">
-              <span className="font-black text-primary text-lg tracking-tighter italic">BEE & DEE</span>
+            <div className="flex items-center justify-center px-4 py-2 bg-primary rounded-lg">
+              <span className="font-black text-white text-xl tracking-tighter italic">BEE & DEE</span>
             </div>
           </Link>
 
@@ -85,7 +84,7 @@ export function Header() {
             </DropdownMenu>
           </div>
 
-          {/* Search Bar - Alibaba Style */}
+          {/* Search Bar */}
           <div className="flex-1 flex items-center relative group">
             <div className="w-full flex">
               <Input 
@@ -123,7 +122,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Secondary Navbar (Direct Collection Links) */}
+      {/* Secondary Navbar */}
       <div className="hidden md:block bg-gray-50/50 border-b border-gray-100">
         <div className="container-market">
           <nav className="flex items-center gap-10 h-10">
