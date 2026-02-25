@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -17,6 +18,7 @@ import {
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const trendingItems = getProductsByCategory('sneaker-lab').slice(0, 8);
@@ -59,7 +61,7 @@ export default function Home() {
             </div>
 
             {/* Center Column: Global Marketplace Slider */}
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] lg:min-h-[400px]">
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
               <HeroCarousel />
             </div>
 
@@ -134,7 +136,7 @@ export default function Home() {
         <div className="flex justify-between items-end mb-8">
           <div>
             <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Curated Trends</span>
-            <h2 className="text-2xl md:text-3xl font-black text-primary flex items-center gap-3 tracking-tighter">
+            <h2 className="text-2xl md:text-3xl font-black text-primary flex items-center gap-3 tracking-tighter uppercase">
               <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-accent" />
               WEEKLY BESTSELLERS
             </h2>
@@ -150,31 +152,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Structured Category Showcase - Responsive Fixed */}
-      <section className="bg-primary py-12 md:py-20 text-white overflow-hidden">
+      {/* Structured Category Showcase - Master Craftsmanship Section */}
+      <section className="bg-primary py-12 md:py-24 text-white overflow-hidden">
         <div className="container-market">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-              <div className="space-y-3 md:space-y-4">
-                <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em]">The Elite Edit</span>
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9]">MASTERING THE STRIDE.</h2>
-                <p className="text-white/60 text-base md:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="space-y-6 md:space-y-10 text-center lg:text-left">
+              <div className="space-y-4 md:space-y-6">
+                <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">The Elite Edit</span>
+                <h2 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.85] uppercase">MASTERING THE STRIDE.</h2>
+                <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
                   Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-8 h-12 rounded-none">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-10 h-14 rounded-full shadow-xl transition-all hover:scale-105">
                   <Link href="/shop/gentlemens-quarters">View Collection</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-8 h-12 rounded-none transition-all">
+                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-10 h-14 rounded-full transition-all">
                   <Link href="/shop">All Departments</Link>
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 gap-4 md:gap-8">
                {luxuryEdit.map((product, idx) => (
-                 <div key={product.id} className={idx % 2 !== 0 ? 'mt-4 md:mt-8' : ''}>
-                    <ProductCard product={product} className="bg-white/5 border-white/10" />
+                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'mt-8 md:mt-16' : '')}>
+                    <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10" />
                  </div>
                ))}
             </div>
