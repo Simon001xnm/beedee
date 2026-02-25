@@ -9,6 +9,11 @@ import { WhatsAppButton } from '@/components/whatsapp-button';
 import { HeroCarousel } from '@/components/hero-carousel';
 import { ProductCard } from '@/components/product-card';
 
+export const metadata = {
+  title: 'Bee & Dee Premium | High-End Footwear Nairobi',
+  description: 'Shop the most exclusive collection of sneakers and formal shoes in Kenya. Defined by excellence, delivered with authority.',
+};
+
 const infoItems = [
   {
     icon: <Truck className="h-5 w-5 md:h-6 md:w-6 text-accent" />,
@@ -45,7 +50,7 @@ export default function Home() {
   const eliteCollection = products.filter(p => p.price > 3000).slice(0, 4);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <FlashSaleBanner />
       <HeroCarousel />
 
@@ -70,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* New Arrivals */}
+      {/* New Arrivals - Editorial Layout */}
       <section className="bg-white py-20 md:py-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32 gap-10">
