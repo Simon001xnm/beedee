@@ -5,14 +5,17 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/context/cart-context';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Bee & Dee | Premium Kenyan Footwear Boutique',
+    default: 'Bee & Dee | Premium Kenyan Footwear Marketplace',
     template: '%s | Bee & Dee Nairobi'
   },
-  description: 'The ultimate destination for luxury footwear in Kenya. Shop sneakers, formal shoes, and boots curated for the modern individual.',
-  keywords: ['shoes kenya', 'sneakers nairobi', 'luxury footwear kenya', 'bee and dee', 'kenya shoe shop'],
+  description: 'Shop premium sneakers, formal shoes, and boots at Bee & Dee. The leading footwear marketplace in Kenya.',
+  keywords: ['shoes kenya', 'sneakers nairobi', 'footwear marketplace', 'bee and dee', 'kenya shoe shop'],
   authors: [{ name: 'Bee & Dee' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
@@ -27,12 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
-      </head>
-      <body className={cn('min-h-screen bg-background font-body antialiased')}>
+      <body className={cn('min-h-screen bg-[#f4f4f4] font-sans antialiased', inter.className)}>
         <CartProvider>
           <div className="relative flex min-h-dvh flex-col">
             <Header />

@@ -1,87 +1,50 @@
 'use client';
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 import {
   Menu,
   ShoppingCart,
   User,
-  Phone,
   Search,
+  List,
+  ChevronDown,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { categories } from "@/lib/data";
 import { useCart } from "@/context/cart-context";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
 
 export function Header() {
-  const pathname = usePathname();
   const { cartItems } = useCart();
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  const navLinks = categories.map(c => ({ href: `/shop/${c.id}`, label: c.name }));
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b border-white/5">
-      {/* Concierge Top Bar */}
-      <div className="bg-secondary text-primary py-2.5 hidden md:block">
-        <div className="container mx-auto px-6 flex justify-between items-center text-[10px] font-black uppercase tracking-[0.4em]">
-          <p>Global Express Shipping On All Orders Above KSh 10,000</p>
-          <div className="flex gap-8">
-            <a href="tel:+254106587150" className="flex items-center gap-2 hover:text-white transition-colors"><Phone className="h-3 w-3" /> Concierge Hotline</a>
-            <Link href="/about" className="hover:text-white transition-colors">Our Legacy</Link>
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
+      {/* Utility Top Bar */}
+      <div className="bg-primary text-white py-1.5 text-xs">
+        <div className="container-market flex justify-between items-center">
+          <p>Kenya's Leading Footwear Marketplace</p>
+          <div className="flex gap-4">
+            <Link href="/about" className="hover:text-accent transition-colors">About Us</Link>
+            <Link href="/contact" className="hover:text-accent transition-colors">Help Center</Link>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto flex h-20 md:h-28 items-center justify-between px-6">
-        {/* Mobile Menu Trigger */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-transparent">
-                <Menu className="h-7 w-7" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="bg-background border-r-white/5 w-full sm:max-w-md">
-              <SheetHeader className="mb-12 border-b border-white/5 pb-8">
-                <SheetTitle className="text-left font-headline text-3xl text-primary">BEE & DEE</SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-10 uppercase text-lg font-black tracking-[0.3em]">
-                <Link href="/shop" className="hover:text-primary transition-colors">Shop All Collections</Link>
-                {navLinks.map(link => (
-                  <Link key={link.href} href={link.href} className="hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="pt-12 border-t border-white/5 flex flex-col gap-6 text-sm">
-                  <Link href="/account" className="text-white/60">My Account</Link>
-                  <Link href="/contact" className="text-white/60">Contact Concierge</Link>
-                </div>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-
-        {/* Desktop Navigation - Curated Structure */}
-        <nav className="hidden md:flex gap-12 text-[11px] font-black uppercase tracking-[0.3em] text-white/50">
-          <Link href="/shop/sneaker-lab" className="hover:text-primary transition-colors">The Lab</Link>
-          <Link href="/shop/gentlemens-quarters" className="hover:text-primary transition-colors">Gentlemen</Link>
-          <Link href="/shop/ladies-vault" className="hover:text-primary transition-colors">Vault</Link>
-        </nav>
-
-        {/* Central Brand Authority */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-          <div className="relative h-10 md:h-16 w-36 md:w-56">
+      <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
+        {/* Brand Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <div className="relative h-8 md:h-12 w-24 md:w-32">
             <Image 
               src="/brands/Logo.png" 
               alt="Bee & Dee" 
@@ -92,26 +55,59 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Action Systems */}
-        <div className="flex items-center gap-3 md:gap-8">
-          <Button variant="ghost" size="icon" className="text-white hover:bg-transparent hidden sm:flex">
-            <Search className="h-6 w-6" />
-          </Button>
-          
-          <Button variant="ghost" size="icon" asChild className="text-white hover:bg-transparent hidden sm:flex">
-            <Link href="/account"><User className="h-6 w-6" /></Link>
-          </Button>
+        {/* Categories Dropdown (Desktop) */}
+        <div className="hidden lg:block">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center gap-2 font-bold text-sm">
+                <List className="h-5 w-5" />
+                Categories
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-56">
+              {categories.map((cat) => (
+                <DropdownMenuItem key={cat.id} asChild>
+                  <Link href={`/shop/${cat.id}`}>{cat.name}</Link>
+                </DropdownMenuItem>
+              ))}
+              <DropdownMenuItem asChild>
+                <Link href="/shop" className="font-bold text-accent">Shop All</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
 
-          <Button variant="ghost" size="icon" asChild className="relative text-white hover:bg-transparent">
-            <Link href="/cart">
-              <ShoppingCart className="h-6 w-6" />
-              {totalItems > 0 && (
-                <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-primary text-primary-foreground text-[10px] font-black rounded-none">
-                  {totalItems}
-                </Badge>
-              )}
-            </Link>
-          </Button>
+        {/* Search Bar */}
+        <div className="flex-1 flex items-center relative">
+          <div className="w-full flex">
+            <Input 
+              type="text" 
+              placeholder="What are you looking for..." 
+              className="rounded-l-full rounded-r-none border-primary focus-visible:ring-0 focus-visible:ring-offset-0 h-10"
+            />
+            <Button className="rounded-r-full rounded-l-none bg-primary hover:bg-primary/90 h-10 px-6">
+              <Search className="h-5 w-5 text-white" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <Link href="/account" className="flex flex-col items-center group">
+            <User className="h-6 w-6 text-gray-600 group-hover:text-primary" />
+            <span className="text-[10px] text-gray-500 hidden sm:block">Sign In</span>
+          </Link>
+
+          <Link href="/cart" className="flex flex-col items-center relative group">
+            <ShoppingCart className="h-6 w-6 text-gray-600 group-hover:text-primary" />
+            {totalItems > 0 && (
+              <Badge className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 bg-accent text-accent-foreground text-[10px] rounded-full">
+                {totalItems}
+              </Badge>
+            )}
+            <span className="text-[10px] text-gray-500 hidden sm:block">Cart</span>
+          </Link>
         </div>
       </div>
     </header>

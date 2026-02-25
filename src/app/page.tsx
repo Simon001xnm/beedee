@@ -1,152 +1,224 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { getProductsByCategory } from '@/lib/data';
-import { ArrowRight, Star, Quote, ArrowUpRight } from 'lucide-react';
-import { WhatsAppButton } from '@/components/whatsapp-button';
+import { getProductsByCategory, categories } from '@/lib/data';
+import { 
+  ArrowRight, 
+  Truck, 
+  ShieldCheck, 
+  RefreshCcw, 
+  ChevronRight,
+  TrendingUp,
+  LayoutGrid,
+  User,
+  ShoppingBag,
+  Zap,
+  Star
+} from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
-
-export const metadata = {
-  title: 'Bee & Dee | Premium Footwear Nairobi',
-  description: 'Curated high-end footwear. From elite sneakers to timeless formal shoes. Defining Kenyan street culture with authority.',
-};
+import { HeroCarousel } from '@/components/hero-carousel';
 
 export default function Home() {
-  const sneakerLab = getProductsByCategory('sneaker-lab').slice(0, 4);
-  const gentlemenQuarters = getProductsByCategory('gentlemens-quarters').slice(0, 4);
-  const ladiesVault = getProductsByCategory('ladies-vault').slice(0, 4);
+  const trendingItems = getProductsByCategory('sneaker-lab').slice(0, 8);
+  const luxuryEdit = getProductsByCategory('gentlemens-quarters').slice(0, 4);
 
   return (
-    <div className="flex flex-col overflow-x-hidden bg-background">
-      {/* Editorial Hero: The Split Entry */}
-      <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center border-b border-white/5">
-        <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative overflow-hidden group">
-          <Image 
-            src="https://picsum.photos/seed/hero-left/1200/1600"
-            alt="Premium Sneaker Culture"
-            fill
-            priority
-            className="object-cover transition-transform duration-[2s] group-hover:scale-110"
-            data-ai-hint="luxury sneakers"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        
-        <div className="w-full md:w-1/2 h-full flex items-center justify-center p-8 md:p-24 bg-background relative z-10">
-          <div className="max-w-xl">
-            <span className="editorial-subtitle">EST. NAIROBI 2024</span>
-            <h1 className="editorial-title mb-10">
-              URBAN<br />
-              <span className="text-primary">ELITE</span>
-            </h1>
-            <p className="text-white/60 text-lg md:text-xl font-medium leading-relaxed mb-12 max-w-md">
-              The definitive destination for premium footwear. Curated for the modern individual who demands authority and comfort.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Button className="btn-gold" asChild>
-                <Link href="/shop">Explore Shop <ArrowUpRight className="h-5 w-5" /></Link>
-              </Button>
-              <Button variant="outline" className="btn-outline-white" asChild>
-                <Link href="/about">Our Story</Link>
-              </Button>
+    <div className="flex flex-col gap-8 pb-20">
+      
+      {/* Marketplace Multi-Column Hero Section */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="container-market py-4 lg:py-8">
+          <div className="grid lg:grid-cols-[240px_1fr_240px] gap-6">
+            
+            {/* Left Column: Deep Categorization Sidebar */}
+            <div className="hidden lg:flex flex-col bg-gray-50/50 rounded-xl p-4 border border-gray-100">
+              <h3 className="text-sm font-black flex items-center gap-2 mb-6 text-primary uppercase tracking-wider">
+                <LayoutGrid className="h-4 w-4" />
+                Departments
+              </h3>
+              <nav className="flex flex-col gap-2">
+                {categories.map((cat) => (
+                  <Link 
+                    key={cat.id} 
+                    href={`/shop/${cat.id}`}
+                    className="group flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white hover:shadow-sm transition-all text-sm font-medium text-gray-600 hover:text-primary"
+                  >
+                    <span className="flex items-center gap-3">
+                      <div className="h-1.5 w-1.5 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {cat.name}
+                    </span>
+                    <ChevronRight className="h-4 w-4 text-gray-300 group-hover:text-primary" />
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-auto pt-6 border-t border-gray-100">
+                 <Link href="/shop" className="text-xs font-bold text-accent hover:underline flex items-center gap-2">
+                    Browse All Collections <ArrowRight className="h-3 w-3" />
+                 </Link>
+              </div>
+            </div>
+
+            {/* Center Column: Global Marketplace Slider */}
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[400px]">
+              <HeroCarousel />
+            </div>
+
+            {/* Right Column: User Trust & Promotional Zone */}
+            <div className="hidden lg:flex flex-col gap-6">
+              <div className="bg-primary rounded-xl p-6 text-white flex flex-col items-center text-center shadow-lg border border-white/10">
+                <div className="w-16 h-16 bg-white/10 rounded-full mb-4 flex items-center justify-center border border-white/20">
+                  <User className="h-8 w-8 text-accent" />
+                </div>
+                <p className="font-bold text-sm mb-1 uppercase tracking-widest">Welcome Back</p>
+                <p className="text-[10px] text-white/60 mb-6">Access your premium footwear concierge</p>
+                <div className="flex flex-col w-full gap-3">
+                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase text-[10px] h-10 tracking-widest">
+                    Create Account
+                  </Button>
+                  <Button size="sm" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-black uppercase text-[10px] h-10 tracking-widest">
+                    Sign In
+                  </Button>
+                </div>
+              </div>
+
+              <div className="bg-accent/5 rounded-xl p-6 flex-1 border border-accent/20 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+                   <Zap className="h-12 w-12 text-accent" />
+                </div>
+                <span className="text-[10px] font-black text-accent uppercase tracking-[0.3em] mb-2 block">Flash Deal</span>
+                <h4 className="text-lg font-black text-primary leading-tight mb-4">Save 20% on your first premium order</h4>
+                <Link href="/shop" className="text-xs font-bold text-primary underline underline-offset-4 decoration-accent hover:text-accent transition-colors">
+                  Claim Offer
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Floating Label */}
-        <div className="absolute bottom-12 left-12 hidden lg:block z-20">
-            <div className="flex items-center gap-4 text-[10px] font-black tracking-[0.4em] uppercase text-white/40">
-                <span className="h-px w-12 bg-white/20"></span>
-                Defining Footwear Excellence
+      </section>
+
+      {/* Global Service Badges */}
+      <section className="container-market">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="flex items-start gap-5">
+            <div className="p-4 bg-primary/5 rounded-2xl">
+              <Truck className="h-6 w-6 text-primary" />
             </div>
+            <div>
+              <p className="text-sm font-black uppercase tracking-wider mb-1">Express Delivery</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Swift dispatch across Nairobi and efficient countrywide shipping.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-5 md:border-x md:px-10">
+            <div className="p-4 bg-accent/5 rounded-2xl">
+              <ShieldCheck className="h-6 w-6 text-accent" />
+            </div>
+            <div>
+              <p className="text-sm font-black uppercase tracking-wider mb-1">Quality Assurance</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Each pair is rigorously inspected for authenticity and craftsmanship.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-5">
+            <div className="p-4 bg-primary/5 rounded-2xl">
+              <RefreshCcw className="h-6 w-6 text-primary" />
+            </div>
+            <div>
+              <p className="text-sm font-black uppercase tracking-wider mb-1">Premium Exchange</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Seamless 7-day exchange policy for guaranteed customer satisfaction.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Structured Category Gateway */}
-      <section className="border-b border-white/5">
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {[
-            { id: 'sneaker-lab', name: 'Sneaker Lab', desc: 'Street Culture Authority' },
-            { id: 'gentlemens-quarters', name: 'Gentlemen\'s Quarters', desc: 'Timeless Formal Excellence' },
-            { id: 'ladies-vault', name: 'Ladies\' Vault', desc: 'Modern Feminine Power' }
-          ].map((cat, idx) => (
-            <Link 
-              key={cat.id} 
-              href={`/shop/${cat.id}`} 
-              className={`group relative h-[400px] md:h-[600px] flex items-end p-8 md:p-12 overflow-hidden ${idx !== 2 ? 'md:border-r border-white/5' : ''}`}
-            >
-              <Image 
-                src={`https://picsum.photos/seed/${cat.id}/800/1200`}
-                alt={cat.name}
-                fill
-                className="object-cover opacity-40 transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                data-ai-hint={cat.id.replace('-', ' ')}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-              <div className="relative z-10 w-full transition-transform duration-500 group-hover:-translate-y-4">
-                <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase mb-2 block">Collection 0{idx + 1}</span>
-                <h3 className="text-3xl md:text-5xl font-headline font-black text-white mb-2">{cat.name}</h3>
-                <p className="text-white/40 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                  View Collection <ArrowRight className="h-3 w-3" />
-                </p>
-              </div>
-            </Link>
+      {/* Marketplace Grid: Trending Collections */}
+      <section className="container-market">
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Curated Trends</span>
+            <h2 className="text-3xl font-black text-primary flex items-center gap-3 tracking-tighter">
+              <TrendingUp className="h-8 w-8 text-accent" />
+              WEEKLY BESTSELLERS
+            </h2>
+          </div>
+          <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group">
+            Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {trendingItems.map(product => (
+            <ProductCard key={product.id} product={product} variant="minimal" />
           ))}
         </div>
       </section>
 
-      {/* Immersive Showcase: The Sneaker Lab */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div className="max-w-2xl">
-              <span className="editorial-subtitle">Premium Drops</span>
-              <h2 className="text-5xl md:text-8xl font-headline font-black text-white tracking-tighter">THE SNEAKER LAB</h2>
+      {/* Structured Category Showcase */}
+      <section className="bg-primary py-20 text-white overflow-hidden">
+        <div className="container-market">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em]">The Elite Edit</span>
+                <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9]">MASTERING THE STRIDE.</h2>
+                <p className="text-white/60 text-lg max-w-md leading-relaxed">
+                  Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-xs px-10 h-14 rounded-none">
+                  <Link href="/shop/gentlemens-quarters">View Collection</Link>
+                </Button>
+                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-xs px-10 h-14 rounded-none transition-all">
+                  <Link href="/shop">All Departments</Link>
+                </Button>
+              </div>
             </div>
-            <Link href="/shop/sneaker-lab" className="btn-outline-white h-14 px-8 text-xs">
-              View All Sneakers
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-24">
-            {sneakerLab.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+            <div className="grid grid-cols-2 gap-4">
+               {luxuryEdit.map((product, idx) => (
+                 <div key={product.id} className={idx % 2 !== 0 ? 'mt-8' : ''}>
+                    <ProductCard product={product} className="bg-white/5 border-white/10" />
+                 </div>
+               ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Dark Immersive Section: Elite Series */}
-      <section className="bg-black section-padding relative overflow-hidden border-y border-white/5">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
-        <div className="container mx-auto relative z-10">
-          <div className="text-center mb-32">
-            <Star className="h-10 w-10 text-primary mx-auto mb-8 animate-pulse" />
-            <span className="editorial-subtitle">The Absolute Pinnacle</span>
-            <h2 className="text-6xl md:text-[12rem] font-headline font-black text-white leading-none mb-8">ELITE</h2>
-            <p className="text-primary text-sm font-black tracking-[0.5em] uppercase">Hand-Picked Authority</p>
+      {/* Global Navigation Hub */}
+      <section className="container-market py-10">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
+            <Image src="https://picsum.photos/seed/cat-1/800/800" alt="Ladies" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="luxury heels" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
+            <div className="absolute bottom-0 left-0 p-8">
+              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Ladies' Vault</h3>
+              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors">
+                <Link href="/shop/ladies-vault">Discover Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              </Button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-24">
-            {gentlemenQuarters.map(product => (
-              <ProductCard key={product.id} product={product} isDark />
-            ))}
+          <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
+            <Image src="https://picsum.photos/seed/cat-2/800/800" alt="Kids" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="kids sneakers" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
+            <div className="absolute bottom-0 left-0 p-8">
+              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Mini Icons</h3>
+              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors">
+                <Link href="/shop/mini-icons">Shop Kids <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              </Button>
+            </div>
+          </div>
+          <div className="bg-accent rounded-2xl p-10 flex flex-col justify-center text-primary relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 opacity-10">
+               <Star className="h-40 w-40 rotate-12" />
+            </div>
+            <h3 className="text-4xl font-black tracking-tighter leading-none mb-6">JOIN THE CONCIERGE.</h3>
+            <p className="font-bold text-sm mb-8 opacity-80 uppercase tracking-wider">Get exclusive access to private drops and premium footwear releases.</p>
+            <div className="flex gap-2">
+               <input type="email" placeholder="Your Email" className="flex-1 bg-white/20 border-white/20 rounded-lg px-4 text-sm placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/40" />
+               <Button className="bg-primary text-white font-black uppercase tracking-widest text-[10px] h-12 px-6">Join</Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Brand Visionary Quote */}
-      <section className="section-padding bg-secondary flex flex-col items-center text-center">
-        <Quote className="h-16 w-16 text-primary mb-12 opacity-40" />
-        <h2 className="text-4xl md:text-7xl font-headline font-black text-white tracking-tighter max-w-5xl leading-tight mb-16">
-          WE DON'T JUST SELL SHOES. WE PROVIDE THE <span className="text-primary">FOUNDATION</span> FOR YOUR IDENTITY.
-        </h2>
-        <Button className="btn-gold h-20 px-16 text-sm" asChild>
-          <Link href="/shop">Enter The Movement</Link>
-        </Button>
-      </section>
-
-      <WhatsAppButton />
     </div>
   );
 }

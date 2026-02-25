@@ -4,36 +4,36 @@
 
 @layer base {
   :root {
-    /* Premium Navy & Gold Palette */
-    --background: 222 47% 11%; /* Midnight Navy #0B1426 */
-    --foreground: 0 0% 100%; /* White */
+    /* Professional Navy & Gold Palette */
+    --background: 0 0% 100%; /* White */
+    --foreground: 222 47% 11%; /* Navy Black */
     
-    --card: 222 47% 13%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
     
-    --popover: 222 47% 11%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
     
-    --primary: 45 100% 42%; /* Burnished Gold #D4AF37 */
-    --primary-foreground: 222 47% 11%;
+    --primary: 222 47% 11%; /* Navy #0B1426 */
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 0%; /* Pure Black */
-    --secondary-foreground: 45 100% 42%;
+    --secondary: 210 40% 96.1%; /* Light Gray */
+    --secondary-foreground: 222 47% 11%;
     
-    --muted: 222 47% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     
-    --accent: 0 0% 100%;
+    --accent: 45 100% 42%; /* Burnished Gold #D4AF37 */
     --accent-foreground: 222 47% 11%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
     
-    --border: 222 47% 20%;
-    --input: 222 47% 20%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 45 100% 42%;
     
-    --radius: 0rem; /* Sharp, modern boutique corners */
+    --radius: 0.5rem;
   }
 }
 
@@ -42,42 +42,23 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30 font-body;
+    @apply bg-[#f4f4f4] text-foreground antialiased selection:bg-accent/30 font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tighter uppercase;
+    @apply font-bold tracking-tight;
   }
 }
 
 @layer components {
-  .btn-gold {
-    @apply bg-primary text-primary-foreground font-black tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white hover:text-background rounded-none px-10 py-5 flex items-center justify-center gap-3 border border-primary;
+  .btn-primary-market {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-bold transition-all;
   }
   
-  .btn-outline-white {
-    @apply bg-transparent text-white border-white/30 font-black tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white hover:text-background rounded-none px-10 py-5 flex items-center justify-center gap-3 border;
+  .btn-accent-market {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 font-bold transition-all;
   }
 
-  .section-padding {
-    @apply py-24 md:py-40 px-4 md:px-12;
+  .container-market {
+    @apply max-w-[1240px] mx-auto px-4;
   }
-
-  .editorial-title {
-    @apply text-6xl md:text-[10rem] font-headline font-black leading-[0.85] tracking-tighter uppercase;
-  }
-
-  .editorial-subtitle {
-    @apply text-[10px] md:text-xs font-bold text-primary uppercase tracking-[0.5em] mb-6 block;
-  }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-primary/20 hover:bg-primary/40 transition-colors;
 }
