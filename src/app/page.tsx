@@ -75,17 +75,17 @@ export default function Home() {
       <section className="bg-white py-24 md:py-32 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
+            <div className="space-y-4 text-left">
+              <div className="flex items-center gap-3 justify-start">
                 <div className="h-px w-10 bg-accent"></div>
                 <h2 className="text-accent font-black tracking-[0.4em] text-[10px] uppercase">New Arrivals</h2>
               </div>
-              <h3 className="text-5xl md:text-7xl font-headline font-bold text-primary leading-[0.9]">SEASONAL<br/>EXCLUSIVES</h3>
+              <h3 className="text-5xl md:text-7xl font-headline font-bold text-primary leading-[0.9] tracking-tighter">SEASONAL<br/>EXCLUSIVES</h3>
             </div>
-            <div className="flex flex-col items-end gap-6">
-              <p className="text-muted-foreground text-sm font-medium max-w-xs text-right uppercase tracking-widest leading-relaxed">Discover the latest footwear innovations curated for the bold Kenyan aesthetic.</p>
-              <Button variant="outline" className="border-primary/20 text-primary h-14 px-10 rounded-full hover:bg-primary hover:text-white transition-all group font-black tracking-widest text-[10px]" asChild>
-                <Link href="/shop" className="flex items-center gap-3">
+            <div className="flex flex-col items-start md:items-end gap-6 w-full md:w-auto">
+              <p className="text-muted-foreground text-sm font-medium max-w-xs text-left md:text-right uppercase tracking-widest leading-relaxed">Discover the latest footwear innovations curated for the bold Kenyan aesthetic.</p>
+              <Button variant="outline" className="border-primary/20 text-primary h-14 px-10 rounded-full hover:bg-primary hover:text-white transition-all group font-black tracking-widest text-[10px] w-full md:w-auto" asChild>
+                <Link href="/shop" className="flex items-center justify-center gap-3">
                   EXPLORE ALL <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-2" />
                 </Link>
               </Button>
@@ -114,7 +114,7 @@ export default function Home() {
               ))}
            </div>
            <div className="mt-24 text-center">
-              <Button size="lg" className="btn-gold h-16 px-16 rounded-full" asChild>
+              <Button size="lg" className="btn-gold h-16 px-16 rounded-full w-full md:w-auto" asChild>
                 <Link href="/shop">SHOP ELITE CATEGORY</Link>
               </Button>
            </div>
@@ -142,8 +142,8 @@ export default function Home() {
               <h3 className="text-5xl md:text-8xl font-headline font-bold leading-[0.95] tracking-tighter">CRAFTED FOR THE<br/><span className="text-accent">DARING.</span></h3>
             </div>
             <p className="text-white/60 text-lg max-w-lg font-medium leading-relaxed italic">"Footwear isn't just about walking; it's about the statement you make with every stride. Bee & Dee brings that conversation to Nairobi."</p>
-            <div className="flex items-center gap-10">
-              <Button size="lg" className="btn-gold h-16 px-12 rounded-full" asChild>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10">
+              <Button size="lg" className="btn-gold h-16 px-12 rounded-full w-full sm:w-auto" asChild>
                 <Link href="/shop">JOIN THE ELITE</Link>
               </Button>
               <div className="flex -space-x-4">
@@ -162,11 +162,11 @@ export default function Home() {
             <div className="absolute -inset-4 bg-accent/20 rounded-[3rem] blur-3xl group-hover:bg-accent/30 transition-all duration-1000" />
             <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-1000">
                <Image 
-                  src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Luxury Sneaker" 
+                  src="/brands/Staff2.jpg" 
+                  alt="Bee & Dee Brand Showcase" 
                   fill 
                   className="object-cover transition-transform duration-[2000ms] group-hover:scale-110" 
-                  data-ai-hint="premium sneakers"
+                  data-ai-hint="team member"
                />
             </div>
           </div>

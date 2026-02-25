@@ -19,12 +19,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
   return (
     <div className={cn("group flex flex-col h-full bg-white", className)}>
-      <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9] rounded-sm">
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9] rounded-sm shadow-sm border border-black/5">
         {/* Wishlist Button */}
         <Button 
           variant="ghost" 
           size="icon" 
-          className="absolute top-2 right-2 z-10 h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white text-primary"
+          className="absolute top-2 right-2 z-10 h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white text-primary"
         >
           <Heart className="h-4 w-4" />
         </Button>
@@ -42,76 +42,76 @@ export function ProductCard({ product, className }: ProductCardProps) {
             alt={product.name}
             width={400}
             height={533}
-            className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105 p-4"
+            className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105 p-3 md:p-4"
             data-ai-hint={product.images[0].hint}
           />
         </Link>
       </div>
 
-      <div className="flex flex-col pt-4 pb-2 space-y-1">
+      <div className="flex flex-col pt-3 pb-2 space-y-1 md:space-y-1.5">
         {/* Brand / Category */}
-        <span className="text-[10px] font-bold text-primary/40 uppercase tracking-[0.15em]">
+        <span className="text-[9px] md:text-[10px] font-bold text-primary/40 uppercase tracking-[0.15em]">
           {product.category.replace('-', ' ')}
         </span>
         
         {/* Product Name */}
         <Link href={`/shop/product/${product.id}`}>
-          <h3 className="text-xs font-medium text-primary line-clamp-2 leading-snug hover:underline decoration-1 underline-offset-2">
+          <h3 className="text-sm md:text-base font-medium text-primary line-clamp-2 leading-snug hover:underline decoration-1 underline-offset-2 tracking-tight">
             {product.name}
           </h3>
         </Link>
 
         {/* Price Section */}
-        <div className="flex flex-col pt-1">
-          <div className="flex items-baseline gap-2">
-            <span className={cn("text-sm font-bold", hasSale ? "text-destructive" : "text-primary")}>
+        <div className="flex flex-col pt-0.5">
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <span className={cn("text-sm md:text-lg font-bold", hasSale ? "text-destructive" : "text-primary")}>
               {formatPrice(product.price)}
             </span>
             {hasSale && (
-              <span className="text-[10px] text-muted-foreground line-through">
+              <span className="text-[10px] md:text-xs text-muted-foreground line-through">
                 {formatPrice(originalPrice)}
               </span>
             )}
             {hasSale && (
-              <span className="text-[10px] text-destructive font-bold">
-                ({discount}% off)
+              <span className="text-[10px] md:text-xs text-destructive font-black">
+                -{discount}%
               </span>
             )}
           </div>
-          <span className="text-[9px] text-muted-foreground italic">
+          <span className="text-[9px] md:text-[10px] text-muted-foreground italic font-medium">
             Inclusive of nationwide delivery
           </span>
         </div>
 
         {/* Rating */}
-        <div className="flex items-center gap-1.5 pt-1">
+        <div className="flex items-center gap-1.5 pt-0.5">
           <div className="flex text-primary">
             {[...Array(5)].map((_, i) => (
               <Star 
                 key={i} 
-                className={cn("h-2.5 w-2.5", i < 4 ? "fill-current" : "text-muted/40")} 
+                className={cn("h-2.5 w-2.5 md:h-3 md:w-3", i < 4 ? "fill-current" : "text-muted/40")} 
               />
             ))}
           </div>
-          <span className="text-[10px] text-muted-foreground font-medium underline decoration-muted-foreground/30">
+          <span className="text-[10px] md:text-xs text-muted-foreground font-medium underline decoration-muted-foreground/30">
             (48)
           </span>
         </div>
 
         {/* Color Swatches */}
-        <div className="flex items-center gap-1.5 pt-2">
+        <div className="flex items-center gap-1.5 pt-1.5">
           {product.colors.map((color, idx) => (
             <div 
               key={idx} 
               className={cn(
-                "h-3 w-3 rounded-full border border-primary/10 shadow-sm",
+                "h-3 w-3 md:h-4 md:w-4 rounded-full border border-primary/10 shadow-sm",
                 idx === 0 ? "bg-primary ring-1 ring-offset-1 ring-primary/20" : "bg-muted"
               )}
               title={color}
             />
           ))}
           {product.colors.length > 3 && (
-            <span className="text-[9px] text-muted-foreground font-medium">
+            <span className="text-[9px] md:text-[10px] text-muted-foreground font-medium">
               +{product.colors.length - 3}
             </span>
           )}
