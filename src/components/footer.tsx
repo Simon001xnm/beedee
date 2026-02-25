@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-white border-t border-gray-200 pt-16 pb-8">
       <div className="container-market">
@@ -81,7 +83,7 @@ export function Footer() {
         <Separator className="bg-gray-100 mb-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Bee & Dee Premium Marketplace. All rights reserved.</p>
+          <p suppressHydrationWarning>&copy; {currentYear} Bee & Dee Premium Marketplace. All rights reserved.</p>
           <div className="flex gap-6">
             <Image src="https://picsum.photos/seed/visa/100/30" alt="Visa" width={40} height={15} className="grayscale opacity-50" />
             <Image src="https://picsum.photos/seed/mpesa/100/30" alt="M-Pesa" width={40} height={15} className="grayscale opacity-50" />

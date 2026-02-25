@@ -30,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('min-h-screen bg-[#f4f4f4] font-sans antialiased', inter.className)}>
+      <body 
+        className={cn('min-h-screen bg-[#f4f4f4] font-sans antialiased', inter.className)}
+        suppressHydrationWarning
+      >
         <CartProvider>
           <div className="relative flex min-h-dvh flex-col">
             <Header />

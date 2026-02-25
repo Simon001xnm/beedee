@@ -6,6 +6,8 @@ export const metadata = {
 };
 
 export default function ReturnPolicyPage() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
       <div className="text-center space-y-4">
@@ -62,8 +64,8 @@ export default function ReturnPolicyPage() {
             </p>
           </div>
 
-           <p className="pt-6 text-[9px] font-black uppercase tracking-widest opacity-40 text-center">
-            Official Bee & Dee Premium Policy. Last Updated: {new Date().getFullYear()}
+           <p className="pt-6 text-[9px] font-black uppercase tracking-widest opacity-40 text-center" suppressHydrationWarning>
+            Official Bee & Dee Premium Policy. Last Updated: {currentYear}
           </p>
 
         </CardContent>

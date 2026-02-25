@@ -6,6 +6,8 @@ export const metadata = {
 };
 
 export default function TermsPage() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Terms of Service' }]} className="mb-12" />
@@ -43,8 +45,8 @@ export default function TermsPage() {
           </section>
         </div>
 
-        <p className="text-[9px] font-black uppercase tracking-widest text-primary/30 text-center pt-12 border-t border-primary/5">
-          Last Updated: March {new Date().getFullYear()}
+        <p className="text-[9px] font-black uppercase tracking-widest text-primary/30 text-center pt-12 border-t border-primary/5" suppressHydrationWarning>
+          Last Updated: March {currentYear}
         </p>
       </div>
     </div>
