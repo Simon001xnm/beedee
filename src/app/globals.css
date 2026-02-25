@@ -4,44 +4,36 @@
 
 @layer base {
   :root {
-    /* PRD Color Palette: Deep Crimson, Very Light Beige, Burnt Sienna */
-    --background: 60 56% 96%; /* #F5F5DC (Very Light Beige) */
-    --foreground: 0 0% 10%;
+    /* Premium Navy & Gold Palette */
+    --background: 222 47% 11%; /* Midnight Navy #0B1426 */
+    --foreground: 0 0% 100%; /* White */
     
-    --card: 60 56% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: 222 47% 13%;
+    --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 100%;
     
-    --primary: 0 100% 27%; /* #8B0000 (Deep Crimson) */
-    --primary-foreground: 60 56% 91%;
+    --primary: 45 100% 42%; /* Burnished Gold #D4AF37 */
+    --primary-foreground: 222 47% 11%;
     
-    --secondary: 0 0% 90%;
-    --secondary-foreground: 0 100% 27%;
+    --secondary: 0 0% 0%; /* Pure Black */
+    --secondary-foreground: 45 100% 42%;
     
-    --muted: 0 0% 93%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 222 47% 20%;
+    --muted-foreground: 0 0% 70%;
     
-    --accent: 14 80% 62%; /* #E97451 (Burnt Sienna) */
-    --accent-foreground: 60 56% 91%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 222 47% 11%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 14 80% 62%;
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 45 100% 42%;
     
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Minimal dark mode support maintaining crimson/gold feel */
-    --background: 0 0% 5%;
-    --foreground: 60 56% 91%;
-    --primary: 0 100% 35%;
-    --accent: 14 80% 62%;
+    --radius: 0rem; /* Sharp, modern boutique corners */
   }
 }
 
@@ -50,41 +42,42 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-accent/30 font-body;
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 font-body;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tight;
+    @apply font-headline tracking-tighter uppercase;
   }
 }
 
 @layer components {
-  .btn-luxury {
-    @apply bg-primary text-primary-foreground font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] rounded-none px-8 py-4 flex items-center justify-center gap-2;
+  .btn-gold {
+    @apply bg-primary text-primary-foreground font-black tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white hover:text-background rounded-none px-10 py-5 flex items-center justify-center gap-3 border border-primary;
   }
   
-  .btn-accent {
-    @apply bg-accent text-accent-foreground font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:bg-accent/90 hover:scale-[1.01] active:scale-[0.99] rounded-none px-8 py-4 flex items-center justify-center gap-2;
+  .btn-outline-white {
+    @apply bg-transparent text-white border-white/30 font-black tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white hover:text-background rounded-none px-10 py-5 flex items-center justify-center gap-3 border;
   }
 
   .section-padding {
-    @apply py-16 md:py-32 px-4 md:px-8;
+    @apply py-24 md:py-40 px-4 md:px-12;
   }
 
   .editorial-title {
-    @apply text-5xl md:text-8xl font-headline font-bold text-primary leading-[0.9] tracking-tighter;
+    @apply text-6xl md:text-[10rem] font-headline font-black leading-[0.85] tracking-tighter uppercase;
   }
 
   .editorial-subtitle {
-    @apply text-sm md:text-base font-body font-bold text-accent uppercase tracking-[0.3em] mb-4;
+    @apply text-[10px] md:text-xs font-bold text-primary uppercase tracking-[0.5em] mb-6 block;
   }
 }
 
-/* Luxury Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 hover:bg-primary/40 transition-colors;
 }

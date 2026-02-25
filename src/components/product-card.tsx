@@ -2,104 +2,93 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '@/lib/types';
 import { formatPrice, cn } from '@/lib/utils';
-import { Star } from 'lucide-react';
+import { Star, Plus } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
   className?: string;
+  isDark?: boolean;
 }
 
-export function ProductCard({ product, className }: ProductCardProps) {
-  // Determine if this is on a dark background (Luxury Section)
-  const isDark = className?.includes('bg-primary');
-  const originalPrice = product.price + 1500;
+export function ProductCard({ product, className, isDark }: ProductCardProps) {
+  const originalPrice = product.price + 1200;
 
   return (
     <article className={cn(
-      "group relative flex flex-col h-full transition-all duration-500",
+      "group relative flex flex-col h-full transition-all duration-700",
       className
     )}>
-      {/* Image Container */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-white/50 border border-primary/5">
+      {/* Image Showcase - Large & Intentional */}
+      <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-white/5">
         <Link href={`/shop/product/${product.id}`} className="block h-full w-full">
           <Image
             src={product.images[0].url}
             alt={product.name}
-            width={600}
-            height={750}
-            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+            width={800}
+            height={1000}
+            className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-105"
             data-ai-hint={product.images[0].hint}
           />
         </Link>
         
-        {/* Editorial Badges */}
-        <div className="absolute top-4 left-4 flex flex-col gap-2 pointer-events-none">
+        {/* Editorial Badge */}
+        <div className="absolute top-6 left-6 flex flex-col gap-2 pointer-events-none">
           {product.price > 3000 && (
-            <span className="bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
-              Elite Selection
+            <span className="bg-primary text-primary-foreground text-[9px] font-black px-4 py-1.5 uppercase tracking-[0.2em] shadow-2xl">
+              Elite
             </span>
           )}
+           <span className="bg-black/80 backdrop-blur-md text-white text-[9px] font-black px-4 py-1.5 uppercase tracking-[0.2em]">
+            -22%
+          </span>
         </div>
+
+        {/* Quick Add Button - Desktop Only */}
+        <button className="absolute bottom-6 right-6 h-12 w-12 bg-white text-background opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hidden md:flex items-center justify-center">
+            <Plus className="h-6 w-6" />
+        </button>
       </div>
 
-      {/* Content Container */}
-      <div className="flex flex-col pt-6 space-y-3">
-        {/* Category */}
-        <span className={cn(
-          "text-[10px] font-bold uppercase tracking-[0.3em]",
-          isDark ? "text-accent" : "text-accent"
-        )}>
+      {/* Product Narrative & Data */}
+      <div className="flex flex-col pt-8 space-y-4">
+        {/* Collection Category */}
+        <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">
           {product.category.replace('-', ' ')}
         </span>
         
-        {/* Name - Gold/Accent for Brand Authority */}
+        {/* Name - Premium Authority */}
         <Link href={`/shop/product/${product.id}`}>
-          <h3 className={cn(
-            "text-xl md:text-2xl font-headline font-bold uppercase tracking-tight leading-tight transition-colors",
-            isDark ? "text-accent" : "text-primary group-hover:text-accent"
-          )}>
+          <h3 className="text-2xl md:text-3xl font-headline font-black uppercase tracking-tight leading-none group-hover:text-primary transition-colors">
             {product.name}
           </h3>
         </Link>
 
-        {/* Pricing & Details - White on Dark, Primary on Light */}
-        <div className="flex flex-col gap-1 pt-1">
-          <div className="flex items-baseline gap-3">
+        {/* Dynamic Pricing - Technical Details in White on Dark */}
+        <div className="flex flex-col gap-2 pt-2">
+          <div className="flex items-baseline gap-4">
             <span className={cn(
-              "text-2xl font-bold tracking-tighter",
-              isDark ? "text-white" : "text-primary"
+              "text-3xl font-black tracking-tighter",
+              isDark ? "text-white" : "text-white"
             )}>
               {formatPrice(product.price)}
             </span>
-            <span className={cn(
-              "text-xs line-through opacity-40",
-              isDark ? "text-white" : "text-primary"
-            )}>
+            <span className="text-sm text-white/20 line-through font-bold">
               {formatPrice(originalPrice)}
             </span>
           </div>
           
-          <p className={cn(
-            "text-[9px] font-bold uppercase tracking-[0.2em] opacity-60",
-            isDark ? "text-white" : "text-primary"
-          )}>
-            Available in Stock
-          </p>
-        </div>
-
-        {/* Rating */}
-        <div className="flex items-center gap-2 pt-2 opacity-80">
-          <div className="flex text-accent gap-0.5">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-3 w-3 fill-current" />
-            ))}
+          <div className="flex items-center justify-between">
+              <p className="text-[9px] font-black uppercase tracking-[0.3em] text-white/40">
+                Available in Stock
+              </p>
+              
+              <div className="flex items-center gap-2">
+                <div className="flex text-primary">
+                    <Star className="h-3 w-3 fill-current" />
+                </div>
+                <span className="text-[9px] font-black tracking-widest text-white/60">4.9 RATING</span>
+              </div>
           </div>
-          <span className={cn(
-            "text-[9px] font-bold tracking-widest uppercase",
-            isDark ? "text-white" : "text-primary"
-          )}>
-            4.9 RATING
-          </span>
         </div>
       </div>
     </article>
