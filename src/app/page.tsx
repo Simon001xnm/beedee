@@ -12,7 +12,6 @@ import {
   TrendingUp,
   LayoutGrid,
   User,
-  ShoppingBag,
   Zap,
   Star
 } from 'lucide-react';
@@ -74,10 +73,10 @@ export default function Home() {
                 <p className="font-bold text-sm mb-1 uppercase tracking-widest">Welcome Back</p>
                 <p className="text-[10px] text-white/60 mb-6">Access your premium footwear concierge</p>
                 <div className="flex flex-col w-full gap-3">
-                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase text-[10px] h-10 tracking-widest">
+                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase text-[10px] h-10 tracking-widest w-full">
                     Create Account
                   </Button>
-                  <Button size="sm" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-black uppercase text-[10px] h-10 tracking-widest">
+                  <Button size="sm" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-black uppercase text-[10px] h-10 tracking-widest w-full">
                     Sign In
                   </Button>
                 </div>
@@ -145,9 +144,9 @@ export default function Home() {
             Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {trendingItems.map(product => (
-            <ProductCard key={product.id} product={product} variant="minimal" />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
@@ -173,49 +172,12 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
                {luxuryEdit.map((product, idx) => (
-                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'mt-8 md:mt-16' : '')}>
-                    <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10" />
+                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'lg:mt-16' : '')}>
+                    <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10 text-white" />
                  </div>
                ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Navigation Hub */}
-      <section className="container-market py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-          <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
-            <Image src="https://picsum.photos/seed/cat-1/800/800" alt="Ladies" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="luxury heels" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
-            <div className="absolute bottom-0 left-0 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4">Ladies' Vault</h3>
-              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors text-xs">
-                <Link href="/shop/ladies-vault">Discover Now <ArrowRight className="h-4 w-4 ml-2" /></Link>
-              </Button>
-            </div>
-          </div>
-          <div className="group relative aspect-[16/9] md:aspect-square overflow-hidden rounded-2xl bg-gray-100">
-            <Image src="https://picsum.photos/seed/cat-2/800/800" alt="Kids" fill className="object-cover group-hover:scale-110 transition-transform duration-700" data-ai-hint="kids sneakers" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
-            <div className="absolute bottom-0 left-0 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4">Mini Icons</h3>
-              <Button asChild variant="link" className="text-white p-0 font-bold hover:text-accent transition-colors text-xs">
-                <Link href="/shop/mini-icons">Shop Kids <ArrowRight className="h-4 w-4 ml-2" /></Link>
-              </Button>
-            </div>
-          </div>
-          <div className="bg-accent rounded-2xl p-8 md:p-10 flex flex-col justify-center text-primary relative overflow-hidden">
-            <div className="absolute -top-10 -right-10 opacity-10">
-               <Star className="h-32 w-32 md:h-40 md:w-40 rotate-12" />
-            </div>
-            <h3 className="text-2xl md:text-4xl font-black tracking-tighter leading-none mb-4 md:mb-6 uppercase">JOIN THE CONCIERGE.</h3>
-            <p className="font-bold text-[10px] md:text-xs mb-6 md:mb-8 opacity-80 uppercase tracking-wider">Get exclusive access to private drops and premium footwear releases.</p>
-            <div className="flex flex-col sm:flex-row gap-2">
-               <input type="email" placeholder="Your Email" className="flex-1 bg-white/20 border-white/20 rounded-lg px-4 h-10 md:h-12 text-xs md:text-sm placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/40" />
-               <Button className="bg-primary text-white font-black uppercase tracking-widest text-[9px] h-10 md:h-12 px-6">Join</Button>
             </div>
           </div>
         </div>
