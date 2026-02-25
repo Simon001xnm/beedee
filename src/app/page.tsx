@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { getProductsByCategory, categories } from '@/lib/data';
 import { 
@@ -12,8 +11,7 @@ import {
   TrendingUp,
   LayoutGrid,
   User,
-  Zap,
-  Star
+  Zap
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
@@ -31,7 +29,7 @@ export default function Home() {
         <div className="container-market py-4 lg:py-8">
           <div className="grid lg:grid-cols-[240px_1fr_240px] gap-6">
             
-            {/* Left Column: Deep Categorization Sidebar */}
+            {/* Left Column: Department Sidebar */}
             <div className="hidden lg:flex flex-col bg-gray-50/50 rounded-xl p-4 border border-gray-100">
               <h3 className="text-sm font-black flex items-center gap-2 mb-6 text-primary uppercase tracking-wider">
                 <LayoutGrid className="h-4 w-4" />
@@ -151,15 +149,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Structured Category Showcase - Master Craftsmanship Section */}
+      {/* Structured Category Showcase - Elite Section */}
       <section className="bg-primary py-12 md:py-24 text-white overflow-hidden">
         <div className="container-market">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-10 text-center lg:text-left">
               <div className="space-y-4 md:space-y-6">
                 <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">The Elite Edit</span>
-                <h2 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.85] uppercase">MASTERING THE STRIDE.</h2>
-                <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight uppercase">MASTERING THE STRIDE.</h2>
+                <p className="text-white/60 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
                   Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
                 </p>
               </div>
@@ -182,7 +180,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

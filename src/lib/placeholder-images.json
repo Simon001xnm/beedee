@@ -2,182 +2,182 @@
   "placeholderImages": [
     {
       "id": "hero-sneakers-banner",
-      "description": "Premium sneakers banner for home hero",
-      "imageUrl": "https://images.unsplash.com/photo-1543652711-77eeb35ae548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBzbmVha2Vyc3xlbnwwfHx8fDE3NzIwMzgwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Premium sneakers banner",
+      "imageUrl": "/brands/nb-offer-1.jpg",
       "imageHint": "luxury sneakers"
     },
     {
       "id": "hero-formal-banner",
-      "description": "Men's formal shoes banner for home hero",
-      "imageUrl": "https://images.unsplash.com/photo-1770198408387-7f45e5d6c056?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVucyUyMGRyZXNzJTIwc2hvZXN8ZW58MHx8fHwxNzcyMDM4MDk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Men's formal shoes banner",
+      "imageUrl": "/brands/clarks-1.jpg",
       "imageHint": "mens dress shoes"
     },
     {
       "id": "nb-offer-1",
-      "description": "New Balance Special Offer view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1695225897718-b657a89ca78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZXclMjBiYWxhbmNlfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "New Balance Special Offer 1",
+      "imageUrl": "/brands/nb-offer-1.jpg",
       "imageHint": "new balance"
     },
     {
       "id": "nb-offer-2",
-      "description": "New Balance Special Offer view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1695225897718-b657a89ca78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZXclMjBiYWxhbmNlfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "New Balance Special Offer 2",
+      "imageUrl": "/brands/nb-offer-2.jpg",
       "imageHint": "new balance"
     },
     {
       "id": "nb-offer-3",
-      "description": "New Balance Special Offer view 3",
-      "imageUrl": "https://images.unsplash.com/photo-1518841252147-00cc0a43dcaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXclMjBiYWxhbmNlfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "New Balance Special Offer 3",
+      "imageUrl": "/brands/nb-offer-3.jpg",
       "imageHint": "new balance"
     },
     {
       "id": "samoa-new-1",
-      "description": "Samoa view 1",
-      "imageUrl": "https://picsum.photos/seed/samoa1/800/1000",
+      "description": "Samoa 1",
+      "imageUrl": "/brands/samoa-new-1.jpg",
       "imageHint": "samoa sneakers"
     },
     {
       "id": "samoa-new-2",
-      "description": "Samoa view 2",
-      "imageUrl": "https://picsum.photos/seed/samoa2/800/1000",
+      "description": "Samoa 2",
+      "imageUrl": "/brands/samoa-new-2.jpg",
       "imageHint": "samoa sneakers"
     },
     {
       "id": "kids-open-1",
-      "description": "Kids open shoe view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1771924367207-faeb2a2012a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxraWRzJTIwc2FuZGFsc3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids open shoe 1",
+      "imageUrl": "/brands/kids-open-1.jpg",
       "imageHint": "kids sandals"
     },
     {
       "id": "kids-open-2",
-      "description": "Kids open shoe view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1759851684030-818f50799ce5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxraWRzJTIwc2FuZGFsc3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids open shoe 2",
+      "imageUrl": "/brands/kids-open-2.jpg",
       "imageHint": "kids sandals"
     },
     {
       "id": "kids-open-3",
-      "description": "Kids open shoe view 3",
-      "imageUrl": "https://images.unsplash.com/photo-1771924367207-faeb2a2012a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxraWRzJTIwc2FuZGFsc3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids open shoe 3",
+      "imageUrl": "/brands/kids-open-3.jpg",
       "imageHint": "kids sandals"
     },
     {
       "id": "kids-sneaker-v5-5",
-      "description": "Kids sneaker toddler view",
-      "imageUrl": "https://images.unsplash.com/photo-1768159817034-d9de822a7fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxraWRzJTIwc25lYWtlcnN8ZW58MHx8fHwxNzcyMDM5MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids sneaker toddler",
+      "imageUrl": "/brands/kids-sneaker-v5-5.jpg",
       "imageHint": "kids sneakers"
     },
     {
       "id": "kids-sneaker-v4-1",
-      "description": "Kids sneaker view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1759313560190-d160c3567170?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxraWRzJTIwc25lYWtlcnN8ZW58MHx8fHwxNzcyMDM5MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids sneaker 1",
+      "imageUrl": "/brands/kids-sneaker-v4-1.jpg",
       "imageHint": "kids sneakers"
     },
     {
       "id": "kids-sneaker-v4-2",
-      "description": "Kids sneaker view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1707013537977-90e0a6cfa484?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxraWRzJTIwc25lYWtlcnN8ZW58MHx8fHwxNzcyMDM5MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Kids sneaker 2",
+      "imageUrl": "/brands/kids-sneaker-v4-2.jpg",
       "imageHint": "kids sneakers"
     },
     {
       "id": "asics-gel-1",
-      "description": "ASICS GEL sneakers view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1650382353453-1afa68d6ead3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhc2ljcyUyMGdlbHxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "ASICS GEL 1",
+      "imageUrl": "/brands/asics-gel-1.jpg",
       "imageHint": "asics gel"
     },
     {
       "id": "asics-gel-2",
-      "description": "ASICS GEL sneakers view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1591222018978-ed27e9ee3f30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhc2ljcyUyMGdlbHxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "ASICS GEL 2",
+      "imageUrl": "/brands/asics-gel-2.jpg",
       "imageHint": "asics gel"
     },
     {
       "id": "jordan-voodoo-1",
-      "description": "Jordan Voodoo view 1",
-      "imageUrl": "https://picsum.photos/seed/jordan1/800/1000",
+      "description": "Jordan Voodoo 1",
+      "imageUrl": "/brands/jordan-voodoo-1.jpg",
       "imageHint": "jordan voodoo"
     },
     {
       "id": "jordan-voodoo-2",
-      "description": "Jordan Voodoo view 2",
-      "imageUrl": "https://picsum.photos/seed/jordan2/800/1000",
+      "description": "Jordan Voodoo 2",
+      "imageUrl": "/brands/jordan-voodoo-2.jpg",
       "imageHint": "jordan voodoo"
     },
     {
       "id": "bape-star-1",
-      "description": "Bape star view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1562344319-b224e64a4456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXBlJTIwc3RhcnxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Bape star 1",
+      "imageUrl": "/brands/bape-star-1.jpg",
       "imageHint": "bape star"
     },
     {
       "id": "bape-star-2",
-      "description": "Bape star view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1562344319-b224e64a4456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXBlJTIwc3RhcnxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Bape star 2",
+      "imageUrl": "/brands/bape-star-2.jpg",
       "imageHint": "bape star"
     },
     {
       "id": "nike-ld-waffle-1",
-      "description": "Nike LD waffle view",
-      "imageUrl": "https://picsum.photos/seed/nike1/800/1000",
+      "description": "Nike LD waffle",
+      "imageUrl": "/brands/nike-ld-waffle-1.jpg",
       "imageHint": "nike ld waffle"
     },
     {
       "id": "nb-9060-1",
-      "description": "New Balance 9060 side view",
-      "imageUrl": "https://images.unsplash.com/photo-1744854185733-e33988d38cf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXclMjBiYWxhbmNlJTIwOTA2MHxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "NB 9060 1",
+      "imageUrl": "/brands/nb-9060-1.jpg",
       "imageHint": "new balance 9060"
     },
     {
       "id": "nb-9060-2",
-      "description": "New Balance 9060 angled view",
-      "imageUrl": "https://images.unsplash.com/photo-1744854185733-e33988d38cf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXclMjBiYWxhbmNlJTIwOTA2MHxlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "NB 9060 2",
+      "imageUrl": "/brands/nb-9060-2.jpg",
       "imageHint": "new balance 9060"
     },
     {
       "id": "asics-new-1",
-      "description": "Asics sneaker view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1633797800559-357515e33868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhc2ljcyUyMHNuZWFrZXJzfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Asics sneaker 1",
+      "imageUrl": "/brands/asics-new-1.jpg",
       "imageHint": "asics sneakers"
     },
     {
       "id": "asics-new-2",
-      "description": "Asics sneaker view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1596505376266-21f87d226d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhc2ljcyUyMHNuZWFrZXJzfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Asics sneaker 2",
+      "imageUrl": "/brands/asics-new-2.jpg",
       "imageHint": "asics sneakers"
     },
     {
       "id": "men-sandals-new-1",
-      "description": "Men sandals view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1650633907497-3d262368f340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVuJTIwc2FuZGFsc3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Men sandals 1",
+      "imageUrl": "/brands/men-sandals-new-1.jpg",
       "imageHint": "men sandals"
     },
     {
       "id": "men-sandals-new-2",
-      "description": "Men sandals view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1761666519882-59ab0dbe5059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBzYW5kYWxzfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Men sandals 2",
+      "imageUrl": "/brands/men-sandals-new-2.jpg",
       "imageHint": "men sandals"
     },
     {
       "id": "soccer-boot-1",
-      "description": "Soccer boot view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1658955455260-3a2c98aa17b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c29jY2VyJTIwYm9vdHN8ZW58MHx8fHwxNzcyMDM5MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Soccer boot 1",
+      "imageUrl": "/brands/soccer-boot-1.jpg",
       "imageHint": "soccer boots"
     },
     {
       "id": "soccer-boot-2",
-      "description": "Soccer boot view 2",
-      "imageUrl": "https://images.unsplash.com/photo-1612387048655-5b94cf7543b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2NjZXIlMjBib290c3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Soccer boot 2",
+      "imageUrl": "/brands/soccer-boot-2.jpg",
       "imageHint": "soccer boots"
     },
     {
       "id": "clarks-1",
-      "description": "Clarks shoe view 1",
-      "imageUrl": "https://images.unsplash.com/photo-1673305619712-8eb28225f205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGFya3MlMjBzaG9lc3xlbnwwfHx8fDE3NzIwMzkwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Clarks shoe 1",
+      "imageUrl": "/brands/clarks-1.jpg",
       "imageHint": "clarks shoes"
     },
     {
       "id": "polo-loafer-1",
-      "description": "Polo loafer front",
-      "imageUrl": "https://images.unsplash.com/photo-1585478259844-06d7b756b082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xvJTIwbG9hZmVyfGVufDB8fHx8MTc3MjAzOTAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Polo loafer",
+      "imageUrl": "/brands/polo-loafer-1.jpg",
       "imageHint": "polo loafer"
     }
   ]

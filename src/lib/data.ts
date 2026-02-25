@@ -4,7 +4,7 @@ import { PlaceHolderImages } from './placeholder-images';
 
 const getPlaceholderImage = () => {
   return { 
-    url: 'https://picsum.photos/seed/footwear-placeholder/600/600', 
+    url: '/brands/Logo.png', 
     hint: 'footwear' 
   };
 }
@@ -18,10 +18,10 @@ const getImageById = (id: string) => {
 }
 
 export const categories: Category[] = [
-  { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: 'https://picsum.photos/seed/sneakers/600/600', imageHint: 'sneakers' },
-  { id: 'gentlemens-quarters', name: 'Gentlemen\'s Quarters', parentId: null, imageUrl: 'https://picsum.photos/seed/mens-shoes/600/600', imageHint: 'mens shoes' },
-  { id: 'ladies-vault', name: 'The Ladies\' Vault', parentId: null, imageUrl: 'https://picsum.photos/seed/ladies-shoes/600/600', imageHint: 'ladies shoes' },
-  { id: 'mini-icons', name: 'Mini Icons', parentId: null, imageUrl: 'https://picsum.photos/seed/kids-shoes/600/600', imageHint: 'kids shoes' },
+  { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: '/brands/nb-offer-1.jpg', imageHint: 'sneakers' },
+  { id: 'gentlemens-quarters', name: 'Gentlemen\'s Quarters', parentId: null, imageUrl: '/brands/clarks-1.jpg', imageHint: 'mens shoes' },
+  { id: 'ladies-vault', name: 'The Ladies\' Vault', parentId: null, imageUrl: '/brands/samoa-new-1.jpg', imageHint: 'ladies shoes' },
+  { id: 'mini-icons', name: 'Mini Icons', parentId: null, imageUrl: '/brands/kids-sneaker-v5-5.jpg', imageHint: 'kids shoes' },
 ];
 
 export const products: Product[] = [
