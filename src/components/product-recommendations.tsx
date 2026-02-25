@@ -62,13 +62,13 @@ export function ProductRecommendations({ currentProductId, currentCategory }: Pr
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {[...Array(4)].map((_, i) => (
-           <div key={i} className="flex flex-col space-y-3">
-             <Skeleton className="h-[200px] w-full rounded-xl" />
-             <div className="space-y-2">
-               <Skeleton className="h-4 w-4/5" />
-               <Skeleton className="h-4 w-1/2" />
+           <div key={i} className="flex flex-col space-y-4">
+             <Skeleton className="h-[300px] w-full rounded-[2.5rem]" />
+             <div className="space-y-3">
+               <Skeleton className="h-6 w-4/5" />
+               <Skeleton className="h-6 w-1/2" />
              </div>
            </div>
         ))}
@@ -81,7 +81,7 @@ export function ProductRecommendations({ currentProductId, currentCategory }: Pr
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
       {recommendations.map(product => (
         <ProductCard key={product.id} product={product} />
       ))}

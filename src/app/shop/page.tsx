@@ -12,13 +12,18 @@ export default function ShopPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="container mx-auto px-4 md:px-6 py-8">
-        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Shop' }]} className="mb-6" />
-        <div className="flex items-baseline justify-between mb-8">
-          <h1 className="text-3xl font-headline font-bold text-primary">All Collections</h1>
-          <span className="text-xs text-muted-foreground font-bold tracking-widest uppercase">{allProducts.length} Items</span>
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Shop' }]} className="mb-12" />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-7xl font-headline font-bold text-primary tracking-tighter">ALL COLLECTIONS</h1>
+            <div className="h-1 w-20 bg-accent rounded-full"></div>
+          </div>
+          <span className="text-[10px] md:text-xs text-muted-foreground font-black tracking-[0.4em] uppercase border-b-2 border-accent pb-2">{allProducts.length} PREMIUM ITEMS</span>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
+        
+        {/* Optimized grid for clarity on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {allProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
