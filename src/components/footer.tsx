@@ -10,9 +10,8 @@ export function Footer() {
     <footer className="bg-white border-t border-gray-200 pt-16 pb-8">
       <div className="container-market">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand Info */}
+          {/* Brand Info & Social Buttons */}
           <div className="space-y-6">
-            {/* Brand Logo - Updated to use Image */}
             <Link href="/" className="flex-shrink-0">
               <div className="relative h-10 w-32">
                 <Image 
@@ -26,16 +25,22 @@ export function Footer() {
             <p className="text-sm text-gray-500 leading-relaxed">
               Bee & Dee is Kenya's premier footwear marketplace, providing authentic, high-quality shoes and handbags to modern individuals.
             </p>
-            <div className="flex gap-4">
-               <Link href="#" className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all">
-                  <Facebook className="h-4 w-4"/>
-               </Link>
-               <Link href="#" className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all">
-                  <Instagram className="h-4 w-4"/>
-               </Link>
-               <Link href="#" className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all">
-                  <Twitter className="h-4 w-4"/>
-               </Link>
+            <div className="flex flex-col gap-3">
+               <h4 className="font-bold text-[10px] text-primary uppercase tracking-[0.3em]">Follow Our Journey</h4>
+               <div className="flex flex-wrap gap-2">
+                 <Link href="#" className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white hover:bg-accent hover:text-primary transition-all text-[10px] font-black uppercase tracking-widest shadow-md hover:shadow-lg">
+                    <Facebook className="h-3 w-3"/>
+                    Facebook
+                 </Link>
+                 <Link href="#" className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white hover:bg-accent hover:text-primary transition-all text-[10px] font-black uppercase tracking-widest shadow-md hover:shadow-lg">
+                    <Instagram className="h-3 w-3"/>
+                    Instagram
+                 </Link>
+                 <Link href="#" className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white hover:bg-accent hover:text-primary transition-all text-[10px] font-black uppercase tracking-widest shadow-md hover:shadow-lg">
+                    <Twitter className="h-3 w-3"/>
+                    Twitter
+                 </Link>
+               </div>
             </div>
           </div>
 
@@ -63,21 +68,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* Visit Us & Map */}
           <div className="space-y-6">
-            <h4 className="font-bold text-sm text-primary uppercase tracking-wider">Visit Us</h4>
+            <h4 className="font-bold text-sm text-primary uppercase tracking-wider">Our Showroom</h4>
             <div className="space-y-4">
               <div className="flex gap-3 items-start">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-gray-500">Juction Trade Centre, Nairobi along Latema Road off Riverroad</p>
+                <p className="text-sm text-gray-500">Junction Trade Centre, Nairobi along Latema Road off Riverroad</p>
+              </div>
+              {/* Styled Map Container */}
+              <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 h-40 w-full relative group">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sLatema%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy"
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                ></iframe>
+                <div className="absolute inset-0 pointer-events-none border-2 border-primary/5 rounded-xl"></div>
               </div>
               <div className="flex gap-3 items-center">
                 <MessageCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-gray-500">+254 106587150</p>
-              </div>
-              <div className="flex gap-3 items-center">
-                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-gray-500">wambuilenny@gmail.com</p>
+                <p className="text-sm text-gray-500">+254 106 587 150</p>
               </div>
             </div>
           </div>
