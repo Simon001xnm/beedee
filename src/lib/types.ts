@@ -11,6 +11,7 @@ export interface Product {
   id: string;
   name: string;
   price: number;
+  originalPrice?: number; // Optional original price for strike-through
   images: { url: string, hint: string }[];
   description: string;
   category: string;

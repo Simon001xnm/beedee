@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '@/lib/types';
@@ -69,7 +70,9 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
         <div className="flex items-end justify-between mt-2">
           <div className="flex flex-col">
             <span className="text-lg font-bold text-primary">{formatPrice(product.price)}</span>
-            <span className="text-xs text-gray-400 line-through">{formatPrice(product.price + 500)}</span>
+            {product.originalPrice ? (
+              <span className="text-xs text-gray-400 line-through">{formatPrice(product.originalPrice)}</span>
+            ) : null}
           </div>
           <Button size="icon" variant="ghost" className="rounded-full bg-gray-50 hover:bg-primary hover:text-white transition-colors">
             <ShoppingCart className="h-4 w-4" />

@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from "react";
@@ -94,7 +95,9 @@ export default function ProductPage({ params }: ProductPageProps) {
               <div className="flex flex-wrap items-center gap-4 lg:gap-6">
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl lg:text-4xl font-black text-primary tracking-tighter">{formatPrice(product.price)}</span>
-                  <span className="text-lg text-gray-400 line-through font-bold">{formatPrice(product.price + 1000)}</span>
+                  {product.originalPrice ? (
+                    <span className="text-lg text-gray-400 line-through font-bold">{formatPrice(product.originalPrice)}</span>
+                  ) : null}
                 </div>
                 <div className="flex items-center gap-2 bg-accent/10 px-3 py-1.5 rounded-full border border-accent/20">
                     <Star className="h-4 w-4 text-accent fill-current" />
