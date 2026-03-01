@@ -122,6 +122,21 @@ export const products: Product[] = [
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
+  { 
+    id: 'p22', 
+    name: "Adidas Samoa", 
+    price: 3999, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.56.jpeg', hint: 'adidas samoa' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg', hint: 'adidas samoa side' }
+    ], 
+    description: "The timeless Adidas Samoa sneakers, rebuilt for modern comfort and everyday urban wear.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p1', 'p19'], 
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
