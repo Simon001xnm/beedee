@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getProductsByCategory, categories } from '@/lib/data';
+import { getProductsByCategory, categories, getProducts } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
@@ -18,6 +18,7 @@ import { HeroCarousel } from '@/components/hero-carousel';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
+  // Pull from standard shop items (Hero items excluded by the helper functions)
   const trendingItems = getProductsByCategory('sneaker-lab').slice(0, 8);
   const luxuryEdit = getProductsByCategory('gentlemens-quarters').slice(0, 4);
 
