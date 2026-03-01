@@ -53,6 +53,21 @@ export const products: Product[] = [
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi', 'Black', 'White', 'Blue', 'Red'] 
   },
+  { 
+    id: 'p18', 
+    name: "Air Force 1 Kids", 
+    price: 1799, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.44.jpeg', hint: 'air force 1' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.44(1).jpeg', hint: 'air force 1 side' }
+    ], 
+    description: "The iconic Air Force 1 for the next generation. Durable, stylish, and comfortable for all-day play. Perfect for the playground and beyond.", 
+    category: 'mini-icons', 
+    subcategory: null, 
+    relatedProducts: ['p2', 'p3'], 
+    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35'], 
+    colors: ['Black', 'White'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
