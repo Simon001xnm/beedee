@@ -85,6 +85,26 @@ export const products: Product[] = [
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
+  { 
+    id: 'p20', 
+    name: "New Balance 530", 
+    price: 2499, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.49(2).jpeg', hint: 'new balance 530' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.50.jpeg', hint: 'new balance 530 side' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.50(1).jpeg', hint: 'new balance 530 detail' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.57(1).jpeg', hint: 'new balance 530 angle' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.58.jpeg', hint: 'new balance 530 back' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.58(1).jpeg', hint: 'new balance 530 front' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.58(2).jpeg', hint: 'new balance 530 close' }
+    ], 
+    description: "The New Balance 530 is a throwback to one of our classic running shoes. This casual kick combines everyday style with modern tech for a look and feel you'll love.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p0', 'p9', 'p19'], 
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
