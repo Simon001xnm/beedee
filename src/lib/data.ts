@@ -159,6 +159,26 @@ export const products: Product[] = [
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
+  { 
+    id: 'p24', 
+    name: "Official Formal Shoes", 
+    price: 2499, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.09 (2).jpeg', hint: 'official shoe' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.09.jpeg', hint: 'official shoe side' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.10 (2).jpeg', hint: 'official shoe angle' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.11 (2).jpeg', hint: 'official shoe back' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.11 (3).jpeg', hint: 'official shoe detail' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.11 (4).jpeg', hint: 'official shoe sole' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 11.00.11.jpeg', hint: 'official shoe top' }
+    ], 
+    description: "Premium official formal shoes, available in black and brown. Perfect for professional and formal occasions.", 
+    category: 'gentlemens-quarters', 
+    subcategory: null, 
+    relatedProducts: ['p13', 'p15', 'p23'], 
+    sizes: ['40', '41', '42', '43', '44', '45'], 
+    colors: ['Black', 'Brown'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
