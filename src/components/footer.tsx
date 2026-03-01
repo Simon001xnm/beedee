@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { MessageCircle, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
@@ -88,12 +87,6 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p suppressHydrationWarning>&copy; {currentYear} Bee & Dee Premium Marketplace. All rights reserved.</p>
-          <div className="flex gap-6">
-             <div className="flex items-center gap-4 grayscale opacity-40">
-                <Image src="https://picsum.photos/seed/visa/100/30" alt="Visa" width={40} height={15} />
-                <Image src="https://picsum.photos/seed/mpesa/100/30" alt="M-Pesa" width={40} height={15} />
-             </div>
-          </div>
         </div>
       </div>
     </footer>
