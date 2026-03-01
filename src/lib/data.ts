@@ -215,6 +215,22 @@ export const products: Product[] = [
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
+  { 
+    id: 'p26', 
+    name: "Airmax 97", 
+    price: 3500, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.12.52 (1).jpeg', hint: 'airmax 97' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.12.52 (3).jpeg', hint: 'airmax 97 side' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.12.52.jpeg', hint: 'airmax 97 top' }
+    ], 
+    description: "The Nike Air Max 97 features the original ripple design inspired by Japanese bullet trains for a look that pushes your style full speed ahead.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p25', 'p16'], 
+    sizes: ['40', '41', '42', '43', '44'], 
+    colors: ['Multi'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
