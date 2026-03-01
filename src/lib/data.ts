@@ -68,6 +68,23 @@ export const products: Product[] = [
     sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35'], 
     colors: ['Black', 'White'] 
   },
+  { 
+    id: 'p19', 
+    name: "Samba Single sole", 
+    price: 2499, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.45.jpeg', hint: 'samba top' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.45(1).jpeg', hint: 'samba side' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.46.jpeg', hint: 'samba front' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.46(1).jpeg', hint: 'samba angle' }
+    ], 
+    description: "The Samba Single Sole offers a sleek, classic profile with a focus on minimalist design and everyday comfort. A staple for any casual outfit.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p16', 'p17'], 
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
