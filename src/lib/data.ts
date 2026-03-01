@@ -50,20 +50,7 @@ export const products: Product[] = [
   { id: 'p5', name: 'ASICS GEL Performance', price: 2999, images: [{ url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000', hint: 'running shoe' }], description: 'High-performance ASICS GEL sneakers offering superior shock absorption.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p6', name: 'Jordan Voodoo Edition', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000', hint: 'jordan sneaker' }], description: 'The exclusive Jordan Voodoo, featuring hand-crafted details and premium materials.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p8'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
-  { id: 'p11', name: 'Handcrafted Men Sandals', price: 1800, images: [{ url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000', hint: 'mens sandals' }], description: 'Premium leather sandals designed for absolute comfort and casual elegance.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p15', 'p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
-  { 
-    id: 'p15', 
-    name: 'Polo Loafer Elite', 
-    price: 2499, 
-    originalPrice: 2999,
-    images: [{ url: 'https://images.unsplash.com/photo-1621306337625-3e4d7c544f1f?q=80&w=1000', hint: 'mens loafer' }], 
-    description: 'Premium Polo loafers that define the modern gentleman. Sophisticated and comfortable.', 
-    category: 'gentlemens-quarters', 
-    subcategory: null, 
-    relatedProducts: ['p11', 'p23'], 
-    sizes: ['40', '41', '42', '43', '44', '45'], 
-    colors: ['Multi'] 
-  },
+  { id: 'p11', name: 'Handcrafted Men Sandals', price: 1800, images: [{ url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000', hint: 'mens sandals' }], description: 'Premium leather sandals designed for absolute comfort and casual elegance.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { 
     id: 'p16', 
     name: "Nike Shox TL Men's Shoes", 
@@ -197,7 +184,7 @@ export const products: Product[] = [
     description: "Premium Timberland casual laced shoes, built for rugged style and all-day comfort.", 
     category: 'gentlemens-quarters', 
     subcategory: null, 
-    relatedProducts: ['p11', 'p15'], 
+    relatedProducts: ['p11', 'p24'], 
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
@@ -217,7 +204,7 @@ export const products: Product[] = [
     description: "Premium official formal shoes, available in black and brown. Perfect for professional and formal occasions.", 
     category: 'gentlemens-quarters', 
     subcategory: null, 
-    relatedProducts: ['p15', 'p23'], 
+    relatedProducts: ['p23'], 
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Black', 'Brown'] 
   },
