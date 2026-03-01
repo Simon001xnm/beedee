@@ -26,7 +26,7 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
           />
         </div>
         <div className="p-3">
-          <h4 className="text-[11px] font-medium line-clamp-1 mb-1 text-gray-700">{product.name}</h4>
+          <h4 className="text-[11px] font-medium line-clamp-1 mb-1 text-inherit">{product.name}</h4>
           <p className="text-sm font-bold text-primary">{formatPrice(product.price)}</p>
         </div>
       </Link>
@@ -58,11 +58,11 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
       <div className="p-4 flex flex-col gap-2">
         <div className="flex flex-col">
           <Link href={`/shop/product/${product.id}`}>
-            <h3 className="text-sm font-bold text-gray-800 line-clamp-2 hover:text-primary transition-colors min-h-[40px]">
+            <h3 className="text-sm font-bold line-clamp-2 hover:text-accent transition-colors min-h-[40px] text-inherit">
               {product.name}
             </h3>
           </Link>
-          <span className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">
+          <span className="text-[10px] uppercase tracking-wider mt-1 opacity-60 text-inherit">
             {product.category.replace('-', ' ')}
           </span>
         </div>
@@ -71,7 +71,7 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
           <div className="flex flex-col">
             <span className="text-lg font-bold text-primary">{formatPrice(product.price)}</span>
             {product.originalPrice ? (
-              <span className="text-xs text-gray-400 line-through">{formatPrice(product.originalPrice)}</span>
+              <span className="text-xs line-through opacity-40">{formatPrice(product.originalPrice)}</span>
             ) : null}
           </div>
           <Button size="icon" variant="ghost" className="rounded-full bg-gray-50 hover:bg-primary hover:text-white transition-colors">
