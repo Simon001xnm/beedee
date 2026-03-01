@@ -37,6 +37,22 @@ export const products: Product[] = [
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Black', 'White'] 
   },
+  { 
+    id: 'p17', 
+    name: "Converse Classic Low", 
+    price: 999, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.41.jpeg', hint: 'converse low top' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.43.jpeg', hint: 'converse side view' },
+      { url: '/brands/WhatsApp Image 2026-01-09 at 17.42.43(1).jpeg', hint: 'converse detail' }
+    ], 
+    description: "The most moving and affordable classic in the streets. Lightweight, versatile, and available in multiple colors. A true essential for every Kenyan wardrobe.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p1', 'p0'], 
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi', 'Black', 'White', 'Blue', 'Red'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
