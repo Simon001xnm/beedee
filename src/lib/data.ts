@@ -31,7 +31,22 @@ export const products: Product[] = [
     sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'], 
     colors: ['Multi'] 
   },
-  { id: 'p3', name: 'Kids Sneakers (Toddler)', price: 1799, images: [{ url: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000', hint: 'baby sneaker' }], description: 'Stylish and supportive sneakers perfect for little feet on the move.', category: 'mini-icons', subcategory: null, relatedProducts: ['p2', 'p18'], sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'], colors: ['Multi'] },
+  { 
+    id: 'p3', 
+    name: 'Kids Sneakers', 
+    price: 1799, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-02-06 at 10.01.20 AM.jpeg', hint: 'kids sneaker front' },
+      { url: '/brands/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids sneaker side' },
+      { url: '/brands/WhatsApp Image 2026-02-06 at 10.01.23 AM (3).jpeg', hint: 'kids sneaker detail' }
+    ], 
+    description: 'Stylish and supportive sneakers perfect for little feet on the move. Built for comfort and daily play.', 
+    category: 'mini-icons', 
+    subcategory: null, 
+    relatedProducts: ['p2', 'p18'], 
+    sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'], 
+    colors: ['Multi'] 
+  },
   { id: 'p5', name: 'ASICS GEL Performance', price: 2999, images: [{ url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000', hint: 'running shoe' }], description: 'High-performance ASICS GEL sneakers offering superior shock absorption.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p6', name: 'Jordan Voodoo Edition', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000', hint: 'jordan sneaker' }], description: 'The exclusive Jordan Voodoo, featuring hand-crafted details and premium materials.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p8'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
