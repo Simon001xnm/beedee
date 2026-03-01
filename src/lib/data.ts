@@ -125,10 +125,14 @@ export const products: Product[] = [
   { 
     id: 'p22', 
     name: "Adidas Samoa", 
-    price: 3999, 
+    price: 2999, 
     images: [
       { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.56.jpeg', hint: 'adidas samoa' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg', hint: 'adidas samoa side' }
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg', hint: 'adidas samoa side' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (3).jpeg', hint: 'adidas samoa back' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (4).jpeg', hint: 'adidas samoa detail' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57.jpeg', hint: 'adidas samoa angle' },
+      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.58.jpeg', hint: 'adidas samoa front' }
     ], 
     description: "The timeless Adidas Samoa sneakers, rebuilt for modern comfort and everyday urban wear.", 
     category: 'sneaker-lab', 
