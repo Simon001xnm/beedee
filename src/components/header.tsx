@@ -2,6 +2,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShoppingCart,
   User,
@@ -54,10 +55,16 @@ export function Header() {
       {/* Main Branding & Search Row */}
       <div className="bg-white border-b border-gray-100">
         <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
-          {/* Brand Logo - Text based to replace local image */}
+          {/* Brand Logo - Updated to use Image */}
           <Link href="/" className="flex-shrink-0">
-            <div className="flex items-center justify-center px-4 py-2 bg-primary rounded-lg">
-              <span className="font-black text-white text-xl tracking-tighter italic">BEE & DEE</span>
+            <div className="relative h-10 w-32 md:h-12 md:w-40">
+              <Image 
+                src="/brands/Logo.png" 
+                alt="Bee & Dee" 
+                fill 
+                className="object-contain"
+                priority
+              />
             </div>
           </Link>
 

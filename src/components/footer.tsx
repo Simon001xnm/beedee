@@ -13,9 +13,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-               <span className="font-black text-primary text-2xl tracking-tighter italic">BEE & DEE</span>
-            </div>
+            {/* Brand Logo - Updated to use Image */}
+            <Link href="/" className="flex-shrink-0">
+              <div className="relative h-10 w-32">
+                <Image 
+                  src="/brands/Logo.png" 
+                  alt="Bee & Dee" 
+                  fill 
+                  className="object-contain"
+                />
+              </div>
+            </Link>
             <p className="text-sm text-gray-500 leading-relaxed">
               Bee & Dee is Kenya's premier footwear marketplace, providing authentic, high-quality shoes and handbags to modern individuals.
             </p>
