@@ -179,6 +179,30 @@ export const products: Product[] = [
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Black', 'Brown'] 
   },
+  { 
+    id: 'p25', 
+    name: "Air Max 90", 
+    price: 3799, 
+    images: [
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.54 (1).jpeg', hint: 'air max 90 side' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.54 (2).jpeg', hint: 'air max 90 angle' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.54.jpeg', hint: 'air max 90 top' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.55 (1).jpeg', hint: 'air max 90 heel' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.55 (2).jpeg', hint: 'air max 90 back' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.55.jpeg', hint: 'air max 90 lateral' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.56.jpeg', hint: 'air max 90 sole' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.58.jpeg', hint: 'air max 90 close' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.59 (1).jpeg', hint: 'air max 90 pair' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.59 (2).jpeg', hint: 'air max 90 profile' },
+      { url: '/brands/WhatsApp Image 2026-01-29 at 11.11.59.jpeg', hint: 'air max 90 front' }
+    ], 
+    description: "The Nike Air Max 90 stays true to its OG running roots with the iconic Waffle outsole, stitched overlays and classic TPU accents.", 
+    category: 'sneaker-lab', 
+    subcategory: null, 
+    relatedProducts: ['p16', 'p21'], 
+    sizes: ['40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi'] 
+  },
 ];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
