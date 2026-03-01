@@ -21,7 +21,18 @@ export const products: Product[] = [
   { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p11', name: 'Handcrafted Men Sandals', price: 1800, images: [{ url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000', hint: 'mens sandals' }], description: 'Premium leather sandals designed for absolute comfort and casual elegance.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p15', 'p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p13', name: 'Clarks Elegant Formals', price: 2999, images: [{ url: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000', hint: 'formal shoe' }], description: 'Timeless Clarks formal shoes, perfect for the office or special occasions.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p15', 'p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
-  { id: 'p15', name: 'Polo Loafer Elite', price: 2499, images: [{ url: 'https://images.unsplash.com/photo-1621306337625-3e4d7c544f1f?q=80&w=1000', hint: 'mens loafer' }], description: 'Sophisticated Polo loafers that define the modern gentleman.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p13', 'p11', 'p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
+  { 
+    id: 'p15', 
+    name: 'Polo Loafer Elite', 
+    price: 2499, 
+    images: [{ url: 'https://images.unsplash.com/photo-1621306337625-3e4d7c544f1f?q=80&w=1000', hint: 'mens loafer' }], 
+    description: 'Premium Polo loafers that define the modern gentleman. Sophisticated and comfortable.', 
+    category: 'gentlemens-quarters', 
+    subcategory: null, 
+    relatedProducts: ['p13', 'p11', 'p23'], 
+    sizes: ['40', '41', '42', '43', '44', '45'], 
+    colors: ['Multi'] 
+  },
   { 
     id: 'p16', 
     name: "Nike Shox TL Men's Shoes", 
