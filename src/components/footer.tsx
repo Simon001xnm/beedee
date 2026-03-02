@@ -1,10 +1,19 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MessageCircle, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [mounted, setMounted] = useState(false);
+  const [currentYear, setCurrentYear] = useState(2026);
+
+  useEffect(() => {
+    setMounted(true);
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="bg-white border-t border-gray-200 pt-16 pb-8">
@@ -77,16 +86,22 @@ export function Footer() {
                 <p className="text-sm text-gray-500">Junction Trade Centre, Nairobi along Latema Road off Riverroad</p>
               </div>
               {/* Styled Map Container */}
-              <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 h-40 w-full relative group">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sLatema%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
-                  loading="lazy"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
-                ></iframe>
+              <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 h-40 w-full relative group bg-gray-50">
+                {mounted ? (
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sLatema%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy"
+                    className="grayscale hover:grayscale-0 transition-all duration-500"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                    title="Bee & Dee Location Map"
+                  ></iframe>
+                ) : (
+                  <div className="w-full h-full animate-pulse bg-gray-200" />
+                )}
                 <div className="absolute inset-0 pointer-events-none border-2 border-primary/5 rounded-xl"></div>
               </div>
               <div className="flex gap-3 items-center">
@@ -100,7 +115,9 @@ export function Footer() {
         <Separator className="bg-gray-100 mb-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p suppressHydrationWarning>&copy; {currentYear} Bee & Dee Premium Marketplace. All rights reserved.</p>
+          <p suppressHydrationWarning>
+            &copy; {mounted ? currentYear : 2026} Bee & Dee Premium Marketplace. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
