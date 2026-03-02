@@ -13,7 +13,6 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
   { id: 'p0', name: 'New Balance Special Offer', price: 2999, originalPrice: 3999, images: [{ url: 'https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000', hint: 'sneaker' }], description: 'Limited time offer on New Balance sneakers featuring premium cushioning and classic style.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p9', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
-  { id: 'p1', name: 'Samoa Classic', price: 2799, images: [{ url: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000', hint: 'classic shoe' }], description: 'The timeless Samoa sneakers, rebuilt for modern comfort and everyday urban wear.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { 
     id: 'p2', 
     name: 'Kids Open Comfort', 
@@ -47,18 +46,6 @@ export const products: Product[] = [
     sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'], 
     colors: ['Multi'] 
   },
-  { 
-    id: 'p5', 
-    name: 'Nike Performance Runner', 
-    price: 2999, 
-    images: [{ url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000', hint: 'nike running shoe' }], 
-    description: 'High-performance Nike sneakers offering superior cushioning and lightweight support for daily runs.', 
-    category: 'sneaker-lab', 
-    subcategory: null, 
-    relatedProducts: ['p16', 'p25'], 
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
-    colors: ['Red'] 
-  },
   { id: 'p6', name: 'Jordan Voodoo Edition', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000', hint: 'jordan sneaker' }], description: 'The exclusive Jordan Voodoo, featuring hand-crafted details and premium materials.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p8'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p11', name: 'Handcrafted Men Sandals', price: 1800, images: [{ url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000', hint: 'mens sandals' }], description: 'Premium leather sandals designed for absolute comfort and casual elegance.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
@@ -89,7 +76,7 @@ export const products: Product[] = [
     description: "The most moving and affordable classic in the streets. A true essential.", 
     category: 'sneaker-lab', 
     subcategory: null, 
-    relatedProducts: ['p1', 'p0'], 
+    relatedProducts: ['p0'], 
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
@@ -177,7 +164,7 @@ export const products: Product[] = [
     description: "The timeless Adidas Samoa sneakers, rebuilt for modern comfort and everyday urban wear.", 
     category: 'sneaker-lab', 
     subcategory: null, 
-    relatedProducts: ['p1', 'p19'], 
+    relatedProducts: ['p19'], 
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
