@@ -16,6 +16,20 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'hermes-sandals',
+    name: 'Hermes sandals',
+    price: 1999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-13 at 1.18.02 PM.jpeg', hint: 'hermes sandals' }
+    ],
+    description: 'Timeless elegance meets modern comfort. These Hermes sandals are handcrafted for the sophisticated individual, perfect for warm Nairobi days.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
+    sizes: ['40', '41', '42', '43', '44'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'puma-gt',
     name: 'Puma GT',
     price: 3799,
