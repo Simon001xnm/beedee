@@ -16,6 +16,23 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'samba-single-sole',
+    name: 'Samba single sole',
+    price: 2499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (1).jpeg', hint: 'samba single sole' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (2).jpeg', hint: 'samba single sole side' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM.jpeg', hint: 'samba single sole detail' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.38.04 PM.jpeg', hint: 'samba single sole back' }
+    ],
+    description: 'The Samba single sole brings a sleek, low-profile look to the classic indoor soccer silhouette. Featuring a clean design and premium materials, it\'s a versatile choice for any casual outfit in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['floral-samba', 'samoa-classic', 'nb-classic-sneakers'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Classic White/Black']
+  },
+  {
     id: 'floral-samba',
     name: 'Floral Samba',
     price: 2999,
