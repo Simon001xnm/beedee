@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'men-open',
+    name: 'Men Open Comfort',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-10 at 12.31.44 PM.jpeg', hint: 'men open shoes' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.31.44 PM (1).jpeg', hint: 'men open shoes side' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.31.43 PM.jpeg', hint: 'men open shoes detail' }
+    ],
+    description: 'Premium open-toe comfort for men. Designed with breathable materials and a supportive sole, perfect for the modern gentleman in Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'girls-open-shoes',
     name: 'Girls Open Shoes',
     price: 1499,
