@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -43,7 +43,7 @@ export const products: Product[] = [
     description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
     category: 'mini-icons',
     subcategory: null,
-    relatedProducts: ['kids-sneakers'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
     sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
     colors: ['Multi-color']
   },
@@ -62,8 +62,26 @@ export const products: Product[] = [
     description: 'Stylish and durable urban sneakers for kids. Designed for comfort and long-lasting wear, perfect for school or weekend adventures.',
     category: 'mini-icons',
     subcategory: null,
-    relatedProducts: ['kids-open'],
+    relatedProducts: ['kids-open', 'kids-active-sneakers'],
     sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-active-sneakers',
+    name: 'Kids Active Sneakers',
+    price: 1799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (1).jpeg', hint: 'kids active sneakers blue' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (2).jpeg', hint: 'kids active sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM (2).jpeg', hint: 'kids active sneakers profile' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM.jpeg', hint: 'kids active sneakers side' }
+    ],
+    description: 'Modern active sneakers for juniors. Built for performance and style, these sneakers provide excellent support for all-day activities.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-sneakers', 'kids-open'],
+    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
     colors: ['Multi-color']
   }
 ];
