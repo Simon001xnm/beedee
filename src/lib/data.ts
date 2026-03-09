@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'max-air',
+    name: 'Max Air',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM (1).jpeg', hint: 'max air side' }
+    ],
+    description: 'Experience superior cushioning and legendary style with the Max Air. Designed for ultimate comfort and a standout look, perfect for the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-vomero', 'nike-zoom', 'sb-dunks', 'jordan-3'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'timberland',
     name: 'Timberland Boots',
     price: 2999,
