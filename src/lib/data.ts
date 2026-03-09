@@ -188,6 +188,22 @@ export const products: Product[] = [
     relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
+  },
+  {
+    id: 'mens-handcrafted-sandals',
+    name: 'Men\'s Handcrafted Sandals',
+    price: 1999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'mens handcrafted sandals' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (1).jpeg', hint: 'mens handcrafted sandals view' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (2).jpeg', hint: 'mens handcrafted sandals detail' }
+    ],
+    description: 'Premium handcrafted men\'s sandals designed for ultimate comfort and durability. Perfect for casual wear and everyday style in Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['samoa-classic', 'nb-9060', 'asics-gel-sneakers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan/Brown']
   }
 ];
 

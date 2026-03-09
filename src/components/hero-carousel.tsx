@@ -15,13 +15,14 @@ import { getProductById } from "@/lib/data";
 
 // Update these IDs as you add new featured products to your catalog
 const featuredProductIds = [
+  'mens-handcrafted-sandals',
   'nb-9060-alt',
   'nb-9060',
   'nike-ld-waffle',
-  'jordan-voodoo',
-  'bape-star',
   'nike-zoom',
   'asics-gel-sneakers',
+  'jordan-voodoo',
+  'bape-star',
   'samoa-classic'
 ];
 
