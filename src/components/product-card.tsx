@@ -24,9 +24,9 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
             data-ai-hint={product.images[0].hint}
           />
         </div>
-        <div className="p-2">
-          <h4 className="text-[10px] font-medium line-clamp-1 mb-1 text-inherit">{product.name}</h4>
-          <p className="text-xs font-bold text-primary">{formatPrice(product.price)}</p>
+        <div className="p-1.5">
+          <h4 className="text-[9px] font-medium line-clamp-1 mb-0.5 text-inherit">{product.name}</h4>
+          <p className="text-[10px] font-bold text-primary">{formatPrice(product.price)}</p>
         </div>
       </Link>
     );
@@ -38,7 +38,7 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
       className
     )}>
       <Link href={`/shop/product/${product.id}`} className="block">
-        <div className="relative aspect-square bg-gray-50">
+        <div className="relative aspect-[4/5] md:aspect-square bg-gray-50">
           <Image
             src={product.images[0].url}
             alt={product.name}
@@ -47,7 +47,7 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
             data-ai-hint={product.images[0].hint}
           />
           {product.price > 3000 && (
-            <div className="absolute top-2 left-2 bg-accent text-accent-foreground text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+            <div className="absolute top-2 left-2 bg-accent text-accent-foreground text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm z-10">
               Premium
             </div>
           )}
@@ -57,23 +57,23 @@ export function ProductCard({ product, className, variant = 'standard' }: Produc
       <div className="p-2 md:p-4 flex flex-col flex-1 gap-1">
         <div className="flex flex-col flex-1">
           <Link href={`/shop/product/${product.id}`}>
-            <h3 className="text-[11px] md:text-sm font-bold line-clamp-1 md:line-clamp-2 hover:text-accent transition-colors text-inherit">
+            <h3 className="text-[10px] md:text-sm font-bold line-clamp-1 md:line-clamp-2 hover:text-accent transition-colors text-inherit leading-tight">
               {product.name}
             </h3>
           </Link>
-          <span className="text-[9px] md:text-[10px] uppercase tracking-wider mt-0.5 opacity-60 text-inherit">
+          <span className="text-[8px] md:text-[10px] uppercase tracking-wider mt-0.5 opacity-60 text-inherit truncate">
             {product.category.replace('-', ' ')}
           </span>
         </div>
 
-        <div className="flex items-center justify-between mt-auto pt-1">
+        <div className="flex items-center justify-between mt-auto pt-1 gap-1">
           <div className="flex flex-col">
-            <span className="text-xs md:text-lg font-bold text-primary leading-tight">{formatPrice(product.price)}</span>
+            <span className="text-[11px] md:text-lg font-bold text-primary leading-none">{formatPrice(product.price)}</span>
             {product.originalPrice ? (
-              <span className="text-[9px] md:text-xs line-through opacity-40">{formatPrice(product.originalPrice)}</span>
+              <span className="text-[8px] md:text-xs line-through opacity-40">{formatPrice(product.originalPrice)}</span>
             ) : null}
           </div>
-          <Button size="icon" variant="ghost" className="h-7 w-7 md:h-9 md:w-9 rounded-full bg-gray-50 hover:bg-primary hover:text-white transition-colors">
+          <Button size="icon" variant="ghost" className="h-6 w-6 md:h-9 md:w-9 rounded-full bg-gray-50 hover:bg-primary hover:text-white transition-colors flex-shrink-0">
             <ShoppingCart className="h-3 w-3 md:h-4 md:w-4" />
           </Button>
         </div>

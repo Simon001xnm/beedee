@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'billionaire-boots',
+    name: 'Billionaire Boots',
+    price: 4499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (2).jpeg', hint: 'billionaire boots side' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM.jpeg', hint: 'billionaire boots detail' }
+    ],
+    description: 'Exquisite luxury boots crafted for those who demand the finest. Combining premium materials with a bold design, these boots are the ultimate statement of success in Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland', 'mens-casual-loafers'],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'max-air',
     name: 'Max Air',
     price: 3999,
