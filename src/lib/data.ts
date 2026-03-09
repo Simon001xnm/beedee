@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo', 'bape-star'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -95,7 +95,7 @@ export const products: Product[] = [
     description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo'],
+    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo', 'bape-star'],
     sizes: ['36', '37', '38', '39', '40', '41'],
     colors: ['Multi-color']
   },
@@ -110,9 +110,25 @@ export const products: Product[] = [
     description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'samoa-classic'],
+    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star'],
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Earthy Multi']
+  },
+  {
+    id: 'bape-star',
+    name: 'Bape Star',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.37 PM.jpeg', hint: 'bape star side' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.38 PM.jpeg', hint: 'bape star detail' }
+    ],
+    description: 'The Bape Star collection brings bold, iconic streetwear design to your rotation. Featuring distinctive patterns and premium materials, these sneakers are a must-have for the modern collector.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic'],
+    sizes: ['40', '41', '42', '43', '44'],
+    colors: ['Multi-color']
   }
 ];
 
