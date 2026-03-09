@@ -25,9 +25,27 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: [],
+    relatedProducts: ['kids-open'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
+  },
+  {
+    id: 'kids-open',
+    name: 'Kids Open Comfort',
+    price: 1499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM.jpeg', hint: 'kids sandals' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (1).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (2).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (3).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.22 AM (1).jpeg', hint: 'kids sandals view' }
+    ],
+    description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['samoa-classic'],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+    colors: ['Multi-color']
   }
 ];
 
