@@ -16,6 +16,24 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'aldo-casual',
+    name: 'ALDO CASUAL SNEAKERS',
+    price: 4499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-10 at 12.28.54 PM.jpeg', hint: 'aldo casual sneakers' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (1).jpeg', hint: 'aldo casual sneakers side' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (2).jpeg', hint: 'aldo casual sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (3).jpeg', hint: 'aldo casual sneakers back' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.28.56 PM.jpeg', hint: 'aldo casual sneakers top' }
+    ],
+    description: 'Sophisticated and versatile, the ALDO Casual Sneakers offer a clean, modern aesthetic perfect for any outfit in Nairobi. Crafted with premium materials for long-lasting comfort.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['samba-single-sole', 'nike-nocta', 'nb-classic-sneakers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'nike-nocta',
     name: 'Nike Nocta',
     price: 3999,
