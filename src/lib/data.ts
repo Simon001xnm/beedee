@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'sb-dunks',
+    name: 'SB Dunks',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (2).jpeg', hint: 'sb dunks profile' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (3).jpeg', hint: 'sb dunks side' }
+    ],
+    description: 'The SB Dunk is a legendary skate shoe that has become a staple in streetwear. Known for its comfort, durability, and unique colorways, it\'s perfect for the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-3', 'jordan-voodoo', 'nike-zoom', 'nb-9060'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'jordan-3',
     name: 'Jordan 3',
     price: 2999,
