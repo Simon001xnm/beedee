@@ -1,8 +1,7 @@
-
 'use client';
 
 import * as React from "react";
-import { use, useState, useMemo } from "react";
+import { use, useState, useMemo, useEffect } from "react";
 import { getProductById, getCategoryById } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -21,6 +20,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, ShoppingBag, Ruler, ShieldCheck, Truck, RefreshCw, Star } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type ProductPageProps = {
   params: Promise<{
@@ -31,6 +31,12 @@ type ProductPageProps = {
 export default function ProductPage({ params }: ProductPageProps) {
   const { productId } = use(params);
   const { addToCart } = useCart();
+  
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const product = useMemo(() => getProductById(productId), [productId]);
 
   if (!product) notFound();
@@ -46,6 +52,22 @@ export default function ProductPage({ params }: ProductPageProps) {
     const message = `Concierge, I'd like to order: ${product.name}\nSize: ${selectedSize || 'Not selected'}\nPrice: ${formatPrice(product.price)}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
+
+  if (!mounted) {
+    return (
+      <div className="container mx-auto px-4 py-8 lg:py-16">
+        <Skeleton className="h-8 w-64 mb-8" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <Skeleton className="aspect-[4/5] rounded-xl" />
+          <div className="space-y-8">
+            <Skeleton className="h-12 w-full" />
+            <Skeleton className="h-24 w-full" />
+            <Skeleton className="h-48 w-full" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background min-h-screen">
