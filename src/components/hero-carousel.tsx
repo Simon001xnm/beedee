@@ -1,4 +1,3 @@
-
 'use client'
 
 import Image from "next/image";
@@ -15,14 +14,14 @@ import Autoplay from "embla-carousel-autoplay"
 import { getProductById } from "@/lib/data";
 
 // Update these IDs as you add new featured products to your catalog
-const featuredProductIds = ['p0', 'p6', 'p9'];
+const featuredProductIds = ['samoa-classic'];
 
 export function HeroCarousel() {
   const featuredProducts = featuredProductIds
     .map(id => getProductById(id))
     .filter(p => !!p);
 
-  // Fallback UI when the catalog is empty during re-upload
+  // Fallback UI when the catalog is empty
   if (featuredProducts.length === 0) {
     return (
       <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative bg-primary flex items-center justify-center text-white p-6 md:p-12 text-center overflow-hidden">

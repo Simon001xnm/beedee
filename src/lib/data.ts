@@ -1,8 +1,6 @@
-
 import type { Product, Category } from './types';
 
 // IDs of products that should be exclusive to the Hero section
-// This will be populated as you add new products
 const HERO_ONLY_IDS: string[] = [];
 
 export const categories: Category[] = [
@@ -16,7 +14,22 @@ export const categories: Category[] = [
  * All products in the marketplace. 
  * Add your new products here!
  */
-export const products: Product[] = [];
+export const products: Product[] = [
+  {
+    id: 'samoa-classic',
+    name: 'Samoa Classic',
+    price: 2799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa sneakers' }
+    ],
+    description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic White']
+  }
+];
 
 export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
 
