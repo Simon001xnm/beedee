@@ -15,6 +15,7 @@ import { getProductById } from "@/lib/data";
 
 // Update these IDs as you add new featured products to your catalog
 const featuredProductIds = [
+  'jordan-3',
   'nb-classic-sneakers',
   'soccer-boots',
   'mens-casual-loafers',

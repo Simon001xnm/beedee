@@ -16,6 +16,25 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'jordan-3',
+    name: 'Jordan 3',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3 sneakers' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM (2).jpeg', hint: 'jordan 3 side' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM (1).jpeg', hint: 'jordan 3 detail' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM.jpeg', hint: 'jordan 3 front' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM (2).jpeg', hint: 'jordan 3 back' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM (1).jpeg', hint: 'jordan 3 lifestyle' }
+    ],
+    description: 'The Jordan 3 is a legendary silhouette featuring the iconic elephant print and visible Air cushioning. A cornerstone of sneaker culture, perfect for making a statement on the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-voodoo', 'nike-zoom', 'bape-star', 'nb-9060'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic Multi']
+  },
+  {
     id: 'nb-classic-sneakers',
     name: 'New Balance Classic',
     price: 2999,
