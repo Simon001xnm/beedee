@@ -16,6 +16,24 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'timberland',
+    name: 'Timberland Boots',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland boots' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (3).jpeg', hint: 'timberland side' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (2).jpeg', hint: 'timberland detail' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (1).jpeg', hint: 'timberland back' },
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.03 PM.jpeg', hint: 'timberland top' }
+    ],
+    description: 'Classic Timberland boots, built for durability and rugged style. A staple for any outdoor or urban wardrobe in Nairobi, providing both comfort and a powerful presence.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic Tan']
+  },
+  {
     id: 'under-armour',
     name: 'Under Armour',
     price: 3799,
