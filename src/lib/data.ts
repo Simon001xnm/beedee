@@ -16,6 +16,23 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'cloud-surfer',
+    name: 'Cloud Surfer',
+    price: 3800,
+    images: [
+      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM.jpeg', hint: 'cloud surfer' },
+      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (3).jpeg', hint: 'cloud surfer side' },
+      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (2).jpeg', hint: 'cloud surfer detail' },
+      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (1).jpeg', hint: 'cloud surfer back' }
+    ],
+    description: 'Experience the sensation of running on clouds with the Cloud Surfer. Engineered for ultimate comfort and a responsive ride, perfect for the active urban lifestyle in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-zoom', 'asics-performance-runner', 'nike-vomero'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'under-armor-elite',
     name: 'Under Armor Elite',
     price: 3999,
