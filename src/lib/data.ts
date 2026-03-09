@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -95,9 +95,24 @@ export const products: Product[] = [
     description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['samoa-classic', 'kids-active-sneakers'],
+    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo'],
     sizes: ['36', '37', '38', '39', '40', '41'],
     colors: ['Multi-color']
+  },
+  {
+    id: 'jordan-voodoo',
+    name: 'Jordan Voodoo',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg', hint: 'jordan voodoo' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg', hint: 'jordan voodoo profile' }
+    ],
+    description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-gel-sneakers', 'samoa-classic'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Earthy Multi']
   }
 ];
 
