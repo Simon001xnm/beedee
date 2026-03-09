@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo', 'bape-star'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -95,7 +95,7 @@ export const products: Product[] = [
     description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo', 'bape-star'],
+    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
     sizes: ['36', '37', '38', '39', '40', '41'],
     colors: ['Multi-color']
   },
@@ -110,7 +110,7 @@ export const products: Product[] = [
     description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star'],
+    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom'],
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Earthy Multi']
   },
@@ -126,8 +126,24 @@ export const products: Product[] = [
     description: 'The Bape Star collection brings bold, iconic streetwear design to your rotation. Featuring distinctive patterns and premium materials, these sneakers are a must-have for the modern collector.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic'],
+    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic', 'nike-zoom'],
     sizes: ['40', '41', '42', '43', '44'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nike-zoom',
+    name: 'Nike zoom',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom sneakers' },
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (2).jpeg', hint: 'nike zoom side' },
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.06 PM.jpeg', hint: 'nike zoom detail' }
+    ],
+    description: 'Experience responsive cushioning and an iconic design with the Nike Zoom. Perfect for performance and street style.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Multi-color']
   }
 ];
