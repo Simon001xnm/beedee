@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'floral-samba',
+    name: 'Floral Samba',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM.jpeg', hint: 'floral samba' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM (2).jpeg', hint: 'floral samba side' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM (1).jpeg', hint: 'floral samba detail' }
+    ],
+    description: 'A beautiful floral take on the classic Samba silhouette. Combining iconic street style with a fresh, artistic print, these sneakers are perfect for making a statement in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['samoa-classic', 'nb-classic-sneakers', 'nike-zoom'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Floral Multi']
+  },
+  {
     id: 'nike-vomero',
     name: 'Nike Vomero',
     price: 3799,
