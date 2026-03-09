@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -82,6 +82,21 @@ export const products: Product[] = [
     subcategory: null,
     relatedProducts: ['kids-sneakers', 'kids-open'],
     sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'asics-gel-sneakers',
+    name: 'ASICS GEL Sneakers',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.21.20 PM.jpeg', hint: 'asics gel sneakers detail' }
+    ],
+    description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['samoa-classic', 'kids-active-sneakers'],
+    sizes: ['36', '37', '38', '39', '40', '41'],
     colors: ['Multi-color']
   }
 ];
