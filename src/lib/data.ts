@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'nike-nocta',
+    name: 'Nike Nocta',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-09 at 5.18.26 PM.jpeg', hint: 'nike nocta' },
+      { url: '/WhatsApp Image 2026-02-09 at 5.18.26 PM (1).jpeg', hint: 'nike nocta profile' }
+    ],
+    description: 'Elevate your street game with the Nike Nocta. A perfect blend of high-fashion aesthetics and athletic functionality, designed for those who move through the night in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-vomero', 'nike-zoom'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'cloud-surfer',
     name: 'Cloud Surfer',
     price: 3800,
