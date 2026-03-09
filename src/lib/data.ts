@@ -12,7 +12,7 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
-  { id: 'p0', name: 'New Balance Special Offer', price: 2999, originalPrice: 3999, images: [{ url: 'https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000', hint: 'sneaker' }], description: 'Limited time offer on New Balance sneakers featuring premium cushioning and classic style.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p9', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
+  { id: 'p0', name: 'New Balance Special Offer', price: 2999, originalPrice: 3999, images: [{ url: 'https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000', hint: 'sneaker' }], description: 'Limited time offer on New Balance sneakers featuring premium cushioning and classic style.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p9', 'p21'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { 
     id: 'p2', 
     name: 'Kids Open Comfort', 
@@ -46,8 +46,8 @@ export const products: Product[] = [
     sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'], 
     colors: ['Multi'] 
   },
-  { id: 'p6', name: 'Jordan Voodoo Edition', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000', hint: 'jordan sneaker' }], description: 'The exclusive Jordan Voodoo, featuring hand-crafted details and premium materials.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p8'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
-  { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p10'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
+  { id: 'p6', name: 'Jordan Voodoo Edition', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000', hint: 'jordan sneaker' }], description: 'The exclusive Jordan Voodoo, featuring hand-crafted details and premium materials.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p25'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
+  { id: 'p9', name: 'New Balance 9060 (Hero)', price: 3499, originalPrice: 4500, images: [{ url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000', hint: 'modern sneaker' }], description: 'Futuristic New Balance 9060, pushing the boundaries of traditional sneaker design.', category: 'sneaker-lab', subcategory: null, relatedProducts: ['p0', 'p21'], sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { id: 'p11', name: 'Handcrafted Men Sandals', price: 1800, images: [{ url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000', hint: 'mens sandals' }], description: 'Premium leather sandals designed for absolute comfort and casual elegance.', category: 'gentlemens-quarters', subcategory: null, relatedProducts: ['p23'], sizes: ['40', '41', '42', '43', '44', '45'], colors: ['Multi'] },
   { 
     id: 'p16', 
@@ -60,7 +60,7 @@ export const products: Product[] = [
     description: "The Nike Shox TL takes mechanical cushioning to the next level. Reconstructed version of the 2003 icon.", 
     category: 'sneaker-lab', 
     subcategory: null, 
-    relatedProducts: ['p6', 'p8'], 
+    relatedProducts: ['p6', 'p25'], 
     sizes: ['40', '41', '42', '43', '44', '45'], 
     colors: ['Black', 'White'] 
   },
