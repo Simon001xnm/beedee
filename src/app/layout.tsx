@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -20,8 +19,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Bee & Dee' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
-    icon: '/brands/Logo.png',
-    apple: '/brands/Logo.png',
+    icon: '/brands/Logo.webp',
+    apple: '/brands/Logo.webp',
   }
 };
 

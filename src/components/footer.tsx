@@ -24,7 +24,7 @@ export function Footer() {
             <Link href="/" className="flex-shrink-0">
               <div className="relative h-10 w-32">
                 <Image 
-                  src="/brands/Logo.png" 
+                  src="/brands/Logo.webp" 
                   alt="Bee & Dee" 
                   fill 
                   className="object-contain"
