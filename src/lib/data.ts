@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'mens-comfort-sandals',
+    name: 'Men\'s Comfort Sandals',
+    price: 1800,
+    images: [
+      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (1).jpeg', hint: 'mens comfort sandals' },
+      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (2).jpeg', hint: 'mens comfort sandals side' },
+      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM.jpeg', hint: 'mens comfort sandals detail' }
+    ],
+    description: 'Lightweight and durable comfort sandals for men. Designed with a supportive footbed and breathable straps, perfect for casual outings and daily wear in warm weather.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['mens-handcrafted-sandals', 'samoa-classic', 'nb-9060'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'asics-performance-runner',
     name: 'ASICS Performance Runner',
     price: 3499,
@@ -30,6 +46,22 @@ export const products: Product[] = [
     relatedProducts: ['asics-gel-sneakers', 'nike-zoom', 'nb-9060'],
     sizes: ['36', '37', '38', '39', '40'],
     colors: ['Multi-color']
+  },
+  {
+    id: 'mens-handcrafted-sandals',
+    name: 'Men\'s Handcrafted Sandals',
+    price: 1999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'mens handcrafted sandals' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (1).jpeg', hint: 'mens handcrafted sandals view' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (2).jpeg', hint: 'mens handcrafted sandals detail' }
+    ],
+    description: 'Premium handcrafted men\'s sandals designed for ultimate comfort and durability. Perfect for casual wear and everyday style in Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['samoa-classic', 'nb-9060', 'asics-gel-sneakers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan/Brown']
   },
   {
     id: 'nb-9060-alt',
@@ -204,22 +236,6 @@ export const products: Product[] = [
     relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
-  },
-  {
-    id: 'mens-handcrafted-sandals',
-    name: 'Men\'s Handcrafted Sandals',
-    price: 1999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'mens handcrafted sandals' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (1).jpeg', hint: 'mens handcrafted sandals view' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (2).jpeg', hint: 'mens handcrafted sandals detail' }
-    ],
-    description: 'Premium handcrafted men\'s sandals designed for ultimate comfort and durability. Perfect for casual wear and everyday style in Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['samoa-classic', 'nb-9060', 'asics-gel-sneakers'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Tan/Brown']
   }
 ];
 
