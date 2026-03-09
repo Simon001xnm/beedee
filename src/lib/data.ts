@@ -16,6 +16,25 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'led-kids-sneakers',
+    name: 'LED Kids Sneakers',
+    price: 1799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM (2).jpeg', hint: 'led kids sneakers' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM.jpeg', hint: 'led kids sneakers side' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM (1).jpeg', hint: 'led kids sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM.jpeg', hint: 'led kids sneakers back' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM (2).jpeg', hint: 'led kids sneakers top' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM (1).jpeg', hint: 'led kids sneakers bottom' }
+    ],
+    description: 'Brighten up their steps with these fun and durable LED Kids Sneakers. Designed for comfort and high-energy play, featuring vibrant lights that kids love.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-active-sneakers', 'kids-sneakers', 'kids-open'],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'aldo-casual',
     name: 'ALDO CASUAL SNEAKERS',
     price: 4499,
