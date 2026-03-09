@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'mens-casual-loafers',
+    name: 'Men\'s Casual Loafers',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'mens casual loafers' },
+      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM (1).jpeg', hint: 'mens casual loafers side' }
+    ],
+    description: 'Sophisticated and versatile casual loafers for the modern man. Handcrafted with premium materials for a comfortable fit that transitions effortlessly from office to evening.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['mens-handcrafted-sandals', 'mens-comfort-sandals', 'samoa-classic'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'mens-comfort-sandals',
     name: 'Men\'s Comfort Sandals',
     price: 1800,

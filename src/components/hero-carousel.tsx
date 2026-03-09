@@ -15,6 +15,7 @@ import { getProductById } from "@/lib/data";
 
 // Update these IDs as you add new featured products to your catalog
 const featuredProductIds = [
+  'mens-casual-loafers',
   'mens-comfort-sandals',
   'asics-performance-runner',
   'mens-handcrafted-sandals',
@@ -25,6 +26,9 @@ const featuredProductIds = [
   'bape-star',
   'jordan-voodoo',
   'asics-gel-sneakers',
+  'kids-active-sneakers',
+  'kids-sneakers',
+  'kids-open',
   'samoa-classic'
 ];
 
