@@ -54,8 +54,8 @@ export const products: Product[] = [
     name: "Nike Shox TL Men's Shoes", 
     price: 3999, 
     images: [
-      { url: '/brands/1759343541238.jpg', hint: 'nike shox' },
-      { url: '/brands/1759343541032.jpg', hint: 'nike shox side' }
+      { url: '/brands/1759343541032.jpg', hint: 'nike shox primary' },
+      { url: '/brands/1759343541238.jpg', hint: 'nike shox alternate' }
     ], 
     description: "The Nike Shox TL takes mechanical cushioning to the next level. Reconstructed version of the 2003 icon.", 
     category: 'sneaker-lab', 
@@ -146,25 +146,6 @@ export const products: Product[] = [
     category: 'sneaker-lab', 
     subcategory: null, 
     relatedProducts: ['p20', 'p9'], 
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
-    colors: ['Multi'] 
-  },
-  { 
-    id: 'p22', 
-    name: "Adidas Samoa", 
-    price: 2999, 
-    images: [
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.56.jpeg', hint: 'adidas samoa' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (1).jpeg', hint: 'adidas samoa side' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (3).jpeg', hint: 'adidas samoa back' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57 (4).jpeg', hint: 'adidas samoa detail' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.57.jpeg', hint: 'adidas samoa angle' },
-      { url: '/brands/WhatsApp Image 2026-01-28 at 10.57.58.jpeg', hint: 'adidas samoa front' }
-    ], 
-    description: "The timeless Adidas Samoa sneakers, rebuilt for modern comfort and everyday urban wear.", 
-    category: 'sneaker-lab', 
-    subcategory: null, 
-    relatedProducts: ['p19'], 
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'], 
     colors: ['Multi'] 
   },
