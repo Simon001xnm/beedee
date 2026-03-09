@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'jellyfish-sneakers',
+    name: 'Jellyfish sneakers',
+    price: 4499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 10.49.10 AM.jpeg', hint: 'jellyfish sneakers' },
+      { url: '/WhatsApp Image 2026-02-12 at 10.49.11 AM (1).jpeg', hint: 'jellyfish sneakers side' },
+      { url: '/WhatsApp Image 2026-02-12 at 10.49.11 AM.jpeg', hint: 'jellyfish sneakers detail' }
+    ],
+    description: 'Distinctive and modern, the Jellyfish sneakers offer a unique aesthetic with superior comfort. A bold choice for the trendsetters in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-nocta', 'cloud-surfer'],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'kids-boots',
     name: 'Kids Boots',
     price: 2499,
