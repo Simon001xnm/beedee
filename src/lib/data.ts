@@ -16,6 +16,20 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'nb-9060-alt',
+    name: 'New Balance 9060',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 12.20.56 PM.jpeg', hint: 'new balance 9060 variant' }
+    ],
+    description: 'A modern expression of the refined style and innovation-led design that has made the 99X series home to some of the most iconic models in New Balance history.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nb-9060', 'nike-ld-waffle', 'nike-zoom'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'nb-9060',
     name: 'New Balance 9060',
     price: 3499,
@@ -31,35 +45,97 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'samoa-classic',
-    name: 'Samoa Classic',
-    price: 2799,
+    id: 'nike-ld-waffle',
+    name: 'Nike LD waffle',
+    price: 3499,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa sneakers' }
+      { url: '/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg', hint: 'nike ld waffle' }
     ],
-    description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
+    description: 'The Nike LD Waffle is a fusion of two iconic silhouettes, offering a unique layered look and exceptional comfort. A premium choice for any sneaker collection.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
+    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo'],
     sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Classic White']
+    colors: ['Multi-color']
   },
   {
-    id: 'kids-open',
-    name: 'Kids Open Comfort',
-    price: 1499,
+    id: 'nike-zoom',
+    name: 'Nike zoom',
+    price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM.jpeg', hint: 'kids sandals' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (1).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (2).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (3).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.22 AM (1).jpeg', hint: 'kids sandals view' }
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom sneakers' },
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (2).jpeg', hint: 'nike zoom side' },
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.06 PM.jpeg', hint: 'nike zoom detail' }
     ],
-    description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
+    description: 'Experience responsive cushioning and an iconic design with the Nike Zoom. Perfect for performance and street style.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers', 'nike-ld-waffle'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'bape-star',
+    name: 'Bape star',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.37 PM.jpeg', hint: 'bape star side' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.38 PM.jpeg', hint: 'bape star detail' }
+    ],
+    description: 'The Bape Star collection brings bold, iconic streetwear design to your rotation. Featuring distinctive patterns and premium materials, these sneakers are a must-have for the modern collector.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic', 'nike-zoom'],
+    sizes: ['40', '41', '42', '43', '44'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'jordan-voodoo',
+    name: 'Jordan Voodoo',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg', hint: 'jordan voodoo' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg', hint: 'jordan voodoo profile' }
+    ],
+    description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom', 'nike-ld-waffle'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Earthy Multi']
+  },
+  {
+    id: 'asics-gel-sneakers',
+    name: 'ASICS GEL Sneakers',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.21.20 PM.jpeg', hint: 'asics gel sneakers detail' }
+    ],
+    description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['samoa-classic', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
+    sizes: ['36', '37', '38', '39', '40', '41'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-active-sneakers',
+    name: 'Kids Active Sneakers',
+    price: 1799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active sneakers' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (1).jpeg', hint: 'kids active sneakers blue' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (2).jpeg', hint: 'kids active sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM (2).jpeg', hint: 'kids active sneakers profile' },
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM.jpeg', hint: 'kids active sneakers side' }
+    ],
+    description: 'Modern active sneakers for juniors. Built for performance and style, these sneakers provide excellent support for all-day activities.',
     category: 'mini-icons',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
-    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+    relatedProducts: ['kids-sneakers', 'kids-open'],
+    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
     colors: ['Multi-color']
   },
   {
@@ -82,98 +158,36 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'kids-active-sneakers',
-    name: 'Kids Active Sneakers',
-    price: 1799,
+    id: 'kids-open',
+    name: 'Kids Open Comfort',
+    price: 1499,
     images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (1).jpeg', hint: 'kids active sneakers blue' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (2).jpeg', hint: 'kids active sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM (2).jpeg', hint: 'kids active sneakers profile' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM.jpeg', hint: 'kids active sneakers side' }
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM.jpeg', hint: 'kids sandals' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (1).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (2).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (3).jpeg', hint: 'kids sandals view' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.02.22 AM (1).jpeg', hint: 'kids sandals view' }
     ],
-    description: 'Modern active sneakers for juniors. Built for performance and style, these sneakers provide excellent support for all-day activities.',
+    description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
     category: 'mini-icons',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-open'],
-    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
     colors: ['Multi-color']
   },
   {
-    id: 'asics-gel-sneakers',
-    name: 'ASICS GEL Sneakers',
-    price: 2999,
+    id: 'samoa-classic',
+    name: 'Samoa Classic',
+    price: 2799,
     images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.21.20 PM.jpeg', hint: 'asics gel sneakers detail' }
+      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa sneakers' }
     ],
-    description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
+    description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['samoa-classic', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
-    sizes: ['36', '37', '38', '39', '40', '41'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'jordan-voodoo',
-    name: 'Jordan Voodoo',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg', hint: 'jordan voodoo' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg', hint: 'jordan voodoo profile' }
-    ],
-    description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom', 'nike-ld-waffle'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Earthy Multi']
-  },
-  {
-    id: 'bape-star',
-    name: 'Bape star',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.37 PM.jpeg', hint: 'bape star side' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.38 PM.jpeg', hint: 'bape star detail' }
-    ],
-    description: 'The Bape Star collection brings bold, iconic streetwear design to your rotation. Featuring distinctive patterns and premium materials, these sneakers are a must-have for the modern collector.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic', 'nike-zoom'],
-    sizes: ['40', '41', '42', '43', '44'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nike-zoom',
-    name: 'Nike zoom',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom sneakers' },
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (2).jpeg', hint: 'nike zoom side' },
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.06 PM.jpeg', hint: 'nike zoom detail' }
-    ],
-    description: 'Experience responsive cushioning and an iconic design with the Nike Zoom. Perfect for performance and street style.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers', 'nike-ld-waffle'],
+    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nike-ld-waffle',
-    name: 'Nike LD waffle',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg', hint: 'nike ld waffle' }
-    ],
-    description: 'The Nike LD Waffle is a fusion of two iconic silhouettes, offering a unique layered look and exceptional comfort. A premium choice for any sneaker collection.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
+    colors: ['Classic White']
   }
 ];
 

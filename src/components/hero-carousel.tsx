@@ -14,7 +14,16 @@ import Autoplay from "embla-carousel-autoplay"
 import { getProductById } from "@/lib/data";
 
 // Update these IDs as you add new featured products to your catalog
-const featuredProductIds = ['nb-9060', 'nike-ld-waffle', 'nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic', 'kids-active-sneakers'];
+const featuredProductIds = [
+  'nb-9060-alt',
+  'nb-9060',
+  'nike-ld-waffle',
+  'jordan-voodoo',
+  'bape-star',
+  'nike-zoom',
+  'asics-gel-sneakers',
+  'samoa-classic'
+];
 
 export function HeroCarousel() {
   const featuredProducts = featuredProductIds
