@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'under-armour',
+    name: 'Under Armour',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' },
+      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM (1).jpeg', hint: 'under armour side' }
+    ],
+    description: 'High-performance Under Armour sneakers designed for ultimate durability and comfort. Perfect for both athletic training and casual wear in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-vomero', 'nike-zoom', 'asics-performance-runner'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'samba-single-sole',
     name: 'Samba single sole',
     price: 2499,
