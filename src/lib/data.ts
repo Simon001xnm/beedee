@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'soccer-boots',
+    name: 'Elite Soccer Boots',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'soccer boots action' },
+      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots side' },
+      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM.jpeg', hint: 'soccer boots detail' }
+    ],
+    description: 'Engineered for elite performance on the pitch. These soccer boots provide exceptional traction, ball control, and comfort for the competitive player in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-performance-runner', 'nike-zoom', 'nb-9060'],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Professional Multi']
+  },
+  {
     id: 'mens-casual-loafers',
     name: 'Men\'s Casual Loafers',
     price: 3499,
