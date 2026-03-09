@@ -16,6 +16,24 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'columbia',
+    name: 'Columbia',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-11 at 11.44.57 AM.jpeg', hint: 'columbia' },
+      { url: '/WhatsApp Image 2026-02-11 at 11.44.57 AM (1).jpeg', hint: 'columbia side' },
+      { url: '/WhatsApp Image 2026-02-11 at 11.44.56 AM.jpeg', hint: 'columbia detail' },
+      { url: '/WhatsApp Image 2026-02-11 at 11.44.56 AM (1).jpeg', hint: 'columbia back' },
+      { url: '/WhatsApp Image 2026-02-11 at 11.44.55 AM.jpeg', hint: 'columbia top' }
+    ],
+    description: 'Rugged and durable Columbia footwear, perfect for both urban exploration and outdoor adventures. Built for comfort and long-lasting performance in any terrain.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['timberland', 'nike-zoom', 'asics-performance-runner'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'men-open',
     name: 'Men Open Comfort',
     price: 3499,
