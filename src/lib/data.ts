@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'nb-9060',
+    name: 'New Balance 9060',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM (1).jpeg', hint: 'new balance 9060' },
+      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM.jpeg', hint: 'new balance 9060 view' }
+    ],
+    description: 'The New Balance 9060 is a new expression of the refined style and innovation-led design that has made the 99X series home to some of the most iconic models in New Balance history.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-ld-waffle', 'nike-zoom', 'asics-gel-sneakers'],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'samoa-classic',
     name: 'Samoa Classic',
     price: 2799,
