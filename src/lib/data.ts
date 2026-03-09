@@ -16,6 +16,24 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'girls-open-shoes',
+    name: 'Girls Open Shoes',
+    price: 1499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-10 at 12.30.51 PM.jpeg', hint: 'girls open shoes' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (1).jpeg', hint: 'girls open shoes side' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (2).jpeg', hint: 'girls open shoes detail' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (3).jpeg', hint: 'girls open shoes profile' },
+      { url: '/WhatsApp Image 2026-02-10 at 12.30.53 PM.jpeg', hint: 'girls open shoes back' }
+    ],
+    description: 'Elegant and comfortable open shoes for girls, perfect for special occasions and daily wear. Crafted with soft materials to ensure comfort for active little ones.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-sneakers', 'kids-open', 'led-kids-sneakers'],
+    sizes: ['24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'led-kids-sneakers',
     name: 'LED Kids Sneakers',
     price: 1799,
