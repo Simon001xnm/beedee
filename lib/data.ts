@@ -16,21 +16,6 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
-    id: 'under-armor-elite',
-    name: 'Under Armor Elite',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.09 PM (1).jpeg', hint: 'under armor elite' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.09 PM.jpeg', hint: 'under armor elite detail' }
-    ],
-    description: 'Elite performance Under Armor sneakers, built for the athlete who demands more. Offering enhanced support and responsiveness for the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['under-armour', 'nike-zoom', 'asics-performance-runner'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
     id: 'billionaire-boots',
     name: 'Billionaire Boots',
     price: 4499,

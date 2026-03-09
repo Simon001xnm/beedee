@@ -1,3 +1,4 @@
+
 export interface Category {
   id: string;
   name: string;
@@ -10,7 +11,7 @@ export interface Product {
   id: string;
   name: string;
   price: number;
-  originalPrice?: number;
+  originalPrice?: number; // Optional original price for strike-through
   images: { url: string, hint: string }[];
   description: string;
   category: string;
@@ -21,7 +22,7 @@ export interface Product {
 }
 
 export interface CartItem extends Product {
-  cartItemId: string;
+  cartItemId: string; // Unique identifier for this specific variant in the cart
   quantity: number;
   selectedSize: string;
   selectedColor: string;
