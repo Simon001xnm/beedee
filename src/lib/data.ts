@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'nike-vomero',
+    name: 'Nike Vomero',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM.jpeg', hint: 'nike vomero' },
+      { url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM (1).jpeg', hint: 'nike vomero profile' }
+    ],
+    description: 'The Nike Vomero offers superior cushioning and a smooth ride, making it a favorite for long runs and daily comfort. Its breathable mesh and supportive design ensure a premium experience.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-zoom', 'nb-9060', 'asics-performance-runner'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'sb-dunks',
     name: 'SB Dunks',
     price: 2999,
