@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-open'],
+    relatedProducts: ['kids-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -43,8 +43,27 @@ export const products: Product[] = [
     description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
     category: 'mini-icons',
     subcategory: null,
-    relatedProducts: ['samoa-classic'],
+    relatedProducts: ['kids-sneakers'],
     sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-sneakers',
+    name: 'Kids Urban Sneakers',
+    price: 1799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids sneakers' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM (1).jpeg', hint: 'kids sneakers blue' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM (2).jpeg', hint: 'kids sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.20 AM.jpeg', hint: 'kids sneakers profile' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.22 AM (1).jpeg', hint: 'kids sneakers sole' },
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.23 AM.jpeg', hint: 'kids sneakers back' }
+    ],
+    description: 'Stylish and durable urban sneakers for kids. Designed for comfort and long-lasting wear, perfect for school or weekend adventures.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-open'],
+    sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
     colors: ['Multi-color']
   }
 ];
