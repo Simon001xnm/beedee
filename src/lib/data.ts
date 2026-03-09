@@ -16,6 +16,23 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'nb-classic-sneakers',
+    name: 'New Balance Classic',
+    price: 2999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM (1).jpeg', hint: 'new balance sneakers' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM.jpeg', hint: 'new balance sneakers side' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.47.23 PM (1).jpeg', hint: 'new balance sneakers detail' },
+      { url: '/WhatsApp Image 2026-02-06 at 3.47.23 PM (2).jpeg', hint: 'new balance sneakers back' }
+    ],
+    description: 'The New Balance classic collection offers timeless style and exceptional comfort. Built with premium materials and a supportive sole, these sneakers are perfect for everyday wear in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nb-9060', 'nb-9060-alt', 'nike-zoom', 'asics-performance-runner'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'soccer-boots',
     name: 'Elite Soccer Boots',
     price: 3999,
