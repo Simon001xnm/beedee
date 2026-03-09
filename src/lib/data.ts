@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'puma-gt',
+    name: 'Puma GT',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM (1).jpeg', hint: 'puma gt' },
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM.jpeg', hint: 'puma gt side' }
+    ],
+    description: 'Dynamic and stylish, the Puma GT offers a perfect blend of performance and street-ready design. Built for comfort and speed on the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-zoom', 'under-armour'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'timberland-v3',
     name: 'Timberland',
     price: 3499,
