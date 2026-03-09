@@ -54,7 +54,7 @@ export function Header() {
       {/* Main Branding & Search Row */}
       <div className="bg-white border-b border-gray-100">
         <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
-          {/* Brand Logo - Updated to use .webp */}
+          {/* Brand Logo - Explicitly using .webp */}
           <Link href="/" className="flex-shrink-0">
             <div className="relative h-10 w-32 md:h-12 md:w-40">
               <Image 
