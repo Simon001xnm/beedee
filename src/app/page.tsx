@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { getProductsByCategory, categories, getProducts } from '@/lib/data';
@@ -143,7 +142,7 @@ export default function Home() {
             Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {trendingItems.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -171,7 +170,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+            <div className="grid grid-cols-2 gap-3 md:gap-8">
                {luxuryEdit.map((product, idx) => (
                  <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'lg:mt-16' : '')}>
                     <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10 text-white" />
