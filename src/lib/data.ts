@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'kids-boots',
+    name: 'Kids Boots',
+    price: 2499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM (1).jpeg', hint: 'kids boots' },
+      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM.jpeg', hint: 'kids boots side' }
+    ],
+    description: 'Rugged and stylish boots for kids, designed for durability and comfort. Perfect for any adventure in Nairobi.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-active-sneakers', 'kids-sneakers', 'led-kids-sneakers'],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'],
+    colors: ['Tan/Brown']
+  },
+  {
     id: 'timberland-premium',
     name: 'Timberland',
     price: 3999,
