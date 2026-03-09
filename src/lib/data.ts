@@ -16,6 +16,22 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'asics-performance-runner',
+    name: 'ASICS Performance Runner',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg', hint: 'asics performance runner' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM.jpeg', hint: 'asics performance runner view' },
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.01 AM (1).jpeg', hint: 'asics performance runner detail' }
+    ],
+    description: 'Engineered for the ultimate running experience, the ASICS Performance Runner provides superior shock absorption and a responsive ride. Perfect for both serious training and premium street style.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-gel-sneakers', 'nike-zoom', 'nb-9060'],
+    sizes: ['36', '37', '38', '39', '40'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'nb-9060-alt',
     name: 'New Balance 9060',
     price: 3499,
