@@ -16,6 +16,20 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'timberland-premium',
+    name: 'Timberland',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-11 at 11.45.15 AM.jpeg', hint: 'timberland premium' }
+    ],
+    description: 'The latest addition to our Timberland collection, featuring premium materials and an iconic silhouette. Built for durability and style on the streets of Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland', 'billionaire-boots', 'mens-casual-loafers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan']
+  },
+  {
     id: 'columbia',
     name: 'Columbia',
     price: 3999,
