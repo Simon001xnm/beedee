@@ -37,7 +37,6 @@ export const products: Product[] = [
     name: 'Elite Soccer Boots',
     price: 3999,
     images: [
-      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'soccer boots action' },
       { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots side' },
       { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM.jpeg', hint: 'soccer boots detail' }
     ],
