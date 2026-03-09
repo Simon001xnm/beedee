@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'timberland-v3',
+    name: 'Timberland',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 4.10.28 PM.jpeg', hint: 'timberland boots' },
+      { url: '/WhatsApp Image 2026-02-12 at 4.10.29 PM.jpeg', hint: 'timberland boots side' }
+    ],
+    description: 'Rugged and iconic Timberland boots, designed for the modern trailblazer. Crafted with premium materials for ultimate durability and comfort on the streets of Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland', 'timberland-premium', 'billionaire-boots'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
     id: 'jellyfish-sneakers',
     name: 'Jellyfish sneakers',
     price: 4499,
