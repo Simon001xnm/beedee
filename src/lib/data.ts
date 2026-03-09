@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers', 'asics-gel-sneakers', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
+    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic White']
   },
@@ -95,7 +95,7 @@ export const products: Product[] = [
     description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['samoa-classic', 'kids-active-sneakers', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
+    relatedProducts: ['samoa-classic', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
     sizes: ['36', '37', '38', '39', '40', '41'],
     colors: ['Multi-color']
   },
@@ -110,13 +110,13 @@ export const products: Product[] = [
     description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom'],
+    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom', 'nike-ld-waffle'],
     sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Earthy Multi']
   },
   {
     id: 'bape-star',
-    name: 'Bape Star',
+    name: 'Bape star',
     price: 2999,
     images: [
       { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' },
@@ -142,7 +142,21 @@ export const products: Product[] = [
     description: 'Experience responsive cushioning and an iconic design with the Nike Zoom. Perfect for performance and street style.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
+    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers', 'nike-ld-waffle'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nike-ld-waffle',
+    name: 'Nike LD waffle',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg', hint: 'nike ld waffle' }
+    ],
+    description: 'The Nike LD Waffle is a fusion of two iconic silhouettes, offering a unique layered look and exceptional comfort. A premium choice for any sneaker collection.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Multi-color']
   }
