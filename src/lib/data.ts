@@ -16,6 +16,20 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'jordan-13',
+    name: 'Jordan 13',
+    price: 3799,
+    images: [
+      { url: '/Image 2026-03-25 at 3.08.59 PM.jpeg', hint: 'jordan 13' }
+    ],
+    description: 'The Jordan 13 is a legendary basketball silhouette known for its unique design and exceptional performance. A must-have for any sneakerhead in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-3', 'jordan-voodoo', 'sb-dunks'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic Multi']
+  },
+  {
     id: 'hermes-sandals',
     name: 'Hermes sandals',
     price: 1999,
