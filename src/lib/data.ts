@@ -16,6 +16,28 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'asics-elite',
+    name: 'Asics Elite',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-03-31 at 3.32.50 PM.jpeg', hint: 'asics elite' },
+      { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM (1).jpeg', hint: 'asics elite view' },
+      { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM.jpeg', hint: 'asics elite side' },
+      { url: '/WhatsApp Image 2026-04-17 at 4.43.01 PM (1).jpeg', hint: 'asics elite detail' },
+      { url: '/WhatsApp Image 2026-04-17 at 4.43.01 PM.jpeg', hint: 'asics elite back' },
+      { url: '/WhatsApp Image 2026-04-17 at 11.35.01 AM.jpeg', hint: 'asics elite top' },
+      { url: '/WhatsApp Image 2026-04-17 at 12.02.51 PM (1).jpeg', hint: 'asics elite profile' },
+      { url: '/WhatsApp Image 2026-04-17 at 12.02.51 PM (2).jpeg', hint: 'asics elite sole' },
+      { url: '/WhatsApp Image 2026-04-17 at 12.02.51 PM.jpeg', hint: 'asics elite angle' }
+    ],
+    description: 'The Asics Elite represents the pinnacle of performance and style. Engineered for maximum comfort and durability, these sneakers are perfect for the active urbanite in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-performance-runner', 'nike-zoom', 'nb-9060'],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Performance Multi']
+  },
+  {
     id: 'jordan-13',
     name: 'Jordan 13',
     price: 3799,

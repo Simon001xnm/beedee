@@ -13,8 +13,9 @@ import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
 import { getProductById } from "@/lib/data";
 
-// Update these IDs as you add new featured products to your catalog
+// All products added are featured here to improve visibility as requested
 const featuredProductIds = [
+  'asics-elite',
   'jordan-13',
   'hermes-sandals',
   'puma-gt',
