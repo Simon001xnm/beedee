@@ -11,58 +11,11 @@ import {
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
-import { getProductById } from "@/lib/data";
-
-// Reordered to put the newest additions first in the carousel
-const featuredProductIds = [
-  'asics-elite',
-  'jordan-13',
-  'hermes-sandals',
-  'puma-gt',
-  'timberland-v3',
-  'jellyfish-sneakers',
-  'kids-boots',
-  'timberland-premium',
-  'columbia',
-  'men-open',
-  'girls-open-shoes',
-  'led-kids-sneakers',
-  'aldo-casual',
-  'nike-nocta',
-  'cloud-surfer',
-  'under-armor-elite',
-  'billionaire-boots',
-  'max-air',
-  'timberland',
-  'under-armour',
-  'samba-single-sole',
-  'floral-samba',
-  'nike-vomero',
-  'sb-dunks',
-  'jordan-3',
-  'nb-classic-sneakers',
-  'soccer-boots',
-  'mens-casual-loafers',
-  'mens-comfort-sandals',
-  'asics-performance-runner',
-  'mens-handcrafted-sandals',
-  'nb-9060-alt',
-  'nb-9060',
-  'nike-ld-waffle',
-  'nike-zoom',
-  'bape-star',
-  'jordan-voodoo',
-  'asics-gel-sneakers',
-  'kids-active-sneakers',
-  'kids-sneakers',
-  'kids-open',
-  'samoa-classic'
-];
+import { getProducts } from "@/lib/data";
 
 export function HeroCarousel() {
-  const featuredProducts = featuredProductIds
-    .map(id => getProductById(id))
-    .filter(p => !!p);
+  // Pull the latest 10 products for the carousel
+  const featuredProducts = getProducts().slice(0, 10);
 
   // Fallback UI when the catalog is empty
   if (featuredProducts.length === 0) {
@@ -97,32 +50,32 @@ export function HeroCarousel() {
     >
     <CarouselContent className="h-full">
       {featuredProducts.map((product) => (
-          <CarouselItem key={product!.id} className="h-full">
+          <CarouselItem key={product.id} className="h-full">
             <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative group overflow-hidden">
               <Image
-                  src={product!.images[0].url}
-                  alt={product!.name}
+                  src={product.images[0].url}
+                  alt={product.name}
                   fill
                   priority
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-                  data-ai-hint={product!.images[0].hint || "luxury shoes"}
+                  data-ai-hint={product.images[0].hint || "luxury shoes"}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/60 to-transparent" />
               <div className="absolute inset-0 flex items-center p-6 md:p-12">
                   <div className="max-w-xs md:max-w-md text-white">
                       <p className="text-accent font-black uppercase tracking-[0.3em] text-[9px] md:text-[10px] mb-2 md:mb-4">Special Selection</p>
-                      <h2 className="text-2xl md:text-5xl font-black mb-3 md:mb-6 leading-tight tracking-tighter uppercase">{product!.name}</h2>
+                      <h2 className="text-2xl md:text-5xl font-black mb-3 md:mb-6 leading-tight tracking-tighter uppercase">{product.name}</h2>
                       <p className="text-white/70 text-xs md:text-base mb-6 md:mb-10 line-clamp-2 font-medium hidden md:block">
-                        {product!.description}
+                        {product.description}
                       </p>
                       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-8">
                         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-10 md:h-12 px-6 md:px-10 rounded-full transition-all hover:scale-105">
-                            <Link href={`/shop/product/${product!.id}`}>Shop Now</Link>
+                            <Link href={`/shop/product/${product.id}`}>Shop Now</Link>
                         </Button>
                         <div className="flex flex-col">
                             <span className="text-[9px] uppercase font-bold text-white/50 tracking-widest">Starting At</span>
-                            <span className="text-lg md:text-2xl font-black text-accent tracking-tighter">KSh {product!.price.toLocaleString()}</span>
+                            <span className="text-lg md:text-2xl font-black text-accent tracking-tighter">KSh {product.price.toLocaleString()}</span>
                         </div>
                       </div>
                   </div>

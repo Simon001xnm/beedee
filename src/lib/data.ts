@@ -12,7 +12,7 @@ export const categories: Category[] = [
 
 /**
  * All products in the marketplace. 
- * Add your new products here!
+ * Latest products are added to the TOP of the array.
  */
 export const products: Product[] = [
   {
@@ -694,14 +694,12 @@ export const products: Product[] = [
 ];
 
 export const getProducts = () => {
-  // Return reversed copy of products so latest items come first
   return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id));
 }
 
 export const getProductById = (id: string) => products.find(p => p.id === id);
 
 export const getProductsByCategory = (categoryId: string) => {
-    // Latest items in this category first
     return [...products].filter(p => (p.category === categoryId || p.subcategory === categoryId) && !HERO_ONLY_IDS.includes(p.id));
 }
 
