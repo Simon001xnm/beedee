@@ -13,7 +13,7 @@ import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
 import { getProductById } from "@/lib/data";
 
-// All products added are featured here to improve visibility as requested
+// Reordered to put the newest additions first in the carousel
 const featuredProductIds = [
   'asics-elite',
   'jordan-13',

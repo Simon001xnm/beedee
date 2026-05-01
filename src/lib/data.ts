@@ -128,7 +128,7 @@ export const products: Product[] = [
   },
   {
     id: 'timberland-premium',
-    name: 'Timberland',
+    name: 'Timberland Premium',
     price: 3999,
     images: [
       { url: '/WhatsApp Image 2026-02-11 at 11.45.15 AM.jpeg', hint: 'timberland premium' }
@@ -693,17 +693,23 @@ export const products: Product[] = [
   }
 ];
 
-export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
+export const getProducts = () => {
+  // Return reversed copy of products so latest items come first
+  return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id));
+}
 
 export const getProductById = (id: string) => products.find(p => p.id === id);
 
 export const getProductsByCategory = (categoryId: string) => {
-    return products.filter(p => (p.category === categoryId || p.subcategory === categoryId) && !HERO_ONLY_IDS.includes(p.id));
+    // Latest items in this category first
+    return [...products].filter(p => (p.category === categoryId || p.subcategory === categoryId) && !HERO_ONLY_IDS.includes(p.id));
 }
 
 export const getCategoryById = (id: string) => categories.find(c => c.id === id);
 
-export const getFeaturedProducts = (limit: number = 4) => products.filter(p => !HERO_ONLY_IDS.includes(p.id)).slice(0, limit);
+export const getFeaturedProducts = (limit: number = 4) => {
+  return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id)).slice(0, limit);
+}
 
 export const getRelatedProducts = (product: Product) => {
     return products.filter(p => product.relatedProducts.includes(p.id) && p.id !== product.id);
