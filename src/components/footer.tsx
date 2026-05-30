@@ -24,7 +24,7 @@ export function Footer() {
             <Link href="/" className="flex-shrink-0">
               <div className="relative h-10 w-32">
                 <Image 
-                  src="/brands/Logo.webp" 
+                  src="/WhatsApp Image 2026-05-07 at 12.36.54 PM.jpeg" 
                   alt="Bee & Dee" 
                   fill 
                   className="object-contain"
