@@ -41,7 +41,7 @@ export function Footer() {
                     <Facebook className="h-3 w-3"/>
                     Facebook
                  </Link>
-                 <Link href="#" className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white hover:bg-accent hover:text-primary transition-all text-[10px] font-black uppercase tracking-widest shadow-md hover:shadow-lg">
+                 <Link href="https://www.instagram.com/p/DYyjPMlsMX6/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white hover:bg-accent hover:text-primary transition-all text-[10px] font-black uppercase tracking-widest shadow-md hover:shadow-lg">
                     <Instagram className="h-3 w-3"/>
                     Instagram
                  </Link>

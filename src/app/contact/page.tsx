@@ -31,7 +31,7 @@ const socialLinks = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/p/DYyjPMlsMX6/",
   },
   {
     icon: Facebook,
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-black text-[10px] tracking-[0.3em] uppercase text-primary/40 mb-1">{detail.label}</h3>
                   {detail.href ? (
-                     <a href={detail.href} className="text-xl font-bold text-primary hover:text-accent transition-colors tracking-tight">
+                     <a href={detail.href} target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-primary hover:text-accent transition-colors tracking-tight">
                        {detail.value}
                      </a>
                   ) : (
