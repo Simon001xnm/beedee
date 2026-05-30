@@ -17,8 +17,8 @@ import { HeroCarousel } from '@/components/hero-carousel';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
-  // Weekly Bestsellers now pulls the 8 newest products overall
-  const trendingItems = getFeaturedProducts(8);
+  // Weekly Bestsellers now pulls the 10 newest products overall to fit the expanded grid
+  const trendingItems = getFeaturedProducts(10);
   // Elite selection pulls a subset of latest products specifically for the highlight section
   const luxuryEdit = getFeaturedProducts(4);
 
@@ -28,7 +28,7 @@ export default function Home() {
       {/* Marketplace Multi-Column Hero Section */}
       <section className="bg-white border-b border-gray-100">
         <div className="container-market py-4 lg:py-8">
-          <div className="grid lg:grid-cols-[240px_1fr_240px] gap-6">
+          <div className="grid lg:grid-cols-[260px_1fr_260px] gap-6">
             
             {/* Left Column: Department Sidebar */}
             <div className="hidden lg:flex flex-col bg-gray-50/50 rounded-xl p-4 border border-gray-100">
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Center Column: Global Marketplace Slider */}
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] md:min-h-[400px] lg:min-h-[550px]">
               <HeroCarousel />
             </div>
 
@@ -98,32 +98,32 @@ export default function Home() {
 
       {/* Global Service Badges */}
       <section className="container-market">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-          <div className="flex items-start gap-4 md:gap-5">
-            <div className="p-3 md:p-4 bg-primary/5 rounded-2xl">
-              <Truck className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+          <div className="flex items-start gap-4 md:gap-6">
+            <div className="p-3 md:p-5 bg-primary/5 rounded-2xl">
+              <Truck className="h-5 w-5 md:h-7 md:w-7 text-primary" />
             </div>
             <div>
-              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Express Delivery</p>
-              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Swift dispatch across Nairobi and efficient countrywide shipping.</p>
+              <p className="text-xs md:text-base font-black uppercase tracking-wider mb-1">Express Delivery</p>
+              <p className="text-[10px] md:text-sm text-gray-500 leading-relaxed">Swift dispatch across Nairobi and efficient countrywide shipping.</p>
             </div>
           </div>
-          <div className="flex items-start gap-4 md:gap-5 md:border-x md:px-10">
-            <div className="p-3 md:p-4 bg-accent/5 rounded-2xl">
-              <ShieldCheck className="h-5 w-5 md:h-6 md:w-6 text-accent" />
+          <div className="flex items-start gap-4 md:gap-6 md:border-x md:px-12">
+            <div className="p-3 md:p-5 bg-accent/5 rounded-2xl">
+              <ShieldCheck className="h-5 w-5 md:h-7 md:w-7 text-accent" />
             </div>
             <div>
-              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Quality Assurance</p>
-              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Each pair is rigorously inspected for authenticity and craftsmanship.</p>
+              <p className="text-xs md:text-base font-black uppercase tracking-wider mb-1">Quality Assurance</p>
+              <p className="text-[10px] md:text-sm text-gray-500 leading-relaxed">Each pair is rigorously inspected for authenticity and craftsmanship.</p>
             </div>
           </div>
-          <div className="flex items-start gap-4 md:gap-5">
-            <div className="p-3 md:p-4 bg-primary/5 rounded-2xl">
-              <RefreshCcw className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+          <div className="flex items-start gap-4 md:gap-6">
+            <div className="p-3 md:p-5 bg-primary/5 rounded-2xl">
+              <RefreshCcw className="h-5 w-5 md:h-7 md:w-7 text-primary" />
             </div>
             <div>
-              <p className="text-xs md:text-sm font-black uppercase tracking-wider mb-1">Premium Exchange</p>
-              <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">Seamless 7-day exchange policy for guaranteed customer satisfaction.</p>
+              <p className="text-xs md:text-base font-black uppercase tracking-wider mb-1">Premium Exchange</p>
+              <p className="text-[10px] md:text-sm text-gray-500 leading-relaxed">Seamless 7-day exchange policy for guaranteed customer satisfaction.</p>
             </div>
           </div>
         </div>
@@ -131,11 +131,11 @@ export default function Home() {
 
       {/* Marketplace Grid: Trending Collections */}
       <section className="container-market">
-        <div className="flex justify-between items-end mb-8">
+        <div className="flex justify-between items-end mb-10">
           <div>
             <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Curated Trends</span>
-            <h2 className="text-2xl md:text-3xl font-black text-primary flex items-center gap-3 tracking-tighter uppercase">
-              <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-accent" />
+            <h2 className="text-2xl md:text-4xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
+              <TrendingUp className="h-6 w-6 md:h-10 md:w-10 text-accent" />
               WEEKLY BESTSELLERS
             </h2>
           </div>
@@ -143,7 +143,7 @@ export default function Home() {
             Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
           {trendingItems.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -151,29 +151,29 @@ export default function Home() {
       </section>
 
       {/* Structured Category Showcase - Elite Section */}
-      <section className="bg-primary py-12 md:py-24 text-white overflow-hidden">
+      <section className="bg-primary py-16 md:py-32 text-white overflow-hidden">
         <div className="container-market">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="space-y-6 md:space-y-10 text-center lg:text-left">
-              <div className="space-y-4 md:space-y-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="space-y-6 md:space-y-12 text-center lg:text-left">
+              <div className="space-y-4 md:space-y-8">
                 <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">The Elite Edit</span>
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight uppercase">MASTERING THE STRIDE.</h2>
-                <p className="text-white/60 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight uppercase">MASTERING THE STRIDE.</h2>
+                <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
                   Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-10 h-14 rounded-full shadow-xl transition-all hover:scale-105">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-12 h-16 rounded-full shadow-2xl transition-all hover:scale-105">
                   <Link href="/shop/gentlemens-quarters">View Collection</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-10 h-14 rounded-full transition-all">
+                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-12 h-16 rounded-full transition-all">
                   <Link href="/shop">All Departments</Link>
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-10">
                {luxuryEdit.map((product, idx) => (
-                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'lg:mt-16' : '')}>
+                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'lg:mt-20' : '')}>
                     <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10 text-white" />
                  </div>
                ))}
