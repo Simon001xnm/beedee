@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   description: 'Shop premium sneakers, formal shoes, and boots at Bee & Dee. The leading footwear marketplace in Kenya.',
   keywords: ['shoes kenya', 'sneakers nairobi', 'footwear marketplace', 'bee and dee', 'kenya shoe shop'],
   authors: [{ name: 'Bee & Dee' }],
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
     icon: '/WhatsApp Image 2026-05-07 at 12.36.54 PM.jpeg',
     apple: '/WhatsApp Image 2026-05-07 at 12.36.54 PM.jpeg',
