@@ -16,6 +16,21 @@ export const categories: Category[] = [
  */
 export const products: Product[] = [
   {
+    id: 'timberland-premium-luxe',
+    name: 'Timberland Premium Luxe',
+    price: 4499,
+    images: [
+      { url: '/WhatsApp Image 2026-04-23 at 15.52.42.jpeg', hint: 'timberland premium luxe' },
+      { url: '/WhatsApp Image 2026-04-23 at 15.52.43.jpeg', hint: 'timberland premium luxe side' }
+    ],
+    description: 'The pinnacle of rugged luxury. This Timberland Premium Luxe edition combines the brand\'s legendary durability with an elevated aesthetic for the modern Nairobi gentleman.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland-v3', 'timberland-premium', 'billionaire-boots'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic Wheat']
+  },
+  {
     id: 'asics-elite',
     name: 'Asics Elite',
     price: 3799,
@@ -67,6 +82,21 @@ export const products: Product[] = [
   },
   {
     id: 'puma-gt',
+    name: 'Puma GT',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM (1).jpeg', hint: 'puma gt' },
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM.jpeg', hint: 'puma gt side' }
+    ],
+    description: 'Dynamic and stylish, the Puma GT offers a perfect blend of performance and street-ready design. Built for comfort and speed on the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-zoom', 'under-armour'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'puma-gt-luxe',
     name: 'Puma GT',
     price: 3799,
     images: [
@@ -293,7 +323,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'max-air',
+    id: 'max-air-classic',
     name: 'Max Air',
     price: 3999,
     images: [
@@ -308,7 +338,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'timberland',
+    id: 'timberland-classic',
     name: 'Timberland Boots',
     price: 2999,
     images: [
@@ -326,7 +356,7 @@ export const products: Product[] = [
     colors: ['Classic Tan']
   },
   {
-    id: 'under-armour',
+    id: 'under-armour-classic',
     name: 'Under Armour',
     price: 3799,
     images: [
@@ -341,7 +371,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'samba-single-sole',
+    id: 'samba-single-sole-classic',
     name: 'Samba single sole',
     price: 2499,
     images: [
@@ -358,7 +388,7 @@ export const products: Product[] = [
     colors: ['Classic White/Black']
   },
   {
-    id: 'floral-samba',
+    id: 'floral-samba-classic',
     name: 'Floral Samba',
     price: 2999,
     images: [
@@ -374,7 +404,7 @@ export const products: Product[] = [
     colors: ['Floral Multi']
   },
   {
-    id: 'nike-vomero',
+    id: 'nike-vomero-classic',
     name: 'Nike Vomero',
     price: 3799,
     images: [
@@ -389,7 +419,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'sb-dunks',
+    id: 'sb-dunks-classic',
     name: 'SB Dunks',
     price: 2999,
     images: [
@@ -404,7 +434,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'jordan-3',
+    id: 'jordan-3-classic',
     name: 'Jordan 3',
     price: 2999,
     images: [
@@ -423,7 +453,7 @@ export const products: Product[] = [
     colors: ['Classic Multi']
   },
   {
-    id: 'nb-classic-sneakers',
+    id: 'nb-classic-sneakers-classic',
     name: 'New Balance Classic',
     price: 2999,
     images: [
@@ -440,7 +470,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'soccer-boots',
+    id: 'soccer-boots-classic',
     name: 'Elite Soccer Boots',
     price: 3999,
     images: [
@@ -455,7 +485,7 @@ export const products: Product[] = [
     colors: ['Professional Multi']
   },
   {
-    id: 'mens-casual-loafers',
+    id: 'mens-casual-loafers-classic',
     name: 'Men\'s Casual Loafers',
     price: 3499,
     images: [
@@ -470,7 +500,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'mens-comfort-sandals',
+    id: 'mens-comfort-sandals-classic',
     name: 'Men\'s Comfort Sandals',
     price: 1800,
     images: [
@@ -486,7 +516,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'asics-performance-runner',
+    id: 'asics-performance-runner-classic',
     name: 'ASICS Performance Runner',
     price: 3499,
     images: [
@@ -502,7 +532,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'mens-handcrafted-sandals',
+    id: 'mens-handcrafted-sandals-classic',
     name: 'Men\'s Handcrafted Sandals',
     price: 1999,
     images: [
@@ -518,7 +548,7 @@ export const products: Product[] = [
     colors: ['Tan/Brown']
   },
   {
-    id: 'nb-9060-alt',
+    id: 'nb-9060-alt-classic',
     name: 'New Balance 9060',
     price: 3499,
     images: [
@@ -532,7 +562,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'nb-9060',
+    id: 'nb-9060-classic-luxe',
     name: 'New Balance 9060',
     price: 3499,
     images: [
@@ -547,7 +577,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'nike-ld-waffle',
+    id: 'nike-ld-waffle-classic',
     name: 'Nike LD waffle',
     price: 3499,
     images: [
@@ -561,7 +591,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'nike-zoom',
+    id: 'nike-zoom-classic',
     name: 'Nike zoom',
     price: 2999,
     images: [
@@ -577,7 +607,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'bape-star',
+    id: 'bape-star-classic',
     name: 'Bape star',
     price: 2999,
     images: [
@@ -593,7 +623,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'jordan-voodoo',
+    id: 'jordan-voodoo-classic',
     name: 'Jordan Voodoo',
     price: 3499,
     images: [
@@ -608,7 +638,7 @@ export const products: Product[] = [
     colors: ['Earthy Multi']
   },
   {
-    id: 'asics-gel-sneakers',
+    id: 'asics-gel-sneakers-classic',
     name: 'ASICS GEL Sneakers',
     price: 2999,
     images: [
@@ -623,7 +653,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'kids-active-sneakers',
+    id: 'kids-active-sneakers-classic',
     name: 'Kids Active Sneakers',
     price: 1799,
     images: [
@@ -641,7 +671,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'kids-sneakers',
+    id: 'kids-sneakers-classic',
     name: 'Kids Urban Sneakers',
     price: 1799,
     images: [
@@ -660,7 +690,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'kids-open',
+    id: 'kids-open-classic',
     name: 'Kids Open Comfort',
     price: 1499,
     images: [
@@ -678,7 +708,7 @@ export const products: Product[] = [
     colors: ['Multi-color']
   },
   {
-    id: 'samoa-classic',
+    id: 'samoa-classic-edition',
     name: 'Samoa Classic',
     price: 2799,
     images: [
