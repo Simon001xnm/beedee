@@ -2,79 +2,67 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '@/lib/types';
 import { formatPrice, cn } from '@/lib/utils';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingBag, ArrowUpRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 interface ProductCardProps {
   product: Product;
   className?: string;
-  variant?: 'standard' | 'minimal';
 }
 
-export function ProductCard({ product, className, variant = 'standard' }: ProductCardProps) {
-  if (variant === 'minimal') {
-    return (
-      <Link href={`/shop/product/${product.id}`} className={cn("group bg-white rounded-lg overflow-hidden border border-transparent hover:border-accent transition-all duration-300", className)}>
-        <div className="relative aspect-square overflow-hidden bg-gray-50">
-          <Image
-            src={product.images[0].url}
-            alt={product.name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            data-ai-hint={product.images[0].hint}
-          />
-        </div>
-        <div className="p-1.5">
-          <h4 className="text-[9px] font-medium line-clamp-1 mb-0.5 text-inherit">{product.name}</h4>
-          <p className="text-[10px] font-bold text-primary">{formatPrice(product.price)}</p>
-        </div>
-      </Link>
-    );
-  }
-
+export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <article className={cn(
-      "group relative bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full",
+      "group relative flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 border border-black/[0.03]",
       className
     )}>
-      <Link href={`/shop/product/${product.id}`} className="block">
-        <div className="relative aspect-[4/5] bg-gray-50">
-          <Image
-            src={product.images[0].url}
-            alt={product.name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            data-ai-hint={product.images[0].hint}
-          />
-          {product.price > 3000 && (
-            <div className="absolute top-2 left-2 bg-accent text-accent-foreground text-[8px] font-bold px-1.5 py-0.5 rounded shadow-sm z-10">
-              Premium
+      {/* Visual Container */}
+      <Link href={`/shop/product/${product.id}`} className="relative block aspect-[4/5] overflow-hidden bg-[#f0f0f0]">
+        <Image
+          src={product.images[0].url}
+          alt={product.name}
+          fill
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          data-ai-hint={product.images[0].hint}
+        />
+        
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <div className="bg-white text-primary rounded-full h-12 w-12 flex items-center justify-center translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
+             <ArrowUpRight className="h-5 w-5" />
+          </div>
+        </div>
+
+        {/* Status Badges */}
+        <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
+          {product.price > 4000 && (
+            <div className="bg-primary text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-sm">
+              Luxe Edition
             </div>
           )}
         </div>
       </Link>
 
-      <div className="p-2 md:p-3 flex flex-col flex-1 gap-1">
-        <div className="flex flex-col flex-1">
+      {/* Narrative Container */}
+      <div className="p-5 flex flex-col flex-1 gap-4">
+        <div className="space-y-1">
           <Link href={`/shop/product/${product.id}`}>
-            <h3 className="text-[11px] md:text-sm font-bold line-clamp-1 md:line-clamp-2 hover:text-accent transition-colors text-inherit leading-tight">
+            <h3 className="text-sm font-black text-primary leading-tight uppercase tracking-tight group-hover:text-accent transition-colors">
               {product.name}
             </h3>
           </Link>
-          <span className="text-[9px] md:text-[10px] uppercase tracking-wider mt-0.5 opacity-60 text-inherit truncate">
+          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60">
             {product.category.replace('-', ' ')}
-          </span>
+          </p>
         </div>
 
-        <div className="flex items-center justify-between mt-auto pt-1 gap-1">
+        <div className="flex items-end justify-between mt-auto">
           <div className="flex flex-col">
-            <span className="text-[12px] md:text-lg font-bold text-primary leading-none">{formatPrice(product.price)}</span>
-            {product.originalPrice ? (
-              <span className="text-[9px] md:text-xs line-through opacity-40">{formatPrice(product.originalPrice)}</span>
-            ) : null}
+            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Market Price</span>
+            <span className="text-xl font-black text-primary tracking-tighter leading-none">{formatPrice(product.price)}</span>
           </div>
-          <Button size="icon" variant="ghost" className="h-7 w-7 md:h-9 md:w-9 rounded-full bg-gray-50 hover:bg-primary hover:text-white transition-colors flex-shrink-0">
-            <ShoppingCart className="h-3.5 w-3.5 md:h-4 md:w-4" />
+          <Button size="icon" variant="ghost" className="h-10 w-10 rounded-xl bg-secondary/50 hover:bg-primary hover:text-white transition-all">
+            <ShoppingBag className="h-4 w-4" />
           </Button>
         </div>
       </div>

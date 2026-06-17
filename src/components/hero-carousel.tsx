@@ -12,27 +12,20 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
 import { getProducts } from "@/lib/data";
+import { formatPrice } from "@/lib/utils";
 
 export function HeroCarousel() {
-  // Pull the latest 10 products for the carousel
   const featuredProducts = getProducts().slice(0, 10);
 
-  // Fallback UI when the catalog is empty
   if (featuredProducts.length === 0) {
     return (
-      <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative bg-primary flex items-center justify-center text-white p-6 md:p-12 text-center overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.4)_0%,transparent_70%)]" />
-        </div>
+      <div className="w-full h-[550px] relative bg-primary flex items-center justify-center text-white p-12 text-center overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]" />
         <div className="max-w-xl relative z-10">
-          <span className="text-accent font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Premium Marketplace</span>
-          <h2 className="text-3xl md:text-6xl font-black mb-6 leading-tight tracking-tighter uppercase">Welcome to Bee & Dee</h2>
-          <p className="text-white/60 text-sm md:text-lg mb-8 font-medium leading-relaxed">
-            We are currently refreshing our premium collections with the latest Kenyan style. 
-            Check back shortly for our curated selection.
-          </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-12 md:h-14 px-10 rounded-full transition-all hover:scale-105 shadow-2xl">
-            <Link href="/shop">Explore Collections</Link>
+          <span className="text-accent font-black uppercase tracking-[0.6em] text-[10px] mb-6 block">Concierge Entry</span>
+          <h2 className="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tighter uppercase">Refining the Stride.</h2>
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-16 px-12 rounded-full transition-all hover:scale-105 shadow-2xl">
+            <Link href="/shop">Access Collections</Link>
           </Button>
         </div>
       </div>
@@ -44,49 +37,62 @@ export function HeroCarousel() {
         className="w-full h-full"
         plugins={[
             Autoplay({
-              delay: 5000,
+              delay: 6000,
             }),
           ]}
+        opts={{
+          loop: true,
+        }}
     >
     <CarouselContent className="h-full">
       {featuredProducts.map((product) => (
           <CarouselItem key={product.id} className="h-full">
-            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative group overflow-hidden">
+            <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] relative group overflow-hidden bg-black">
               <Image
                   src={product.images[0].url}
                   alt={product.name}
                   fill
                   priority
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                  className="object-cover object-center transition-transform duration-[10000ms] scale-100 group-data-[state=active]:scale-110 animate-kenburns"
+                  sizes="100vw"
                   data-ai-hint={product.images[0].hint || "luxury shoes"}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/60 to-transparent" />
-              <div className="absolute inset-0 flex items-center p-6 md:p-12">
-                  <div className="max-w-xs md:max-w-md text-white">
-                      <p className="text-accent font-black uppercase tracking-[0.3em] text-[9px] md:text-[10px] mb-2 md:mb-4">Special Selection</p>
-                      <h2 className="text-2xl md:text-5xl font-black mb-3 md:mb-6 leading-tight tracking-tighter uppercase">{product.name}</h2>
-                      <p className="text-white/70 text-xs md:text-base mb-6 md:mb-10 line-clamp-2 font-medium hidden md:block">
-                        {product.description}
-                      </p>
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-8">
-                        <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-10 md:h-12 px-6 md:px-10 rounded-full transition-all hover:scale-105">
-                            <Link href={`/shop/product/${product.id}`}>Shop Now</Link>
-                        </Button>
-                        <div className="flex flex-col">
-                            <span className="text-[9px] uppercase font-bold text-white/50 tracking-widest">Starting At</span>
-                            <span className="text-lg md:text-2xl font-black text-accent tracking-tighter">KSh {product.price.toLocaleString()}</span>
+              
+              {/* Cinematic Vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-transparent hidden lg:block" />
+
+              <div className="absolute inset-0 flex items-center">
+                  <div className="container-market w-full">
+                    <div className="max-w-xl text-white">
+                        <div className="overflow-hidden mb-2">
+                           <p className="text-accent font-black uppercase tracking-[0.4em] text-[10px] animate-in slide-in-from-bottom-full duration-700">Premium Selection</p>
                         </div>
-                      </div>
+                        <div className="overflow-hidden mb-6">
+                           <h2 className="text-4xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
+                             {product.name}
+                           </h2>
+                        </div>
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 animate-in fade-in duration-1000 delay-300">
+                          <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-14 px-12 rounded-full transition-all hover:scale-105 shadow-2xl">
+                              <Link href={`/shop/product/${product.id}`}>Discover Item</Link>
+                          </Button>
+                          <div className="flex flex-col">
+                              <span className="text-[10px] uppercase font-bold text-white/50 tracking-[0.2em] mb-1">Heritage Value</span>
+                              <span className="text-2xl font-black text-accent tracking-tighter">{formatPrice(product.price)}</span>
+                          </div>
+                        </div>
+                    </div>
                   </div>
               </div>
             </div>
           </CarouselItem>
       ))}
     </CarouselContent>
-    <div className="absolute bottom-4 right-4 md:right-12 flex gap-2">
-        <CarouselPrevious className="static translate-y-0 h-10 w-10 bg-white/10 hover:bg-accent hover:text-primary border border-white/20 text-white transition-all rounded-full" />
-        <CarouselNext className="static translate-y-0 h-10 w-10 bg-white/10 hover:bg-accent hover:text-primary border border-white/20 text-white transition-all rounded-full" />
+    
+    <div className="absolute bottom-8 right-8 md:right-16 flex gap-4 z-20">
+        <CarouselPrevious className="static translate-y-0 h-14 w-14 bg-white/5 hover:bg-accent hover:text-primary border border-white/10 text-white transition-all rounded-full backdrop-blur-md" />
+        <CarouselNext className="static translate-y-0 h-14 w-14 bg-white/5 hover:bg-accent hover:text-primary border border-white/10 text-white transition-all rounded-full backdrop-blur-md" />
     </div>
     </Carousel>
   )
