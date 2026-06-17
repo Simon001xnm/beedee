@@ -23,7 +23,7 @@ export function HeroCarousel() {
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]" />
         <div className="max-w-xl relative z-10">
           <span className="text-accent font-black uppercase tracking-[0.6em] text-[10px] mb-6 block">Concierge Entry</span>
-          <h2 className="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tighter uppercase">Refining the Stride.</h2>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-8 leading-tight tracking-tighter uppercase">Refining the Stride.</h2>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-16 px-12 rounded-full transition-all hover:scale-105 shadow-2xl">
             <Link href="/shop">Access Collections</Link>
           </Button>
@@ -69,7 +69,7 @@ export function HeroCarousel() {
                            <p className="text-accent font-black uppercase tracking-[0.4em] text-[10px] animate-in slide-in-from-bottom-full duration-700">Premium Selection</p>
                         </div>
                         <div className="overflow-hidden mb-6">
-                           <h2 className="text-4xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
+                           <h2 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
                              {product.name}
                            </h2>
                         </div>
