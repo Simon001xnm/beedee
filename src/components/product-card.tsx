@@ -49,14 +49,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         {/* Status Badges */}
         <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
-          {product.price > 4000 && !isImageOffer && (
+          {(product.price > 4000 || isImageOffer) && (
             <div className="bg-primary text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-sm">
-              Luxe Edition
+              {isImageOffer ? "Stock Clearance" : "Luxe Edition"}
             </div>
           )}
           {isImageOffer && (
             <div className="bg-accent text-primary text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg border border-primary/10">
-              Clearance Offer
+              Limited Drop
             </div>
           )}
         </div>
@@ -92,7 +92,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {isImageOffer && (
         <div className="p-4 border-t border-black/[0.03] bg-secondary/30">
            <Button asChild variant="default" className="w-full rounded-xl bg-primary text-white hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[10px] h-12 transition-all">
-              <Link href={`/shop/product/${product.id}`}>Claim This Offer</Link>
+              <Link href={`/shop/product/${product.id}`}>Add To Cart</Link>
            </Button>
         </div>
       )}

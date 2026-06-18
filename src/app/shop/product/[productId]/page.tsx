@@ -47,10 +47,12 @@ export default function ProductPage({ params }: ProductPageProps) {
   );
 
   const category = useMemo(() => getCategoryById(product.category), [product.category]);
+  const isImageOffer = product.id.startsWith('offer-');
 
   const handleWhatsAppOrder = () => {
     const phoneNumber = "254106587150";
-    const message = `Concierge, I'd like to order: ${product.name}\nSize: ${selectedSize || 'Not selected'}\nPrice: ${formatPrice(product.price)}`;
+    const priceDisplay = product.price > 0 ? formatPrice(product.price) : "Clearance Pricing (As per image)";
+    const message = `Concierge, I'd like to order: ${product.name}\nSize: ${selectedSize || 'Not selected'}\nPrice: ${priceDisplay}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -70,7 +72,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen animate-in fade-in duration-700">
       <div className="container-market py-12 lg:py-24">
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Collections', href: '/shop' }, { label: product.name }]} className="mb-12" />
         
@@ -78,31 +80,46 @@ export default function ProductPage({ params }: ProductPageProps) {
           
           {/* Visual Showcase */}
           <div className="space-y-8 lg:sticky lg:top-32">
-            <div className="aspect-[4/5] bg-[#f8f8f8] border border-black/[0.03] overflow-hidden rounded-[2rem] relative shadow-2xl">
+            <div className={cn(
+              "bg-[#f8f8f8] border border-black/[0.03] overflow-hidden rounded-[2rem] relative shadow-2xl transition-all duration-700",
+              isImageOffer ? "aspect-auto min-h-[500px]" : "aspect-[4/5]"
+            )}>
               <Carousel className="w-full h-full">
                 <CarouselContent className="h-full">
                   {product.images.map((image, idx) => (
                     <CarouselItem key={idx} className="h-full">
-                      <div className="relative aspect-[4/5] w-full h-full">
-                        <Image src={image.url} alt={product.name} fill className="object-cover" priority={idx === 0} />
+                      <div className={cn("relative w-full h-full", isImageOffer ? "aspect-auto p-4" : "aspect-[4/5]")}>
+                        <Image 
+                          src={image.url} 
+                          alt={product.name} 
+                          fill={!isImageOffer}
+                          width={isImageOffer ? 1200 : undefined}
+                          height={isImageOffer ? 1500 : undefined}
+                          className={isImageOffer ? "object-contain w-full h-full" : "object-cover"} 
+                          priority={idx === 0} 
+                        />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-                  <CarouselPrevious className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white text-primary border-none shadow-xl" />
-                  <CarouselNext className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white text-primary border-none shadow-xl" />
-                </div>
+                {product.images.length > 1 && (
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-10">
+                    <CarouselPrevious className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white text-primary border-none shadow-xl" />
+                    <CarouselNext className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white text-primary border-none shadow-xl" />
+                  </div>
+                )}
               </Carousel>
             </div>
             
-            <div className="grid grid-cols-4 gap-4">
-              {product.images.map((img, idx) => (
-                <div key={idx} className="aspect-square bg-[#f8f8f8] border border-black/[0.03] relative cursor-pointer hover:border-accent transition-all duration-300 overflow-hidden rounded-2xl group shadow-md">
-                  <Image src={img.url} alt={`${product.name} view ${idx + 1}`} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-              ))}
-            </div>
+            {product.images.length > 1 && (
+              <div className="grid grid-cols-4 gap-4">
+                {product.images.map((img, idx) => (
+                  <div key={idx} className="aspect-square bg-[#f8f8f8] border border-black/[0.03] relative cursor-pointer hover:border-accent transition-all duration-300 overflow-hidden rounded-2xl group shadow-md">
+                    <Image src={img.url} alt={`${product.name} view ${idx + 1}`} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Concierge Editorial Details */}
@@ -110,13 +127,19 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <span className="text-[10px] font-black tracking-[0.4em] uppercase text-accent border-b border-accent pb-1">{category?.name}</span>
-                <Badge className="bg-primary/5 text-primary border-none text-[9px] font-black tracking-widest px-3 py-1 uppercase">In Reserve</Badge>
+                <Badge className="bg-primary/5 text-primary border-none text-[9px] font-black tracking-widest px-3 py-1 uppercase">
+                  {isImageOffer ? "Limited Clearance" : "In Reserve"}
+                </Badge>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-primary tracking-tighter leading-none uppercase">{product.name}</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-primary tracking-tighter leading-none uppercase">
+                {isImageOffer ? "EXCLUSIVE CLEARANCE ITEM" : product.name}
+              </h1>
               
               <div className="flex flex-wrap items-center gap-8">
                 <div className="flex items-baseline gap-4">
-                  <span className="text-4xl lg:text-6xl font-black text-primary tracking-tighter">{formatPrice(product.price)}</span>
+                  <span className="text-4xl lg:text-6xl font-black text-primary tracking-tighter">
+                    {product.price > 0 ? formatPrice(product.price) : "SEE IMAGE FOR PRICE"}
+                  </span>
                   {product.originalPrice && (
                     <span className="text-2xl text-muted-foreground line-through font-bold opacity-40">{formatPrice(product.originalPrice)}</span>
                   )}
@@ -172,7 +195,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="grid gap-4">
               <Button 
                 className="bg-primary hover:bg-primary/90 text-white h-20 w-full text-xs font-black uppercase tracking-[0.3em] rounded-[1.5rem] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 group" 
-                onClick={() => addToCart(product, selectedSize || "", "")}
+                onClick={() => addToCart(product, selectedSize || "Universal", "Default")}
               >
                 <ShoppingBag className="h-5 w-5 mr-4" /> 
                 Add To Shopping Bag 
@@ -183,7 +206,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 className="border-black/[0.1] hover:bg-secondary h-20 w-full text-xs font-black uppercase tracking-[0.3em] rounded-[1.5rem] transition-all" 
                 onClick={handleWhatsAppOrder}
               >
-                <MessageCircle className="h-5 w-5 mr-4 text-green-600" /> WhatsApp Concierge
+                <MessageCircle className="h-5 w-5 mr-4 text-green-600" /> Checkout via WhatsApp
               </Button>
             </div>
 
@@ -215,7 +238,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         <section className="mt-32">
            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="space-y-4">
-                <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Recommended Pairings</span>
+                <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Explore More Offers</span>
                 <h2 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Complete the aesthetic</h2>
               </div>
            </div>
