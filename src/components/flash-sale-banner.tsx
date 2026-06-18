@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { X, Sparkles, Timer } from 'lucide-react';
+import { X, Timer } from 'lucide-react';
 
 export function FlashSaleBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -20,7 +20,7 @@ export function FlashSaleBanner() {
         <div className="flex items-center gap-2">
           <Timer className="h-4 w-4 text-accent animate-pulse" />
           <p className="font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase">
-            CLEARANCE ALERT: <span className="text-accent">EVERYTHING MUST GO</span> - SHOP NEW MARKDOWNS
+            <span className="text-accent">BEE & DEE STOCK CLEARANCE:</span> UNBEATABLE PRICES - SHOP NOW
           </p>
         </div>
         <Link href="/shop" className="text-[10px] md:text-xs font-bold underline underline-offset-4 hover:text-accent transition-colors decoration-accent">

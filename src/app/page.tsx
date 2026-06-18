@@ -9,7 +9,6 @@ import {
   ChevronRight,
   LayoutGrid,
   User,
-  Zap,
   Sparkles,
   Timer
 } from 'lucide-react';
@@ -86,9 +85,9 @@ export default function Home() {
                    <Timer className="h-12 w-12 text-accent" />
                 </div>
                 <span className="text-[10px] font-black text-accent uppercase tracking-[0.3em] mb-2 block animate-pulse">Ending Soon</span>
-                <h4 className="text-lg font-black text-primary leading-tight mb-4 uppercase">CLEARANCE: SAVE UP TO 50% TODAY</h4>
+                <h4 className="text-lg font-black text-primary leading-tight mb-4 uppercase">STOCK CLEARANCE: SAVE UP TO 50% TODAY</h4>
                 <Link href="/shop" className="text-xs font-bold text-primary underline underline-offset-4 decoration-accent hover:text-accent transition-colors">
-                  Shop Flash Sale
+                  Shop All Offers
                 </Link>
               </div>
             </div>
@@ -133,12 +132,12 @@ export default function Home() {
       <section className="container-market">
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Inventory Flush</span>
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Inventory</span>
             <h2 className="text-2xl md:text-5xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
               <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
-              BOUTIQUE CLEARANCE EVENT
+              BEE & DEE STOCK CLEARANCE
             </h2>
-            <p className="text-sm text-muted-foreground mt-2 font-medium">STRICTLY LIMITED QUANTITIES. UNBEATABLE OFFERS ON ALL HIGHLIGHTED ITEMS.</p>
+            <p className="text-sm text-muted-foreground mt-2 font-medium">STRICTLY LIMITED QUANTITIES. UNBEATABLE STOCK CLEARANCE PRICES ON ALL HIGHLIGHTED ITEMS.</p>
           </div>
           <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group border-b-2 border-accent pb-2">
             Access Full Catalog <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -164,7 +163,7 @@ export default function Home() {
            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
            <div className="relative z-10 max-w-2xl mx-auto space-y-8">
               <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">Everything Must Go</span>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">STOCK IS MOVING FAST. SECURE YOUR PAIR NOW.</h2>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">BEE & DEE STOCK CLEARANCE PRICE.</h2>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-16 px-16 rounded-full transition-all hover:scale-105 shadow-2xl">
                   <Link href="/shop">Shop Entire Sale</Link>
               </Button>
