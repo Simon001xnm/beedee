@@ -11,11 +11,12 @@ import {
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
-import { getProducts } from "@/lib/data";
+import { getHeroProducts } from "@/lib/data";
 import { formatPrice } from "@/lib/utils";
 
 export function HeroCarousel() {
-  const featuredProducts = getProducts().slice(0, 10);
+  // Use products that are NOT restricted to the landing page grid
+  const featuredProducts = getHeroProducts();
 
   if (featuredProducts.length === 0) {
     return (
@@ -69,7 +70,7 @@ export function HeroCarousel() {
                            <p className="text-accent font-black uppercase tracking-[0.4em] text-[10px] animate-in slide-in-from-bottom-full duration-700">Premium Selection</p>
                         </div>
                         <div className="overflow-hidden mb-6">
-                           <h2 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
+                           <h2 className="text-xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
                              {product.name}
                            </h2>
                         </div>
@@ -79,7 +80,7 @@ export function HeroCarousel() {
                           </Button>
                           <div className="flex flex-col">
                               <span className="text-[10px] uppercase font-bold text-white/50 tracking-[0.2em] mb-1">Heritage Value</span>
-                              <span className="text-2xl font-black text-accent tracking-tighter">{formatPrice(product.price)}</span>
+                              <span className="text-xl font-black text-accent tracking-tighter">{formatPrice(product.price)}</span>
                           </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getFeaturedProducts, categories } from '@/lib/data';
+import { getLandingExclusiveProducts, categories } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
@@ -10,17 +10,16 @@ import {
   TrendingUp,
   LayoutGrid,
   User,
-  Zap
+  Zap,
+  Sparkles
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
-  // Weekly Bestsellers now pulls the 10 newest products overall to fit the expanded grid
-  const trendingItems = getFeaturedProducts(10);
-  // Elite selection pulls a subset of latest products specifically for the highlight section
-  const luxuryEdit = getFeaturedProducts(4);
+  // landing exclusives are the only items shown in the bestseller grid
+  const trendingItems = getLandingExclusiveProducts();
 
   return (
     <div className="flex flex-col gap-8 pb-20">
@@ -129,58 +128,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Marketplace Grid: Trending Collections */}
+      {/* Landing Page Offer Gallery */}
       <section className="container-market">
         <div className="flex justify-between items-end mb-10">
           <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Curated Trends</span>
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Inventory</span>
             <h2 className="text-2xl md:text-4xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
-              <TrendingUp className="h-6 w-6 md:h-10 md:w-10 text-accent" />
-              WEEKLY BESTSELLERS
+              <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
+              NEW COLLECTION ARRIVALS
             </h2>
           </div>
           <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group">
-            Shop All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            Browse Entire Shop <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
-          {trendingItems.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        
+        {trendingItems.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+            {trendingItems.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed">
+             <p className="text-muted-foreground">New offers coming soon to the landing gallery.</p>
+          </div>
+        )}
+      </section>
+
+      {/* Call to Action Banner */}
+      <section className="container-market mt-10">
+        <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+           <div className="relative z-10 max-w-2xl mx-auto space-y-8">
+              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">Explore More</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">Can't find your fit? Access our full catalog.</h2>
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-16 px-16 rounded-full transition-all hover:scale-105 shadow-2xl">
+                  <Link href="/shop">Shop All Collections</Link>
+              </Button>
+           </div>
         </div>
       </section>
 
-      {/* Structured Category Showcase - Elite Section */}
-      <section className="bg-primary py-16 md:py-32 text-white overflow-hidden">
-        <div className="container-market">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="space-y-6 md:space-y-12 text-center lg:text-left">
-              <div className="space-y-4 md:space-y-8">
-                <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">The Elite Edit</span>
-                <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight uppercase">MASTERING THE STRIDE.</h2>
-                <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                  Discover our Gentlemen's Quarters collection, where heritage craftsmanship meets contemporary Kenyan style.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] px-12 h-16 rounded-full shadow-2xl transition-all hover:scale-105">
-                  <Link href="/shop/gentlemens-quarters">View Collection</Link>
-                </Button>
-                <Button variant="outline" size="lg" className="border-white/20 hover:bg-white text-white hover:text-primary font-black uppercase tracking-widest text-[10px] px-12 h-16 rounded-full transition-all">
-                  <Link href="/shop">All Departments</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4 md:gap-10">
-               {luxuryEdit.map((product, idx) => (
-                 <div key={product.id} className={cn("transition-all duration-500", idx % 2 !== 0 ? 'lg:mt-20' : '')}>
-                    <ProductCard product={product} className="bg-white/5 border-white/10 hover:bg-white/10 text-white" />
-                 </div>
-               ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

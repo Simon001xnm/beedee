@@ -3,6 +3,9 @@ import type { Product, Category } from './types';
 // IDs of products that should be exclusive to the Hero section
 const HERO_ONLY_IDS: string[] = [];
 
+// IDs of products that are for the landing page grid only (image-based offers)
+const LANDING_OFFER_IDS: string[] = ['offer-landing-1'];
+
 export const categories: Category[] = [
   { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800', imageHint: 'sneakers' },
   { id: 'gentlemens-quarters', name: 'Gentlemens Quarters', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=800', imageHint: 'mens shoes' },
@@ -15,6 +18,20 @@ export const categories: Category[] = [
  * Latest products are added to the TOP of the array.
  */
 export const products: Product[] = [
+  {
+    id: 'offer-landing-1',
+    name: 'Premium Offer',
+    price: 0, // Price is visible in the image
+    images: [
+      { url: '/WhatsApp Image 2026-06-17 at 22.21.40.jpeg', hint: 'premium offer' }
+    ],
+    description: 'New arrivals collection. Please see image for specific model names and pricing details.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
   {
     id: 'timberland-premium-luxe',
     name: 'Timberland Premium Luxe',
@@ -725,6 +742,15 @@ export const products: Product[] = [
 
 export const getProducts = () => {
   return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id));
+}
+
+export const getLandingExclusiveProducts = () => {
+  return products.filter(p => LANDING_OFFER_IDS.includes(p.id));
+}
+
+export const getHeroProducts = () => {
+  // Return products that are NOT landing exclusives for the hero carousel
+  return products.filter(p => !LANDING_OFFER_IDS.includes(p.id)).slice(0, 10);
 }
 
 export const getProductById = (id: string) => products.find(p => p.id === id);
