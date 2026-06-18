@@ -5,15 +5,26 @@ const HERO_ONLY_IDS: string[] = [];
 
 // IDs of products that are for the landing page grid only (image-based offers)
 const LANDING_OFFER_IDS: string[] = [
-  'offer-landing-1', 
-  'offer-landing-2',
-  'offer-landing-3',
-  'offer-landing-4',
-  'offer-landing-5',
-  'offer-landing-6',
-  'offer-landing-7',
+  'offer-landing-20',
+  'offer-landing-19',
+  'offer-landing-18',
+  'offer-landing-17',
+  'offer-landing-16',
+  'offer-landing-15',
+  'offer-landing-14',
+  'offer-landing-13',
+  'offer-landing-12',
+  'offer-landing-11',
+  'offer-landing-10',
+  'offer-landing-9', 
   'offer-landing-8',
-  'offer-landing-9'
+  'offer-landing-7',
+  'offer-landing-6',
+  'offer-landing-5',
+  'offer-landing-4',
+  'offer-landing-3',
+  'offer-landing-2',
+  'offer-landing-1'
 ];
 
 export const categories: Category[] = [
@@ -28,6 +39,138 @@ export const categories: Category[] = [
  * Latest products are added to the TOP of the array.
  */
 export const products: Product[] = [
+  {
+    id: 'offer-landing-20',
+    name: 'Boutique Collection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.05.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-19',
+    name: 'Elite Series Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.04.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-18',
+    name: 'Heritage Choice Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.04 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-17',
+    name: 'Premium Edition Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.59 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-16',
+    name: 'Signature Collection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.58.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-15',
+    name: 'Luxe Selection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.57.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-14',
+    name: 'Elite Arrival Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.56.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-13',
+    name: 'Boutique Series Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.56 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-12',
+    name: 'Heritage Edition Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.55.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-11',
+    name: 'Premium Arrival Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.55 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-10',
+    name: 'Signature Choice Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.54.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
   {
     id: 'offer-landing-9',
     name: 'Heritage Collection Item',
