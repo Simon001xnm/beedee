@@ -4,7 +4,7 @@ import type { Product, Category } from './types';
 const HERO_ONLY_IDS: string[] = [];
 
 // IDs of products that are for the landing page grid only (image-based offers)
-const LANDING_OFFER_IDS: string[] = ['offer-landing-1'];
+const LANDING_OFFER_IDS: string[] = ['offer-landing-1', 'offer-landing-2'];
 
 export const categories: Category[] = [
   { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800', imageHint: 'sneakers' },
@@ -18,6 +18,20 @@ export const categories: Category[] = [
  * Latest products are added to the TOP of the array.
  */
 export const products: Product[] = [
+  {
+    id: 'offer-landing-2',
+    name: 'New Collection Offer',
+    price: 0,
+    images: [
+      { url: '/WhatsApp Image 2026-06-17 at 22.21.42 (1).jpeg', hint: 'premium sneakers offer' }
+    ],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
   {
     id: 'offer-landing-1',
     name: 'Premium Offer',
