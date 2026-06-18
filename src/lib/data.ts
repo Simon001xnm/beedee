@@ -4,7 +4,17 @@ import type { Product, Category } from './types';
 const HERO_ONLY_IDS: string[] = [];
 
 // IDs of products that are for the landing page grid only (image-based offers)
-const LANDING_OFFER_IDS: string[] = ['offer-landing-1', 'offer-landing-2'];
+const LANDING_OFFER_IDS: string[] = [
+  'offer-landing-1', 
+  'offer-landing-2',
+  'offer-landing-3',
+  'offer-landing-4',
+  'offer-landing-5',
+  'offer-landing-6',
+  'offer-landing-7',
+  'offer-landing-8',
+  'offer-landing-9'
+];
 
 export const categories: Category[] = [
   { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800', imageHint: 'sneakers' },
@@ -18,6 +28,90 @@ export const categories: Category[] = [
  * Latest products are added to the TOP of the array.
  */
 export const products: Product[] = [
+  {
+    id: 'offer-landing-9',
+    name: 'Heritage Collection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.53.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-8',
+    name: 'Elite Edition Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.53 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-7',
+    name: 'Signature Series Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.52.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-6',
+    name: 'Boutique Choice Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.51.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-5',
+    name: 'Luxe Arrival Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.51 (1).jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-4',
+    name: 'Premium Selection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.49.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
+  {
+    id: 'offer-landing-3',
+    name: 'Exclusive Collection Item',
+    price: 0,
+    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.43.jpeg', hint: 'sneaker offer' }],
+    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: [],
+    colors: []
+  },
   {
     id: 'offer-landing-2',
     name: 'New Collection Offer',
@@ -35,7 +129,7 @@ export const products: Product[] = [
   {
     id: 'offer-landing-1',
     name: 'Premium Offer',
-    price: 0, // Price is visible in the image
+    price: 0, 
     images: [
       { url: '/WhatsApp Image 2026-06-17 at 22.21.40.jpeg', hint: 'premium offer' }
     ],
@@ -110,647 +204,6 @@ export const products: Product[] = [
     relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
     sizes: ['40', '41', '42', '43', '44'],
     colors: ['Multi-color']
-  },
-  {
-    id: 'puma-gt',
-    name: 'Puma GT',
-    price: 3799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM (1).jpeg', hint: 'puma gt' },
-      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM.jpeg', hint: 'puma gt side' }
-    ],
-    description: 'Dynamic and stylish, the Puma GT offers a perfect blend of performance and street-ready design. Built for comfort and speed on the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['max-air', 'nike-zoom', 'under-armour'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'puma-gt-luxe',
-    name: 'Puma GT',
-    price: 3799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM (1).jpeg', hint: 'puma gt' },
-      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM.jpeg', hint: 'puma gt side' }
-    ],
-    description: 'Dynamic and stylish, the Puma GT offers a perfect blend of performance and street-ready design. Built for comfort and speed on the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['max-air', 'nike-zoom', 'under-armour'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'timberland-v3',
-    name: 'Timberland',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-12 at 4.10.28 PM.jpeg', hint: 'timberland boots' },
-      { url: '/WhatsApp Image 2026-02-12 at 4.10.29 PM.jpeg', hint: 'timberland boots side' }
-    ],
-    description: 'Rugged and iconic Timberland boots, designed for the modern trailblazer. Crafted with premium materials for ultimate durability and comfort on the streets of Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['timberland', 'timberland-premium', 'billionaire-boots'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'jellyfish-sneakers',
-    name: 'Jellyfish sneakers',
-    price: 4499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-12 at 10.49.10 AM.jpeg', hint: 'jellyfish sneakers' },
-      { url: '/WhatsApp Image 2026-02-12 at 10.49.11 AM (1).jpeg', hint: 'jellyfish sneakers side' },
-      { url: '/WhatsApp Image 2026-02-12 at 10.49.11 AM.jpeg', hint: 'jellyfish sneakers detail' }
-    ],
-    description: 'Distinctive and modern, the Jellyfish sneakers offer a unique aesthetic with superior comfort. A bold choice for the trendsetters in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['max-air', 'nike-nocta', 'cloud-surfer'],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'kids-boots',
-    name: 'Kids Boots',
-    price: 2499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM (1).jpeg', hint: 'kids boots' },
-      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM.jpeg', hint: 'kids boots side' }
-    ],
-    description: 'Rugged and stylish boots for kids, designed for durability and comfort. Perfect for any adventure in Nairobi.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-active-sneakers', 'kids-sneakers', 'led-kids-sneakers'],
-    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'],
-    colors: ['Tan/Brown']
-  },
-  {
-    id: 'timberland-premium',
-    name: 'Timberland Premium',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-11 at 11.45.15 AM.jpeg', hint: 'timberland premium' }
-    ],
-    description: 'The latest addition to our Timberland collection, featuring premium materials and an iconic silhouette. Built for durability and style on the streets of Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['timberland', 'billionaire-boots', 'mens-casual-loafers'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Tan']
-  },
-  {
-    id: 'columbia',
-    name: 'Columbia',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-11 at 11.44.57 AM.jpeg', hint: 'columbia' },
-      { url: '/WhatsApp Image 2026-02-11 at 11.44.57 AM (1).jpeg', hint: 'columbia side' },
-      { url: '/WhatsApp Image 2026-02-11 at 11.44.56 AM.jpeg', hint: 'columbia detail' },
-      { url: '/WhatsApp Image 2026-02-11 at 11.44.56 AM (1).jpeg', hint: 'columbia back' },
-      { url: '/WhatsApp Image 2026-02-11 at 11.44.55 AM.jpeg', hint: 'columbia top' }
-    ],
-    description: 'Rugged and durable Columbia footwear, perfect for both urban exploration and outdoor adventures. Built for comfort and long-lasting performance in any terrain.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['timberland', 'nike-zoom', 'asics-performance-runner'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'men-open',
-    name: 'Men Open Comfort',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-10 at 12.31.44 PM.jpeg', hint: 'men open shoes' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.31.44 PM (1).jpeg', hint: 'men open shoes side' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.31.43 PM.jpeg', hint: 'men open shoes detail' }
-    ],
-    description: 'Premium open-toe comfort for men. Designed with breathable materials and a supportive sole, perfect for the modern gentleman in Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'girls-open-shoes',
-    name: 'Girls Open Shoes',
-    price: 1499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-10 at 12.30.51 PM.jpeg', hint: 'girls open shoes' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (1).jpeg', hint: 'girls open shoes side' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (2).jpeg', hint: 'girls open shoes detail' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.30.52 PM (3).jpeg', hint: 'girls open shoes profile' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.30.53 PM.jpeg', hint: 'girls open shoes back' }
-    ],
-    description: 'Elegant and comfortable open shoes for girls, perfect for special occasions and daily wear. Crafted with soft materials to ensure comfort for active little ones.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-open', 'led-kids-sneakers'],
-    sizes: ['24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'led-kids-sneakers',
-    name: 'LED Kids Sneakers',
-    price: 1799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM (2).jpeg', hint: 'led kids sneakers' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM.jpeg', hint: 'led kids sneakers side' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.54 PM (1).jpeg', hint: 'led kids sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM.jpeg', hint: 'led kids sneakers back' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM (2).jpeg', hint: 'led kids sneakers top' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.29.53 PM (1).jpeg', hint: 'led kids sneakers bottom' }
-    ],
-    description: 'Brighten up their steps with these fun and durable LED Kids Sneakers. Designed for comfort and high-energy play, featuring vibrant lights that kids love.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-active-sneakers', 'kids-sneakers', 'kids-open'],
-    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'aldo-casual',
-    name: 'ALDO CASUAL SNEAKERS',
-    price: 4499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-10 at 12.28.54 PM.jpeg', hint: 'aldo casual sneakers' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (1).jpeg', hint: 'aldo casual sneakers side' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (2).jpeg', hint: 'aldo casual sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.28.55 PM (3).jpeg', hint: 'aldo casual sneakers back' },
-      { url: '/WhatsApp Image 2026-02-10 at 12.28.56 PM.jpeg', hint: 'aldo casual sneakers top' }
-    ],
-    description: 'Sophisticated and versatile, the ALDO Casual Sneakers offer a clean, modern aesthetic perfect for any outfit in Nairobi. Crafted with premium materials for long-lasting comfort.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['samba-single-sole', 'nike-nocta', 'nb-classic-sneakers'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nike-nocta',
-    name: 'Nike Nocta',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-09 at 5.18.26 PM.jpeg', hint: 'nike nocta' },
-      { url: '/WhatsApp Image 2026-02-09 at 5.18.26 PM (1).jpeg', hint: 'nike nocta profile' }
-    ],
-    description: 'Elevate your street game with the Nike Nocta. A perfect blend of high-fashion aesthetics and athletic functionality, designed for those who move through the night in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['max-air', 'nike-vomero', 'nike-zoom'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'cloud-surfer',
-    name: 'Cloud Surfer',
-    price: 3800,
-    images: [
-      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM.jpeg', hint: 'cloud surfer' },
-      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (3).jpeg', hint: 'cloud surfer side' },
-      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (2).jpeg', hint: 'cloud surfer detail' },
-      { url: '/WhatsApp Image 2026-02-09 at 10.21.33 AM (1).jpeg', hint: 'cloud surfer back' }
-    ],
-    description: 'Experience the sensation of running on clouds with the Cloud Surfer. Engineered for ultimate comfort and a responsive ride, perfect for the active urban lifestyle in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-zoom', 'asics-performance-runner', 'nike-vomero'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'under-armor-elite',
-    name: 'Under Armor Elite',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.09 PM (1).jpeg', hint: 'under armor elite' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.09 PM.jpeg', hint: 'under armor elite detail' }
-    ],
-    description: 'Elite performance Under Armor sneakers, built for the athlete who demands more. Offering enhanced support and responsiveness for the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['under-armour', 'nike-zoom', 'asics-performance-runner'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'billionaire-boots',
-    name: 'Billionaire Boots',
-    price: 4499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (2).jpeg', hint: 'billionaire boots side' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM.jpeg', hint: 'billionaire boots detail' }
-    ],
-    description: 'Exquisite luxury boots crafted for those who demand the finest. Combining premium materials with a bold design, these boots are the ultimate statement of success in Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['timberland', 'mens-casual-loafers'],
-    sizes: ['39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'max-air-classic',
-    name: 'Max Air',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM (1).jpeg', hint: 'max air side' }
-    ],
-    description: 'Experience superior cushioning and legendary style with the Max Air. Designed for ultimate comfort and a standout look, perfect for the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-vomero', 'nike-zoom', 'sb-dunks', 'jordan-3'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'timberland-classic',
-    name: 'Timberland Boots',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland boots' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (3).jpeg', hint: 'timberland side' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (2).jpeg', hint: 'timberland detail' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (1).jpeg', hint: 'timberland back' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.03 PM.jpeg', hint: 'timberland top' }
-    ],
-    description: 'Classic Timberland boots, built for durability and rugged style. A staple for any outdoor or urban wardrobe in Nairobi, providing both comfort and a powerful presence.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Classic Tan']
-  },
-  {
-    id: 'under-armour-classic',
-    name: 'Under Armour',
-    price: 3799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' },
-      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM (1).jpeg', hint: 'under armour side' }
-    ],
-    description: 'High-performance Under Armour sneakers designed for ultimate durability and comfort. Perfect for both athletic training and casual wear in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-vomero', 'nike-zoom', 'asics-performance-runner'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'samba-single-sole-classic',
-    name: 'Samba single sole',
-    price: 2499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (1).jpeg', hint: 'samba single sole' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (2).jpeg', hint: 'samba single sole side' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM.jpeg', hint: 'samba single sole detail' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.38.04 PM.jpeg', hint: 'samba single sole back' }
-    ],
-    description: 'The Samba single sole brings a sleek, low-profile look to the classic indoor soccer silhouette. Featuring a clean design and premium materials, it\'s a versatile choice for any casual outfit in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['floral-samba', 'samoa-classic', 'nb-classic-sneakers'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Classic White/Black']
-  },
-  {
-    id: 'floral-samba-classic',
-    name: 'Floral Samba',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM.jpeg', hint: 'floral samba' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM (2).jpeg', hint: 'floral samba side' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM (1).jpeg', hint: 'floral samba detail' }
-    ],
-    description: 'A beautiful floral take on the classic Samba silhouette. Combining iconic street style with a fresh, artistic print, these sneakers are perfect for making a statement in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['samoa-classic', 'nb-classic-sneakers', 'nike-zoom'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42'],
-    colors: ['Floral Multi']
-  },
-  {
-    id: 'nike-vomero-classic',
-    name: 'Nike Vomero',
-    price: 3799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM.jpeg', hint: 'nike vomero' },
-      { url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM (1).jpeg', hint: 'nike vomero profile' }
-    ],
-    description: 'The Nike Vomero offers superior cushioning and a smooth ride, making it a favorite for long runs and daily comfort. Its breathable mesh and supportive design ensure a premium experience.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-zoom', 'nb-9060', 'asics-performance-runner'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'sb-dunks-classic',
-    name: 'SB Dunks',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (2).jpeg', hint: 'sb dunks profile' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (3).jpeg', hint: 'sb dunks side' }
-    ],
-    description: 'The SB Dunk is a legendary skate shoe that has become a staple in streetwear. Known for its comfort, durability, and unique colorways, it\'s perfect for the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['jordan-3', 'jordan-voodoo', 'nike-zoom', 'nb-9060'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'jordan-3-classic',
-    name: 'Jordan 3',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3 sneakers' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM (2).jpeg', hint: 'jordan 3 side' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM (1).jpeg', hint: 'jordan 3 detail' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM.jpeg', hint: 'jordan 3 front' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM (2).jpeg', hint: 'jordan 3 back' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.29 PM (1).jpeg', hint: 'jordan 3 lifestyle' }
-    ],
-    description: 'The Jordan 3 is a legendary silhouette featuring the iconic elephant print and visible Air cushioning. A cornerstone of sneaker culture, perfect for making a statement on the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['jordan-voodoo', 'nike-zoom', 'bape-star', 'nb-9060'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Classic Multi']
-  },
-  {
-    id: 'nb-classic-sneakers-classic',
-    name: 'New Balance Classic',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM (1).jpeg', hint: 'new balance sneakers' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM.jpeg', hint: 'new balance sneakers side' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.47.23 PM (1).jpeg', hint: 'new balance sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-06 at 3.47.23 PM (2).jpeg', hint: 'new balance sneakers back' }
-    ],
-    description: 'The New Balance classic collection offers timeless style and exceptional comfort. Built with premium materials and a supportive sole, these sneakers are perfect for everyday wear in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nb-9060', 'nb-9060-alt', 'nike-zoom', 'asics-performance-runner'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'soccer-boots-classic',
-    name: 'Elite Soccer Boots',
-    price: 3999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots side' },
-      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM.jpeg', hint: 'soccer boots detail' }
-    ],
-    description: 'Engineered for elite performance on the pitch. These soccer boots provide exceptional traction, ball control, and comfort for the competitive player in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['asics-performance-runner', 'nike-zoom', 'nb-9060'],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Professional Multi']
-  },
-  {
-    id: 'mens-casual-loafers-classic',
-    name: 'Men\'s Casual Loafers',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'mens casual loafers' },
-      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM (1).jpeg', hint: 'mens casual loafers side' }
-    ],
-    description: 'Sophisticated and versatile casual loafers for the modern man. Handcrafted with premium materials for a comfortable fit that transitions effortlessly from office to evening.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['mens-handcrafted-sandals', 'mens-comfort-sandals', 'samoa-classic'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'mens-comfort-sandals-classic',
-    name: 'Men\'s Comfort Sandals',
-    price: 1800,
-    images: [
-      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (1).jpeg', hint: 'mens comfort sandals' },
-      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (2).jpeg', hint: 'mens comfort sandals side' },
-      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM.jpeg', hint: 'mens comfort sandals detail' }
-    ],
-    description: 'Lightweight and durable comfort sandals for men. Designed with a supportive footbed and breathable straps, perfect for casual outings and daily wear in warm weather.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['mens-handcrafted-sandals', 'samoa-classic', 'nb-9060'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'asics-performance-runner-classic',
-    name: 'ASICS Performance Runner',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg', hint: 'asics performance runner' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM.jpeg', hint: 'asics performance runner view' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.01 AM (1).jpeg', hint: 'asics performance runner detail' }
-    ],
-    description: 'Engineered for the ultimate running experience, the ASICS Performance Runner provides superior shock absorption and a responsive ride. Perfect for both serious training and premium street style.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'nike-zoom', 'nb-9060'],
-    sizes: ['36', '37', '38', '39', '40'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'mens-handcrafted-sandals-classic',
-    name: 'Men\'s Handcrafted Sandals',
-    price: 1999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'mens handcrafted sandals' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (1).jpeg', hint: 'mens handcrafted sandals view' },
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.53 AM (2).jpeg', hint: 'mens handcrafted sandals detail' }
-    ],
-    description: 'Premium handcrafted men\'s sandals designed for ultimate comfort and durability. Perfect for casual wear and everyday style in Nairobi.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['samoa-classic', 'nb-9060', 'asics-gel-sneakers'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Tan/Brown']
-  },
-  {
-    id: 'nb-9060-alt-classic',
-    name: 'New Balance 9060',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 12.20.56 PM.jpeg', hint: 'new balance 9060 variant' }
-    ],
-    description: 'A modern expression of the refined style and innovation-led design that has made the 99X series home to some of the most iconic models in New Balance history.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nb-9060', 'nike-ld-waffle', 'nike-zoom'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nb-9060-classic-luxe',
-    name: 'New Balance 9060',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM (1).jpeg', hint: 'new balance 9060' },
-      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM.jpeg', hint: 'new balance 9060 view' }
-    ],
-    description: 'The New Balance 9060 is a new expression of the refined style and innovation-led design that has made the 99X series home to some of the most iconic models in New Balance history.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-ld-waffle', 'nike-zoom', 'asics-gel-sneakers'],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nike-ld-waffle-classic',
-    name: 'Nike LD waffle',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg', hint: 'nike ld waffle' }
-    ],
-    description: 'The Nike LD Waffle is a fusion of two iconic silhouettes, offering a unique layered look and exceptional comfort. A premium choice for any sneaker collection.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'nike-zoom-classic',
-    name: 'Nike zoom',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom sneakers' },
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (2).jpeg', hint: 'nike zoom side' },
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.06 PM.jpeg', hint: 'nike zoom detail' }
-    ],
-    description: 'Experience responsive cushioning and an iconic design with the Nike Zoom. Perfect for performance and street style.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['bape-star', 'jordan-voodoo', 'asics-gel-sneakers', 'nike-ld-waffle'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'bape-star-classic',
-    name: 'Bape star',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.37 PM.jpeg', hint: 'bape star side' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.38 PM.jpeg', hint: 'bape star detail' }
-    ],
-    description: 'The Bape Star collection brings bold, iconic streetwear design to your rotation. Featuring distinctive patterns and premium materials, these sneakers are a must-have for the modern collector.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['jordan-voodoo', 'asics-gel-sneakers', 'samoa-classic', 'nike-zoom'],
-    sizes: ['40', '41', '42', '43', '44'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'jordan-voodoo-classic',
-    name: 'Jordan Voodoo',
-    price: 3499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg', hint: 'jordan voodoo' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM (1).jpeg', hint: 'jordan voodoo profile' }
-    ],
-    description: 'The Jordan Voodoo edition brings a unique, mystical aesthetic to the classic silhouette. Featuring earthy tones and intricate details, it\'s a standout piece for any sneaker enthusiast.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['asics-gel-sneakers', 'samoa-classic', 'bape-star', 'nike-zoom', 'nike-ld-waffle'],
-    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Earthy Multi']
-  },
-  {
-    id: 'asics-gel-sneakers-classic',
-    name: 'ASICS GEL Sneakers',
-    price: 2999,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.21.20 PM.jpeg', hint: 'asics gel sneakers detail' }
-    ],
-    description: 'High-performance ASICS GEL sneakers designed for ultimate comfort and support. Perfect for both athletic activities and stylish everyday wear in Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['samoa-classic', 'jordan-voodoo', 'bape-star', 'nike-zoom'],
-    sizes: ['36', '37', '38', '39', '40', '41'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'kids-active-sneakers-classic',
-    name: 'Kids Active Sneakers',
-    price: 1799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active sneakers' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (1).jpeg', hint: 'kids active sneakers blue' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.06 PM (2).jpeg', hint: 'kids active sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM (2).jpeg', hint: 'kids active sneakers profile' },
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.07 PM.jpeg', hint: 'kids active sneakers side' }
-    ],
-    description: 'Modern active sneakers for juniors. Built for performance and style, these sneakers provide excellent support for all-day activities.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-open'],
-    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'kids-sneakers-classic',
-    name: 'Kids Urban Sneakers',
-    price: 1799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids sneakers' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM (1).jpeg', hint: 'kids sneakers blue' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM (2).jpeg', hint: 'kids sneakers detail' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.20 AM.jpeg', hint: 'kids sneakers profile' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.22 AM (1).jpeg', hint: 'kids sneakers sole' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.23 AM.jpeg', hint: 'kids sneakers back' }
-    ],
-    description: 'Stylish and durable urban sneakers for kids. Designed for comfort and long-lasting wear, perfect for school or weekend adventures.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-open', 'kids-active-sneakers'],
-    sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'kids-open-classic',
-    name: 'Kids Open Comfort',
-    price: 1499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM.jpeg', hint: 'kids sandals' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (1).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (2).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM (3).jpeg', hint: 'kids sandals view' },
-      { url: '/WhatsApp Image 2026-02-06 at 10.02.22 AM (1).jpeg', hint: 'kids sandals view' }
-    ],
-    description: 'Ultra-comfortable open-toe sandals for children. Designed for all-day play with a secure fit and breathable materials, perfect for active kids.',
-    category: 'mini-icons',
-    subcategory: null,
-    relatedProducts: ['kids-sneakers', 'kids-active-sneakers'],
-    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
-    colors: ['Multi-color']
-  },
-  {
-    id: 'samoa-classic-edition',
-    name: 'Samoa Classic',
-    price: 2799,
-    images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa sneakers' }
-    ],
-    description: 'A timeless silhouette that combines heritage style with modern comfort. This classic design is built for durability and style, perfect for the streets of Nairobi.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: ['nike-zoom', 'bape-star', 'jordan-voodoo', 'asics-gel-sneakers'],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Classic White']
   }
 ];
 
