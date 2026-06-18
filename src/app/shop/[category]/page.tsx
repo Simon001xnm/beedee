@@ -39,7 +39,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
   }
 
   const currentPage = parseInt(page || '1', 10);
-  const itemsPerPage = 10; // 2 rows of 5 columns = 10 items
+  const itemsPerPage = 12; // Adjusted for 4-column layout
   
   const allCategoryProducts = getProductsByCategory(categoryId);
   const totalItems = allCategoryProducts.length;
@@ -74,7 +74,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
 
       {paginatedProducts.length > 0 ? (
         <>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-12 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-12 mb-20">
             {paginatedProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}

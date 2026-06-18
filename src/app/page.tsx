@@ -7,7 +7,6 @@ import {
   ShieldCheck, 
   RefreshCcw, 
   ChevronRight,
-  TrendingUp,
   LayoutGrid,
   User,
   Zap,
@@ -15,7 +14,6 @@ import {
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
-import { cn } from '@/lib/utils';
 
 export default function Home() {
   // landing exclusives are the only items shown in the bestseller grid
@@ -144,7 +142,7 @@ export default function Home() {
         </div>
         
         {trendingItems.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {trendingItems.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
