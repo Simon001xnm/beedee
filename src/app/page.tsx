@@ -10,10 +10,12 @@ import {
   LayoutGrid,
   User,
   Zap,
-  Sparkles
+  Sparkles,
+  Timer
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
+import { FlashSaleBanner } from '@/components/flash-sale-banner';
 
 export default function Home() {
   // landing exclusives are the only items shown in the bestseller grid
@@ -21,6 +23,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-8 pb-20">
+      <FlashSaleBanner />
       
       {/* Marketplace Multi-Column Hero Section */}
       <section className="bg-white border-b border-gray-100">
@@ -78,14 +81,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-accent/5 rounded-xl p-6 flex-1 border border-accent/20 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
-                   <Zap className="h-12 w-12 text-accent" />
+              <div className="bg-accent/10 rounded-xl p-6 flex-1 border border-accent/20 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:scale-110 transition-transform">
+                   <Timer className="h-12 w-12 text-accent" />
                 </div>
-                <span className="text-[10px] font-black text-accent uppercase tracking-[0.3em] mb-2 block">Flash Deal</span>
-                <h4 className="text-lg font-black text-primary leading-tight mb-4">Save 20% on your first premium order</h4>
+                <span className="text-[10px] font-black text-accent uppercase tracking-[0.3em] mb-2 block animate-pulse">Ending Soon</span>
+                <h4 className="text-lg font-black text-primary leading-tight mb-4 uppercase">CLEARANCE: SAVE UP TO 50% TODAY</h4>
                 <Link href="/shop" className="text-xs font-bold text-primary underline underline-offset-4 decoration-accent hover:text-accent transition-colors">
-                  Claim Offer
+                  Shop Flash Sale
                 </Link>
               </div>
             </div>
@@ -128,16 +131,17 @@ export default function Home() {
 
       {/* Landing Page Offer Gallery */}
       <section className="container-market">
-        <div className="flex justify-between items-end mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Inventory</span>
-            <h2 className="text-2xl md:text-4xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Inventory Flush</span>
+            <h2 className="text-2xl md:text-5xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
               <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
-              NEW COLLECTION ARRIVALS
+              BOUTIQUE CLEARANCE EVENT
             </h2>
+            <p className="text-sm text-muted-foreground mt-2 font-medium">STRICTLY LIMITED QUANTITIES. UNBEATABLE OFFERS ON ALL HIGHLIGHTED ITEMS.</p>
           </div>
-          <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group">
-            Browse Entire Shop <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group border-b-2 border-accent pb-2">
+            Access Full Catalog <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
         
@@ -149,7 +153,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed">
-             <p className="text-muted-foreground">New offers coming soon to the landing gallery.</p>
+             <p className="text-muted-foreground">New clearance offers coming soon.</p>
           </div>
         )}
       </section>
@@ -159,10 +163,10 @@ export default function Home() {
         <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
            <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">Explore More</span>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">Can't find your fit? Access our full catalog.</h2>
+              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">Everything Must Go</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">STOCK IS MOVING FAST. SECURE YOUR PAIR NOW.</h2>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-16 px-16 rounded-full transition-all hover:scale-105 shadow-2xl">
-                  <Link href="/shop">Shop All Collections</Link>
+                  <Link href="/shop">Shop Entire Sale</Link>
               </Button>
            </div>
         </div>

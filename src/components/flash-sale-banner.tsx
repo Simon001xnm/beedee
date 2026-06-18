@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { X, Sparkles } from 'lucide-react';
+import { X, Sparkles, Timer } from 'lucide-react';
 
 export function FlashSaleBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -19,13 +18,13 @@ export function FlashSaleBanner() {
       </div>
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
         <div className="flex items-center gap-2">
-          <Sparkles className="h-4 w-4 text-accent animate-pulse" />
+          <Timer className="h-4 w-4 text-accent animate-pulse" />
           <p className="font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase">
-            Exclusive Launch: <span className="text-accent">SAVE UP TO 30%</span> ON SELECTED PREMIUM KICKS
+            CLEARANCE ALERT: <span className="text-accent">EVERYTHING MUST GO</span> - SHOP NEW MARKDOWNS
           </p>
         </div>
         <Link href="/shop" className="text-[10px] md:text-xs font-bold underline underline-offset-4 hover:text-accent transition-colors decoration-accent">
-          VIEW OFFERS
+          ACT NOW
         </Link>
         <button 
           onClick={() => setIsVisible(false)} 

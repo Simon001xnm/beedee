@@ -55,8 +55,8 @@ export function ProductCard({ product, className }: ProductCardProps) {
             </div>
           )}
           {isImageOffer && (
-            <div className="bg-accent text-primary text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg">
-              Limited Drop
+            <div className="bg-accent text-primary text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg border border-primary/10">
+              Clearance Offer
             </div>
           )}
         </div>
@@ -90,9 +90,9 @@ export function ProductCard({ product, className }: ProductCardProps) {
       
       {/* Action Footer for Image Offers */}
       {isImageOffer && (
-        <div className="p-4 border-t border-black/[0.03]">
-           <Button asChild variant="outline" className="w-full rounded-xl border-black/10 hover:bg-primary hover:text-white font-black uppercase tracking-widest text-[10px] h-12">
-              <Link href={`/shop/product/${product.id}`}>Reserve This Item</Link>
+        <div className="p-4 border-t border-black/[0.03] bg-secondary/30">
+           <Button asChild variant="default" className="w-full rounded-xl bg-primary text-white hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[10px] h-12 transition-all">
+              <Link href={`/shop/product/${product.id}`}>Claim This Offer</Link>
            </Button>
         </div>
       )}
