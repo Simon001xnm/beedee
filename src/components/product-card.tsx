@@ -24,7 +24,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         href={`/shop/product/${product.id}`} 
         className={cn(
           "relative block overflow-hidden bg-[#f9f9f9]",
-          isImageOffer ? "aspect-auto min-h-[400px]" : "aspect-[4/5]"
+          isImageOffer ? "aspect-auto min-h-[300px] md:min-h-[400px]" : "aspect-[4/5]"
         )}
       >
         <Image
@@ -54,48 +54,44 @@ export function ProductCard({ product, className }: ProductCardProps) {
               {isImageOffer ? "Stock Clearance" : "Luxe Edition"}
             </div>
           )}
-          {isImageOffer && (
-            <div className="bg-accent text-primary text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg border border-primary/10">
-              Limited Drop
-            </div>
-          )}
         </div>
       </Link>
 
-      {/* Narrative Container - Only show if not a self-contained image offer */}
-      {!isImageOffer && (
-        <div className="p-5 flex flex-col flex-1 gap-4">
-          <div className="space-y-1">
-            <Link href={`/shop/product/${product.id}`}>
-              <h3 className="text-sm font-black text-primary leading-tight uppercase tracking-tight group-hover:text-accent transition-colors">
-                {product.name}
-              </h3>
-            </Link>
-            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60">
-              {product.category.replace('-', ' ')}
-            </p>
-          </div>
+      {/* Narrative Container - Now shown for all products */}
+      <div className="p-5 flex flex-col flex-1 gap-4">
+        <div className="space-y-1">
+          <Link href={`/shop/product/${product.id}`}>
+            <h3 className="text-sm font-black text-primary leading-tight uppercase tracking-tight group-hover:text-accent transition-colors line-clamp-1">
+              {product.name}
+            </h3>
+          </Link>
+          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60">
+            {product.category.replace('-', ' ')}
+          </p>
+        </div>
 
-          <div className="flex items-end justify-between mt-auto">
+        <div className="space-y-3">
+          <p className="text-[11px] text-muted-foreground line-clamp-2 leading-relaxed">
+            {product.description}
+          </p>
+          
+          <div className="flex items-end justify-between mt-auto pt-2">
             <div className="flex flex-col">
-              <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Market Price</span>
-              <span className="text-xl font-black text-primary tracking-tighter leading-none">{formatPrice(product.price)}</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">
+                {product.price > 0 ? "Market Price" : "Event Pricing"}
+              </span>
+              <span className="text-lg font-black text-primary tracking-tighter leading-none">
+                {product.price > 0 ? formatPrice(product.price) : "SEE IMAGE"}
+              </span>
             </div>
-            <Button size="icon" variant="ghost" className="h-10 w-10 rounded-xl bg-secondary/50 hover:bg-primary hover:text-white transition-all">
-              <ShoppingBag className="h-4 w-4" />
+            <Button size="icon" variant="ghost" asChild className="h-10 w-10 rounded-xl bg-secondary/50 hover:bg-primary hover:text-white transition-all">
+              <Link href={`/shop/product/${product.id}`}>
+                <ShoppingBag className="h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
-      )}
-      
-      {/* Action Footer for Image Offers */}
-      {isImageOffer && (
-        <div className="p-4 border-t border-black/[0.03] bg-secondary/30">
-           <Button asChild variant="default" className="w-full rounded-xl bg-primary text-white hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[10px] h-12 transition-all">
-              <Link href={`/shop/product/${product.id}`}>Add To Cart</Link>
-           </Button>
-        </div>
-      )}
+      </div>
     </article>
   );
 }

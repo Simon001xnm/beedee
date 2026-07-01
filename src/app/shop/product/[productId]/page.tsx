@@ -128,11 +128,11 @@ export default function ProductPage({ params }: ProductPageProps) {
               <div className="flex items-center gap-4">
                 <span className="text-[10px] font-black tracking-[0.4em] uppercase text-accent border-b border-accent pb-1">{category?.name}</span>
                 <Badge className="bg-primary/5 text-primary border-none text-[9px] font-black tracking-widest px-3 py-1 uppercase">
-                  {isImageOffer ? "Limited Clearance" : "In Reserve"}
+                  {isImageOffer ? "Limited Clearance" : "Premium Stock"}
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-primary tracking-tighter leading-none uppercase">
-                {isImageOffer ? "EXCLUSIVE CLEARANCE ITEM" : product.name}
+                {product.name}
               </h1>
               
               <div className="flex flex-wrap items-center gap-8">
