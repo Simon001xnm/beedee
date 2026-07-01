@@ -3,28 +3,13 @@ import type { Product, Category } from './types';
 // IDs of products that should be exclusive to the Hero section
 const HERO_ONLY_IDS: string[] = [];
 
-// IDs of products that are for the landing page grid only (image-based offers)
+// IDs of products that are for the landing page grid (image-based offers)
 const LANDING_OFFER_IDS: string[] = [
-  'offer-landing-20',
-  'offer-landing-19',
-  'offer-landing-18',
-  'offer-landing-17',
-  'offer-landing-16',
-  'offer-landing-15',
-  'offer-landing-14',
-  'offer-landing-13',
-  'offer-landing-12',
-  'offer-landing-11',
-  'offer-landing-10',
-  'offer-landing-9', 
-  'offer-landing-8',
-  'offer-landing-7',
-  'offer-landing-6',
-  'offer-landing-5',
-  'offer-landing-4',
-  'offer-landing-3',
-  'offer-landing-2',
-  'offer-landing-1'
+  'offer-landing-20', 'offer-landing-19', 'offer-landing-18', 'offer-landing-17',
+  'offer-landing-16', 'offer-landing-15', 'offer-landing-14', 'offer-landing-13',
+  'offer-landing-12', 'offer-landing-11', 'offer-landing-10', 'offer-landing-9',
+  'offer-landing-8', 'offer-landing-7', 'offer-landing-6', 'offer-landing-5',
+  'offer-landing-4', 'offer-landing-3', 'offer-landing-2', 'offer-landing-1'
 ];
 
 export const categories: Category[] = [
@@ -34,255 +19,7 @@ export const categories: Category[] = [
   { id: 'mini-icons', name: 'Mini Icons', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=800', imageHint: 'kids shoes' },
 ];
 
-/**
- * All products in the marketplace. 
- * Latest products are added to the TOP of the array.
- */
 export const products: Product[] = [
-  {
-    id: 'offer-landing-20',
-    name: 'Boutique Collection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.05.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-19',
-    name: 'Elite Series Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.04.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-18',
-    name: 'Heritage Choice Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.22.04 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-17',
-    name: 'Premium Edition Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.59 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-16',
-    name: 'Signature Collection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.58.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-15',
-    name: 'Luxe Selection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.57.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-14',
-    name: 'Elite Arrival Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.56.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-13',
-    name: 'Boutique Series Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.56 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-12',
-    name: 'Heritage Edition Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.55.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-11',
-    name: 'Premium Arrival Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.55 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-10',
-    name: 'Signature Choice Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.54.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-9',
-    name: 'Heritage Collection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.53.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-8',
-    name: 'Elite Edition Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.53 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-7',
-    name: 'Signature Series Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.52.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-6',
-    name: 'Boutique Choice Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.51.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-5',
-    name: 'Luxe Arrival Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.51 (1).jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-4',
-    name: 'Premium Selection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.49.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-3',
-    name: 'Exclusive Collection Item',
-    price: 0,
-    images: [{ url: '/WhatsApp Image 2026-06-17 at 22.21.43.jpeg', hint: 'sneaker offer' }],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-2',
-    name: 'New Collection Offer',
-    price: 0,
-    images: [
-      { url: '/WhatsApp Image 2026-06-17 at 22.21.42 (1).jpeg', hint: 'premium sneakers offer' }
-    ],
-    description: 'Exclusive arrival. See image for detailed pricing and model specs.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
-  {
-    id: 'offer-landing-1',
-    name: 'Premium Offer',
-    price: 0, 
-    images: [
-      { url: '/WhatsApp Image 2026-06-17 at 22.21.40.jpeg', hint: 'premium offer' }
-    ],
-    description: 'New arrivals collection. Please see image for specific model names and pricing details.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  },
   {
     id: 'timberland-premium-luxe',
     name: 'Timberland Premium Luxe',
@@ -294,7 +31,7 @@ export const products: Product[] = [
     description: 'The pinnacle of rugged luxury. This Timberland Premium Luxe edition combines the brand\'s legendary durability with an elevated aesthetic for the modern Nairobi gentleman.',
     category: 'gentlemens-quarters',
     subcategory: null,
-    relatedProducts: ['timberland', 'billionaire-boots'],
+    relatedProducts: ['timberland-v3', 'timberland-premium', 'billionaire-boots'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic Wheat']
   },
@@ -307,7 +44,7 @@ export const products: Product[] = [
       { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM (1).jpeg', hint: 'asics elite view' },
       { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM.jpeg', hint: 'asics elite side' }
     ],
-    description: 'The Asics Elite represents the pinnacle of performance and style. Engineered for maximum comfort and durability.',
+    description: 'The Asics Elite represents the pinnacle of performance and style. Engineered for maximum comfort and durability, these sneakers are perfect for the active urbanite in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['asics-performance-runner', 'nike-zoom', 'nb-9060'],
@@ -321,7 +58,7 @@ export const products: Product[] = [
     images: [
       { url: '/Image 2026-03-25 at 3.08.59 PM.jpeg', hint: 'jordan 13' }
     ],
-    description: 'The Jordan 13 is a legendary basketball silhouette known for its unique design and exceptional performance.',
+    description: 'The Jordan 13 is a legendary basketball silhouette known for its unique design and exceptional performance. A must-have for any sneakerhead in Nairobi.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['jordan-3', 'jordan-voodoo', 'sb-dunks'],
@@ -335,23 +72,108 @@ export const products: Product[] = [
     images: [
       { url: '/WhatsApp Image 2026-02-13 at 1.18.02 PM.jpeg', hint: 'hermes sandals' }
     ],
-    description: 'Timeless elegance meets modern comfort. These Hermes sandals are handcrafted for the sophisticated individual.',
+    description: 'Timeless elegance meets modern comfort. These Hermes sandals are handcrafted for the sophisticated individual, perfect for warm Nairobi days.',
     category: 'gentlemens-quarters',
     subcategory: null,
-    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals'],
+    relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals', 'mens-handcrafted-sandals'],
     sizes: ['40', '41', '42', '43', '44'],
     colors: ['Multi-color']
   },
+  {
+    id: 'puma-gt',
+    name: 'Puma GT',
+    price: 3799,
+    images: [
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM (1).jpeg', hint: 'puma gt' },
+      { url: '/WhatsApp Image 2026-02-13 at 1.16.09 PM.jpeg', hint: 'puma gt side' }
+    ],
+    description: 'Dynamic and stylish, the Puma GT offers a perfect blend of performance and street-ready design. Built for comfort and speed on the streets of Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-zoom', 'under-armour'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'jellyfish-sneakers',
+    name: 'Jellyfish sneakers',
+    price: 4499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 10.49.10 AM.jpeg', hint: 'jellyfish sneakers' },
+      { url: '/WhatsApp Image 2026-02-12 at 10.49.11 AM (1).jpeg', hint: 'jellyfish sneakers side' }
+    ],
+    description: 'Distinctive and modern, the Jellyfish sneakers offer a unique aesthetic with superior comfort. A bold choice for the trendsetters in Nairobi.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['max-air', 'nike-zoom'],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-boots',
+    name: 'Kids Boots',
+    price: 2499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM (1).jpeg', hint: 'kids boots' },
+      { url: '/WhatsApp Image 2026-02-12 at 10.48.05 AM.jpeg', hint: 'kids boots side' }
+    ],
+    description: 'Rugged and stylish boots for kids, designed for durability and comfort. Perfect for any adventure in Nairobi.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: ['kids-active-sneakers', 'kids-sneakers'],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'],
+    colors: ['Tan/Brown']
+  },
+  {
+    id: 'timberland-v3',
+    name: 'Timberland',
+    price: 3499,
+    images: [
+      { url: '/WhatsApp Image 2026-02-12 at 4.10.28 PM.jpeg', hint: 'timberland boots' },
+      { url: '/WhatsApp Image 2026-02-12 at 4.10.29 PM.jpeg', hint: 'timberland boots side' }
+    ],
+    description: 'Rugged and iconic Timberland boots, designed for the modern trailblazer. Crafted with premium materials for ultimate durability and comfort on the streets of Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland', 'timberland-premium', 'billionaire-boots'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'timberland-premium',
+    name: 'Timberland Premium',
+    price: 3999,
+    images: [
+      { url: '/WhatsApp Image 2026-02-11 at 11.45.15 AM.jpeg', hint: 'timberland premium' }
+    ],
+    description: 'The latest addition to our Timberland collection, featuring premium materials and an iconic silhouette. Built for durability and style on the streets of Nairobi.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland', 'billionaire-boots', 'mens-casual-loafers'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan']
+  },
+  ...Array.from({ length: 20 }, (_, i) => ({
+    id: `offer-landing-${20 - i}`,
+    name: `Clearance Offer ${20 - i}`,
+    price: 0,
+    images: [{ url: `/WhatsApp Image 2026-06-17 at 22.21.${(40 + i).toString().padStart(2, '0')}.jpeg`, hint: 'clearance sneaker' }],
+    description: 'Exclusive clearance arrival. See image for detailed pricing and model specs.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: []
+  })),
   {
     id: 'billionaire-boots',
     name: 'Billionaire Boots',
     price: 4499,
     images: [
       { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (2).jpeg', hint: 'billionaire boots side' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM.jpeg', hint: 'billionaire boots detail' }
+      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (2).jpeg', hint: 'billionaire boots side' }
     ],
-    description: 'Exquisite luxury boots crafted for those who demand the finest. Combining premium materials with a bold design, these boots are the ultimate statement of success.',
+    description: 'Exquisite luxury boots crafted for those who demand the finest.',
     category: 'gentlemens-quarters',
     subcategory: null,
     relatedProducts: ['timberland', 'mens-casual-loafers'],
@@ -363,13 +185,12 @@ export const products: Product[] = [
     name: 'Max Air',
     price: 3999,
     images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM (1).jpeg', hint: 'max air side' }
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' }
     ],
-    description: 'Experience superior cushioning and legendary style with the Max Air. Designed for ultimate comfort and a standout look.',
+    description: 'Experience superior cushioning and legendary style with the Max Air.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['nike-vomero', 'nike-zoom', 'sb-dunks', 'jordan-3'],
+    relatedProducts: ['nike-vomero', 'nike-zoom'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Multi-color']
   },
@@ -378,11 +199,9 @@ export const products: Product[] = [
     name: 'Timberland Boots',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland boots' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (3).jpeg', hint: 'timberland side' },
-      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM (2).jpeg', hint: 'timberland detail' }
+      { url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland boots' }
     ],
-    description: 'Classic Timberland boots, built for durability and rugged style. A staple for any outdoor or urban wardrobe.',
+    description: 'Classic Timberland boots, built for durability and rugged style.',
     category: 'gentlemens-quarters',
     subcategory: null,
     relatedProducts: ['mens-casual-loafers', 'mens-comfort-sandals'],
@@ -394,13 +213,12 @@ export const products: Product[] = [
     name: 'Under Armour',
     price: 3799,
     images: [
-      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' },
-      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM (1).jpeg', hint: 'under armour side' }
+      { url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' }
     ],
-    description: 'High-performance Under Armour sneakers designed for ultimate durability and comfort.',
+    description: 'High-performance Under Armour sneakers designed for ultimate durability.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['nike-vomero', 'nike-zoom', 'asics-performance-runner'],
+    relatedProducts: ['nike-vomero', 'nike-zoom'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Multi-color']
   },
@@ -411,7 +229,7 @@ export const products: Product[] = [
     images: [
       { url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (1).jpeg', hint: 'samba single sole' }
     ],
-    description: 'The Samba single sole brings a sleek, low-profile look to the classic indoor soccer silhouette.',
+    description: 'The Samba single sole brings a sleek, low-profile look.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['floral-samba', 'nb-classic-sneakers'],
@@ -451,9 +269,9 @@ export const products: Product[] = [
     name: 'SB Dunks',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (2).jpeg', hint: 'sb dunks profile' }
+      { url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (2).jpeg', hint: 'sb dunks' }
     ],
-    description: 'The SB Dunk is a legendary skate shoe that has become a staple in streetwear.',
+    description: 'The SB Dunk is a legendary skate shoe that has become a staple.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['jordan-3', 'nb-9060'],
@@ -465,7 +283,7 @@ export const products: Product[] = [
     name: 'Jordan 3',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3 sneakers' }
+      { url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3' }
     ],
     description: 'The Jordan 3 is a legendary silhouette featuring the iconic elephant print.',
     category: 'sneaker-lab',
@@ -479,9 +297,9 @@ export const products: Product[] = [
     name: 'New Balance Classic',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM (1).jpeg', hint: 'new balance sneakers' }
+      { url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM (1).jpeg', hint: 'new balance' }
     ],
-    description: 'The New Balance classic collection offers timeless style and exceptional comfort.',
+    description: 'Timeless style and exceptional comfort.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['nb-9060', 'asics-performance-runner'],
@@ -493,7 +311,7 @@ export const products: Product[] = [
     name: 'Elite Soccer Boots',
     price: 3999,
     images: [
-      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots side' }
+      { url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots' }
     ],
     description: 'Engineered for elite performance on the pitch.',
     category: 'sneaker-lab',
@@ -507,7 +325,7 @@ export const products: Product[] = [
     name: 'Men\'s Casual Loafers',
     price: 3499,
     images: [
-      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'mens casual loafers' }
+      { url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'mens loafers' }
     ],
     description: 'Sophisticated and versatile casual loafers for the modern man.',
     category: 'gentlemens-quarters',
@@ -521,7 +339,7 @@ export const products: Product[] = [
     name: 'Men\'s Comfort Sandals',
     price: 1800,
     images: [
-      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (1).jpeg', hint: 'mens comfort sandals' }
+      { url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (1).jpeg', hint: 'mens sandals' }
     ],
     description: 'Lightweight and durable comfort sandals for men.',
     category: 'gentlemens-quarters',
@@ -535,7 +353,7 @@ export const products: Product[] = [
     name: 'ASICS Performance Runner',
     price: 3499,
     images: [
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg', hint: 'asics performance runner' }
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.00 AM (1).jpeg', hint: 'asics runner' }
     ],
     description: 'Engineered for the ultimate running experience.',
     category: 'sneaker-lab',
@@ -549,7 +367,7 @@ export const products: Product[] = [
     name: 'Men\'s Handcrafted Sandals',
     price: 1999,
     images: [
-      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'mens handcrafted sandals' }
+      { url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'handcrafted sandals' }
     ],
     description: 'Premium handcrafted men\'s sandals designed for ultimate comfort.',
     category: 'gentlemens-quarters',
@@ -563,12 +381,12 @@ export const products: Product[] = [
     name: 'New Balance 9060',
     price: 3499,
     images: [
-      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM (1).jpeg', hint: 'new balance 9060' }
+      { url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM (1).jpeg', hint: 'nb 9060' }
     ],
     description: 'The New Balance 9060 is a new expression of refined style.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['nike-ld-waffle', 'nike-zoom'],
+    relatedProducts: ['nike-zoom'],
     sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Multi-color']
   },
@@ -577,9 +395,9 @@ export const products: Product[] = [
     name: 'Nike zoom',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom sneakers' }
+      { url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom' }
     ],
-    description: 'Experience responsive cushioning and an iconic design with the Nike Zoom.',
+    description: 'Experience responsive cushioning and an iconic design.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['bape-star', 'jordan-voodoo'],
@@ -591,7 +409,7 @@ export const products: Product[] = [
     name: 'Bape star',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star sneakers' }
+      { url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star' }
     ],
     description: 'The Bape Star collection brings bold, iconic streetwear design.',
     category: 'sneaker-lab',
@@ -619,7 +437,7 @@ export const products: Product[] = [
     name: 'ASICS GEL Sneakers',
     price: 2999,
     images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel sneakers' }
+      { url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel' }
     ],
     description: 'High-performance ASICS GEL sneakers designed for ultimate comfort.',
     category: 'sneaker-lab',
@@ -633,9 +451,9 @@ export const products: Product[] = [
     name: 'Kids Active Sneakers',
     price: 1799,
     images: [
-      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active sneakers' }
+      { url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active' }
     ],
-    description: 'Modern active sneakers for juniors. Built for performance and style.',
+    description: 'Modern active sneakers for juniors.',
     category: 'mini-icons',
     subcategory: null,
     relatedProducts: ['kids-sneakers', 'kids-open'],
@@ -647,7 +465,7 @@ export const products: Product[] = [
     name: 'Kids Urban Sneakers',
     price: 1799,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids sneakers' }
+      { url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids urban' }
     ],
     description: 'Stylish and durable urban sneakers for kids.',
     category: 'mini-icons',
@@ -675,7 +493,7 @@ export const products: Product[] = [
     name: 'Samoa Classic',
     price: 2799,
     images: [
-      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa sneakers' }
+      { url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa' }
     ],
     description: 'A timeless silhouette that combines heritage style with modern comfort.',
     category: 'sneaker-lab',
@@ -686,31 +504,21 @@ export const products: Product[] = [
   }
 ];
 
-export const getProducts = () => {
-  return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id));
-}
+export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.id));
 
-export const getLandingExclusiveProducts = () => {
-  return products.filter(p => LANDING_OFFER_IDS.includes(p.id));
-}
+export const getLandingExclusiveProducts = () => products.filter(p => LANDING_OFFER_IDS.includes(p.id));
 
-export const getHeroProducts = () => {
-  // Return products that are NOT landing exclusives for the hero carousel
-  // We take the top premium non-offer items
-  return products.filter(p => !LANDING_OFFER_IDS.includes(p.id)).slice(0, 10);
-}
+export const getHeroProducts = () => products.filter(p => !LANDING_OFFER_IDS.includes(p.id)).slice(0, 8);
 
 export const getProductById = (id: string) => products.find(p => p.id === id);
 
 export const getProductsByCategory = (categoryId: string) => {
-    return [...products].filter(p => (p.category === categoryId || p.subcategory === categoryId) && !HERO_ONLY_IDS.includes(p.id));
+    return products.filter(p => (p.category === categoryId || p.subcategory === categoryId) && !HERO_ONLY_IDS.includes(p.id));
 }
 
 export const getCategoryById = (id: string) => categories.find(c => c.id === id);
 
-export const getFeaturedProducts = (limit: number = 4) => {
-  return [...products].filter(p => !HERO_ONLY_IDS.includes(p.id)).slice(0, limit);
-}
+export const getFeaturedProducts = (limit: number = 4) => products.filter(p => !HERO_ONLY_IDS.includes(p.id)).slice(0, limit);
 
 export const getRelatedProducts = (product: Product) => {
     return products.filter(p => product.relatedProducts.includes(p.id) && p.id !== product.id);
