@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getLandingExclusiveProducts, categories } from '@/lib/data';
+import { getHourlyRotatingProducts, categories, getHeroProducts } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
@@ -16,9 +16,12 @@ import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
 import { FlashSaleBanner } from '@/components/flash-sale-banner';
 
+// Revalidate this page every hour to refresh the rotating product slice
+export const revalidate = 3600;
+
 export default function Home() {
-  // Landing exclusives are the specific clearance offers with details in images
-  const clearanceItems = getLandingExclusiveProducts();
+  // Get 12 products for the landing page grid (rotating hourly)
+  const rotatingClearanceItems = getHourlyRotatingProducts(12);
 
   return (
     <div className="flex flex-col gap-8 pb-20">
@@ -95,25 +98,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Landing Page Clearance Gallery */}
+      {/* Landing Page Clearance Gallery (Rotating Batch) */}
       <section className="container-market">
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Inventory</span>
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Hourly Offers</span>
             <h2 className="text-2xl md:text-5xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
               <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
               BEE & DEE STOCK CLEARANCE
             </h2>
-            <p className="text-sm text-muted-foreground mt-2 font-medium">STRICTLY LIMITED QUANTITIES. PRICES AS DISPLAYED ON IMAGES.</p>
+            <p className="text-sm text-muted-foreground mt-2 font-medium uppercase tracking-widest">Selected Inventory - Refreshed Hourly</p>
           </div>
           <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group border-b-2 border-accent pb-2">
             Access Full Catalog <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
         
-        {clearanceItems.length > 0 ? (
+        {rotatingClearanceItems.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
-            {clearanceItems.map(product => (
+            {rotatingClearanceItems.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>

@@ -508,6 +508,26 @@ export const getProducts = () => products.filter(p => !HERO_ONLY_IDS.includes(p.
 
 export const getLandingExclusiveProducts = () => products.filter(p => LANDING_OFFER_IDS.includes(p.id));
 
+/**
+ * Returns a slice of products that rotates based on the current hour.
+ */
+export const getHourlyRotatingProducts = (limit: number = 12) => {
+  const pool = products; // All products available for rotation
+  if (pool.length === 0) return [];
+  
+  // Calculate hours since epoch to use as a stable rotation seed
+  const hoursSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60));
+  const startIndex = (hoursSinceEpoch * limit) % pool.length;
+  
+  // Select items, wrapping around if needed
+  const result = [];
+  for (let i = 0; i < limit; i++) {
+    result.push(pool[(startIndex + i) % pool.length]);
+  }
+  
+  return result;
+};
+
 export const getHeroProducts = () => products.filter(p => !LANDING_OFFER_IDS.includes(p.id)).slice(0, 8);
 
 export const getProductById = (id: string) => products.find(p => p.id === id);
