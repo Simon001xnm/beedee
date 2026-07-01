@@ -1,8 +1,5 @@
 import type { Product, Category } from './types';
 
-// IDs of products that should be exclusive to the Hero section
-const HERO_ONLY_IDS: string[] = [];
-
 // Exact filenames provided by user for the clearance collection
 const CLEARANCE_IMAGES = [
   'WhatsApp Image 2026-06-17 at 22.21.40.jpeg',
@@ -15,6 +12,15 @@ const CLEARANCE_IMAGES = [
   'WhatsApp Image 2026-06-17 at 22.21.53 (1).jpeg',
   'WhatsApp Image 2026-06-17 at 22.21.53.jpeg',
   'Image 2026-06-17 at 22.22.05.jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.30 PM (1).jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.04 PM (3).jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.04 PM (2).jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.04 PM (1).jpeg',
+  'WhatsApp Image 2026-02-07 at 1.08.03 PM.jpeg',
+  'WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg',
+  'WhatsApp Image 2026-02-07 at 11.40.57 AM (1).jpeg',
   'WhatsApp Image 2026-06-17 at 22.22.04.jpeg',
   'WhatsApp Image 2026-06-17 at 22.22.04 (1).jpeg',
   'WhatsApp Image 2026-06-17 at 22.21.59 (1).jpeg',
@@ -36,6 +42,78 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
   {
+    id: 'billionaire-boots',
+    name: 'Billionaire Boots',
+    price: 4499,
+    images: [{ url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' }],
+    description: 'Exquisite luxury boots crafted for those who demand the finest.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland-premium-luxe'],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'max-air',
+    name: 'Max Air',
+    price: 3999,
+    images: [{ url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' }],
+    description: 'Superior cushioning and legendary style.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-zoom'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'timberland-boots',
+    name: 'Timberland Boots',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland' }],
+    description: 'Classic rugged durability.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: ['timberland-v3'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan']
+  },
+  {
+    id: 'under-armour',
+    name: 'Under Armour',
+    price: 3799,
+    images: [{ url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' }],
+    description: 'High-performance athletic sneakers.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['nike-vomero'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nike-vomero',
+    name: 'Nike Vomero',
+    price: 3799,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM.jpeg', hint: 'nike vomero' }],
+    description: 'Premium running comfort.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['asics-performance-runner'],
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'jordan-3',
+    name: 'Jordan 3',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3' }],
+    description: 'Legendary silhouette with elephant print.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: ['jordan-voodoo'],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic Multi']
+  },
+  {
     id: 'timberland-premium-luxe',
     name: 'Timberland Premium Luxe',
     price: 4499,
@@ -43,10 +121,10 @@ export const products: Product[] = [
       { url: '/WhatsApp Image 2026-04-23 at 15.52.42.jpeg', hint: 'timberland premium luxe' },
       { url: '/WhatsApp Image 2026-04-23 at 15.52.43.jpeg', hint: 'timberland premium luxe side' }
     ],
-    description: 'The pinnacle of rugged luxury. This Timberland Premium Luxe edition combines legendary durability with an elevated aesthetic.',
+    description: 'The pinnacle of rugged luxury.',
     category: 'gentlemens-quarters',
     subcategory: null,
-    relatedProducts: ['billionaire-boots', 'timberland-premium'],
+    relatedProducts: ['billionaire-boots', 'timberland-boots'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic Wheat']
   },
@@ -58,10 +136,10 @@ export const products: Product[] = [
       { url: '/WhatsApp Image 2026-03-31 at 3.32.50 PM.jpeg', hint: 'asics elite' },
       { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM (1).jpeg', hint: 'asics elite view' }
     ],
-    description: 'High-performance Asics Elite engineered for maximum comfort and urban style in Nairobi.',
+    description: 'High-performance Asics Elite engineered for maximum comfort.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['asics-performance-runner', 'nike-zoom'],
+    relatedProducts: ['nike-zoom'],
     sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Performance Multi']
   },
@@ -77,32 +155,16 @@ export const products: Product[] = [
     sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
     colors: []
   })),
-  {
-    id: 'billionaire-boots',
-    name: 'Billionaire Boots',
-    price: 4499,
-    images: [
-      { url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' }
-    ],
-    description: 'Exquisite luxury boots crafted for those who demand the finest.',
-    category: 'gentlemens-quarters',
-    subcategory: null,
-    relatedProducts: ['timberland-premium-luxe'],
-    sizes: ['39', '40', '41', '42', '43', '44', '45'],
-    colors: ['Multi-color']
-  }
 ];
 
 export const getProducts = () => products;
 
-export const getLandingExclusiveProducts = () => products.filter(p => p.id.startsWith('offer-'));
-
 /**
  * Returns a slice of products that rotates based on the current hour.
- * Exclusively returns clearance offers for the landing page grid.
+ * Now includes all products so that the "first added" ones appear on the landing page grid.
  */
 export const getHourlyRotatingProducts = (limit: number = 12) => {
-  const pool = getLandingExclusiveProducts();
+  const pool = products; 
   if (pool.length === 0) return [];
   
   const hoursSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60));
