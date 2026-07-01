@@ -15,7 +15,6 @@ import { getHeroProducts } from "@/lib/data";
 import { formatPrice } from "@/lib/utils";
 
 export function HeroCarousel() {
-  // Use products that are NOT restricted to the landing page grid
   const featuredProducts = getHeroProducts();
 
   if (featuredProducts.length === 0) {
@@ -24,7 +23,7 @@ export function HeroCarousel() {
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]" />
         <div className="max-w-xl relative z-10">
           <span className="text-accent font-black uppercase tracking-[0.6em] text-[10px] mb-6 block">Concierge Entry</span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-8 leading-tight tracking-tighter uppercase">Refining the Stride.</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 leading-tight tracking-tighter uppercase">Refining the Stride.</h2>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase tracking-widest text-[10px] h-16 px-12 rounded-full transition-all hover:scale-105 shadow-2xl">
             <Link href="/shop">Access Collections</Link>
           </Button>
@@ -54,12 +53,11 @@ export function HeroCarousel() {
                   alt={product.name}
                   fill
                   priority
-                  className="object-cover object-center transition-transform duration-[10000ms] scale-100 group-data-[state=active]:scale-110 animate-kenburns"
+                  className="object-cover object-center transition-transform duration-[10000ms] scale-100 animate-kenburns"
                   sizes="100vw"
                   data-ai-hint={product.images[0].hint || "luxury shoes"}
               />
               
-              {/* Cinematic Vignette */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-transparent hidden lg:block" />
 
@@ -70,7 +68,7 @@ export function HeroCarousel() {
                            <p className="text-accent font-black uppercase tracking-[0.4em] text-[10px] animate-in slide-in-from-bottom-full duration-700">Premium Selection</p>
                         </div>
                         <div className="overflow-hidden mb-6">
-                           <h2 className="text-xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
+                           <h2 className="text-xl md:text-2xl lg:text-3xl font-black leading-tight tracking-tighter uppercase animate-in slide-in-from-bottom-full duration-1000 delay-100">
                              {product.name}
                            </h2>
                         </div>
