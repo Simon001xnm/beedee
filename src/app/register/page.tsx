@@ -12,7 +12,7 @@ import { Label } from '@/components/ui/label';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Loader2 } from 'lucide-react';
 
 export default function RegisterPage() {
   const { auth, db, isReady } = useFirebase();
@@ -30,8 +30,8 @@ export default function RegisterPage() {
     if (!isReady || !auth || !db) {
       toast({ 
         variant: "destructive", 
-        title: "System Initializing", 
-        description: "Please wait a moment while we establish a secure connection." 
+        title: "System Provisioning", 
+        description: "Your secure cloud environment is still being prepared. Please try again in 30 seconds." 
       });
       return;
     }
@@ -67,7 +67,7 @@ export default function RegisterPage() {
           : "Your Bee & Dee profile is ready."
       });
 
-      router.push(isFirstUser ? '/admin' : '/');
+      router.push(isFirstUser ? '/admin' : '/account');
     } catch (error: any) {
       toast({ 
         variant: "destructive", 
@@ -80,38 +80,48 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-20 flex justify-center">
-      <Card className="w-full max-w-md shadow-2xl rounded-[3rem] border-primary/5">
+    <div className="container mx-auto px-4 py-20 flex justify-center bg-[#f4f4f4] min-h-screen">
+      <Card className="w-full max-w-md shadow-2xl rounded-[3rem] border-primary/5 bg-white">
         <CardHeader className="text-center space-y-4 pt-10">
           <div className="mx-auto h-16 w-16 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
              <ShieldCheck className="h-8 w-8 text-primary" />
           </div>
           <div className="space-y-1">
-            <CardTitle className="text-4xl font-black uppercase tracking-tighter">Join Bee & Dee</CardTitle>
+            <CardTitle className="text-4xl font-black uppercase tracking-tighter text-primary">Join Bee & Dee</CardTitle>
             <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Your Luxury Experience</CardDescription>
           </div>
         </CardHeader>
         <CardContent className="px-10 pb-12">
+          {!isReady && (
+            <div className="mb-6 p-4 bg-accent/5 rounded-2xl border border-accent/20 flex items-center gap-3">
+              <Loader2 className="h-4 w-4 text-accent animate-spin" />
+              <p className="text-[10px] font-bold text-accent uppercase tracking-widest">Awaiting Secure Cloud Sync...</p>
+            </div>
+          )}
           <form onSubmit={handleRegister} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label className="text-[10px] uppercase font-black tracking-widest ml-1">First Name</Label>
-                <Input className="h-12 rounded-xl" placeholder="Lenny" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">First Name</Label>
+                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Lenny" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
               </div>
               <div className="space-y-2">
-                <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Last Name</Label>
-                <Input className="h-12 rounded-xl" placeholder="Wambui" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Last Name</Label>
+                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Wambui" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Email Address</Label>
-              <Input className="h-12 rounded-xl" type="email" placeholder="lenny@beedee.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Email Address</Label>
+              <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" type="email" placeholder="lenny@beedee.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="space-y-2">
-              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Password</Label>
-              <Input className="h-12 rounded-xl" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
+              <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Password</Label>
+              <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
-            <Button type="submit" className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl" disabled={loading}>
+            <Button 
+              type="submit" 
+              className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl disabled:opacity-50" 
+              disabled={loading}
+            >
               {loading ? "Establishing Profile..." : "Create Account"}
             </Button>
             <div className="text-center text-[10px] font-bold uppercase tracking-widest text-primary/40 pt-4">
