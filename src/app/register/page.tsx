@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc, getDocs, collection, query, limit, serverTimestamp } from 'firebase/firestore';
-import { useFirebase } from '@/firebase';
+import { initializeFirebase } from '@/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,7 +14,6 @@ import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
 
 export default function RegisterPage() {
-  const { auth, db, isReady } = useFirebase();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -25,14 +24,11 @@ export default function RegisterPage() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Attempting registration regardless of isReady state to provide instant access
-    // Firebase SDK will throw a specific error if keys are missing
     setLoading(true);
+
     try {
-      if (!auth || !db) {
-        throw new Error("Security services are still initializing. Please wait a moment.");
-      }
+      // Direct initialization for instant access
+      const { auth, firestore: db } = initializeFirebase();
 
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
@@ -59,20 +55,17 @@ export default function RegisterPage() {
       toast({ 
         title: isFirstUser ? "Welcome, Super Admin" : "Account Created", 
         description: isFirstUser 
-          ? "You have been granted full management access. Redirecting to admin core..." 
+          ? "You have been granted full management access." 
           : "Your Bee & Dee profile is ready."
       });
 
       router.push(isFirstUser ? '/admin' : '/account');
     } catch (error: any) {
-      const message = error.code === 'auth/invalid-api-key' 
-        ? "The secure cloud sync is still in progress. Please try again in a few seconds."
-        : error.message;
-        
+      console.error("Registration failed:", error);
       toast({ 
         variant: "destructive", 
         title: "Registration Error", 
-        description: message 
+        description: error.message || "Failed to create account." 
       });
     } finally {
       setLoading(false);

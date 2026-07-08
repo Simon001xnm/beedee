@@ -1,10 +1,9 @@
-
 'use client';
 
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, updateDoc, arrayUnion, serverTimestamp } from 'firebase/firestore';
-import { useFirebase } from '@/firebase';
+import { initializeFirebase } from '@/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,7 +13,6 @@ import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 
 export default function LoginPage() {
-  const { auth, db } = useFirebase();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,13 +21,10 @@ export default function LoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!auth || !db) {
-      toast({ variant: "destructive", title: "System Readying", description: "Firebase is initializing. Please try again in 2 seconds." });
-      return;
-    }
-
     setLoading(true);
+
     try {
+      const { auth, firestore: db } = initializeFirebase();
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       const now = new Date().toISOString();
