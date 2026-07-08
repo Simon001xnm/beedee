@@ -1,3 +1,4 @@
+
 'use client';
 
 /**
@@ -13,4 +14,7 @@ export const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-export const isFirebaseConfigValid = !!firebaseConfig.apiKey && firebaseConfig.apiKey !== 'undefined';
+export const isFirebaseConfigValid = 
+  !!firebaseConfig.apiKey && 
+  firebaseConfig.apiKey !== 'undefined' && 
+  firebaseConfig.apiKey !== '';

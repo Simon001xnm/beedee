@@ -3,29 +3,31 @@
   "entities": {
     "UserProfile": {
       "title": "User Profile",
-      "description": "Extended user information including role and activity history.",
+      "description": "User profile with role-based permissions and activity tracking.",
       "type": "object",
       "properties": {
         "uid": { "type": "string" },
         "email": { "type": "string", "format": "email" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
         "role": { 
           "type": "string", 
           "enum": ["Super Admin", "Manager", "Cashier", "Inventory Manager", "Customer Support", "Customer"] 
         },
-        "firstName": { "type": "string" },
-        "lastName": { "type": "string" },
+        "isActive": { "type": "boolean" },
         "lastLogin": { "type": "string", "format": "date-time" },
         "loginHistory": { 
-          "array", 
+          "type": "array", 
           "items": { "type": "string", "format": "date-time" } 
         },
-        "isActive": { "type": "boolean" }
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
       },
       "required": ["uid", "email", "role"]
     },
     "Product": {
       "title": "Product",
-      "description": "Detailed product information stored in Firestore.",
+      "description": "Inventory product details.",
       "type": "object",
       "properties": {
         "id": { "type": "string" },
@@ -33,9 +35,8 @@
         "price": { "type": "number" },
         "description": { "type": "string" },
         "category": { "type": "string" },
-        "images": { "type": "array", "items": { "type": "object" } },
-        "inventoryCount": { "type": "number" },
-        "createdAt": { "type": "string", "format": "date-time" }
+        "stockCount": { "type": "number" },
+        "images": { "type": "array", "items": { "type": "string" } }
       }
     }
   },
@@ -43,17 +44,19 @@
     "providers": ["password"]
   },
   "firestore": {
-    "/users/{userId}": {
-      "schema": "UserProfile",
-      "description": "User profiles and permissions."
-    },
-    "/products/{productId}": {
-      "schema": "Product",
-      "description": "Inventory and product details."
-    },
-    "/orders/{orderId}": {
-      "schema": { "type": "object" },
-      "description": "Customer purchase records."
-    }
+    "/users/{userId}": { "schema": "UserProfile", "description": "System users and roles." },
+    "/products/{productId}": { "schema": "Product", "description": "Master product catalog." },
+    "/categories/{categoryId}": { "schema": { "type": "object" }, "description": "Product departments." },
+    "/orders/{orderId}": { "schema": { "type": "object" }, "description": "Customer orders." },
+    "/customers/{customerId}": { "schema": { "type": "object" }, "description": "Customer records." },
+    "/inventory/{itemId}": { "schema": { "type": "object" }, "description": "Stock tracking." },
+    "/payments/{paymentId}": { "schema": { "type": "object" }, "description": "Payment history." },
+    "/transactions/{txnId}": { "schema": { "type": "object" }, "description": "Financial ledger." },
+    "/website/{configId}": { "schema": { "type": "object" }, "description": "Site configurations." },
+    "/settings/{settingId}": { "schema": { "type": "object" }, "description": "System settings." },
+    "/pages/{pageId}": { "schema": { "type": "object" }, "description": "CMS pages." },
+    "/reports/{reportId}": { "schema": { "type": "object" }, "description": "Generated reports." },
+    "/reviews/{reviewId}": { "schema": { "type": "object" }, "description": "Product reviews." },
+    "/notifications/{notifId}": { "schema": { "type": "object" }, "description": "User notifications." }
   }
 }

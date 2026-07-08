@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -6,12 +7,8 @@ import { signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
-const INACTIVITY_TIMEOUT = 30 * 60 * 1000; // 30 minutes in milliseconds
+const INACTIVITY_TIMEOUT = 30 * 60 * 1000; // 30 minutes
 
-/**
- * Manages user session inactivity. 
- * Automatically logs out the user after 30 minutes of no interaction.
- */
 export function SessionManager() {
   const { auth } = useFirebase();
   const { toast } = useToast();
@@ -25,11 +22,11 @@ export function SessionManager() {
       await signOut(auth);
       toast({
         title: "Session Expired",
-        description: "You have been logged out due to inactivity.",
+        description: "You have been logged out due to inactivity for security.",
       });
       router.push('/login');
     } catch (error) {
-      console.error("Error signing out after inactivity:", error);
+      console.error("Session logout error:", error);
     }
   };
 
@@ -39,11 +36,9 @@ export function SessionManager() {
   };
 
   useEffect(() => {
-    // Track user session if logged in
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         resetTimer();
-        
         const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
         events.forEach(event => window.addEventListener(event, resetTimer));
 
@@ -51,15 +46,10 @@ export function SessionManager() {
           if (timeoutRef.current) clearTimeout(timeoutRef.current);
           events.forEach(event => window.removeEventListener(event, resetTimer));
         };
-      } else {
-        if (timeoutRef.current) clearTimeout(timeoutRef.current);
       }
     });
 
-    return () => {
-      unsubscribe();
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
+    return () => unsubscribe();
   }, [auth]);
 
   return null;

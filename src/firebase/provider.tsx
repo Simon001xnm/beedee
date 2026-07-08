@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -16,11 +17,13 @@ const FirebaseContext = createContext<FirebaseContextType | undefined>(undefined
 
 export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   const [services, setServices] = useState<FirebaseContextType | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [configError, setConfigError] = useState<string | null>(null);
 
   useEffect(() => {
+    // If the project is not yet provisioned, we might not have keys.
+    // In Firebase Studio, these are injected eventually.
     if (!isFirebaseConfigValid) {
-      setError("Firebase configuration is missing or invalid. Please check your environment variables.");
+      console.warn("Firebase configuration is pending or invalid.");
       return;
     }
 
@@ -29,19 +32,29 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
       const auth = getAuth(app);
       const db = getFirestore(app);
       setServices({ app, auth, db });
+      setConfigError(null);
     } catch (err: any) {
       console.error("Firebase initialization failed:", err);
-      setError(err.message);
+      setConfigError(err.message);
     }
   }, []);
 
-  if (error) {
+  if (!isFirebaseConfigValid || configError) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4 text-center">
-        <div className="max-w-md space-y-4">
-          <h1 className="text-2xl font-bold text-red-600">Configuration Error</h1>
-          <p className="text-slate-600">{error}</p>
-          <p className="text-sm text-slate-400">Ensure NEXT_PUBLIC_FIREBASE_API_KEY and other variables are set.</p>
+        <div className="max-w-md space-y-6 bg-white p-8 rounded-[2rem] shadow-2xl border border-red-50">
+          <div className="mx-auto h-16 w-16 bg-red-100 rounded-full flex items-center justify-center">
+             <div className="h-8 w-8 text-red-600 font-black text-2xl">!</div>
+          </div>
+          <div className="space-y-2">
+            <h1 className="text-2xl font-black uppercase tracking-tighter text-slate-900">System Setup Required</h1>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              {configError || "Firebase configuration is missing. Please ensure your Firebase Project is linked and environment variables are active."}
+            </p>
+          </div>
+          <div className="p-4 bg-slate-50 rounded-xl text-[10px] font-mono text-slate-400 break-all uppercase tracking-widest">
+            ERR: {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'PENDING_PROVISIONING'}
+          </div>
         </div>
       </div>
     );
@@ -49,10 +62,13 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
 
   if (!services) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="animate-pulse flex flex-col items-center gap-4">
-          <div className="h-12 w-12 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
-          <p className="font-bold text-primary uppercase tracking-widest text-xs">Initializing Secure Environment...</p>
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="animate-pulse flex flex-col items-center gap-6">
+          <div className="h-14 w-14 rounded-full border-[6px] border-primary/10 border-t-primary animate-spin"></div>
+          <div className="text-center">
+             <p className="font-black text-primary uppercase tracking-[0.3em] text-[10px]">Secure Environment</p>
+             <p className="text-slate-400 text-[9px] uppercase tracking-widest mt-1">Booting System Components...</p>
+          </div>
         </div>
       </div>
     );
