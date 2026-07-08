@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, getDocs, collection, query, limit } from 'firebase/firestore';
+import { doc, setDoc, getDocs, collection, query, limit, arrayUnion, serverTimestamp } from 'firebase/firestore';
 import { useFirebase } from '@/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -35,7 +35,9 @@ export default function RegisterPage() {
       const usersSnap = await getDocs(query(collection(db, 'users'), limit(1)));
       const isFirstUser = usersSnap.empty;
 
-      // 3. Create the Firestore profile
+      const now = new Date().toISOString();
+
+      // 3. Create the Firestore profile with foundation requirements
       await setDoc(doc(db, 'users', user.uid), {
         uid: user.uid,
         email: user.email,
@@ -43,8 +45,10 @@ export default function RegisterPage() {
         lastName,
         role: isFirstUser ? "Super Admin" : "Customer",
         isActive: true,
-        lastLogin: new Date().toISOString(),
-        createdAt: new Date().toISOString()
+        lastLogin: now,
+        loginHistory: arrayUnion(now),
+        createdAt: now,
+        updatedAt: serverTimestamp(),
       });
 
       toast({ 
@@ -56,10 +60,11 @@ export default function RegisterPage() {
 
       router.push(isFirstUser ? '/admin' : '/');
     } catch (error: any) {
+      console.error("Registration error:", error);
       toast({ 
         variant: "destructive", 
         title: "Registration failed", 
-        description: error.message 
+        description: error.message || "Please ensure your Firebase project is correctly configured."
       });
     } finally {
       setLoading(false);

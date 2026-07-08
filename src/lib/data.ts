@@ -1,6 +1,7 @@
+
 import type { Product, Category } from './types';
 
-// Exact filenames provided by user for the clearance collection
+// Detailed filenames for the clearance collection provided by user
 const CLEARANCE_IMAGES = [
   'WhatsApp Image 2026-06-17 at 22.21.40.jpeg',
   'Image 2026-06-17 at 22.21.42 (1).jpeg',
@@ -46,7 +47,7 @@ export const products: Product[] = [
     name: 'Billionaire Boots',
     price: 4499,
     images: [{ url: '/WhatsApp Image 2026-02-07 at 1.11.56 PM (1).jpeg', hint: 'billionaire boots' }],
-    description: 'Exquisite luxury boots crafted for those who demand the finest.',
+    description: 'Exquisite luxury boots crafted for those who demand the finest footwear in Nairobi.',
     category: 'gentlemens-quarters',
     subcategory: null,
     relatedProducts: ['timberland-premium-luxe'],
@@ -58,7 +59,7 @@ export const products: Product[] = [
     name: 'Max Air',
     price: 3999,
     images: [{ url: '/WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg', hint: 'max air' }],
-    description: 'Superior cushioning and legendary style.',
+    description: 'Experience superior cushioning and legendary style with the Max Air classic.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['nike-zoom'],
@@ -70,10 +71,10 @@ export const products: Product[] = [
     name: 'Timberland Boots',
     price: 2999,
     images: [{ url: '/WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg', hint: 'timberland' }],
-    description: 'Classic rugged durability.',
+    description: 'Classic rugged durability built for the urban explorer.',
     category: 'gentlemens-quarters',
     subcategory: null,
-    relatedProducts: ['timberland-v3'],
+    relatedProducts: ['timberland-premium-luxe'],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Tan']
   },
@@ -82,7 +83,7 @@ export const products: Product[] = [
     name: 'Under Armour',
     price: 3799,
     images: [{ url: '/WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg', hint: 'under armour' }],
-    description: 'High-performance athletic sneakers.',
+    description: 'High-performance athletic sneakers designed for endurance and comfort.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['nike-vomero'],
@@ -94,7 +95,7 @@ export const products: Product[] = [
     name: 'Nike Vomero',
     price: 3799,
     images: [{ url: '/WhatsApp Image 2026-02-06 at 5.36.55 PM.jpeg', hint: 'nike vomero' }],
-    description: 'Premium running comfort.',
+    description: 'Premium running comfort with a modern silhouette.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['asics-performance-runner'],
@@ -106,7 +107,7 @@ export const products: Product[] = [
     name: 'Jordan 3',
     price: 2999,
     images: [{ url: '/WhatsApp Image 2026-02-06 at 3.50.30 PM.jpeg', hint: 'jordan 3' }],
-    description: 'Legendary silhouette with elephant print.',
+    description: 'Legendary silhouette featuring iconic elephant print and premium leather.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['jordan-voodoo'],
@@ -121,7 +122,7 @@ export const products: Product[] = [
       { url: '/WhatsApp Image 2026-04-23 at 15.52.42.jpeg', hint: 'timberland premium luxe' },
       { url: '/WhatsApp Image 2026-04-23 at 15.52.43.jpeg', hint: 'timberland premium luxe side' }
     ],
-    description: 'The pinnacle of rugged luxury.',
+    description: 'The pinnacle of rugged luxury, featuring handcrafted leather and superior grip.',
     category: 'gentlemens-quarters',
     subcategory: null,
     relatedProducts: ['billionaire-boots', 'timberland-boots'],
@@ -136,7 +137,7 @@ export const products: Product[] = [
       { url: '/WhatsApp Image 2026-03-31 at 3.32.50 PM.jpeg', hint: 'asics elite' },
       { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM (1).jpeg', hint: 'asics elite view' }
     ],
-    description: 'High-performance Asics Elite engineered for maximum comfort.',
+    description: 'High-performance Asics Elite engineered for maximum comfort and speed.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['nike-zoom'],
@@ -145,10 +146,10 @@ export const products: Product[] = [
   },
   ...CLEARANCE_IMAGES.map((filename, i) => ({
     id: `offer-${i}`,
-    name: `Exclusive Clearance Item ${i + 1}`,
+    name: `Clearance Special Offer #${i + 1}`,
     price: 0,
     images: [{ url: `/${filename}`, hint: 'clearance offer' }],
-    description: 'BEE & DEE STOCK CLEARANCE. Limited availability arrival. See image for detailed pricing and features.',
+    description: 'BEE & DEE STOCK CLEARANCE. Exclusive event pricing. See image for detailed information.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: [],
@@ -161,7 +162,6 @@ export const getProducts = () => products;
 
 /**
  * Returns a slice of products that rotates based on the current hour.
- * Now includes all products so that the "first added" ones appear on the landing page grid.
  */
 export const getHourlyRotatingProducts = (limit: number = 12) => {
   const pool = products; 

@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/context/cart-context';
 import { FirebaseProvider } from '@/firebase';
 import { Inter } from 'next/font/google';
+import { SessionManager } from '@/components/session-manager';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <FirebaseProvider>
+          <SessionManager />
           <CartProvider>
             <div className="relative flex min-h-dvh flex-col">
               <Header />

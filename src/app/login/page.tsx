@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { doc, updateDoc, arrayUnion, serverTimestamp } from 'firebase/firestore';
 import { useFirebase } from '@/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,7 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 
 export default function LoginPage() {
-  const { auth } = useFirebase();
+  const { auth, db } = useFirebase();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -24,14 +25,30 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      const now = new Date().toISOString();
+
+      // Update foundation metadata
+      const profileRef = doc(db, 'users', user.uid);
+      await updateDoc(profileRef, {
+        lastLogin: now,
+        loginHistory: arrayUnion(now),
+        updatedAt: serverTimestamp(),
+      }).catch(() => {
+        // Fallback if profile doesn't exist yet for some reason
+        console.warn("Profile update failed during login. This is expected if the profile hasn't been created yet.");
+      });
+
       toast({ title: "Welcome back!", description: "You have successfully logged in." });
       router.push('/');
     } catch (error: any) {
+      console.error("Login error:", error);
       toast({ 
         variant: "destructive", 
         title: "Login failed", 
-        description: error.message 
+        description: error.message || "Invalid credentials or project configuration issue."
       });
     } finally {
       setLoading(false);
