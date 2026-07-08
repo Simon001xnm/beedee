@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -14,7 +15,7 @@ import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
 
 export default function RegisterPage() {
-  const { auth, db } = useFirebase();
+  const { auth, db, isReady } = useFirebase();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -26,11 +27,11 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!auth || !db) {
+    if (!isReady || !auth || !db) {
       toast({ 
         variant: "destructive", 
-        title: "Connection Readying", 
-        description: "Establishing secure link to the database. Please click again in a second." 
+        title: "System Initializing", 
+        description: "Please wait a moment while we establish a secure connection." 
       });
       return;
     }
@@ -60,9 +61,9 @@ export default function RegisterPage() {
       });
 
       toast({ 
-        title: isFirstUser ? "Welcome, Super Admin" : "Account Established", 
+        title: isFirstUser ? "Welcome, Super Admin" : "Account Created", 
         description: isFirstUser 
-          ? "You have full management access. Redirecting to core..." 
+          ? "You have been granted full management access. Redirecting to admin core..." 
           : "Your Bee & Dee profile is ready."
       });
 
@@ -70,7 +71,7 @@ export default function RegisterPage() {
     } catch (error: any) {
       toast({ 
         variant: "destructive", 
-        title: "Registration Denied", 
+        title: "Registration Error", 
         description: error.message 
       });
     } finally {
@@ -86,8 +87,8 @@ export default function RegisterPage() {
              <ShieldCheck className="h-8 w-8 text-primary" />
           </div>
           <div className="space-y-1">
-            <CardTitle className="text-4xl font-black uppercase tracking-tighter">B&D Identity</CardTitle>
-            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Your Premium Account</CardDescription>
+            <CardTitle className="text-4xl font-black uppercase tracking-tighter">Join Bee & Dee</CardTitle>
+            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Your Luxury Experience</CardDescription>
           </div>
         </CardHeader>
         <CardContent className="px-10 pb-12">
@@ -95,26 +96,26 @@ export default function RegisterPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label className="text-[10px] uppercase font-black tracking-widest ml-1">First Name</Label>
-                <Input className="h-12 rounded-xl" placeholder="Jane" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                <Input className="h-12 rounded-xl" placeholder="Lenny" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
               </div>
               <div className="space-y-2">
                 <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Last Name</Label>
-                <Input className="h-12 rounded-xl" placeholder="Doe" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                <Input className="h-12 rounded-xl" placeholder="Wambui" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Identity Email</Label>
-              <Input className="h-12 rounded-xl" type="email" placeholder="jane@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Email Address</Label>
+              <Input className="h-12 rounded-xl" type="email" placeholder="lenny@beedee.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="space-y-2">
-              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Security Key</Label>
+              <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Password</Label>
               <Input className="h-12 rounded-xl" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <Button type="submit" className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl" disabled={loading}>
-              {loading ? "Initializing..." : "Create Account"}
+              {loading ? "Establishing Profile..." : "Create Account"}
             </Button>
             <div className="text-center text-[10px] font-bold uppercase tracking-widest text-primary/40 pt-4">
-              Already verified? <Link href="/login" className="text-accent hover:underline">Sign In</Link>
+              Already have an account? <Link href="/login" className="text-accent hover:underline">Sign In</Link>
             </div>
           </form>
         </CardContent>
