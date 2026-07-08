@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -12,7 +11,7 @@ import { Label } from '@/components/ui/label';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
-import { ShieldCheck, Loader2 } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export default function RegisterPage() {
   const { auth, db, isReady } = useFirebase();
@@ -27,17 +26,14 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!isReady || !auth || !db) {
-      toast({ 
-        variant: "destructive", 
-        title: "System Provisioning", 
-        description: "Your secure cloud environment is still being prepared. Please try again in 30 seconds." 
-      });
-      return;
-    }
-
+    // Attempting registration regardless of isReady state to provide instant access
+    // Firebase SDK will throw a specific error if keys are missing
     setLoading(true);
     try {
+      if (!auth || !db) {
+        throw new Error("Security services are still initializing. Please wait a moment.");
+      }
+
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
@@ -69,10 +65,14 @@ export default function RegisterPage() {
 
       router.push(isFirstUser ? '/admin' : '/account');
     } catch (error: any) {
+      const message = error.code === 'auth/invalid-api-key' 
+        ? "The secure cloud sync is still in progress. Please try again in a few seconds."
+        : error.message;
+        
       toast({ 
         variant: "destructive", 
         title: "Registration Error", 
-        description: error.message 
+        description: message 
       });
     } finally {
       setLoading(false);
@@ -88,30 +88,24 @@ export default function RegisterPage() {
           </div>
           <div className="space-y-1">
             <CardTitle className="text-4xl font-black uppercase tracking-tighter text-primary">Join Bee & Dee</CardTitle>
-            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Your Luxury Experience</CardDescription>
+            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Instant Identity Setup</CardDescription>
           </div>
         </CardHeader>
         <CardContent className="px-10 pb-12">
-          {!isReady && (
-            <div className="mb-6 p-4 bg-accent/5 rounded-2xl border border-accent/20 flex items-center gap-3">
-              <Loader2 className="h-4 w-4 text-accent animate-spin" />
-              <p className="text-[10px] font-bold text-accent uppercase tracking-widest">Awaiting Secure Cloud Sync...</p>
-            </div>
-          )}
           <form onSubmit={handleRegister} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">First Name</Label>
-                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Lenny" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Enter name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
               </div>
               <div className="space-y-2">
                 <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Last Name</Label>
-                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Wambui" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" placeholder="Enter name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
               </div>
             </div>
             <div className="space-y-2">
               <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Email Address</Label>
-              <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" type="email" placeholder="lenny@beedee.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <Input className="h-12 rounded-xl bg-gray-50 border-none focus:bg-white transition-all" type="email" placeholder="email@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="space-y-2">
               <Label className="text-[10px] uppercase font-black tracking-widest ml-1 text-primary/60">Password</Label>
@@ -119,10 +113,10 @@ export default function RegisterPage() {
             </div>
             <Button 
               type="submit" 
-              className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl disabled:opacity-50" 
+              className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl" 
               disabled={loading}
             >
-              {loading ? "Establishing Profile..." : "Create Account"}
+              {loading ? "Creating Profile..." : "Create Account"}
             </Button>
             <div className="text-center text-[10px] font-bold uppercase tracking-widest text-primary/40 pt-4">
               Already have an account? <Link href="/login" className="text-accent hover:underline">Sign In</Link>

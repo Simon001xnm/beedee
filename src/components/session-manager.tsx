@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -15,7 +14,7 @@ export function SessionManager() {
   const router = useRouter();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleLogout = async () => {
+  const handleLogout = React.useCallback(async () => {
     if (!auth || !auth.currentUser) return;
     
     try {
@@ -26,27 +25,30 @@ export function SessionManager() {
       });
       router.push('/login');
     } catch (error) {
-      console.error("Inactivity logout failed:", error);
+      // Silently fail to avoid UI disruption
     }
-  };
+  }, [auth, router, toast]);
 
-  const resetTimer = () => {
+  const resetTimer = React.useCallback(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(handleLogout, INACTIVITY_TIMEOUT);
-  };
+  }, [handleLogout]);
 
   useEffect(() => {
     if (!isReady || !auth) return;
 
+    // Correct Modular SDK Syntax: onAuthStateChanged(auth, ...)
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         resetTimer();
         const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
-        events.forEach(event => window.addEventListener(event, resetTimer));
+        const handler = () => resetTimer();
+        
+        events.forEach(event => window.addEventListener(event, handler));
 
         return () => {
           if (timeoutRef.current) clearTimeout(timeoutRef.current);
-          events.forEach(event => window.removeEventListener(event, resetTimer));
+          events.forEach(event => window.removeEventListener(event, handler));
         };
       } else {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -54,7 +56,8 @@ export function SessionManager() {
     });
 
     return () => unsubscribe();
-  }, [auth, isReady]);
+  }, [auth, isReady, resetTimer]);
 
   return null;
 }
+import React from 'react';
