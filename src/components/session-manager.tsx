@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -26,7 +25,7 @@ export function SessionManager() {
       });
       router.push('/login');
     } catch (error) {
-      // Errors are handled centrally via listener if needed
+      console.error("Inactivity logout failed:", error);
     }
   };
 

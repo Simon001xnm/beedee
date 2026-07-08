@@ -1,11 +1,10 @@
-
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { FirebaseApp, initializeApp, getApps } from 'firebase/app';
 import { Auth, getAuth } from 'firebase/auth';
 import { Firestore, getFirestore } from 'firebase/firestore';
-import { firebaseConfig, isFirebaseConfigValid } from './config';
+import { firebaseConfig } from './config';
 
 interface FirebaseContextType {
   app: FirebaseApp | null;
@@ -27,15 +26,15 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    if (isFirebaseConfigValid) {
-      try {
-        const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-        setServices({ app, auth, db });
-      } catch (err) {
-        console.warn("Firebase initialization deferred: Project is still provisioning.", err);
-      }
+    try {
+      // Ensure we don't initialize multiple times
+      const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+      
+      setServices({ app, auth, db });
+    } catch (err) {
+      console.error("Firebase initialization failed:", err);
     }
   }, []);
 
@@ -48,6 +47,5 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
 
 export function useFirebase() {
   const context = useContext(FirebaseContext);
-  if (context === undefined) throw new Error('useFirebase must be used within FirebaseProvider');
   return context;
 }

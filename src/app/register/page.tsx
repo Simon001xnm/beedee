@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -26,8 +25,13 @@ export default function RegisterPage() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!auth || !db) {
-      toast({ variant: "destructive", title: "System Offline", description: "Firebase is not initialized yet. Please wait a moment." });
+      toast({ 
+        variant: "destructive", 
+        title: "Connection Readying", 
+        description: "Establishing secure link to the database. Please click again in a second." 
+      });
       return;
     }
 
@@ -36,7 +40,7 @@ export default function RegisterPage() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Check if this is the first user ever
+      // Check if this is the first user to assign Super Admin role
       const usersSnap = await getDocs(query(collection(db, 'users'), limit(1)));
       const isFirstUser = usersSnap.empty;
 
@@ -56,17 +60,17 @@ export default function RegisterPage() {
       });
 
       toast({ 
-        title: isFirstUser ? "Super Admin Initialized" : "Registration Complete", 
+        title: isFirstUser ? "Welcome, Super Admin" : "Account Established", 
         description: isFirstUser 
-          ? "Welcome. You have full access to the management core." 
-          : "Welcome to Bee & Dee. Your account is ready."
+          ? "You have full management access. Redirecting to core..." 
+          : "Your Bee & Dee profile is ready."
       });
 
       router.push(isFirstUser ? '/admin' : '/');
     } catch (error: any) {
       toast({ 
         variant: "destructive", 
-        title: "Registration Error", 
+        title: "Registration Denied", 
         description: error.message 
       });
     } finally {
@@ -107,7 +111,7 @@ export default function RegisterPage() {
               <Input className="h-12 rounded-xl" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <Button type="submit" className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl" disabled={loading}>
-              {loading ? "Establishing Identity..." : "Create Account"}
+              {loading ? "Initializing..." : "Create Account"}
             </Button>
             <div className="text-center text-[10px] font-bold uppercase tracking-widest text-primary/40 pt-4">
               Already verified? <Link href="/login" className="text-accent hover:underline">Sign In</Link>
