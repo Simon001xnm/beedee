@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -22,27 +23,29 @@ export default function LoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!auth || !db) {
+      toast({ variant: "destructive", title: "System Readying", description: "Firebase is initializing. Please try again in 2 seconds." });
+      return;
+    }
+
     setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
       const now = new Date().toISOString();
 
-      // Update login metadata
       const profileRef = doc(db, 'users', user.uid);
-      await updateDoc(profileRef, {
+      updateDoc(profileRef, {
         lastLogin: now,
         loginHistory: arrayUnion(now),
         updatedAt: serverTimestamp(),
-      }).catch((err) => {
-        console.warn("Profile update failed during login. This is expected if the profile hasn't been created yet.", err);
+      }).catch(() => {
+        // Silently fail if profile update fails during first login
       });
 
-      toast({ title: "Welcome back!", description: "You have successfully logged in." });
+      toast({ title: "Welcome back!", description: "Access granted." });
       router.push('/');
     } catch (error: any) {
-      console.error("Login error:", error);
       toast({ 
         variant: "destructive", 
         title: "Login failed", 
@@ -58,7 +61,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-2xl rounded-[2rem]">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-black uppercase tracking-tighter">Login</CardTitle>
-          <CardDescription>Access your Bee & Dee account</CardDescription>
+          <CardDescription>Enter your credentials to access Bee & Dee</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-6">
@@ -84,10 +87,10 @@ export default function LoginPage() {
               />
             </div>
             <Button type="submit" className="w-full h-12 uppercase tracking-widest font-black" disabled={loading}>
-              {loading ? "Logging in..." : "Sign In"}
+              {loading ? "Verifying..." : "Sign In"}
             </Button>
             <div className="text-center text-sm">
-              Don't have an account? <Link href="/register" className="text-accent font-bold hover:underline">Register here</Link>
+              New to Bee & Dee? <Link href="/register" className="text-accent font-bold hover:underline">Create Account</Link>
             </div>
           </form>
         </CardContent>

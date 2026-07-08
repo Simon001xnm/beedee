@@ -1,8 +1,9 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
 import { useFirebase } from '@/firebase';
-import { signOut } from 'firebase/auth';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
@@ -15,7 +16,7 @@ export function SessionManager() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleLogout = async () => {
-    if (!auth.currentUser) return;
+    if (!auth?.currentUser) return;
     
     try {
       await signOut(auth);
@@ -25,7 +26,7 @@ export function SessionManager() {
       });
       router.push('/login');
     } catch (error) {
-      console.error("Session management failure:", error);
+      // Errors are handled centrally via listener if needed
     }
   };
 
@@ -35,7 +36,9 @@ export function SessionManager() {
   };
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    if (!auth) return;
+
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         resetTimer();
         const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];

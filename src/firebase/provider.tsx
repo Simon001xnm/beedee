@@ -8,32 +8,39 @@ import { Firestore, getFirestore } from 'firebase/firestore';
 import { firebaseConfig, isFirebaseConfigValid } from './config';
 
 interface FirebaseContextType {
-  app: FirebaseApp;
-  auth: Auth;
-  db: Firestore;
+  app: FirebaseApp | null;
+  auth: Auth | null;
+  db: Firestore | null;
 }
 
-const FirebaseContext = createContext<FirebaseContextType | undefined>(undefined);
+const FirebaseContext = createContext<FirebaseContextType>({
+  app: null,
+  auth: null,
+  db: null
+});
 
 export function FirebaseProvider({ children }: { children: React.ReactNode }) {
-  const [services, setServices] = useState<FirebaseContextType | null>(null);
+  const [services, setServices] = useState<FirebaseContextType>({
+    app: null,
+    auth: null,
+    db: null
+  });
 
   useEffect(() => {
-    // Attempt initialization. If config is missing, we'll handle it gracefully in hooks.
-    try {
-      const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-      const auth = getAuth(app);
-      const db = getFirestore(app);
-      setServices({ app, auth, db });
-    } catch (err) {
-      console.warn("Firebase initialization deferred: Check configuration.", err);
+    if (isFirebaseConfigValid) {
+      try {
+        const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        setServices({ app, auth, db });
+      } catch (err) {
+        console.warn("Firebase initialization deferred: Project is still provisioning.", err);
+      }
     }
   }, []);
 
-  // We render children immediately to avoid "hell no" waiting screens.
-  // Hooks like useUser will handle the null state of services.
   return (
-    <FirebaseContext.Provider value={services || {} as FirebaseContextType}>
+    <FirebaseContext.Provider value={services}>
       {children}
     </FirebaseContext.Provider>
   );

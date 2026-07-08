@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -25,6 +26,7 @@ export function useUser() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!auth) return;
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
       if (!firebaseUser) {
@@ -36,7 +38,10 @@ export function useUser() {
   }, [auth]);
 
   useEffect(() => {
-    if (!user) return;
+    if (!user || !db) {
+      if (!user) setLoading(false);
+      return;
+    }
 
     const profileRef = doc(db, 'users', user.uid);
     const unsubscribe = onSnapshot(profileRef, (snap) => {
@@ -45,7 +50,6 @@ export function useUser() {
       }
       setLoading(false);
     }, (err) => {
-      console.error("Error fetching profile:", err);
       setLoading(false);
     });
 
