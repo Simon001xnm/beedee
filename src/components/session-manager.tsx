@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -7,7 +6,7 @@ import { signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
-const INACTIVITY_TIMEOUT = 30 * 60 * 1000; // 30 minutes
+const INACTIVITY_TIMEOUT = 30 * 60 * 1000; // 30 minutes for security
 
 export function SessionManager() {
   const { auth } = useFirebase();
@@ -21,12 +20,12 @@ export function SessionManager() {
     try {
       await signOut(auth);
       toast({
-        title: "Session Expired",
-        description: "You have been logged out due to inactivity for security.",
+        title: "Session Secured",
+        description: "You have been logged out for your security due to inactivity.",
       });
       router.push('/login');
     } catch (error) {
-      console.error("Session logout error:", error);
+      console.error("Session management failure:", error);
     }
   };
 

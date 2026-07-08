@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -20,10 +19,7 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   const [configError, setConfigError] = useState<string | null>(null);
 
   useEffect(() => {
-    // If the project is not yet provisioned, we might not have keys.
-    // In Firebase Studio, these are injected eventually.
     if (!isFirebaseConfigValid) {
-      console.warn("Firebase configuration is pending or invalid.");
       return;
     }
 
@@ -42,18 +38,18 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   if (!isFirebaseConfigValid || configError) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4 text-center">
-        <div className="max-w-md space-y-6 bg-white p-8 rounded-[2rem] shadow-2xl border border-red-50">
-          <div className="mx-auto h-16 w-16 bg-red-100 rounded-full flex items-center justify-center">
-             <div className="h-8 w-8 text-red-600 font-black text-2xl">!</div>
+        <div className="max-w-md space-y-6 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-primary/5">
+          <div className="mx-auto h-20 w-20 bg-accent rounded-3xl flex items-center justify-center shadow-xl rotate-3">
+             <div className="h-10 w-10 text-primary font-black text-3xl -rotate-3">!</div>
           </div>
-          <div className="space-y-2">
-            <h1 className="text-2xl font-black uppercase tracking-tighter text-slate-900">System Setup Required</h1>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              {configError || "Firebase configuration is missing. Please ensure your Firebase Project is linked and environment variables are active."}
+          <div className="space-y-3">
+            <h1 className="text-3xl font-black uppercase tracking-tighter text-primary leading-none">System Sync Required</h1>
+            <p className="text-slate-500 text-sm leading-relaxed font-medium">
+              {configError || "Your secure marketplace environment is preparing for launch. Please ensure your Firebase keys are active."}
             </p>
           </div>
-          <div className="p-4 bg-slate-50 rounded-xl text-[10px] font-mono text-slate-400 break-all uppercase tracking-widest">
-            ERR: {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'PENDING_PROVISIONING'}
+          <div className="p-4 bg-slate-50 rounded-2xl text-[9px] font-mono text-slate-400 break-all uppercase tracking-widest border border-slate-100">
+            CID: {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'PENDING_SYNC'}
           </div>
         </div>
       </div>
@@ -63,11 +59,11 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   if (!services) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="animate-pulse flex flex-col items-center gap-6">
-          <div className="h-14 w-14 rounded-full border-[6px] border-primary/10 border-t-primary animate-spin"></div>
+        <div className="flex flex-col items-center gap-6">
+          <div className="h-16 w-16 rounded-full border-[6px] border-primary/5 border-t-accent animate-spin"></div>
           <div className="text-center">
-             <p className="font-black text-primary uppercase tracking-[0.3em] text-[10px]">Secure Environment</p>
-             <p className="text-slate-400 text-[9px] uppercase tracking-widest mt-1">Booting System Components...</p>
+             <p className="font-black text-primary uppercase tracking-[0.4em] text-[10px]">Secure Core</p>
+             <p className="text-slate-400 text-[9px] uppercase tracking-widest mt-1">Initializing Security Protocols...</p>
           </div>
         </div>
       </div>
@@ -83,6 +79,6 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
 
 export function useFirebase() {
   const context = useContext(FirebaseContext);
-  if (!context) throw new Error('useFirebase must be used within FirebaseProvider');
+  if (context === undefined) throw new Error('useFirebase must be used within FirebaseProvider');
   return context;
 }

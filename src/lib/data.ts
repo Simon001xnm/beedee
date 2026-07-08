@@ -1,7 +1,6 @@
-
 import type { Product, Category } from './types';
 
-// Detailed filenames for the clearance collection provided by user
+// Visual clearance assets provided by user
 const CLEARANCE_IMAGES = [
   'WhatsApp Image 2026-06-17 at 22.21.40.jpeg',
   'Image 2026-06-17 at 22.21.42 (1).jpeg',
@@ -118,11 +117,8 @@ export const products: Product[] = [
     id: 'timberland-premium-luxe',
     name: 'Timberland Premium Luxe',
     price: 4499,
-    images: [
-      { url: '/WhatsApp Image 2026-04-23 at 15.52.42.jpeg', hint: 'timberland premium luxe' },
-      { url: '/WhatsApp Image 2026-04-23 at 15.52.43.jpeg', hint: 'timberland premium luxe side' }
-    ],
-    description: 'The pinnacle of rugged luxury, featuring handcrafted leather and superior grip.',
+    images: [{ url: '/WhatsApp Image 2026-04-23 at 15.52.42.jpeg', hint: 'timberland premium luxe' }],
+    description: 'The pinnacle of rugged luxury, featuring handcrafted leather.',
     category: 'gentlemens-quarters',
     subcategory: null,
     relatedProducts: ['billionaire-boots', 'timberland-boots'],
@@ -133,11 +129,8 @@ export const products: Product[] = [
     id: 'asics-elite',
     name: 'Asics Elite',
     price: 3799,
-    images: [
-      { url: '/WhatsApp Image 2026-03-31 at 3.32.50 PM.jpeg', hint: 'asics elite' },
-      { url: '/WhatsApp Image 2026-03-31 at 3.32.51 PM (1).jpeg', hint: 'asics elite view' }
-    ],
-    description: 'High-performance Asics Elite engineered for maximum comfort and speed.',
+    images: [{ url: '/WhatsApp Image 2026-03-31 at 3.32.50 PM.jpeg', hint: 'asics elite' }],
+    description: 'High-performance Asics Elite engineered for maximum comfort.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: ['nike-zoom'],
@@ -146,10 +139,10 @@ export const products: Product[] = [
   },
   ...CLEARANCE_IMAGES.map((filename, i) => ({
     id: `offer-${i}`,
-    name: `Clearance Special Offer #${i + 1}`,
+    name: `Event Exclusive #${i + 1}`,
     price: 0,
     images: [{ url: `/${filename}`, hint: 'clearance offer' }],
-    description: 'BEE & DEE STOCK CLEARANCE. Exclusive event pricing. See image for detailed information.',
+    description: 'BEE & DEE STOCK CLEARANCE. Event Pricing. See image for details.',
     category: 'sneaker-lab',
     subcategory: null,
     relatedProducts: [],
@@ -160,34 +153,20 @@ export const products: Product[] = [
 
 export const getProducts = () => products;
 
-/**
- * Returns a slice of products that rotates based on the current hour.
- */
 export const getHourlyRotatingProducts = (limit: number = 12) => {
   const pool = products; 
   if (pool.length === 0) return [];
-  
   const hoursSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60));
   const startIndex = (hoursSinceEpoch * limit) % pool.length;
-  
   const result = [];
   for (let i = 0; i < limit; i++) {
     result.push(pool[(startIndex + i) % pool.length]);
   }
-  
   return result;
 };
 
 export const getHeroProducts = () => products.filter(p => !p.id.startsWith('offer-')).slice(0, 8);
-
 export const getProductById = (id: string) => products.find(p => p.id === id);
-
-export const getProductsByCategory = (categoryId: string) => {
-    return products.filter(p => (p.category === categoryId || p.subcategory === categoryId));
-}
-
+export const getProductsByCategory = (categoryId: string) => products.filter(p => p.category === categoryId);
 export const getCategoryById = (id: string) => categories.find(c => c.id === id);
-
-export const getRecommendedProductsByIds = (ids: string[]) => {
-  return products.filter(p => ids.includes(p.id));
-}
+export const getRecommendedProductsByIds = (ids: string[]) => products.filter(p => ids.includes(p.id));
