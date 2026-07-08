@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -40,7 +39,7 @@ export function SessionManager() {
   };
 
   useEffect(() => {
-    // Only track if a user is actually logged in
+    // Track user session if logged in
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         resetTimer();

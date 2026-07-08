@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -15,6 +14,8 @@ export interface UserProfile {
   firstName?: string;
   lastName?: string;
   lastLogin?: string;
+  isActive: boolean;
+  loginHistory?: string[];
 }
 
 export function useUser() {
@@ -42,6 +43,9 @@ export function useUser() {
       if (snap.exists()) {
         setProfile(snap.data() as UserProfile);
       }
+      setLoading(false);
+    }, (err) => {
+      console.error("Error fetching profile:", err);
       setLoading(false);
     });
 

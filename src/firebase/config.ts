@@ -1,11 +1,8 @@
-
 'use client';
 
 /**
  * Firebase configuration object.
- * Environment variables are injected by the platform. 
- * We remove hardcoded placeholders to prevent "invalid API key" errors 
- * if environment variables are not yet propagated.
+ * Environment variables are injected by the platform.
  */
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,3 +12,5 @@ export const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
+
+export const isFirebaseConfigValid = !!firebaseConfig.apiKey && firebaseConfig.apiKey !== 'undefined';

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -30,15 +29,14 @@ export default function LoginPage() {
 
       const now = new Date().toISOString();
 
-      // Update foundation metadata
+      // Update login metadata
       const profileRef = doc(db, 'users', user.uid);
       await updateDoc(profileRef, {
         lastLogin: now,
         loginHistory: arrayUnion(now),
         updatedAt: serverTimestamp(),
-      }).catch(() => {
-        // Fallback if profile doesn't exist yet for some reason
-        console.warn("Profile update failed during login. This is expected if the profile hasn't been created yet.");
+      }).catch((err) => {
+        console.warn("Profile update failed during login. This is expected if the profile hasn't been created yet.", err);
       });
 
       toast({ title: "Welcome back!", description: "You have successfully logged in." });
@@ -48,7 +46,7 @@ export default function LoginPage() {
       toast({ 
         variant: "destructive", 
         title: "Login failed", 
-        description: error.message || "Invalid credentials or project configuration issue."
+        description: error.message || "Invalid credentials."
       });
     } finally {
       setLoading(false);
