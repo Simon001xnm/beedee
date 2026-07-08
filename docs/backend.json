@@ -3,7 +3,7 @@
   "entities": {
     "UserProfile": {
       "title": "User Profile",
-      "description": "User profile with role-based permissions and activity tracking.",
+      "description": "Comprehensive user profile with role-based permissions and activity auditing.",
       "type": "object",
       "properties": {
         "uid": { "type": "string" },
@@ -27,7 +27,7 @@
     },
     "Product": {
       "title": "Product",
-      "description": "Inventory product details.",
+      "description": "Master inventory product details.",
       "type": "object",
       "properties": {
         "id": { "type": "string" },

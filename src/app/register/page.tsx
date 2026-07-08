@@ -1,8 +1,9 @@
+
 'use client';
 
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, getDocs, collection, query, limit, arrayUnion, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, getDocs, collection, query, limit, serverTimestamp } from 'firebase/firestore';
 import { useFirebase } from '@/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,19 +26,22 @@ export default function RegisterPage() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!auth || !db) {
+      toast({ variant: "destructive", title: "System Offline", description: "Firebase is not initialized yet. Please wait a moment." });
+      return;
+    }
+
     setLoading(true);
     try {
-      // 1. Create the Auth user
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // 2. Determine role based on existence of other users
+      // Check if this is the first user ever
       const usersSnap = await getDocs(query(collection(db, 'users'), limit(1)));
       const isFirstUser = usersSnap.empty;
 
       const now = new Date().toISOString();
 
-      // 3. Create the profile with metadata
       await setDoc(doc(db, 'users', user.uid), {
         uid: user.uid,
         email: user.email,
@@ -52,19 +56,18 @@ export default function RegisterPage() {
       });
 
       toast({ 
-        title: isFirstUser ? "Admin Initialized" : "Welcome to Bee & Dee", 
+        title: isFirstUser ? "Super Admin Initialized" : "Registration Complete", 
         description: isFirstUser 
-          ? "You have been registered as the primary Super Admin." 
-          : "Your account is ready for premium shopping."
+          ? "Welcome. You have full access to the management core." 
+          : "Welcome to Bee & Dee. Your account is ready."
       });
 
       router.push(isFirstUser ? '/admin' : '/');
     } catch (error: any) {
-      console.error("Foundation registration error:", error);
       toast({ 
         variant: "destructive", 
-        title: "Registration Failed", 
-        description: error.message || "An error occurred during system initialization."
+        title: "Registration Error", 
+        description: error.message 
       });
     } finally {
       setLoading(false);
@@ -79,8 +82,8 @@ export default function RegisterPage() {
              <ShieldCheck className="h-8 w-8 text-primary" />
           </div>
           <div className="space-y-1">
-            <CardTitle className="text-4xl font-black uppercase tracking-tighter">B&D Portal</CardTitle>
-            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Identity Creation</CardDescription>
+            <CardTitle className="text-4xl font-black uppercase tracking-tighter">B&D Identity</CardTitle>
+            <CardDescription className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Secure Your Premium Account</CardDescription>
           </div>
         </CardHeader>
         <CardContent className="px-10 pb-12">
@@ -97,14 +100,14 @@ export default function RegisterPage() {
             </div>
             <div className="space-y-2">
               <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Identity Email</Label>
-              <Input className="h-12 rounded-xl" type="email" placeholder="jane@beedee.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <Input className="h-12 rounded-xl" type="email" placeholder="jane@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="space-y-2">
               <Label className="text-[10px] uppercase font-black tracking-widest ml-1">Security Key</Label>
               <Input className="h-12 rounded-xl" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <Button type="submit" className="w-full h-14 bg-primary text-white hover:bg-accent hover:text-primary transition-all rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl" disabled={loading}>
-              {loading ? "Initializing..." : "Register Profile"}
+              {loading ? "Establishing Identity..." : "Create Account"}
             </Button>
             <div className="text-center text-[10px] font-bold uppercase tracking-widest text-primary/40 pt-4">
               Already verified? <Link href="/login" className="text-accent hover:underline">Sign In</Link>

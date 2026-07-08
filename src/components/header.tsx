@@ -12,7 +12,8 @@ import {
   Phone,
   Mail,
   UserPlus,
-  LogIn
+  LogIn,
+  LayoutDashboard
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -28,10 +29,14 @@ import { useCart } from "@/context/cart-context";
 import { Badge } from "./ui/badge";
 import { useUser } from "@/firebase";
 
+const STAFF_ROLES = ["Super Admin", "Manager", "Cashier", "Inventory Manager", "Customer Support"];
+
 export function Header() {
   const { cartItems } = useCart();
-  const { user } = useUser();
+  const { user, profile } = useUser();
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+  const isStaff = profile && STAFF_ROLES.includes(profile.role);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
@@ -59,7 +64,16 @@ export function Header() {
                 </Link>
               </div>
             ) : (
-              <Link href="/account" className="hover:text-accent transition-colors font-black uppercase tracking-widest text-[9px]">My Profile</Link>
+              <div className="flex items-center gap-4">
+                {isStaff && (
+                  <Link href="/admin" className="flex items-center gap-1 text-accent hover:text-white transition-colors font-black uppercase tracking-widest text-[9px] border border-accent/30 px-3 py-1 rounded-full">
+                    <LayoutDashboard className="h-3 w-3" /> Admin Portal
+                  </Link>
+                )}
+                <Link href="/account" className="hover:text-accent transition-colors font-black uppercase tracking-widest text-[9px]">
+                  {profile?.firstName || 'My Account'}
+                </Link>
+              </div>
             )}
             <div className="hidden sm:flex items-center gap-6 border-l border-white/10 ml-4 pl-4">
               <Link href="/about" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Our Story</Link>
@@ -72,7 +86,6 @@ export function Header() {
       {/* Main Branding & Search Row */}
       <div className="bg-white border-b border-gray-100">
         <div className="container-market h-16 md:h-20 flex items-center gap-4 md:gap-8">
-          {/* Brand Logo */}
           <Link href="/" className="flex-shrink-0">
             <div className="relative h-10 w-32 md:h-12 md:w-40">
               <Image 
@@ -85,7 +98,6 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Categories Dropdown (Desktop) */}
           <div className="hidden lg:block">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -108,7 +120,6 @@ export function Header() {
             </DropdownMenu>
           </div>
 
-          {/* Search Bar */}
           <div className="flex-1 flex items-center relative group">
             <div className="w-full flex">
               <Input 
@@ -122,7 +133,6 @@ export function Header() {
             </div>
           </div>
 
-          {/* User Actions */}
           <div className="flex items-center gap-3 md:gap-6">
             <Link href="/account" className="flex flex-col items-center group">
               <div className="p-2 rounded-full group-hover:bg-primary/5 transition-colors">
@@ -146,7 +156,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Secondary Navbar */}
       <div className="hidden md:block bg-gray-50/50 border-b border-gray-100">
         <div className="container-market">
           <nav className="flex items-center gap-10 h-10">
