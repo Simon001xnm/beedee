@@ -47,16 +47,16 @@
     "/users/{userId}": { "schema": "UserProfile", "description": "System users and roles." },
     "/products/{productId}": { "schema": "Product", "description": "Master product catalog." },
     "/categories/{categoryId}": { "schema": { "type": "object" }, "description": "Product departments." },
-    "/orders/{orderId}": { "schema": { "type": "object" }, "description": "Customer orders." },
-    "/customers/{customerId}": { "schema": { "type": "object" }, "description": "Customer records." },
-    "/inventory/{itemId}": { "schema": { "type": "object" }, "description": "Stock tracking." },
-    "/payments/{paymentId}": { "schema": { "type": "object" }, "description": "Payment history." },
-    "/transactions/{txnId}": { "schema": { "type": "object" }, "description": "Financial ledger." },
-    "/website/{configId}": { "schema": { "type": "object" }, "description": "Site configurations." },
-    "/settings/{settingId}": { "schema": { "type": "object" }, "description": "System settings." },
-    "/pages/{pageId}": { "schema": { "type": "object" }, "description": "CMS pages." },
-    "/reports/{reportId}": { "schema": { "type": "object" }, "description": "Generated reports." },
-    "/reviews/{reviewId}": { "schema": { "type": "object" }, "description": "Product reviews." },
-    "/notifications/{notifId}": { "schema": { "type": "object" }, "description": "User notifications." }
+    "/orders/{orderId}": { "schema": { "type": "object" }, "description": "Customer orders and fulfillment." },
+    "/customers/{customerId}": { "schema": { "type": "object" }, "description": "Customer demographic records." },
+    "/inventory/{itemId}": { "schema": { "type": "object" }, "description": "Stock tracking and adjustments." },
+    "/payments/{paymentId}": { "schema": { "type": "object" }, "description": "Payment gateway history." },
+    "/transactions/{txnId}": { "schema": { "type": "object" }, "description": "Financial ledger and accounting." },
+    "/website/{configId}": { "schema": { "type": "object" }, "description": "Site-wide UI configurations." },
+    "/settings/{settingId}": { "schema": { "type": "object" }, "description": "Global system variables." },
+    "/pages/{pageId}": { "schema": { "type": "object" }, "description": "CMS page content." },
+    "/reports/{reportId}": { "schema": { "type": "object" }, "description": "Analytics and business intelligence." },
+    "/reviews/{reviewId}": { "schema": { "type": "object" }, "description": "User feedback and ratings." },
+    "/notifications/{notifId}": { "schema": { "type": "object" }, "description": "System and user alerts." }
   }
 }

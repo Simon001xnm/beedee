@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from "next/link";
@@ -10,6 +11,8 @@ import {
   ChevronDown,
   Phone,
   Mail,
+  UserPlus,
+  LogIn
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -23,14 +26,16 @@ import {
 import { categories } from "@/lib/data";
 import { useCart } from "@/context/cart-context";
 import { Badge } from "./ui/badge";
+import { useUser } from "@/firebase";
 
 export function Header() {
   const { cartItems } = useCart();
+  const { user } = useUser();
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      {/* Utility Top Bar: Contact & Help */}
+      {/* Utility Top Bar: Contact & Auth Entry */}
       <div className="bg-primary text-white py-2 text-xs border-b border-white/10">
         <div className="container-market flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center gap-6">
@@ -43,10 +48,23 @@ export function Header() {
               <span className="font-medium tracking-tight">wambuilenny@gmail.com</span>
             </a>
           </div>
-          <div className="hidden sm:flex items-center gap-6">
-            <Link href="/about" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Our Story</Link>
-            <Link href="/contact" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Concierge</Link>
-            <Link href="/return-policy" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Returns</Link>
+          <div className="flex items-center gap-6">
+            {!user ? (
+              <div className="flex items-center gap-4">
+                <Link href="/login" className="flex items-center gap-1 hover:text-accent transition-colors font-black uppercase tracking-widest text-[9px]">
+                  <LogIn className="h-3 w-3" /> Sign In
+                </Link>
+                <Link href="/register" className="flex items-center gap-1 hover:text-accent transition-colors font-black uppercase tracking-widest text-[9px] bg-accent/20 px-3 py-1 rounded-full">
+                  <UserPlus className="h-3 w-3" /> Register
+                </Link>
+              </div>
+            ) : (
+              <Link href="/account" className="hover:text-accent transition-colors font-black uppercase tracking-widest text-[9px]">My Profile</Link>
+            )}
+            <div className="hidden sm:flex items-center gap-6 border-l border-white/10 ml-4 pl-4">
+              <Link href="/about" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Our Story</Link>
+              <Link href="/contact" className="hover:text-accent transition-colors font-bold uppercase tracking-widest text-[9px]">Concierge</Link>
+            </div>
           </div>
         </div>
       </div>

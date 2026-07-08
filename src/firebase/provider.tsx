@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -19,6 +20,7 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
   const [configError, setConfigError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Only attempt initialization if the keys are actually present
     if (!isFirebaseConfigValid) {
       return;
     }
@@ -35,6 +37,7 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  // Show a professional provisioning screen if keys are missing
   if (!isFirebaseConfigValid || configError) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4 text-center">
@@ -45,17 +48,21 @@ export function FirebaseProvider({ children }: { children: React.ReactNode }) {
           <div className="space-y-3">
             <h1 className="text-3xl font-black uppercase tracking-tighter text-primary leading-none">System Sync Required</h1>
             <p className="text-slate-500 text-sm leading-relaxed font-medium">
-              {configError || "Your secure marketplace environment is preparing for launch. Please ensure your Firebase keys are active."}
+              {configError || "Your secure marketplace environment is preparing for launch. This occurs once as we provision your dedicated Firebase resources."}
             </p>
           </div>
           <div className="p-4 bg-slate-50 rounded-2xl text-[9px] font-mono text-slate-400 break-all uppercase tracking-widest border border-slate-100">
-            CID: {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'PENDING_SYNC'}
+            CID: {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'PENDING_PROVISIONING'}
+          </div>
+          <div className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest pt-4">
+            Refreshing in a few moments...
           </div>
         </div>
       </div>
     );
   }
 
+  // Loading state while services are being set up
   if (!services) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
