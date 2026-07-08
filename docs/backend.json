@@ -1,0 +1,59 @@
+
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Extended user information including role and activity history.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "role": { 
+          "type": "string", 
+          "enum": ["Super Admin", "Manager", "Cashier", "Inventory Manager", "Customer Support", "Customer"] 
+        },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "lastLogin": { "type": "string", "format": "date-time" },
+        "loginHistory": { 
+          "array", 
+          "items": { "type": "string", "format": "date-time" } 
+        },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Detailed product information stored in Firestore.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "object" } },
+        "inventoryCount": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "auth": {
+    "providers": ["password"]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles and permissions."
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Inventory and product details."
+    },
+    "/orders/{orderId}": {
+      "schema": { "type": "object" },
+      "description": "Customer purchase records."
+    }
+  }
+}
