@@ -59,7 +59,7 @@
   }
 
   .container-market {
-    @apply max-w-[1600px] mx-auto px-4 md:px-12 lg:px-16;
+    @apply max-w-[2000px] mx-auto px-4 md:px-8 2xl:px-2 w-full;
   }
 
   .premium-blur {

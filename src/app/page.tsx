@@ -66,10 +66,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Full Marketplace Gallery */}
-      <section className="container-market px-2 sm:px-4 md:px-8 lg:px-12">
+      {/* Full Marketplace Gallery - Ultra Wide for large screens */}
+      <section className="container-market px-2 sm:px-4 md:px-6 2xl:px-2">
         {allProducts.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4 lg:gap-5">
             {allProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
