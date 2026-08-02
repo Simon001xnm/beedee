@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Hash, Building2 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function LocationMap() {
@@ -19,8 +19,8 @@ export function LocationMap() {
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Our Physical Home</span>
-              <h2 className="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Showroom</h2>
-              <p className="text-muted-foreground text-sm max-w-md">Experience the quality of our premium footwear in person at our Nairobi showroom.</p>
+              <h2 className="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Shop</h2>
+              <p className="text-muted-foreground text-sm max-w-md">Experience the quality of our premium footwear in person at our Nairobi shop.</p>
             </div>
 
             <div className="space-y-6">
@@ -29,8 +29,30 @@ export function LocationMap() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Showroom Location</h4>
+                  <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Shop Location</h4>
                   <p className="font-bold text-primary text-sm">{address}</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex gap-6 items-start">
+                  <div className="h-12 w-12 rounded-2xl bg-secondary/50 flex items-center justify-center shrink-0">
+                    <Hash className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Shop Number</h4>
+                    <p className="font-bold text-primary text-sm">Add Shop No</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6 items-start">
+                  <div className="h-12 w-12 rounded-2xl bg-secondary/50 flex items-center justify-center shrink-0">
+                    <Building2 className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Floor</h4>
+                    <p className="font-bold text-primary text-sm">Add Floor No</p>
+                  </div>
                 </div>
               </div>
 
@@ -39,7 +61,7 @@ export function LocationMap() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Shop Number / Contact</h4>
+                  <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Contact / WhatsApp</h4>
                   <p className="font-bold text-primary text-sm">+254 106 587 150</p>
                 </div>
               </div>
@@ -51,7 +73,7 @@ export function LocationMap() {
                 className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-accent hover:text-primary transition-all shadow-xl"
               >
                 <MessageCircle className="h-4 w-4" />
-                Book a Visit
+                Message Shop Concierge
               </a>
             </div>
           </div>
@@ -67,7 +89,7 @@ export function LocationMap() {
                 loading="lazy"
                 className="grayscale group-hover:grayscale-0 transition-all duration-700"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                title="Bee & Dee Location Map - Kenneth Matiba Road & River Road Junction"
+                title="Bee & Dee Shop Location Map - Kenneth Matiba Road & River Road Junction"
               ></iframe>
             ) : (
               <div className="w-full h-full animate-pulse bg-gray-200" />
