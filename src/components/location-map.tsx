@@ -10,8 +10,7 @@ export function LocationMap() {
     setMounted(true);
   }, []);
 
-  // Use a constant address to prevent mismatches
-  const address = "Latema Road, Nairobi (Kenneth Matiba Road and River Road junction)";
+  const address = "Kenneth Matiba Road and River Road junction, Nairobi";
 
   return (
     <section className="w-full bg-white border-t border-gray-100">
@@ -60,7 +59,7 @@ export function LocationMap() {
           <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 h-[400px] md:h-[500px] relative group bg-gray-50">
             {mounted ? (
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sLatema%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sKenneth%20Matiba%20Rd%20%26%20River%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -68,7 +67,7 @@ export function LocationMap() {
                 loading="lazy"
                 className="grayscale group-hover:grayscale-0 transition-all duration-700"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                title="Bee & Dee Location Map - Latema Road"
+                title="Bee & Dee Location Map - Kenneth Matiba Road & River Road Junction"
               ></iframe>
             ) : (
               <div className="w-full h-full animate-pulse bg-gray-200" />

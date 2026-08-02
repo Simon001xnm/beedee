@@ -23,7 +23,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Latema Road, Nairobi (Kenneth Matiba Road and River Road junction)",
+    value: "Kenneth Matiba Road and River Road junction, Nairobi",
   },
 ];
 
