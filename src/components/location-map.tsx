@@ -17,8 +17,8 @@ export function LocationMap() {
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Our Physical Home</span>
-              <h2 className="text-2xl md:text-3xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Showroom</h2>
-              <p className="text-muted-foreground text-lg max-w-md">Experience the quality of our premium footwear in person at our Nairobi showroom.</p>
+              <h2 className="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Showroom</h2>
+              <p className="text-muted-foreground text-sm max-w-md">Experience the quality of our premium footwear in person at our Nairobi showroom.</p>
             </div>
 
             <div className="space-y-6">
@@ -28,7 +28,7 @@ export function LocationMap() {
                 </div>
                 <div>
                   <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Showroom Location</h4>
-                  <p className="font-bold text-primary">Kenneth Matiba Road and River Road junction</p>
+                  <p className="font-bold text-primary text-sm">Latema Road, Nairobi (Kenneth Matiba Road and River Road junction)</p>
                 </div>
               </div>
 
@@ -38,7 +38,7 @@ export function LocationMap() {
                 </div>
                 <div>
                   <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Shop Number / Contact</h4>
-                  <p className="font-bold text-primary">+254 106 587 150</p>
+                  <p className="font-bold text-primary text-sm">+254 106 587 150</p>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export function LocationMap() {
                 loading="lazy"
                 className="grayscale group-hover:grayscale-0 transition-all duration-700"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                title="Bee & Dee Location Map"
+                title="Bee & Dee Location Map - Latema Road"
               ></iframe>
             ) : (
               <div className="w-full h-full animate-pulse bg-gray-200" />
