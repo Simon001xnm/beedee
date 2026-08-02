@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { useFirebase } from '@/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
@@ -14,7 +14,7 @@ export function SessionManager() {
   const router = useRouter();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleLogout = React.useCallback(async () => {
+  const handleLogout = useCallback(async () => {
     if (!auth || !auth.currentUser) return;
     
     try {
@@ -29,7 +29,7 @@ export function SessionManager() {
     }
   }, [auth, router, toast]);
 
-  const resetTimer = React.useCallback(() => {
+  const resetTimer = useCallback(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(handleLogout, INACTIVITY_TIMEOUT);
   }, [handleLogout]);
@@ -37,7 +37,6 @@ export function SessionManager() {
   useEffect(() => {
     if (!isReady || !auth) return;
 
-    // Correct Modular SDK Syntax: onAuthStateChanged(auth, ...)
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         resetTimer();
@@ -60,4 +59,3 @@ export function SessionManager() {
 
   return null;
 }
-import React from 'react';

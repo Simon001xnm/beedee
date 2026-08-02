@@ -10,6 +10,9 @@ export function LocationMap() {
     setMounted(true);
   }, []);
 
+  // Use a constant address to prevent mismatches
+  const address = "Latema Road, Nairobi (Kenneth Matiba Road and River Road junction)";
+
   return (
     <section className="w-full bg-white border-t border-gray-100">
       <div className="container-market py-16 md:py-24">
@@ -28,7 +31,7 @@ export function LocationMap() {
                 </div>
                 <div>
                   <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Showroom Location</h4>
-                  <p className="font-bold text-primary text-sm">Latema Road, Nairobi (Kenneth Matiba Road and River Road junction)</p>
+                  <p className="font-bold text-primary text-sm">{address}</p>
                 </div>
               </div>
 
