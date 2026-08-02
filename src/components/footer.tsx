@@ -77,36 +77,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Visit Us & Map */}
+          {/* Support Info */}
           <div className="space-y-6">
-            <h4 className="font-bold text-sm text-primary uppercase tracking-wider">Our Showroom</h4>
+            <h4 className="font-bold text-sm text-primary uppercase tracking-wider">Direct Support</h4>
             <div className="space-y-4">
-              <div className="flex gap-3 items-start">
-                <MapPin className="h-5 w-5 text-accent flex-shrink-0" />
-                <p className="text-sm text-gray-500">Junction Trade Centre, Nairobi along Latema Road off Riverroad</p>
-              </div>
-              {/* Increased Map Size for better visibility */}
-              <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 h-64 w-full relative group bg-gray-50">
-                {mounted ? (
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819036986423!2d36.82522631535216!3d-1.2823659990647184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d638708c99%3A0x6b2e75e5c7a52a33!2sLatema%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen={true} 
-                    loading="lazy"
-                    className="grayscale hover:grayscale-0 transition-all duration-500"
-                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    title="Bee & Dee Location Map"
-                  ></iframe>
-                ) : (
-                  <div className="w-full h-full animate-pulse bg-gray-200" />
-                )}
-                <div className="absolute inset-0 pointer-events-none border-2 border-primary/5 rounded-xl"></div>
+              <div className="flex gap-3 items-center">
+                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
+                <p className="text-sm text-gray-500">wambuilenny@gmail.com</p>
               </div>
               <div className="flex gap-3 items-center">
                 <MessageCircle className="h-5 w-5 text-accent flex-shrink-0" />
                 <p className="text-sm text-gray-500">+254 106 587 150</p>
+              </div>
+              <div className="pt-4">
+                <Link href="/contact" className="btn-accent-market py-3 inline-block">
+                  Talk to Concierge
+                </Link>
               </div>
             </div>
           </div>

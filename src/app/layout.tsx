@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -9,6 +8,7 @@ import { CartProvider } from '@/context/cart-context';
 import { FirebaseProvider } from '@/firebase';
 import { Inter } from 'next/font/google';
 import { SessionManager } from '@/components/session-manager';
+import { LocationMap } from '@/components/location-map';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,6 +43,7 @@ export default function RootLayout({
             <div className="relative flex min-h-dvh flex-col">
               <Header />
               <main className="flex-1">{children}</main>
+              <LocationMap />
               <Footer />
             </div>
             <Toaster />
