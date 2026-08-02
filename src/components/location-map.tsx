@@ -28,7 +28,7 @@ export function LocationMap() {
                 </div>
                 <div>
                   <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Showroom Location</h4>
-                  <p className="font-bold text-primary">Junction Trade Centre, Nairobi along Latema Road off Riverroad</p>
+                  <p className="font-bold text-primary">Kenneth Matiba Road and River Road junction</p>
                 </div>
               </div>
 

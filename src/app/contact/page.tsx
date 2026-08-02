@@ -23,7 +23,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Juction Trade Centre, Nairobi along Latema Road off Riverroad",
+    value: "Kenneth Matiba Road and River Road junction",
   },
 ];
 
