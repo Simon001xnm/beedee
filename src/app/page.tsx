@@ -99,20 +99,6 @@ export default function Home() {
 
       {/* Full Marketplace Gallery */}
       <section className="container-market px-2 sm:px-4 md:px-8 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
-          <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Our Premium Collection</span>
-            <h2 className="text-2xl md:text-5xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
-              <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
-              BEE & DEE MARKETPLACE
-            </h2>
-            <p className="text-sm text-muted-foreground mt-2 font-medium uppercase tracking-widest">Global Standards - Local Excellence</p>
-          </div>
-          <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group border-b-2 border-accent pb-2">
-            Access Full Catalog <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-        
         {allProducts.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {allProducts.map(product => (
