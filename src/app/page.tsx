@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getHourlyRotatingProducts, categories, getHeroProducts } from '@/lib/data';
+import { getAllProducts, categories } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
@@ -16,12 +16,11 @@ import { ProductCard } from '@/components/product-card';
 import { HeroCarousel } from '@/components/hero-carousel';
 import { FlashSaleBanner } from '@/components/flash-sale-banner';
 
-// Revalidate this page every hour to refresh the rotating product slice
 export const revalidate = 3600;
 
 export default function Home() {
-  // Get 12 products for the landing page grid (rotating hourly)
-  const rotatingClearanceItems = getHourlyRotatingProducts(12);
+  // Get all products to show in a large grid
+  const allProducts = getAllProducts();
 
   return (
     <div className="flex flex-col gap-8 pb-20">
@@ -98,31 +97,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Landing Page Clearance Gallery (Rotating Batch) */}
-      <section className="container-market">
+      {/* Full Marketplace Gallery */}
+      <section className="container-market px-2 sm:px-4 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div>
-            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Limited Hourly Offers</span>
+            <span className="text-[10px] font-black text-accent uppercase tracking-[0.4em] block mb-2">Our Premium Collection</span>
             <h2 className="text-2xl md:text-5xl font-black text-primary flex items-center gap-4 tracking-tighter uppercase">
               <Sparkles className="h-6 w-6 md:h-10 md:w-10 text-accent" />
-              BEE & DEE STOCK CLEARANCE
+              BEE & DEE MARKETPLACE
             </h2>
-            <p className="text-sm text-muted-foreground mt-2 font-medium uppercase tracking-widest">Selected Inventory - Refreshed Hourly</p>
+            <p className="text-sm text-muted-foreground mt-2 font-medium uppercase tracking-widest">Global Standards - Local Excellence</p>
           </div>
           <Link href="/shop" className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-2 group border-b-2 border-accent pb-2">
             Access Full Catalog <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
         
-        {rotatingClearanceItems.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
-            {rotatingClearanceItems.map(product => (
+        {allProducts.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+            {allProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         ) : (
           <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed">
-             <p className="text-muted-foreground">New clearance offers coming soon.</p>
+             <p className="text-muted-foreground">Refreshing inventory...</p>
           </div>
         )}
       </section>
@@ -165,8 +164,8 @@ export default function Home() {
         <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
            <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">Everything Must Go</span>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">FINAL STOCK CLEARANCE PRICING.</h2>
+              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">World Class Footwear</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">THE COMPLETE COLLECTION.</h2>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-16 px-16 rounded-full transition-all hover:scale-105 shadow-2xl">
                   <Link href="/shop">Shop All Collections</Link>
               </Button>

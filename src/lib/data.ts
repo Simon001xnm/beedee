@@ -103,13 +103,229 @@ export const products: Product[] = [
     relatedProducts: ['nike-vomero'],
     sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Performance Multi']
+  },
+  {
+    id: 'samba-single-sole',
+    name: 'Samba Single Sole',
+    price: 2499,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 5.38.03 PM (1).jpeg', hint: 'samba single sole' }],
+    description: 'Sleek, low-profile indoor soccer silhouette with clean design.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Classic White/Black']
+  },
+  {
+    id: 'floral-samba',
+    name: 'Floral Samba',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 5.37.25 PM.jpeg', hint: 'floral samba' }],
+    description: 'Artistic floral take on the classic Samba silhouette.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Floral Multi']
+  },
+  {
+    id: 'sb-dunks',
+    name: 'SB Dunks',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 3.52.33 PM (2).jpeg', hint: 'sb dunks' }],
+    description: 'Legendary skate shoe turned streetwear staple.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nb-classic',
+    name: 'New Balance Classic',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 3.47.22 PM (1).jpeg', hint: 'new balance' }],
+    description: 'Timeless style meets exceptional everyday comfort.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'soccer-boots-elite',
+    name: 'Elite Soccer Boots',
+    price: 3999,
+    images: [{ url: '/WhatsApp Image 2026-02-03 at 10.00.24 AM (2).jpeg', hint: 'soccer boots' }],
+    description: 'Engineered for elite performance and ball control.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Professional Multi']
+  },
+  {
+    id: 'mens-casual-loafers',
+    name: 'Men\'s Casual Loafers',
+    price: 3499,
+    images: [{ url: '/WhatsApp Image 2026-02-03 at 10.04.28 AM.jpeg', hint: 'loafers' }],
+    description: 'Versatile casual loafers for the modern gentleman.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'mens-comfort-sandals',
+    name: 'Men\'s Comfort Sandals',
+    price: 1800,
+    images: [{ url: '/WhatsApp Image 2026-02-03 at 12.03.18 PM (1).jpeg', hint: 'sandals' }],
+    description: 'Supportive footbed and breathable design for warm weather.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'mens-handcrafted-sandals',
+    name: 'Men\'s Handcrafted Sandals',
+    price: 1999,
+    images: [{ url: '/WhatsApp Image 2026-02-04 at 11.55.52 AM.jpeg', hint: 'handcrafted sandals' }],
+    description: 'Premium handcrafted leather for ultimate durability.',
+    category: 'gentlemens-quarters',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Tan/Brown']
+  },
+  {
+    id: 'nb-9060',
+    name: 'New Balance 9060',
+    price: 3499,
+    images: [{ url: '/WhatsApp Image 2026-02-04 at 12.22.51 PM (1).jpeg', hint: 'nb 9060' }],
+    description: 'Modern expression of refined style and innovation.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nike-ld-waffle',
+    name: 'Nike LD Waffle',
+    price: 3499,
+    images: [{ url: '/WhatsApp Image 2026-02-04 at 12.23.35 PM.jpeg', hint: 'ld waffle' }],
+    description: 'Unique layered look fusion of two iconic silhouettes.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'nike-zoom',
+    name: 'Nike Zoom',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-04 at 1.55.05 PM (1).jpeg', hint: 'nike zoom' }],
+    description: 'Responsive cushioning and iconic athletic design.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'bape-star',
+    name: 'Bape Star',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-05 at 3.04.36 PM.jpeg', hint: 'bape star' }],
+    description: 'Bold streetwear icons with distinctive patterns.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'jordan-voodoo',
+    name: 'Jordan Voodoo',
+    price: 3499,
+    images: [{ url: '/WhatsApp Image 2026-02-05 at 3.15.11 PM.jpeg', hint: 'voodoo' }],
+    description: 'Unique mystical aesthetic with earthy tones.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: ['Earthy Multi']
+  },
+  {
+    id: 'asics-gel',
+    name: 'ASICS GEL Sneakers',
+    price: 2999,
+    images: [{ url: '/WhatsApp Image 2026-02-05 at 3.21.19 PM.jpeg', hint: 'asics gel' }],
+    description: 'High-performance comfort for both training and street style.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['36', '37', '38', '39', '40', '41'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-active',
+    name: 'Kids Active Sneakers',
+    price: 1799,
+    images: [{ url: '/WhatsApp Image 2026-02-05 at 3.23.05 PM.jpeg', hint: 'kids active' }],
+    description: 'Modern active sneakers built for junior performance.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-urban',
+    name: 'Kids Urban Sneakers',
+    price: 1799,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 10.01.19 AM.jpeg', hint: 'kids urban' }],
+    description: 'Durable and stylish for school or weekend adventures.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'kids-open',
+    name: 'Kids Open Comfort',
+    price: 1499,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 10.02.21 AM.jpeg', hint: 'kids sandals' }],
+    description: 'Ultra-comfortable open-toe sandals for all-day play.',
+    category: 'mini-icons',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
+    colors: ['Multi-color']
+  },
+  {
+    id: 'samoa-classic',
+    name: 'Samoa Classic',
+    price: 2799,
+    images: [{ url: '/WhatsApp Image 2026-02-06 at 10.59.37 AM (1).jpeg', hint: 'samoa classic' }],
+    description: 'Timeless heritage style with modern everyday comfort.',
+    category: 'sneaker-lab',
+    subcategory: null,
+    relatedProducts: [],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: ['Classic White']
   }
 ];
 
 export const getProducts = () => products;
+export const getAllProducts = () => products;
 
 export const getHourlyRotatingProducts = (limit: number = 12) => {
-  // Since we removed all clearance items, we just return the full detailed set
   return products.slice(0, limit);
 };
 
