@@ -38,19 +38,19 @@ export function ProductCard({ product, className }: ProductCardProps) {
       </Link>
 
       {/* Simplified Info Container */}
-      <div className="p-3 flex flex-col flex-1 gap-2">
+      <div className="p-3 flex flex-col flex-1 gap-1.5">
         <Link href={`/shop/product/${product.id}`}>
-          <h3 className="text-[11px] sm:text-[12px] font-black text-primary leading-tight uppercase tracking-tight group-hover:text-accent transition-colors line-clamp-1">
+          <h3 className="text-[9px] sm:text-[10px] font-black text-primary leading-tight uppercase tracking-tight group-hover:text-accent transition-colors line-clamp-1">
             {product.name}
           </h3>
         </Link>
         
         <div className="flex flex-col gap-1 mt-auto">
           <div className="flex items-center justify-between">
-            <span className="text-[13px] sm:text-[14px] font-black text-primary tracking-tighter">
+            <span className="text-[11px] sm:text-[12px] font-black text-primary tracking-tighter">
               {formatPrice(product.price)}
             </span>
-            <Button size="icon" variant="ghost" asChild className="h-7 w-7 rounded-lg bg-secondary/50 hover:bg-primary hover:text-white transition-all">
+            <Button size="icon" variant="ghost" asChild className="h-6 w-6 rounded-md bg-secondary/50 hover:bg-primary hover:text-white transition-all">
               <Link href={`/shop/product/${product.id}`}>
                 <ShoppingBag className="h-3 w-3" />
               </Link>
@@ -58,14 +58,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
           </div>
           
           {/* Size Display */}
-          <div className="flex flex-wrap gap-1 mt-1">
+          <div className="flex flex-wrap gap-1 mt-0.5">
             {product.sizes.slice(0, 3).map(size => (
-              <span key={size} className="text-[8px] font-bold text-muted-foreground/60 border border-black/[0.05] px-1 rounded uppercase">
+              <span key={size} className="text-[7px] font-bold text-muted-foreground/60 border border-black/[0.05] px-1 rounded uppercase">
                 {size}
               </span>
             ))}
             {product.sizes.length > 3 && (
-              <span className="text-[8px] font-bold text-muted-foreground/40 px-1 uppercase">
+              <span className="text-[7px] font-bold text-muted-foreground/40 px-1 uppercase">
                 +{product.sizes.length - 3}
               </span>
             )}

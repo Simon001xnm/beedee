@@ -231,9 +231,9 @@ export default function ProductPage({ params }: ProductPageProps) {
         {/* Extended Section: Recommendations */}
         <section className="mt-32">
            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-              <div className="space-y-4">
-                <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Explore More Offers</span>
-                <h2 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Complete the aesthetic</h2>
+              <div className="space-y-2">
+                <span className="text-[9px] font-black text-accent uppercase tracking-[0.5em]">Explore More Offers</span>
+                <h2 className="text-2xl md:text-3xl font-black text-primary tracking-tighter uppercase leading-none">Complete the aesthetic</h2>
               </div>
            </div>
            <ProductRecommendations currentProductId={product.id} currentCategory={product.category} />
