@@ -41,7 +41,7 @@ export function LocationMap() {
                   </div>
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Shop Number</h4>
-                    <p className="font-bold text-primary text-sm">Add Shop No</p>
+                    <p className="font-bold text-primary text-sm">Shop 212</p>
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ export function LocationMap() {
                   </div>
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest text-primary/40 mb-1">Floor</h4>
-                    <p className="font-bold text-primary text-sm">Add Floor No</p>
+                    <p className="font-bold text-primary text-sm">Second Floor</p>
                   </div>
                 </div>
               </div>
