@@ -1,15 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getProducts, categories } from '@/lib/data';
+import { getProducts } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
   ShieldCheck, 
   RefreshCcw, 
-  ChevronRight,
-  LayoutGrid,
   User,
-  Sparkles,
   Timer
 } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
@@ -29,36 +26,8 @@ export default function Home() {
       {/* Marketplace Multi-Column Hero Section */}
       <section className="bg-white border-b border-gray-100">
         <div className="container-market py-4 lg:py-8">
-          <div className="grid lg:grid-cols-[260px_1fr_260px] gap-6">
+          <div className="grid lg:grid-cols-[1fr_260px] gap-6">
             
-            {/* Left Column: Department Sidebar */}
-            <div className="hidden lg:flex flex-col bg-gray-50/50 rounded-xl p-4 border border-gray-100">
-              <h3 className="text-sm font-black flex items-center gap-2 mb-6 text-primary uppercase tracking-wider">
-                <LayoutGrid className="h-4 w-4" />
-                Departments
-              </h3>
-              <nav className="flex flex-col gap-2">
-                {categories.map((cat) => (
-                  <Link 
-                    key={cat.id} 
-                    href={`/shop/${cat.id}`}
-                    className="group flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white hover:shadow-sm transition-all text-sm font-medium text-gray-600 hover:text-primary"
-                  >
-                    <span className="flex items-center gap-3">
-                      <div className="h-1.5 w-1.5 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {cat.name}
-                    </span>
-                    <ChevronRight className="h-4 w-4 text-gray-300 group-hover:text-primary" />
-                  </Link>
-                ))}
-              </nav>
-              <div className="mt-auto pt-6 border-t border-gray-100">
-                 <Link href="/shop" className="text-xs font-bold text-accent hover:underline flex items-center gap-2">
-                    Browse All Collections <ArrowRight className="h-3 w-3" />
-                 </Link>
-              </div>
-            </div>
-
             {/* Center Column: Global Marketplace Slider */}
             <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100 min-h-[300px] md:min-h-[400px] lg:min-h-[550px]">
               <HeroCarousel />
