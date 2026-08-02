@@ -89,7 +89,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                           src={image.url} 
                           alt={product.name} 
                           fill
-                          className="object-cover" 
+                          className="object-contain p-4" 
                           priority={idx === 0} 
                         />
                       </div>
@@ -109,7 +109,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               <div className="grid grid-cols-4 gap-4">
                 {product.images.map((img, idx) => (
                   <div key={idx} className="aspect-square bg-[#f8f8f8] border border-black/[0.03] relative cursor-pointer hover:border-accent transition-all duration-300 overflow-hidden rounded-2xl group shadow-md">
-                    <Image src={img.url} alt={`${product.name} view ${idx + 1}`} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <Image src={img.url} alt={`${product.name} view ${idx + 1}`} fill className="object-contain p-2 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                 ))}
               </div>
