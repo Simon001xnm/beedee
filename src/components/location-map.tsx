@@ -17,7 +17,7 @@ export function LocationMap() {
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="text-[10px] font-black text-accent uppercase tracking-[0.6em]">Our Physical Home</span>
-              <h2 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Showroom</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-primary tracking-tighter uppercase leading-none">Visit Our Showroom</h2>
               <p className="text-muted-foreground text-lg max-w-md">Experience the quality of our premium footwear in person at our Nairobi showroom.</p>
             </div>
 
