@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { getAllProducts, categories } from '@/lib/data';
+import { getProducts, categories } from '@/lib/data';
 import { 
   ArrowRight, 
   Truck, 
@@ -20,7 +20,7 @@ export const revalidate = 3600;
 
 export default function Home() {
   // Get all products to show in a large grid
-  const allProducts = getAllProducts();
+  const allProducts = getProducts();
 
   return (
     <div className="flex flex-col gap-8 pb-20">
@@ -73,11 +73,11 @@ export default function Home() {
                 <p className="font-bold text-sm mb-1 uppercase tracking-widest">Welcome Back</p>
                 <p className="text-[10px] text-white/60 mb-6">Access your premium footwear concierge</p>
                 <div className="flex flex-col w-full gap-3">
-                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase text-[10px] h-10 tracking-widest w-full">
-                    Create Account
+                  <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-primary font-black uppercase text-[10px] h-10 tracking-widest w-full">
+                    <Link href="/register">Create Account</Link>
                   </Button>
-                  <Button size="sm" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-black uppercase text-[10px] h-10 tracking-widest w-full">
-                    Sign In
+                  <Button asChild size="sm" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-black uppercase text-[10px] h-10 tracking-widest w-full">
+                    <Link href="/login">Sign In</Link>
                   </Button>
                 </div>
               </div>
@@ -158,21 +158,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Call to Action Banner */}
-      <section className="container-market mt-10">
-        <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
-           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
-           <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-              <span className="text-[10px] font-black tracking-[0.6em] text-accent uppercase">World Class Footwear</span>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">THE COMPLETE COLLECTION.</h2>
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-accent hover:text-primary font-black uppercase tracking-widest text-[11px] h-16 px-16 rounded-full transition-all hover:scale-105 shadow-2xl">
-                  <Link href="/shop">Shop All Collections</Link>
-              </Button>
-           </div>
-        </div>
-      </section>
-
     </div>
   );
 }
