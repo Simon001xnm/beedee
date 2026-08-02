@@ -11,9 +11,6 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, className }: ProductCardProps) {
-  // Detect if this is a landing page exclusive offer with text in image
-  const isImageOffer = product.id.startsWith('offer-');
-
   return (
     <article className={cn(
       "group relative flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 border border-black/[0.03]",
@@ -22,21 +19,13 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {/* Visual Container */}
       <Link 
         href={`/shop/product/${product.id}`} 
-        className={cn(
-          "relative block overflow-hidden bg-[#f9f9f9]",
-          isImageOffer ? "aspect-auto min-h-[300px] md:min-h-[400px]" : "aspect-[4/5]"
-        )}
+        className="relative block overflow-hidden bg-[#f9f9f9] aspect-[4/5]"
       >
         <Image
           src={product.images[0].url}
           alt={product.name}
-          fill={!isImageOffer}
-          width={isImageOffer ? 1200 : undefined}
-          height={isImageOffer ? 1500 : undefined}
-          className={cn(
-            "transition-transform duration-700 ease-out group-hover:scale-105",
-            isImageOffer ? "object-contain w-full h-full p-2" : "object-cover"
-          )}
+          fill
+          className="transition-transform duration-700 ease-out group-hover:scale-105 object-cover"
           data-ai-hint={product.images[0].hint}
         />
         
@@ -49,15 +38,15 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         {/* Status Badges */}
         <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
-          {(product.price > 4000 || isImageOffer) && (
+          {product.price > 4000 && (
             <div className="bg-primary text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-sm">
-              {isImageOffer ? "Stock Clearance" : "Luxe Edition"}
+              Luxe Edition
             </div>
           )}
         </div>
       </Link>
 
-      {/* Narrative Container - Now shown for all products */}
+      {/* Narrative Container */}
       <div className="p-5 flex flex-col flex-1 gap-4">
         <div className="space-y-1">
           <Link href={`/shop/product/${product.id}`}>
@@ -78,10 +67,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
           <div className="flex items-end justify-between mt-auto pt-2">
             <div className="flex flex-col">
               <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">
-                {product.price > 0 ? "Market Price" : "Event Pricing"}
+                Market Price
               </span>
               <span className="text-lg font-black text-primary tracking-tighter leading-none">
-                {product.price > 0 ? formatPrice(product.price) : "SEE IMAGE"}
+                {formatPrice(product.price)}
               </span>
             </div>
             <Button size="icon" variant="ghost" asChild className="h-10 w-10 rounded-xl bg-secondary/50 hover:bg-primary hover:text-white transition-all">

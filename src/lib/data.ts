@@ -1,38 +1,5 @@
 import type { Product, Category } from './types';
 
-// Visual clearance assets provided by user
-const CLEARANCE_IMAGES = [
-  'WhatsApp Image 2026-06-17 at 22.21.40.jpeg',
-  'Image 2026-06-17 at 22.21.42 (1).jpeg',
-  'Image 2026-06-17 at 22.21.43.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.49.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.51 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.51.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.52.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.53 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.53.jpeg',
-  'Image 2026-06-17 at 22.22.05.jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.30 PM.jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.30 PM (1).jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.04 PM.jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.04 PM (3).jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.04 PM (2).jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.04 PM (1).jpeg',
-  'WhatsApp Image 2026-02-07 at 1.08.03 PM.jpeg',
-  'WhatsApp Image 2026-02-07 at 11.40.57 AM.jpeg',
-  'WhatsApp Image 2026-02-07 at 11.40.57 AM (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.22.04.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.22.04 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.59 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.58.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.57.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.56.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.56 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.55.jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.55 (1).jpeg',
-  'WhatsApp Image 2026-06-17 at 22.21.54.jpeg',
-];
-
 export const categories: Category[] = [
   { id: 'sneaker-lab', name: 'The Sneaker Lab', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800', imageHint: 'sneakers' },
   { id: 'gentlemens-quarters', name: 'Gentlemens Quarters', parentId: null, imageUrl: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=800', imageHint: 'mens shoes' },
@@ -97,7 +64,7 @@ export const products: Product[] = [
     description: 'Premium running comfort with a modern silhouette.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['asics-performance-runner'],
+    relatedProducts: ['asics-elite'],
     sizes: ['36', '37', '38', '39', '40', '41', '42'],
     colors: ['Multi-color']
   },
@@ -109,7 +76,7 @@ export const products: Product[] = [
     description: 'Legendary silhouette featuring iconic elephant print and premium leather.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['jordan-voodoo'],
+    relatedProducts: [],
     sizes: ['40', '41', '42', '43', '44', '45'],
     colors: ['Classic Multi']
   },
@@ -133,39 +100,20 @@ export const products: Product[] = [
     description: 'High-performance Asics Elite engineered for maximum comfort.',
     category: 'sneaker-lab',
     subcategory: null,
-    relatedProducts: ['nike-zoom'],
+    relatedProducts: ['nike-vomero'],
     sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
     colors: ['Performance Multi']
-  },
-  ...CLEARANCE_IMAGES.map((filename, i) => ({
-    id: `offer-${i}`,
-    name: `Event Exclusive #${i + 1}`,
-    price: 0,
-    images: [{ url: `/${filename}`, hint: 'clearance offer' }],
-    description: 'BEE & DEE STOCK CLEARANCE. Event Pricing. See image for details.',
-    category: 'sneaker-lab',
-    subcategory: null,
-    relatedProducts: [],
-    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
-    colors: []
-  })),
+  }
 ];
 
 export const getProducts = () => products;
 
 export const getHourlyRotatingProducts = (limit: number = 12) => {
-  const pool = products; 
-  if (pool.length === 0) return [];
-  const hoursSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60));
-  const startIndex = (hoursSinceEpoch * limit) % pool.length;
-  const result = [];
-  for (let i = 0; i < limit; i++) {
-    result.push(pool[(startIndex + i) % pool.length]);
-  }
-  return result;
+  // Since we removed all clearance items, we just return the full detailed set
+  return products.slice(0, limit);
 };
 
-export const getHeroProducts = () => products.filter(p => !p.id.startsWith('offer-')).slice(0, 8);
+export const getHeroProducts = () => products.slice(0, 8);
 export const getProductById = (id: string) => products.find(p => p.id === id);
 export const getProductsByCategory = (categoryId: string) => products.filter(p => p.category === categoryId);
 export const getCategoryById = (id: string) => categories.find(c => c.id === id);

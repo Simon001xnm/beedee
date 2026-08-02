@@ -47,11 +47,10 @@ export default function ProductPage({ params }: ProductPageProps) {
   );
 
   const category = useMemo(() => getCategoryById(product.category), [product.category]);
-  const isImageOffer = product.id.startsWith('offer-');
 
   const handleWhatsAppOrder = () => {
     const phoneNumber = "254106587150";
-    const priceDisplay = product.price > 0 ? formatPrice(product.price) : "Clearance Pricing (As per image)";
+    const priceDisplay = formatPrice(product.price);
     const message = `Concierge, I'd like to order: ${product.name}\nSize: ${selectedSize || 'Not selected'}\nPrice: ${priceDisplay}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
@@ -80,22 +79,17 @@ export default function ProductPage({ params }: ProductPageProps) {
           
           {/* Visual Showcase */}
           <div className="space-y-8 lg:sticky lg:top-32">
-            <div className={cn(
-              "bg-[#f8f8f8] border border-black/[0.03] overflow-hidden rounded-[2rem] relative shadow-2xl transition-all duration-700",
-              isImageOffer ? "aspect-auto min-h-[500px]" : "aspect-[4/5]"
-            )}>
+            <div className="bg-[#f8f8f8] border border-black/[0.03] overflow-hidden rounded-[2rem] relative shadow-2xl transition-all duration-700 aspect-[4/5]">
               <Carousel className="w-full h-full">
                 <CarouselContent className="h-full">
                   {product.images.map((image, idx) => (
                     <CarouselItem key={idx} className="h-full">
-                      <div className={cn("relative w-full h-full", isImageOffer ? "aspect-auto p-4" : "aspect-[4/5]")}>
+                      <div className="relative w-full h-full aspect-[4/5]">
                         <Image 
                           src={image.url} 
                           alt={product.name} 
-                          fill={!isImageOffer}
-                          width={isImageOffer ? 1200 : undefined}
-                          height={isImageOffer ? 1500 : undefined}
-                          className={isImageOffer ? "object-contain w-full h-full" : "object-cover"} 
+                          fill
+                          className="object-cover" 
                           priority={idx === 0} 
                         />
                       </div>
@@ -128,7 +122,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               <div className="flex items-center gap-4">
                 <span className="text-[10px] font-black tracking-[0.4em] uppercase text-accent border-b border-accent pb-1">{category?.name}</span>
                 <Badge className="bg-primary/5 text-primary border-none text-[9px] font-black tracking-widest px-3 py-1 uppercase">
-                  {isImageOffer ? "Limited Clearance" : "Premium Stock"}
+                  Premium Stock
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-primary tracking-tighter leading-none uppercase">
@@ -138,7 +132,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               <div className="flex flex-wrap items-center gap-8">
                 <div className="flex items-baseline gap-4">
                   <span className="text-4xl lg:text-6xl font-black text-primary tracking-tighter">
-                    {product.price > 0 ? formatPrice(product.price) : "SEE IMAGE FOR PRICE"}
+                    {formatPrice(product.price)}
                   </span>
                   {product.originalPrice && (
                     <span className="text-2xl text-muted-foreground line-through font-bold opacity-40">{formatPrice(product.originalPrice)}</span>

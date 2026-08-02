@@ -118,6 +118,17 @@ export function Footer() {
           <p suppressHydrationWarning>
             &copy; {mounted ? currentYear : 2026} Bee & Dee Premium Marketplace. All rights reserved.
           </p>
+          <div className="flex items-center gap-2">
+            <span className="font-bold">Developed by</span>
+            <Link 
+              href="https://simonstyles.co.ke" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary font-black hover:text-accent transition-colors"
+            >
+              simonstyles
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
